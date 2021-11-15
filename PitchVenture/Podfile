@@ -6,7 +6,7 @@ target 'PitchVenture' do
   use_frameworks!
 
   # Pods for PitchVenture
-  pod 'IQKeyboardManagerSwift'
-  pod 'SVProgressHUD'
+  pod 'IQKeyboardManagerSwift', '6.5.9'
+  pod 'SVProgressHUD', '2.2.5'
 
 end
