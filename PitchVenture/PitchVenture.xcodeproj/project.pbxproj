@@ -3,23 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
+		FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D162B2742CCB300CF4413 /* FontManager.swift */; };
+		FA474C8827234A25008601A9 /* PVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA474C8727234A25008601A9 /* PVButton.swift */; };
+		FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B01AA2742D65900976EB6 /* ConfigurationManager.swift */; };
+		FA5B01AD2742D65900976EB6 /* Environments.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA5B01AB2742D65900976EB6 /* Environments.plist */; };
+		FA81A8B62727688D00D6759A /* PVLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8B52727688D00D6759A /* PVLabel.swift */; };
+		FA81A8B9272769F100D6759A /* PVLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8B8272769F100D6759A /* PVLoginVC.swift */; };
+		FA81A8BB27276AB300D6759A /* PVBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8BA27276AB300D6759A /* PVBaseVC.swift */; };
+		FA81A8BE27276C7900D6759A /* AppDelegate+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8BD27276C7900D6759A /* AppDelegate+Additions.swift */; };
+		FA81A8C127276F7100D6759A /* PVPhoneVerifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8C027276F7100D6759A /* PVPhoneVerifyVC.swift */; };
+		FA81A8C327276FED00D6759A /* PVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8C227276FED00D6759A /* PVNavigationController.swift */; };
+		FA81A8C62727705B00D6759A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8C52727705B00D6759A /* Constants.swift */; };
 		FA93343F271A10780002DBED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93343E271A10780002DBED /* AppDelegate.swift */; };
 		FA933441271A10780002DBED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA933440271A10780002DBED /* SceneDelegate.swift */; };
-		FA933443271A10780002DBED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA933442271A10780002DBED /* ViewController.swift */; };
 		FA933446271A10780002DBED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA933444271A10780002DBED /* Main.storyboard */; };
 		FA933448271A107A0002DBED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA933447271A107A0002DBED /* Assets.xcassets */; };
 		FA93344B271A107A0002DBED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA933449271A107A0002DBED /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.release.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.release.xcconfig"; sourceTree = "<group>"; };
+		EBD47B50966951F0CEB0EE3B /* Pods-PitchVenture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.debug.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.debug.xcconfig"; sourceTree = "<group>"; };
+		FA0D162B2742CCB300CF4413 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		FA474C8727234A25008601A9 /* PVButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVButton.swift; sourceTree = "<group>"; };
+		FA5B01AA2742D65900976EB6 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
+		FA5B01AB2742D65900976EB6 /* Environments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environments.plist; sourceTree = "<group>"; };
+		FA81A8B52727688D00D6759A /* PVLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVLabel.swift; sourceTree = "<group>"; };
+		FA81A8B8272769F100D6759A /* PVLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVLoginVC.swift; sourceTree = "<group>"; };
+		FA81A8BA27276AB300D6759A /* PVBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVBaseVC.swift; sourceTree = "<group>"; };
+		FA81A8BD27276C7900D6759A /* AppDelegate+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Additions.swift"; sourceTree = "<group>"; };
+		FA81A8C027276F7100D6759A /* PVPhoneVerifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPhoneVerifyVC.swift; sourceTree = "<group>"; };
+		FA81A8C227276FED00D6759A /* PVNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVNavigationController.swift; sourceTree = "<group>"; };
+		FA81A8C52727705B00D6759A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA93343B271A10780002DBED /* PitchVenture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchVenture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA93343E271A10780002DBED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA933440271A10780002DBED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA933442271A10780002DBED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA933445271A10780002DBED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA933447271A107A0002DBED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA93344A271A107A0002DBED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,17 +55,101 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C29550ED8F555926ADDCC41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F2D321FC1A45AF67191A850 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBD47B50966951F0CEB0EE3B /* Pods-PitchVenture.debug.xcconfig */,
+				99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA474C8627234993008601A9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA5B01A92742D60300976EB6 /* Configuration Manager */,
+				FA474C8727234A25008601A9 /* PVButton.swift */,
+				FA81A8B52727688D00D6759A /* PVLabel.swift */,
+				FA81A8BA27276AB300D6759A /* PVBaseVC.swift */,
+				FA81A8C227276FED00D6759A /* PVNavigationController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA474C8927234A83008601A9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA81A8BF27276EF600D6759A /* PhoneVerifyVC */,
+				FA81A8B72727696E00D6759A /* LoginVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA5B01A92742D60300976EB6 /* Configuration Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FA5B01AA2742D65900976EB6 /* ConfigurationManager.swift */,
+				FA5B01AB2742D65900976EB6 /* Environments.plist */,
+			);
+			path = "Configuration Manager";
+			sourceTree = "<group>";
+		};
+		FA81A8B72727696E00D6759A /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA81A8B8272769F100D6759A /* PVLoginVC.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		FA81A8BC27276C1A00D6759A /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				FA93343E271A10780002DBED /* AppDelegate.swift */,
+				FA81A8BD27276C7900D6759A /* AppDelegate+Additions.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		FA81A8BF27276EF600D6759A /* PhoneVerifyVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA81A8C027276F7100D6759A /* PVPhoneVerifyVC.swift */,
+			);
+			path = PhoneVerifyVC;
+			sourceTree = "<group>";
+		};
+		FA81A8C42727704100D6759A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FA81A8C52727705B00D6759A /* Constants.swift */,
+				FA0D162B2742CCB300CF4413 /* FontManager.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		FA933432271A10780002DBED = {
 			isa = PBXGroup;
 			children = (
 				FA93343D271A10780002DBED /* PitchVenture */,
 				FA93343C271A10780002DBED /* Products */,
+				7F2D321FC1A45AF67191A850 /* Pods */,
+				1C29550ED8F555926ADDCC41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +164,11 @@
 		FA93343D271A10780002DBED /* PitchVenture */ = {
 			isa = PBXGroup;
 			children = (
-				FA93343E271A10780002DBED /* AppDelegate.swift */,
+				FA81A8C42727704100D6759A /* Constants */,
+				FA81A8BC27276C1A00D6759A /* AppDelegates */,
+				FA474C8927234A83008601A9 /* Controllers */,
+				FA474C8627234993008601A9 /* Helpers */,
 				FA933440271A10780002DBED /* SceneDelegate.swift */,
-				FA933442271A10780002DBED /* ViewController.swift */,
 				FA933444271A10780002DBED /* Main.storyboard */,
 				FA933447271A107A0002DBED /* Assets.xcassets */,
 				FA933449271A107A0002DBED /* LaunchScreen.storyboard */,
@@ -74,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA93344F271A107A0002DBED /* Build configuration list for PBXNativeTarget "PitchVenture" */;
 			buildPhases = (
+				1FD12A26A7C605F1B2151C2E /* [CP] Check Pods Manifest.lock */,
 				FA933437271A10780002DBED /* Sources */,
 				FA933438271A10780002DBED /* Frameworks */,
 				FA933439271A10780002DBED /* Resources */,
+				08EBE890B319DB65DA6BBBEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,6 +205,7 @@
 		FA933433271A10780002DBED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PV;
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = PitchVenture;
@@ -125,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5B01AD2742D65900976EB6 /* Environments.plist in Resources */,
 				FA93344B271A107A0002DBED /* LaunchScreen.storyboard in Resources */,
 				FA933448271A107A0002DBED /* Assets.xcassets in Resources */,
 				FA933446271A10780002DBED /* Main.storyboard in Resources */,
@@ -133,14 +247,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08EBE890B319DB65DA6BBBEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PitchVenture/Pods-PitchVenture-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PitchVenture/Pods-PitchVenture-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PitchVenture/Pods-PitchVenture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FD12A26A7C605F1B2151C2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PitchVenture-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA933437271A10780002DBED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA933443271A10780002DBED /* ViewController.swift in Sources */,
+				FA81A8B9272769F100D6759A /* PVLoginVC.swift in Sources */,
+				FA81A8BB27276AB300D6759A /* PVBaseVC.swift in Sources */,
+				FA81A8B62727688D00D6759A /* PVLabel.swift in Sources */,
+				FA81A8BE27276C7900D6759A /* AppDelegate+Additions.swift in Sources */,
 				FA93343F271A10780002DBED /* AppDelegate.swift in Sources */,
+				FA81A8C62727705B00D6759A /* Constants.swift in Sources */,
+				FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */,
 				FA933441271A10780002DBED /* SceneDelegate.swift in Sources */,
+				FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */,
+				FA81A8C327276FED00D6759A /* PVNavigationController.swift in Sources */,
+				FA81A8C127276F7100D6759A /* PVPhoneVerifyVC.swift in Sources */,
+				FA474C8827234A25008601A9 /* PVButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +447,7 @@
 		};
 		FA933450271A107A0002DBED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBD47B50966951F0CEB0EE3B /* Pods-PitchVenture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +467,7 @@
 		};
 		FA933451271A107A0002DBED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
