@@ -9,4 +9,12 @@ target 'PitchVenture' do
   pod 'IQKeyboardManagerSwift', '6.5.9'
   pod 'SVProgressHUD', '2.2.5'
 
+  # Country Code Selection
+  pod 'FlagPhoneNumber', '~> 0.8.0'
+  
+  # Pull To Refresh
+  pod 'LGRefreshView'
+  
+  # Object Mapping
+  pod 'ObjectMapper', '~> 3.3'
 end

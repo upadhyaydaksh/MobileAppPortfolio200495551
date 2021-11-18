@@ -13,6 +13,39 @@ let appDel = UIApplication.shared.delegate as! AppDelegate
 
 struct Constants {
     
+    struct TextLength {
+        static let GenericMaxTextLength = 256
+        static let VerificationCodeLength = 4
+        static let PriceBeforeDecimalLength = 6
+        static let PriceAfterDecimalLength = 2
+        static let RulesShort = 100
+        static let PasswordMaxLength = 30
+        static let PhoneNumberMaxLength = 15
+        static let NoLimit = Int(INT_MAX)
+        static let ShortDescriptionTextLength = 200
+        static let ZipCodeMaxLength = 10
+        static let ZipCodeMinLength = 6
+        static let PriceMaxLength = 7
+        static let QuantityMaxLength = 3
+        static let AccountNumberMaxLength = 17
+        static let RoutingNumberMaxLength = 9
+    }
+    
+    struct AcceptableCharacters {
+        static let OnlyNumbers = "0123456789"
+        static let Price = "0123456789."
+        static let PhoneNumber = "+0123456789"
+        static let Alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        static let AlphabetsWithSpace = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+        static let AlphabetsNumbersWithSpace = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+        static let AlphabetsNumbersDashOnly = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-"
+        static let NumbersWithSpace = "0123456789 "
+    }
+    
+    struct CharacterSets {
+        static let SpaceCharacterSetInverted = CharacterSet(charactersIn: " ").inverted
+    }
+    
     struct Default {
         static let animationDuration: TimeInterval = 0.3
         static let contentInsets: UIEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
@@ -38,9 +71,14 @@ struct Constants {
     }
     
     struct color {
-        static let kAPP_COLOR = Constants.color.kRoot_App_Blue_Color
+        static let kAPP_COLOR = Constants.color.kApp_Blue_Color
         
-        static let kRoot_App_Blue_Color = UIColor(red: 42.0/255.0, green: 172.0/255.0, blue: 150.0/255.0, alpha: 1.0)
+        static let kApp_Blue_Color = UIColor(red: 42.0/255.0, green: 172.0/255.0, blue: 150.0/255.0, alpha: 1.0)
+        
+        static let kTEXTFIELD_PLACEHOLDER_COLOR = UIColor(red: 186.0/255.0, green: 187.0/255.0, blue: 188.0/255.0, alpha: 1.0)
+        
+        static let kTextFieldBorderColor = UIColor(red: 231.0/255.0, green: 231.0/255.0, blue: 231.0/255.0, alpha: 1.0)
+        
     }
     
     static let BASE_URL = ConfigurationManager.sharedManager().APIEndPoint()

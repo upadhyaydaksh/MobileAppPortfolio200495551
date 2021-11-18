@@ -24,6 +24,24 @@
 		FA933446271A10780002DBED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA933444271A10780002DBED /* Main.storyboard */; };
 		FA933448271A107A0002DBED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA933447271A107A0002DBED /* Assets.xcassets */; };
 		FA93344B271A107A0002DBED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA933449271A107A0002DBED /* LaunchScreen.storyboard */; };
+		FAB45CDA27460FC4009F1D5D /* PVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CD927460FC4009F1D5D /* PVView.swift */; };
+		FAB45CDC27462BD6009F1D5D /* PVTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CDB27462BD6009F1D5D /* PVTextFieldView.swift */; };
+		FAB45CDE27462C15009F1D5D /* PVTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CDD27462C15009F1D5D /* PVTextField.swift */; };
+		FAB45CEB27462D8B009F1D5D /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE027462D8B009F1D5D /* UIImage+Additions.swift */; };
+		FAB45CEC27462D8B009F1D5D /* UINavigationController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE127462D8B009F1D5D /* UINavigationController+Additions.swift */; };
+		FAB45CED27462D8B009F1D5D /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE227462D8B009F1D5D /* UIView+Additions.swift */; };
+		FAB45CEE27462D8B009F1D5D /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE327462D8B009F1D5D /* UITextViewPlaceholder.swift */; };
+		FAB45CEF27462D8B009F1D5D /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE427462D8B009F1D5D /* UIButton+Additions.swift */; };
+		FAB45CF027462D8B009F1D5D /* UITextField+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE527462D8B009F1D5D /* UITextField+Additions.swift */; };
+		FAB45CF127462D8B009F1D5D /* UITapGestureRecognizer+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE627462D8B009F1D5D /* UITapGestureRecognizer+Additions.swift */; };
+		FAB45CF227462D8B009F1D5D /* UIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE727462D8B009F1D5D /* UIScrollView+Additions.swift */; };
+		FAB45CF327462D8B009F1D5D /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE827462D8B009F1D5D /* UITableView+Additions.swift */; };
+		FAB45CF427462D8B009F1D5D /* UIStoryboard+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE927462D8B009F1D5D /* UIStoryboard+Additions.swift */; };
+		FAB45CF527462D8B009F1D5D /* UIBarButtonItem+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CEA27462D8B009F1D5D /* UIBarButtonItem+Additions.swift */; };
+		FAB45CF927463889009F1D5D /* String+Attributions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CF727463888009F1D5D /* String+Attributions.swift */; };
+		FAB45CFA27463889009F1D5D /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CF827463888009F1D5D /* String+Additions.swift */; };
+		FAB45CFC27463AD5009F1D5D /* PVTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CFB27463AD5009F1D5D /* PVTableView.swift */; };
+		FAB45CFE27463BE4009F1D5D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CFD27463BE3009F1D5D /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +66,24 @@
 		FA933447271A107A0002DBED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA93344A271A107A0002DBED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA93344C271A107A0002DBED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB45CD927460FC4009F1D5D /* PVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVView.swift; sourceTree = "<group>"; };
+		FAB45CDB27462BD6009F1D5D /* PVTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTextFieldView.swift; sourceTree = "<group>"; };
+		FAB45CDD27462C15009F1D5D /* PVTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTextField.swift; sourceTree = "<group>"; };
+		FAB45CE027462D8B009F1D5D /* UIImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CE127462D8B009F1D5D /* UINavigationController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CE227462D8B009F1D5D /* UIView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CE327462D8B009F1D5D /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
+		FAB45CE427462D8B009F1D5D /* UIButton+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CE527462D8B009F1D5D /* UITextField+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CE627462D8B009F1D5D /* UITapGestureRecognizer+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CE727462D8B009F1D5D /* UIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CE827462D8B009F1D5D /* UITableView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CE927462D8B009F1D5D /* UIStoryboard+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CEA27462D8B009F1D5D /* UIBarButtonItem+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CF727463888009F1D5D /* String+Attributions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Attributions.swift"; sourceTree = "<group>"; };
+		FAB45CF827463888009F1D5D /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		FAB45CFB27463AD5009F1D5D /* PVTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVTableView.swift; sourceTree = "<group>"; };
+		FAB45CFD27463BE3009F1D5D /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +118,17 @@
 		FA474C8627234993008601A9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FAB45CF627463888009F1D5D /* String */,
+				FAB45CDF27462D8B009F1D5D /* UI */,
 				FA5B01A92742D60300976EB6 /* Configuration Manager */,
 				FA474C8727234A25008601A9 /* PVButton.swift */,
 				FA81A8B52727688D00D6759A /* PVLabel.swift */,
 				FA81A8BA27276AB300D6759A /* PVBaseVC.swift */,
 				FA81A8C227276FED00D6759A /* PVNavigationController.swift */,
+				FAB45CD927460FC4009F1D5D /* PVView.swift */,
+				FAB45CDB27462BD6009F1D5D /* PVTextFieldView.swift */,
+				FAB45CDD27462C15009F1D5D /* PVTextField.swift */,
+				FAB45CFB27463AD5009F1D5D /* PVTableView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -137,6 +179,7 @@
 		FA81A8C42727704100D6759A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				FAB45CFD27463BE3009F1D5D /* Country.swift */,
 				FA81A8C52727705B00D6759A /* Constants.swift */,
 				FA0D162B2742CCB300CF4413 /* FontManager.swift */,
 			);
@@ -175,6 +218,33 @@
 				FA93344C271A107A0002DBED /* Info.plist */,
 			);
 			path = PitchVenture;
+			sourceTree = "<group>";
+		};
+		FAB45CDF27462D8B009F1D5D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FAB45CE027462D8B009F1D5D /* UIImage+Additions.swift */,
+				FAB45CE127462D8B009F1D5D /* UINavigationController+Additions.swift */,
+				FAB45CE227462D8B009F1D5D /* UIView+Additions.swift */,
+				FAB45CE327462D8B009F1D5D /* UITextViewPlaceholder.swift */,
+				FAB45CE427462D8B009F1D5D /* UIButton+Additions.swift */,
+				FAB45CE527462D8B009F1D5D /* UITextField+Additions.swift */,
+				FAB45CE627462D8B009F1D5D /* UITapGestureRecognizer+Additions.swift */,
+				FAB45CE727462D8B009F1D5D /* UIScrollView+Additions.swift */,
+				FAB45CE827462D8B009F1D5D /* UITableView+Additions.swift */,
+				FAB45CE927462D8B009F1D5D /* UIStoryboard+Additions.swift */,
+				FAB45CEA27462D8B009F1D5D /* UIBarButtonItem+Additions.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FAB45CF627463888009F1D5D /* String */ = {
+			isa = PBXGroup;
+			children = (
+				FAB45CF727463888009F1D5D /* String+Attributions.swift */,
+				FAB45CF827463888009F1D5D /* String+Additions.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,18 +364,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB45CF027462D8B009F1D5D /* UITextField+Additions.swift in Sources */,
+				FAB45CED27462D8B009F1D5D /* UIView+Additions.swift in Sources */,
 				FA81A8B9272769F100D6759A /* PVLoginVC.swift in Sources */,
 				FA81A8BB27276AB300D6759A /* PVBaseVC.swift in Sources */,
+				FAB45CEF27462D8B009F1D5D /* UIButton+Additions.swift in Sources */,
 				FA81A8B62727688D00D6759A /* PVLabel.swift in Sources */,
+				FAB45CF527462D8B009F1D5D /* UIBarButtonItem+Additions.swift in Sources */,
+				FAB45CF427462D8B009F1D5D /* UIStoryboard+Additions.swift in Sources */,
 				FA81A8BE27276C7900D6759A /* AppDelegate+Additions.swift in Sources */,
+				FAB45CDA27460FC4009F1D5D /* PVView.swift in Sources */,
+				FAB45CF927463889009F1D5D /* String+Attributions.swift in Sources */,
+				FAB45CEE27462D8B009F1D5D /* UITextViewPlaceholder.swift in Sources */,
+				FAB45CF327462D8B009F1D5D /* UITableView+Additions.swift in Sources */,
 				FA93343F271A10780002DBED /* AppDelegate.swift in Sources */,
+				FAB45CFA27463889009F1D5D /* String+Additions.swift in Sources */,
 				FA81A8C62727705B00D6759A /* Constants.swift in Sources */,
 				FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */,
 				FA933441271A10780002DBED /* SceneDelegate.swift in Sources */,
+				FAB45CF227462D8B009F1D5D /* UIScrollView+Additions.swift in Sources */,
+				FAB45CDE27462C15009F1D5D /* PVTextField.swift in Sources */,
 				FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */,
+				FAB45CEC27462D8B009F1D5D /* UINavigationController+Additions.swift in Sources */,
 				FA81A8C327276FED00D6759A /* PVNavigationController.swift in Sources */,
 				FA81A8C127276F7100D6759A /* PVPhoneVerifyVC.swift in Sources */,
+				FAB45CEB27462D8B009F1D5D /* UIImage+Additions.swift in Sources */,
+				FAB45CF127462D8B009F1D5D /* UITapGestureRecognizer+Additions.swift in Sources */,
+				FAB45CFC27463AD5009F1D5D /* PVTableView.swift in Sources */,
 				FA474C8827234A25008601A9 /* PVButton.swift in Sources */,
+				FAB45CFE27463BE4009F1D5D /* Country.swift in Sources */,
+				FAB45CDC27462BD6009F1D5D /* PVTextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

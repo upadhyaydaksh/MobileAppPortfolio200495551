@@ -14,4 +14,25 @@ class PVLoginVC: PVBaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    // MARK: - Class Methods
+    
+    class func identifier() -> String {
+        return String(describing: self)
+    }
+    
+    class func instantiate() -> PVLoginVC {
+        return UIStoryboard.main().instantiateViewController(withIdentifier: PVLoginVC.identifier()) as! PVLoginVC
+    }
+    
+    @IBAction func btnAppleLoginAction(_ sender: Any) {
+        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
+        self.push(vc: objPVPhoneVerifyVC)
+    }
+    
+    @IBAction func btnGoogleLoginAction(_ sender: Any) {
+        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
+        self.push(vc: objPVPhoneVerifyVC)
+    }
+    
 }
