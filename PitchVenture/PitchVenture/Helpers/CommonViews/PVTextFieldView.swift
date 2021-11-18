@@ -1,5 +1,5 @@
 //
-//  PVTextField.swift
+//  PVTextFieldView.swift
 //  PitchVenture
 //
 //  Created by Harshit on 18/11/21.
@@ -18,6 +18,7 @@ enum PVUserTextFieldViewMode {
 class PVTextFieldView: UIView {
     
     @IBOutlet weak var textField: PVTextField!
+    
     
     @IBOutlet weak var textFieldPhonePicker: FPNTextField!
     
@@ -88,20 +89,22 @@ class PVTextFieldView: UIView {
     private func initialize() {
         
         // Custom the size/edgeInsets of the flag button
-        textFieldPhonePicker.flagButtonSize = CGSize(width: 40, height: 30)
+        textFieldPhonePicker.flagButtonSize = CGSize(width: 40, height: 40)
         //textFieldPhonePicker.flagButtonEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 5)
         
         textFieldPhonePicker.font = FontManager.montserratFont(fontName: .semiBold, size: 17)
         
         textFieldPhonePicker.backgroundColor = UIColor.clear
         
-        // Set the country US, Japan, Korea, India
-        textFieldPhonePicker.setCountries(including: [.US, .JP, .KP, .KR, .IN])
+        // Set the country CA, US, Japan, Korea, India
+        textFieldPhonePicker.setCountries(including: [.CA, .US, .IN])
         
         
-        textFieldPhonePicker.setFlag(countryCode: FPNCountryCode.US)
+        textFieldPhonePicker.setFlag(countryCode: FPNCountryCode.CA)
         
-        textFieldPhonePicker.textColor = Constants.color.kAPP_COLOR
+        //textFieldPhonePicker.textColor = Constants.color.kAPP_COLOR
+        
+        textFieldPhonePicker.textColor = .black
         textFieldPhonePicker.tintColor = textFieldPhonePicker.textColor!
         textFieldPhonePicker.attributedPlaceholder = NSAttributedString(string: textFieldPhonePicker.placeholder ?? "", attributes:[NSAttributedString.Key.foregroundColor: Constants.color.kTEXTFIELD_PLACEHOLDER_COLOR])
         textFieldPhonePicker.font = FontManager.montserratFont(fontName: .semiBold, size: 16)

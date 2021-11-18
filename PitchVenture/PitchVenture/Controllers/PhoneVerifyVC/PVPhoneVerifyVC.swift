@@ -16,7 +16,7 @@ class PVPhoneVerifyVC: PVBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        txtPhoneNumber.viewMode = .phoneNumber
     }
     
     // MARK: - Class Methods
@@ -29,9 +29,26 @@ class PVPhoneVerifyVC: PVBaseVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVPhoneVerifyVC.identifier()) as! PVPhoneVerifyVC
     }
     
+    func isMobileNumberValid() -> Bool {
+        guard let _ = txtPhoneNumber.countryCode else { return false }
+        guard let _ = txtPhoneNumber.phone else {
+            PVMessage.showWarningWithMessage(message: "Please enter your phone number.")
+            return false
+        }
+        return true
+    }
+    
     @IBAction func btnUserRoleSegmentControlAction(_ sender: Any) {
     }
     
     @IBAction func btnSubmitAction(_ sender: Any) {
+        // PHONE NUMBER VERIFY
+        if isMobileNumberValid() {
+            guard let countryCode = txtPhoneNumber.countryCode else { return }
+            guard let phoneNumber = txtPhoneNumber.phone else { return }
+            let param = ["countryCode": countryCode, "phone": phoneNumber]
+            //self.signIn(parameters: param as [String : AnyObject])
+            print(param)
+        }
     }
 }

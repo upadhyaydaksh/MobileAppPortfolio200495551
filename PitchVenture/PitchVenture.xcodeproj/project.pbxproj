@@ -20,12 +20,10 @@
 		FA81A8C327276FED00D6759A /* PVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8C227276FED00D6759A /* PVNavigationController.swift */; };
 		FA81A8C62727705B00D6759A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8C52727705B00D6759A /* Constants.swift */; };
 		FA93343F271A10780002DBED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA93343E271A10780002DBED /* AppDelegate.swift */; };
-		FA933441271A10780002DBED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA933440271A10780002DBED /* SceneDelegate.swift */; };
 		FA933446271A10780002DBED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA933444271A10780002DBED /* Main.storyboard */; };
 		FA933448271A107A0002DBED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA933447271A107A0002DBED /* Assets.xcassets */; };
 		FA93344B271A107A0002DBED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA933449271A107A0002DBED /* LaunchScreen.storyboard */; };
 		FAB45CDA27460FC4009F1D5D /* PVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CD927460FC4009F1D5D /* PVView.swift */; };
-		FAB45CDC27462BD6009F1D5D /* PVTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CDB27462BD6009F1D5D /* PVTextFieldView.swift */; };
 		FAB45CDE27462C15009F1D5D /* PVTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CDD27462C15009F1D5D /* PVTextField.swift */; };
 		FAB45CEB27462D8B009F1D5D /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE027462D8B009F1D5D /* UIImage+Additions.swift */; };
 		FAB45CEC27462D8B009F1D5D /* UINavigationController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CE127462D8B009F1D5D /* UINavigationController+Additions.swift */; };
@@ -42,6 +40,32 @@
 		FAB45CFA27463889009F1D5D /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CF827463888009F1D5D /* String+Additions.swift */; };
 		FAB45CFC27463AD5009F1D5D /* PVTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CFB27463AD5009F1D5D /* PVTableView.swift */; };
 		FAB45CFE27463BE4009F1D5D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CFD27463BE3009F1D5D /* Country.swift */; };
+		FAEAC3D527470150005F0A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAC3D42747014F005F0A4F /* SceneDelegate.swift */; };
+		FAEAC3DE27470D16005F0A4F /* PVTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEAC3DA27470D16005F0A4F /* PVTextFieldView.xib */; };
+		FAEAC3E027470DA1005F0A4F /* PVTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAC3DF27470DA1005F0A4F /* PVTextFieldView.swift */; };
+		FAEAC3E227470F47005F0A4F /* PVMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAC3E127470F47005F0A4F /* PVMessage.swift */; };
+		FAF4B62D2746D86400B9503F /* PVUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B62C2746D86400B9503F /* PVUserManager.swift */; };
+		FAF4B6322746DA5A00B9503F /* PVHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6312746DA5A00B9503F /* PVHomeVC.swift */; };
+		FAF4B6362746DE8400B9503F /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6342746DE8400B9503F /* PhoneNumber.swift */; };
+		FAF4B6372746DE8400B9503F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6352746DE8400B9503F /* User.swift */; };
+		FAF4B63D2746E1C400B9503F /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6392746E1C300B9503F /* StatusCode.swift */; };
+		FAF4B63E2746E1C400B9503F /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B63A2746E1C300B9503F /* RequestManager.swift */; };
+		FAF4B63F2746E1C400B9503F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B63B2746E1C300B9503F /* Response.swift */; };
+		FAF4B6402746E1C400B9503F /* NSMutableURLRequest+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B63C2746E1C300B9503F /* NSMutableURLRequest+Additions.swift */; };
+		FAF4B6462746E9CD00B9503F /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6452746E9CD00B9503F /* LogManager.swift */; };
+		FAF4B64A2746EAEC00B9503F /* Date+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6482746EAEC00B9503F /* Date+Additions.swift */; };
+		FAF4B64B2746EAEC00B9503F /* NSDate+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6492746EAEC00B9503F /* NSDate+Formatters.swift */; };
+		FAF4B64D2746EBA500B9503F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B64C2746EBA400B9503F /* Helper.swift */; };
+		FAF4B64F2746ECB300B9503F /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B64E2746ECB300B9503F /* Address.swift */; };
+		FAF4B6522746EDBF00B9503F /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6502746EDBF00B9503F /* AppInfo.swift */; };
+		FAF4B6532746EDBF00B9503F /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6512746EDBF00B9503F /* DeviceInfo.swift */; };
+		FAF4B6572746EE4C00B9503F /* NSUserDefaults+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6552746EE4C00B9503F /* NSUserDefaults+Additions.swift */; };
+		FAF4B6582746EE4C00B9503F /* Userdefaults+Savings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6562746EE4C00B9503F /* Userdefaults+Savings.swift */; };
+		FAF4B65A2746F15B00B9503F /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6592746F15B00B9503F /* Media.swift */; };
+		FAF4B65C2746F23D00B9503F /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B65B2746F23D00B9503F /* Messages.swift */; };
+		FAF4B6602746F59900B9503F /* Dictionary+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B65E2746F59900B9503F /* Dictionary+Request.swift */; };
+		FAF4B6612746F59900B9503F /* Dictionary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B65F2746F59900B9503F /* Dictionary+Additions.swift */; };
+		FAF4B6642746F71500B9503F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6632746F71400B9503F /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,13 +85,11 @@
 		FA81A8C52727705B00D6759A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA93343B271A10780002DBED /* PitchVenture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchVenture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA93343E271A10780002DBED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA933440271A10780002DBED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA933445271A10780002DBED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA933447271A107A0002DBED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA93344A271A107A0002DBED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA93344C271A107A0002DBED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB45CD927460FC4009F1D5D /* PVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVView.swift; sourceTree = "<group>"; };
-		FAB45CDB27462BD6009F1D5D /* PVTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTextFieldView.swift; sourceTree = "<group>"; };
 		FAB45CDD27462C15009F1D5D /* PVTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTextField.swift; sourceTree = "<group>"; };
 		FAB45CE027462D8B009F1D5D /* UIImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
 		FAB45CE127462D8B009F1D5D /* UINavigationController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Additions.swift"; sourceTree = "<group>"; };
@@ -84,6 +106,32 @@
 		FAB45CF827463888009F1D5D /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		FAB45CFB27463AD5009F1D5D /* PVTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVTableView.swift; sourceTree = "<group>"; };
 		FAB45CFD27463BE3009F1D5D /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		FAEAC3D42747014F005F0A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FAEAC3DA27470D16005F0A4F /* PVTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PVTextFieldView.xib; sourceTree = "<group>"; };
+		FAEAC3DF27470DA1005F0A4F /* PVTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTextFieldView.swift; sourceTree = "<group>"; };
+		FAEAC3E127470F47005F0A4F /* PVMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVMessage.swift; sourceTree = "<group>"; };
+		FAF4B62C2746D86400B9503F /* PVUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVUserManager.swift; sourceTree = "<group>"; };
+		FAF4B6312746DA5A00B9503F /* PVHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVHomeVC.swift; sourceTree = "<group>"; };
+		FAF4B6342746DE8400B9503F /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		FAF4B6352746DE8400B9503F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FAF4B6392746E1C300B9503F /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		FAF4B63A2746E1C300B9503F /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		FAF4B63B2746E1C300B9503F /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		FAF4B63C2746E1C300B9503F /* NSMutableURLRequest+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableURLRequest+Additions.swift"; sourceTree = "<group>"; };
+		FAF4B6452746E9CD00B9503F /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		FAF4B6482746EAEC00B9503F /* Date+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Additions.swift"; sourceTree = "<group>"; };
+		FAF4B6492746EAEC00B9503F /* NSDate+Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Formatters.swift"; sourceTree = "<group>"; };
+		FAF4B64C2746EBA400B9503F /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		FAF4B64E2746ECB300B9503F /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		FAF4B6502746EDBF00B9503F /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		FAF4B6512746EDBF00B9503F /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		FAF4B6552746EE4C00B9503F /* NSUserDefaults+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+Additions.swift"; sourceTree = "<group>"; };
+		FAF4B6562746EE4C00B9503F /* Userdefaults+Savings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Userdefaults+Savings.swift"; sourceTree = "<group>"; };
+		FAF4B6592746F15B00B9503F /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		FAF4B65B2746F23D00B9503F /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		FAF4B65E2746F59900B9503F /* Dictionary+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Request.swift"; sourceTree = "<group>"; };
+		FAF4B65F2746F59900B9503F /* Dictionary+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Additions.swift"; sourceTree = "<group>"; };
+		FAF4B6632746F71400B9503F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,16 +166,25 @@
 		FA474C8627234993008601A9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FAEAC3D627470CFE005F0A4F /* CommonViews */,
+				FAF4B64C2746EBA400B9503F /* Helper.swift */,
 				FAB45CF627463888009F1D5D /* String */,
 				FAB45CDF27462D8B009F1D5D /* UI */,
 				FA5B01A92742D60300976EB6 /* Configuration Manager */,
+				FAF4B6442746E9CD00B9503F /* Log Manager */,
+				FAF4B6382746E1C300B9503F /* Network Manager */,
+				FAF4B6472746EAEC00B9503F /* NSDate */,
+				FAF4B65D2746F59900B9503F /* Dictionary */,
+				FAF4B6542746EE4C00B9503F /* NSUserDefaults */,
+				FAF4B6622746F71400B9503F /* Reachability */,
+				FAF4B62B2746D86400B9503F /* ServiceManagers */,
 				FA474C8727234A25008601A9 /* PVButton.swift */,
 				FA81A8B52727688D00D6759A /* PVLabel.swift */,
 				FA81A8BA27276AB300D6759A /* PVBaseVC.swift */,
 				FA81A8C227276FED00D6759A /* PVNavigationController.swift */,
 				FAB45CD927460FC4009F1D5D /* PVView.swift */,
-				FAB45CDB27462BD6009F1D5D /* PVTextFieldView.swift */,
 				FAB45CDD27462C15009F1D5D /* PVTextField.swift */,
+				FAEAC3E127470F47005F0A4F /* PVMessage.swift */,
 				FAB45CFB27463AD5009F1D5D /* PVTableView.swift */,
 			);
 			path = Helpers;
@@ -136,6 +193,7 @@
 		FA474C8927234A83008601A9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAF4B6302746DA3E00B9503F /* HomeVC */,
 				FA81A8BF27276EF600D6759A /* PhoneVerifyVC */,
 				FA81A8B72727696E00D6759A /* LoginVC */,
 			);
@@ -162,6 +220,7 @@
 		FA81A8BC27276C1A00D6759A /* AppDelegates */ = {
 			isa = PBXGroup;
 			children = (
+				FAEAC3D42747014F005F0A4F /* SceneDelegate.swift */,
 				FA93343E271A10780002DBED /* AppDelegate.swift */,
 				FA81A8BD27276C7900D6759A /* AppDelegate+Additions.swift */,
 			);
@@ -180,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB45CFD27463BE3009F1D5D /* Country.swift */,
+				FAF4B65B2746F23D00B9503F /* Messages.swift */,
 				FA81A8C52727705B00D6759A /* Constants.swift */,
 				FA0D162B2742CCB300CF4413 /* FontManager.swift */,
 			);
@@ -210,8 +270,8 @@
 				FA81A8C42727704100D6759A /* Constants */,
 				FA81A8BC27276C1A00D6759A /* AppDelegates */,
 				FA474C8927234A83008601A9 /* Controllers */,
+				FAF4B6332746DE8400B9503F /* Models */,
 				FA474C8627234993008601A9 /* Helpers */,
-				FA933440271A10780002DBED /* SceneDelegate.swift */,
 				FA933444271A10780002DBED /* Main.storyboard */,
 				FA933447271A107A0002DBED /* Assets.xcassets */,
 				FA933449271A107A0002DBED /* LaunchScreen.storyboard */,
@@ -245,6 +305,98 @@
 				FAB45CF827463888009F1D5D /* String+Additions.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		FAEAC3D627470CFE005F0A4F /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				FAEAC3DA27470D16005F0A4F /* PVTextFieldView.xib */,
+				FAEAC3DF27470DA1005F0A4F /* PVTextFieldView.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		FAF4B62B2746D86400B9503F /* ServiceManagers */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4B62C2746D86400B9503F /* PVUserManager.swift */,
+			);
+			path = ServiceManagers;
+			sourceTree = "<group>";
+		};
+		FAF4B6302746DA3E00B9503F /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4B6312746DA5A00B9503F /* PVHomeVC.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		FAF4B6332746DE8400B9503F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4B6592746F15B00B9503F /* Media.swift */,
+				FAF4B6502746EDBF00B9503F /* AppInfo.swift */,
+				FAF4B6512746EDBF00B9503F /* DeviceInfo.swift */,
+				FAF4B64E2746ECB300B9503F /* Address.swift */,
+				FAF4B6342746DE8400B9503F /* PhoneNumber.swift */,
+				FAF4B6352746DE8400B9503F /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAF4B6382746E1C300B9503F /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4B6392746E1C300B9503F /* StatusCode.swift */,
+				FAF4B63A2746E1C300B9503F /* RequestManager.swift */,
+				FAF4B63B2746E1C300B9503F /* Response.swift */,
+				FAF4B63C2746E1C300B9503F /* NSMutableURLRequest+Additions.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		FAF4B6442746E9CD00B9503F /* Log Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4B6452746E9CD00B9503F /* LogManager.swift */,
+			);
+			path = "Log Manager";
+			sourceTree = "<group>";
+		};
+		FAF4B6472746EAEC00B9503F /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4B6482746EAEC00B9503F /* Date+Additions.swift */,
+				FAF4B6492746EAEC00B9503F /* NSDate+Formatters.swift */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		FAF4B6542746EE4C00B9503F /* NSUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4B6552746EE4C00B9503F /* NSUserDefaults+Additions.swift */,
+				FAF4B6562746EE4C00B9503F /* Userdefaults+Savings.swift */,
+			);
+			path = NSUserDefaults;
+			sourceTree = "<group>";
+		};
+		FAF4B65D2746F59900B9503F /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4B65E2746F59900B9503F /* Dictionary+Request.swift */,
+				FAF4B65F2746F59900B9503F /* Dictionary+Additions.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		FAF4B6622746F71400B9503F /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				FAF4B6632746F71400B9503F /* Reachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +464,7 @@
 				FA93344B271A107A0002DBED /* LaunchScreen.storyboard in Resources */,
 				FA933448271A107A0002DBED /* Assets.xcassets in Resources */,
 				FA933446271A10780002DBED /* Main.storyboard in Resources */,
+				FAEAC3DE27470D16005F0A4F /* PVTextFieldView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,31 +522,54 @@
 				FA81A8B9272769F100D6759A /* PVLoginVC.swift in Sources */,
 				FA81A8BB27276AB300D6759A /* PVBaseVC.swift in Sources */,
 				FAB45CEF27462D8B009F1D5D /* UIButton+Additions.swift in Sources */,
+				FAF4B63F2746E1C400B9503F /* Response.swift in Sources */,
 				FA81A8B62727688D00D6759A /* PVLabel.swift in Sources */,
 				FAB45CF527462D8B009F1D5D /* UIBarButtonItem+Additions.swift in Sources */,
 				FAB45CF427462D8B009F1D5D /* UIStoryboard+Additions.swift in Sources */,
 				FA81A8BE27276C7900D6759A /* AppDelegate+Additions.swift in Sources */,
+				FAEAC3E027470DA1005F0A4F /* PVTextFieldView.swift in Sources */,
+				FAEAC3E227470F47005F0A4F /* PVMessage.swift in Sources */,
 				FAB45CDA27460FC4009F1D5D /* PVView.swift in Sources */,
 				FAB45CF927463889009F1D5D /* String+Attributions.swift in Sources */,
+				FAF4B64B2746EAEC00B9503F /* NSDate+Formatters.swift in Sources */,
+				FAF4B6362746DE8400B9503F /* PhoneNumber.swift in Sources */,
 				FAB45CEE27462D8B009F1D5D /* UITextViewPlaceholder.swift in Sources */,
 				FAB45CF327462D8B009F1D5D /* UITableView+Additions.swift in Sources */,
+				FAF4B6462746E9CD00B9503F /* LogManager.swift in Sources */,
+				FAF4B6572746EE4C00B9503F /* NSUserDefaults+Additions.swift in Sources */,
 				FA93343F271A10780002DBED /* AppDelegate.swift in Sources */,
+				FAF4B63E2746E1C400B9503F /* RequestManager.swift in Sources */,
 				FAB45CFA27463889009F1D5D /* String+Additions.swift in Sources */,
 				FA81A8C62727705B00D6759A /* Constants.swift in Sources */,
+				FAF4B6322746DA5A00B9503F /* PVHomeVC.swift in Sources */,
 				FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */,
-				FA933441271A10780002DBED /* SceneDelegate.swift in Sources */,
+				FAF4B6402746E1C400B9503F /* NSMutableURLRequest+Additions.swift in Sources */,
+				FAF4B6522746EDBF00B9503F /* AppInfo.swift in Sources */,
 				FAB45CF227462D8B009F1D5D /* UIScrollView+Additions.swift in Sources */,
+				FAF4B64F2746ECB300B9503F /* Address.swift in Sources */,
+				FAF4B63D2746E1C400B9503F /* StatusCode.swift in Sources */,
 				FAB45CDE27462C15009F1D5D /* PVTextField.swift in Sources */,
 				FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */,
+				FAF4B64D2746EBA500B9503F /* Helper.swift in Sources */,
 				FAB45CEC27462D8B009F1D5D /* UINavigationController+Additions.swift in Sources */,
+				FAF4B6372746DE8400B9503F /* User.swift in Sources */,
+				FAF4B6532746EDBF00B9503F /* DeviceInfo.swift in Sources */,
 				FA81A8C327276FED00D6759A /* PVNavigationController.swift in Sources */,
 				FA81A8C127276F7100D6759A /* PVPhoneVerifyVC.swift in Sources */,
+				FAF4B6642746F71500B9503F /* Reachability.swift in Sources */,
+				FAF4B65C2746F23D00B9503F /* Messages.swift in Sources */,
+				FAF4B6612746F59900B9503F /* Dictionary+Additions.swift in Sources */,
+				FAF4B65A2746F15B00B9503F /* Media.swift in Sources */,
 				FAB45CEB27462D8B009F1D5D /* UIImage+Additions.swift in Sources */,
+				FAF4B6582746EE4C00B9503F /* Userdefaults+Savings.swift in Sources */,
 				FAB45CF127462D8B009F1D5D /* UITapGestureRecognizer+Additions.swift in Sources */,
+				FAF4B62D2746D86400B9503F /* PVUserManager.swift in Sources */,
 				FAB45CFC27463AD5009F1D5D /* PVTableView.swift in Sources */,
+				FAF4B6602746F59900B9503F /* Dictionary+Request.swift in Sources */,
+				FAEAC3D527470150005F0A4F /* SceneDelegate.swift in Sources */,
 				FA474C8827234A25008601A9 /* PVButton.swift in Sources */,
 				FAB45CFE27463BE4009F1D5D /* Country.swift in Sources */,
-				FAB45CDC27462BD6009F1D5D /* PVTextFieldView.swift in Sources */,
+				FAF4B64A2746EAEC00B9503F /* Date+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

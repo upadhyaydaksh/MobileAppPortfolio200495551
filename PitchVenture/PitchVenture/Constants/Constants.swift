@@ -11,6 +11,11 @@ import UIKit
 
 let appDel = UIApplication.shared.delegate as! AppDelegate
 
+enum DeviceType: String {
+    case iOS = "iPhone"
+    case Android = "Android"
+}
+
 struct Constants {
     
     struct TextLength {
@@ -70,6 +75,12 @@ struct Constants {
         static let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
     }
     
+    struct AppInfo {
+        static let appID = "1"
+        static let appVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        static let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+    }
+    
     struct color {
         static let kAPP_COLOR = Constants.color.kApp_Blue_Color
         
@@ -81,8 +92,16 @@ struct Constants {
         
     }
     
+    struct UserDefaultKeys {
+        static let ACTIVE_USER_KEY = "activeUser"
+        static let DeviceTokenKey = "DeviceTokenKey"
+        static let UserNameKey = "UserNameKey"
+        static let UserEmailKey = "UserEmailKey"
+        static let DeepLinkParams = "DeepLinkParams"
+    }
+    
     static let BASE_URL = ConfigurationManager.sharedManager().APIEndPoint()
     
     static let kKeyboardDistanceFromTextField: CGFloat = 20.0
-    
+ 
 }

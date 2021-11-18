@@ -17,4 +17,13 @@ target 'PitchVenture' do
   
   # Object Mapping
   pod 'ObjectMapper', '~> 3.3'
+  
+  # Logging
+  pod 'XCGLogger'
+  
+  # Localization (If Required in Future)
+  pod 'Localize-Swift', '~> 2.0'
+  
+  # Banners and alert messages
+  pod 'SwiftMessages', '~> 5.0'
 end

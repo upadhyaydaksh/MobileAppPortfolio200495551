@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BFUserTextFieldView" customModule="PitchVenture" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="nQc-yK-dpi" id="1FB-lV-Nsu"/>
+                <outlet property="textFieldPhonePicker" destination="cIK-3l-1ci" id="b79-Ep-L35"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="486-Zw-g7O">
+            <rect key="frame" x="0.0" y="0.0" width="533" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwl-lZ-wLi" customClass="HSView" customModule="PitchVenture" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="533" height="96"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nQc-yK-dpi" customClass="PVTextField" customModule="PitchVenture" customModuleProvider="target">
+                            <rect key="frame" x="10" y="0.0" width="513" height="96"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="5JW-hu-c4B"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cIK-3l-1ci" customClass="FPNTextField" customModule="FlagPhoneNumber">
+                            <rect key="frame" x="10" y="0.0" width="513" height="96"/>
+                            <color key="textColor" red="0.0" green="0.062745098040000002" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="rDn-De-8r1"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="cIK-3l-1ci" firstAttribute="leading" secondItem="nQc-yK-dpi" secondAttribute="leading" id="89s-Ng-4os"/>
+                        <constraint firstAttribute="bottom" secondItem="nQc-yK-dpi" secondAttribute="bottom" id="9CK-s6-CuT"/>
+                        <constraint firstItem="cIK-3l-1ci" firstAttribute="trailing" secondItem="nQc-yK-dpi" secondAttribute="trailing" id="EoV-iC-l0L"/>
+                        <constraint firstItem="cIK-3l-1ci" firstAttribute="bottom" secondItem="nQc-yK-dpi" secondAttribute="bottom" id="FTg-ej-jcV"/>
+                        <constraint firstItem="nQc-yK-dpi" firstAttribute="top" secondItem="hwl-lZ-wLi" secondAttribute="top" id="Jcl-z7-fJy"/>
+                        <constraint firstItem="cIK-3l-1ci" firstAttribute="top" secondItem="nQc-yK-dpi" secondAttribute="top" id="Ra3-Dy-682"/>
+                        <constraint firstAttribute="trailing" secondItem="nQc-yK-dpi" secondAttribute="trailing" constant="10" id="eI6-sg-zib"/>
+                        <constraint firstItem="nQc-yK-dpi" firstAttribute="leading" secondItem="hwl-lZ-wLi" secondAttribute="leading" constant="10" id="pVu-7a-dqm"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.78823529411764703" green="0.78823529411764703" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hwl-lZ-wLi" firstAttribute="top" secondItem="486-Zw-g7O" secondAttribute="top" id="591-xY-MOD"/>
+                <constraint firstAttribute="bottom" secondItem="hwl-lZ-wLi" secondAttribute="bottom" id="AQw-23-Ydr"/>
+                <constraint firstItem="hwl-lZ-wLi" firstAttribute="trailing" secondItem="vMo-LQ-jfd" secondAttribute="trailing" id="SQb-VE-dwa"/>
+                <constraint firstItem="hwl-lZ-wLi" firstAttribute="leading" secondItem="vMo-LQ-jfd" secondAttribute="leading" id="kYZ-Lg-6Qj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vMo-LQ-jfd"/>
+            <point key="canvasLocation" x="-205.07246376811597" y="109.82142857142857"/>
+        </view>
+    </objects>
+</document>
