@@ -45,6 +45,7 @@
 		FAC8A152274818E200EFC95B /* PVHomeVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8A151274818E200EFC95B /* PVHomeVC+TableView.swift */; };
 		FAC8A1552748196000EFC95B /* PVHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8A1532748196000EFC95B /* PVHomeTableViewCell.swift */; };
 		FAC8A1562748196000EFC95B /* PVHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC8A1542748196000EFC95B /* PVHomeTableViewCell.xib */; };
+		FAC8A159274836D700EFC95B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC8A158274836D700EFC95B /* GoogleService-Info.plist */; };
 		FAEAC3D527470150005F0A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAC3D42747014F005F0A4F /* SceneDelegate.swift */; };
 		FAEAC3DE27470D16005F0A4F /* PVTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEAC3DA27470D16005F0A4F /* PVTextFieldView.xib */; };
 		FAEAC3E027470DA1005F0A4F /* PVTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAC3DF27470DA1005F0A4F /* PVTextFieldView.swift */; };
@@ -116,6 +117,7 @@
 		FAC8A151274818E200EFC95B /* PVHomeVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVHomeVC+TableView.swift"; sourceTree = "<group>"; };
 		FAC8A1532748196000EFC95B /* PVHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVHomeTableViewCell.swift; sourceTree = "<group>"; };
 		FAC8A1542748196000EFC95B /* PVHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVHomeTableViewCell.xib; sourceTree = "<group>"; };
+		FAC8A158274836D700EFC95B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAEAC3D42747014F005F0A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAEAC3DA27470D16005F0A4F /* PVTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PVTextFieldView.xib; sourceTree = "<group>"; };
 		FAEAC3DF27470DA1005F0A4F /* PVTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTextFieldView.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				FA933447271A107A0002DBED /* Assets.xcassets */,
 				FA933449271A107A0002DBED /* LaunchScreen.storyboard */,
 				FA93344C271A107A0002DBED /* Info.plist */,
+				FAC8A158274836D700EFC95B /* GoogleService-Info.plist */,
 			);
 			path = PitchVenture;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				FA933448271A107A0002DBED /* Assets.xcassets in Resources */,
 				FA933446271A10780002DBED /* Main.storyboard in Resources */,
 				FAEAC3DE27470D16005F0A4F /* PVTextFieldView.xib in Resources */,
+				FAC8A159274836D700EFC95B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

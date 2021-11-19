@@ -12,6 +12,8 @@ import GoogleSignIn
 
 class PVLoginVC: PVBaseVC {
 
+    let signInConfig = GIDConfiguration.init(clientID: Constants.googleClientId)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -53,14 +55,21 @@ class PVLoginVC: PVBaseVC {
     }
     
     @IBAction func btnAppleLoginAction(_ sender: Any) {
-//        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
-//        self.push(vc: objPVPhoneVerifyVC)
-        self.handleAuthorizationAppleIDButtonPress()
+        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
+        self.push(vc: objPVPhoneVerifyVC)
+//        self.handleAuthorizationAppleIDButtonPress()
     }
     
     @IBAction func btnGoogleLoginAction(_ sender: Any) {
-        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
-        self.push(vc: objPVPhoneVerifyVC)
+//        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
+//        self.push(vc: objPVPhoneVerifyVC)
+        
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
+          guard error == nil else { return }
+
+            PVMessage.showSuccessWithMessage(message: "Login successfull")
+          // If sign in succeeded, display the app's main content View.
+        }
     }
     
 }
