@@ -103,7 +103,7 @@ class PVTextFieldView: UIView {
         textFieldPhonePicker.setFlag(countryCode: FPNCountryCode.CA)
         
         //textFieldPhonePicker.textColor = Constants.color.kAPP_COLOR
-        
+         
         textFieldPhonePicker.textColor = .black
         textFieldPhonePicker.tintColor = textFieldPhonePicker.textColor!
         textFieldPhonePicker.attributedPlaceholder = NSAttributedString(string: textFieldPhonePicker.placeholder ?? "", attributes:[NSAttributedString.Key.foregroundColor: Constants.color.kTEXTFIELD_PLACEHOLDER_COLOR])

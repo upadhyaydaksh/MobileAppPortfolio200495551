@@ -13,6 +13,7 @@
 		FA474C8827234A25008601A9 /* PVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA474C8727234A25008601A9 /* PVButton.swift */; };
 		FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B01AA2742D65900976EB6 /* ConfigurationManager.swift */; };
 		FA5B01AD2742D65900976EB6 /* Environments.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA5B01AB2742D65900976EB6 /* Environments.plist */; };
+		FA70059627479944006DAB61 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70059527479944006DAB61 /* KeychainItem.swift */; };
 		FA81A8B62727688D00D6759A /* PVLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8B52727688D00D6759A /* PVLabel.swift */; };
 		FA81A8B9272769F100D6759A /* PVLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8B8272769F100D6759A /* PVLoginVC.swift */; };
 		FA81A8BB27276AB300D6759A /* PVBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8BA27276AB300D6759A /* PVBaseVC.swift */; };
@@ -78,6 +79,7 @@
 		FA474C8727234A25008601A9 /* PVButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVButton.swift; sourceTree = "<group>"; };
 		FA5B01AA2742D65900976EB6 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		FA5B01AB2742D65900976EB6 /* Environments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environments.plist; sourceTree = "<group>"; };
+		FA70059527479944006DAB61 /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 		FA81A8B52727688D00D6759A /* PVLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVLabel.swift; sourceTree = "<group>"; };
 		FA81A8B8272769F100D6759A /* PVLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVLoginVC.swift; sourceTree = "<group>"; };
 		FA81A8BA27276AB300D6759A /* PVBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVBaseVC.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 		FAF4B6332746DE8400B9503F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA70059527479944006DAB61 /* KeychainItem.swift */,
 				FAF4B6592746F15B00B9503F /* Media.swift */,
 				FAF4B6502746EDBF00B9503F /* AppInfo.swift */,
 				FAF4B6512746EDBF00B9503F /* DeviceInfo.swift */,
@@ -555,6 +558,7 @@
 				FAF4B6322746DA5A00B9503F /* PVHomeVC.swift in Sources */,
 				FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */,
 				FAF4B6402746E1C400B9503F /* NSMutableURLRequest+Additions.swift in Sources */,
+				FA70059627479944006DAB61 /* KeychainItem.swift in Sources */,
 				FAF4B6522746EDBF00B9503F /* AppInfo.swift in Sources */,
 				FAB45CF227462D8B009F1D5D /* UIScrollView+Additions.swift in Sources */,
 				FAF4B64F2746ECB300B9503F /* Address.swift in Sources */,
