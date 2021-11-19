@@ -10,6 +10,7 @@ import UIKit
 
 class PVPhoneVerifyVC: PVBaseVC {
 
+    //MARK: - Outlets
     @IBOutlet weak var vwPhoneNumber: PVView!
     @IBOutlet weak var txtPhoneNumber: PVTextFieldView!
     @IBOutlet weak var btnUserRoleSegmentControl: UISegmentedControl!
@@ -43,12 +44,14 @@ class PVPhoneVerifyVC: PVBaseVC {
     
     @IBAction func btnSubmitAction(_ sender: Any) {
         // PHONE NUMBER VERIFY
-        if isMobileNumberValid() {
-            guard let countryCode = txtPhoneNumber.countryCode else { return }
-            guard let phoneNumber = txtPhoneNumber.phone else { return }
-            let param = ["countryCode": countryCode, "phone": phoneNumber]
-            //self.signIn(parameters: param as [String : AnyObject])
-            print(param)
-        }
+//        if isMobileNumberValid() {
+//            guard let countryCode = txtPhoneNumber.countryCode else { return }
+//            guard let phoneNumber = txtPhoneNumber.phone else { return }
+//            let param = ["countryCode": countryCode, "phone": phoneNumber]
+//            self.signIn(parameters: param as [String : AnyObject])
+//            print(param)
+//        }
+        let objPVInputLocationVC = PVInputLocationVC.instantiate()
+        self.push(vc: objPVInputLocationVC)
     }
 }
