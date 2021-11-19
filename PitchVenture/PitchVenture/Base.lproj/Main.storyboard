@@ -136,7 +136,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your mobile number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lbM-ua-Hnj">
                                 <rect key="frame" x="24" y="24" width="272" height="23.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaj-1x-gq9" customClass="PVView" customModule="PitchVenture" customModuleProvider="target">
@@ -257,6 +257,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="btnImagePickerAction:" destination="l4S-c7-dNC" eventType="touchUpInside" id="ZDp-39-jnf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -364,6 +367,7 @@
                     <connections>
                         <outlet property="btnImagePicker" destination="nW1-Qr-xKd" id="acW-29-pv8"/>
                         <outlet property="btnSubmit" destination="Sbu-YX-eiL" id="9s4-jd-8Tu"/>
+                        <outlet property="imgLocation" destination="0Xj-j1-6eH" id="jpw-NZ-FZh"/>
                         <outlet property="txtAddressLine1" destination="tYz-mK-0kQ" id="9AH-bL-0eq"/>
                         <outlet property="txtAddressLine2" destination="roA-ii-p09" id="GFV-a3-hrJ"/>
                         <outlet property="txtApartmentNo" destination="ReW-gH-K6i" id="x8i-po-7sG"/>
