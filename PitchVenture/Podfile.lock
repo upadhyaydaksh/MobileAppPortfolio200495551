@@ -1,0 +1,60 @@
+PODS:
+  - DACircularProgress (2.3.1)
+  - FlagPhoneNumber (0.8.0):
+    - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
+  - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
+  - IQKeyboardManagerSwift (6.5.9)
+  - LGRefreshView (1.0.5):
+    - DACircularProgress (~> 2.3.0)
+  - Localize-Swift (2.0.0)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - ObjectMapper (3.5.3)
+  - SVProgressHUD (2.2.5)
+  - SwiftMessages (5.0.1):
+    - SwiftMessages/App (= 5.0.1)
+  - SwiftMessages/App (5.0.1)
+  - XCGLogger (7.0.1):
+    - XCGLogger/Core (= 7.0.1)
+  - XCGLogger/Core (7.0.1):
+    - ObjcExceptionBridging
+
+DEPENDENCIES:
+  - FlagPhoneNumber (~> 0.8.0)
+  - IQKeyboardManagerSwift (= 6.5.9)
+  - LGRefreshView
+  - Localize-Swift (~> 2.0)
+  - ObjectMapper (~> 3.3)
+  - SVProgressHUD (= 2.2.5)
+  - SwiftMessages (~> 5.0)
+  - XCGLogger
+
+SPEC REPOS:
+  trunk:
+    - DACircularProgress
+    - FlagPhoneNumber
+    - IQKeyboardManagerSwift
+    - LGRefreshView
+    - Localize-Swift
+    - ObjcExceptionBridging
+    - ObjectMapper
+    - SVProgressHUD
+    - SwiftMessages
+    - XCGLogger
+
+SPEC CHECKSUMS:
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  LGRefreshView: 34746afadbd23de8d1449cab15f3d89269645d43
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
+  XCGLogger: 1943831ef907df55108b0b18657953f868de973b
+
+PODFILE CHECKSUM: ae2f38cbde95774f16d7db7ff9ab4b9e34a0dc16
+
+COCOAPODS: 1.11.2

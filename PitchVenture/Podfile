@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PitchVenture' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for PitchVenture
+  pod 'IQKeyboardManagerSwift', '6.5.9'
+  pod 'SVProgressHUD', '2.2.5'
+
+  # Country Code Selection
+  pod 'FlagPhoneNumber', '~> 0.8.0'
+  
+  # Pull To Refresh
+  pod 'LGRefreshView'
+  
+  # Object Mapping
+  pod 'ObjectMapper', '~> 3.3'
+  
+  # Logging
+  pod 'XCGLogger'
+  
+  # Localization (If Required in Future)
+  pod 'Localize-Swift', '~> 2.0'
+  
+  # Banners and alert messages
+  pod 'SwiftMessages', '~> 5.0'
+end

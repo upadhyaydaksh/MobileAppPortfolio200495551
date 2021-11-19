@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Development</key>
+	<dict>
+		<key>APIEndPoint</key>
+		<string>http://3.7.245.243/v1_1/</string>
+		<key>URLEndPoint</key>
+		<string>http://3.7.245.243/v1_1/</string>
+		<key>UserImageEndPoint</key>
+		<string>https://gokone-dev.s3.us-east-2.amazonaws.com/users/</string>
+		<key>CircleImageEndPoint</key>
+		<string>https://gokone-dev.s3.us-east-2.amazonaws.com/circles/</string>
+		<key>LoggingEnabled</key>
+		<true/>
+		<key>AnalyticsTrackingEnabled</key>
+		<true/>
+		<key>URIScheme</key>
+		<string>gokonedev</string>
+		<key>GoogleAPIKey</key>
+		<string>AIzaSyB3Tuhya8OGuZvYgHD96p58FsJuOA7sxNg</string>
+		<key>ZoomAppKey</key>
+		<string>a7pzSKO26voULj6LRnB94Han8XHok9L1ODGW</string>
+		<key>ZoomAppSecretKey</key>
+		<string>x1nbhgsT4GM1DRz5QeoavAWC8cCznDGVdKM7</string>
+		<key>WebSocketURL</key>
+		<string>ws://3.7.245.243:4000</string>
+	</dict>
+	<key>Production</key>
+	<dict>
+		<key>APIEndPoint</key>
+		<string>https://gokone.group/v1_1/</string>
+		<key>URLEndPoint</key>
+		<string>https://gokone.group/v1_1/</string>
+		<key>UserImageEndPoint</key>
+		<string>https://gokone-dev.s3.us-east-2.amazonaws.com/users/</string>
+		<key>CircleImageEndPoint</key>
+		<string>https://gokone-dev.s3.us-east-2.amazonaws.com/circles/</string>
+		<key>LoggingEnabled</key>
+		<false/>
+		<key>AnalyticsTrackingEnabled</key>
+		<true/>
+		<key>URIScheme</key>
+		<string>gokone</string>
+		<key>GoogleAPIKey</key>
+		<string>AIzaSyB3Tuhya8OGuZvYgHD96p58FsJuOA7sxNg</string>
+		<key>ZoomAppKey</key>
+		<string>a7pzSKO26voULj6LRnB94Han8XHok9L1ODGW</string>
+		<key>ZoomAppSecretKey</key>
+		<string>x1nbhgsT4GM1DRz5QeoavAWC8cCznDGVdKM7</string>
+		<key>WebSocketURL</key>
+		<string>ws://3.7.245.243:4000</string>
+	</dict>
+</dict>
+</plist>
