@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import MobileCoreServices
 
-class PVInputLocationVC: UIViewController {
+class PVInputLocationVC: PVBaseVC {
 
     //MARK: - Outlets
     @IBOutlet weak var btnImagePicker: UIButton!
@@ -73,6 +73,7 @@ class PVInputLocationVC: UIViewController {
     
     
     @IBAction func btnSubmitAction(_ sender: Any) {
+        appDel.setHomeVC()
     }
     
 }

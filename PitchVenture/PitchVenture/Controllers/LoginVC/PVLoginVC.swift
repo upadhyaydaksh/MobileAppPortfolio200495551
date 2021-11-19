@@ -8,6 +8,7 @@
 
 import UIKit
 import AuthenticationServices
+import GoogleSignIn
 
 class PVLoginVC: PVBaseVC {
 
@@ -52,8 +53,9 @@ class PVLoginVC: PVBaseVC {
     }
     
     @IBAction func btnAppleLoginAction(_ sender: Any) {
-        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
-        self.push(vc: objPVPhoneVerifyVC)
+//        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
+//        self.push(vc: objPVPhoneVerifyVC)
+        self.handleAuthorizationAppleIDButtonPress()
     }
     
     @IBAction func btnGoogleLoginAction(_ sender: Any) {

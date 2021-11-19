@@ -26,4 +26,7 @@ target 'PitchVenture' do
   
   # Banners and alert messages
   pod 'SwiftMessages', '~> 5.0'
+
+  pod 'GoogleSignIn'
+
 end

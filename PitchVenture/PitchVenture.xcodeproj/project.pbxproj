@@ -42,6 +42,9 @@
 		FAB45CFA27463889009F1D5D /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CF827463888009F1D5D /* String+Additions.swift */; };
 		FAB45CFC27463AD5009F1D5D /* PVTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CFB27463AD5009F1D5D /* PVTableView.swift */; };
 		FAB45CFE27463BE4009F1D5D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB45CFD27463BE3009F1D5D /* Country.swift */; };
+		FAC8A152274818E200EFC95B /* PVHomeVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8A151274818E200EFC95B /* PVHomeVC+TableView.swift */; };
+		FAC8A1552748196000EFC95B /* PVHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8A1532748196000EFC95B /* PVHomeTableViewCell.swift */; };
+		FAC8A1562748196000EFC95B /* PVHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC8A1542748196000EFC95B /* PVHomeTableViewCell.xib */; };
 		FAEAC3D527470150005F0A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAC3D42747014F005F0A4F /* SceneDelegate.swift */; };
 		FAEAC3DE27470D16005F0A4F /* PVTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEAC3DA27470D16005F0A4F /* PVTextFieldView.xib */; };
 		FAEAC3E027470DA1005F0A4F /* PVTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAC3DF27470DA1005F0A4F /* PVTextFieldView.swift */; };
@@ -110,6 +113,9 @@
 		FAB45CF827463888009F1D5D /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		FAB45CFB27463AD5009F1D5D /* PVTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVTableView.swift; sourceTree = "<group>"; };
 		FAB45CFD27463BE3009F1D5D /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		FAC8A151274818E200EFC95B /* PVHomeVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVHomeVC+TableView.swift"; sourceTree = "<group>"; };
+		FAC8A1532748196000EFC95B /* PVHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVHomeTableViewCell.swift; sourceTree = "<group>"; };
+		FAC8A1542748196000EFC95B /* PVHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVHomeTableViewCell.xib; sourceTree = "<group>"; };
 		FAEAC3D42747014F005F0A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAEAC3DA27470D16005F0A4F /* PVTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PVTextFieldView.xib; sourceTree = "<group>"; };
 		FAEAC3DF27470DA1005F0A4F /* PVTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVTextFieldView.swift; sourceTree = "<group>"; };
@@ -320,6 +326,23 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		FAC8A150274811B400EFC95B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8A1572748199300EFC95B /* PVHomeTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		FAC8A1572748199300EFC95B /* PVHomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8A1532748196000EFC95B /* PVHomeTableViewCell.swift */,
+				FAC8A1542748196000EFC95B /* PVHomeTableViewCell.xib */,
+			);
+			path = PVHomeTableViewCell;
+			sourceTree = "<group>";
+		};
 		FAEAC3D627470CFE005F0A4F /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,7 +363,9 @@
 		FAF4B6302746DA3E00B9503F /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				FAC8A150274811B400EFC95B /* TableViewCells */,
 				FAF4B6312746DA5A00B9503F /* PVHomeVC.swift */,
+				FAC8A151274818E200EFC95B /* PVHomeVC+TableView.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -476,6 +501,7 @@
 			files = (
 				FA5B01AD2742D65900976EB6 /* Environments.plist in Resources */,
 				FA93344B271A107A0002DBED /* LaunchScreen.storyboard in Resources */,
+				FAC8A1562748196000EFC95B /* PVHomeTableViewCell.xib in Resources */,
 				FA933448271A107A0002DBED /* Assets.xcassets in Resources */,
 				FA933446271A10780002DBED /* Main.storyboard in Resources */,
 				FAEAC3DE27470D16005F0A4F /* PVTextFieldView.xib in Resources */,
@@ -548,6 +574,7 @@
 				FAF4B64B2746EAEC00B9503F /* NSDate+Formatters.swift in Sources */,
 				FAF4B6362746DE8400B9503F /* PhoneNumber.swift in Sources */,
 				FAB45CEE27462D8B009F1D5D /* UITextViewPlaceholder.swift in Sources */,
+				FAC8A152274818E200EFC95B /* PVHomeVC+TableView.swift in Sources */,
 				FAB45CF327462D8B009F1D5D /* UITableView+Additions.swift in Sources */,
 				FAF4B6462746E9CD00B9503F /* LogManager.swift in Sources */,
 				FAF4B6572746EE4C00B9503F /* NSUserDefaults+Additions.swift in Sources */,
@@ -584,6 +611,7 @@
 				FAF4B6602746F59900B9503F /* Dictionary+Request.swift in Sources */,
 				FAEAC3D527470150005F0A4F /* SceneDelegate.swift in Sources */,
 				FA474C8827234A25008601A9 /* PVButton.swift in Sources */,
+				FAC8A1552748196000EFC95B /* PVHomeTableViewCell.swift in Sources */,
 				FAB45CFE27463BE4009F1D5D /* Country.swift in Sources */,
 				FAF4B64A2746EAEC00B9503F /* Date+Additions.swift in Sources */,
 			);

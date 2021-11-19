@@ -1,8 +1,21 @@
 PODS:
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
   - DACircularProgress (2.3.1)
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
+  - GoogleSignIn (6.0.2):
+    - AppAuth (~> 1.4)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GTMAppAuth (1.2.2):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
+  - GTMSessionFetcher/Core (1.7.0)
   - IQKeyboardManagerSwift (6.5.9)
   - LGRefreshView (1.0.5):
     - DACircularProgress (~> 2.3.0)
@@ -22,6 +35,7 @@ PODS:
 
 DEPENDENCIES:
   - FlagPhoneNumber (~> 0.8.0)
+  - GoogleSignIn
   - IQKeyboardManagerSwift (= 6.5.9)
   - LGRefreshView
   - Localize-Swift (~> 2.0)
@@ -32,8 +46,12 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AppAuth
     - DACircularProgress
     - FlagPhoneNumber
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
     - IQKeyboardManagerSwift
     - LGRefreshView
     - Localize-Swift
@@ -44,8 +62,12 @@ SPEC REPOS:
     - XCGLogger
 
 SPEC CHECKSUMS:
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
+  GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
+  GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   LGRefreshView: 34746afadbd23de8d1449cab15f3d89269645d43
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
@@ -55,6 +77,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: ae2f38cbde95774f16d7db7ff9ab4b9e34a0dc16
+PODFILE CHECKSUM: 481d2b8d121d1c10954f76c82bf13e0ddb627f0c
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.10.1

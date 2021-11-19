@@ -12,20 +12,25 @@ import IQKeyboardManagerSwift
 
 extension AppDelegate {
     
+    func setHomeVC() {
+        let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
+        let obj = PVHomeVC.instantiate()
+        nav.setViewControllers([obj], animated: false)
+        nav.isNavigationBarHidden = false
+        self.window?.rootViewController = nav
+    }
+    
     func setRootViewController() {
         if PVUserManager.sharedManager().isProfileComplete() {
             // Move to HomeVC
-            let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
-            let obj = PVHomeVC.instantiate()
-            nav.setViewControllers([obj], animated: false)
-            self.window?.rootViewController = nav
-            
+            self.setHomeVC()
         } else {
             PVUserManager.sharedManager().deleteActiveUser()
             //Set login page as root
             let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
             let obj = PVLoginVC.instantiate()
             nav.setViewControllers([obj], animated: false)
+            nav.isNavigationBarHidden = true
             self.window?.rootViewController = nav
         }
     }
