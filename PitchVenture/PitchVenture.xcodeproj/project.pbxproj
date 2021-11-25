@@ -10,6 +10,12 @@
 		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
 		5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */; };
 		FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D162B2742CCB300CF4413 /* FontManager.swift */; };
+		FA3CD3F6274F683F007DB824 /* PVFranchiseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD3F5274F683F007DB824 /* PVFranchiseDetailVC.swift */; };
+		FA3CD3F8274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD3F7274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift */; };
+		FA3CD3FD274F7AB6007DB824 /* PVImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD3FB274F7AB6007DB824 /* PVImageTableViewCell.swift */; };
+		FA3CD3FE274F7AB6007DB824 /* PVImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3CD3FC274F7AB6007DB824 /* PVImageTableViewCell.xib */; };
+		FA3CD402274F8674007DB824 /* PVFranchiseDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD400274F8674007DB824 /* PVFranchiseDetailTableViewCell.swift */; };
+		FA3CD403274F8674007DB824 /* PVFranchiseDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3CD401274F8674007DB824 /* PVFranchiseDetailTableViewCell.xib */; };
 		FA474C8827234A25008601A9 /* PVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA474C8727234A25008601A9 /* PVButton.swift */; };
 		FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B01AA2742D65900976EB6 /* ConfigurationManager.swift */; };
 		FA5B01AD2742D65900976EB6 /* Environments.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA5B01AB2742D65900976EB6 /* Environments.plist */; };
@@ -80,6 +86,12 @@
 		99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.release.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.release.xcconfig"; sourceTree = "<group>"; };
 		EBD47B50966951F0CEB0EE3B /* Pods-PitchVenture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.debug.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0D162B2742CCB300CF4413 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		FA3CD3F5274F683F007DB824 /* PVFranchiseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVFranchiseDetailVC.swift; sourceTree = "<group>"; };
+		FA3CD3F7274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVFranchiseDetailVC+TableView.swift"; sourceTree = "<group>"; };
+		FA3CD3FB274F7AB6007DB824 /* PVImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVImageTableViewCell.swift; sourceTree = "<group>"; };
+		FA3CD3FC274F7AB6007DB824 /* PVImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVImageTableViewCell.xib; sourceTree = "<group>"; };
+		FA3CD400274F8674007DB824 /* PVFranchiseDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVFranchiseDetailTableViewCell.swift; sourceTree = "<group>"; };
+		FA3CD401274F8674007DB824 /* PVFranchiseDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVFranchiseDetailTableViewCell.xib; sourceTree = "<group>"; };
 		FA474C8727234A25008601A9 /* PVButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVButton.swift; sourceTree = "<group>"; };
 		FA5B01AA2742D65900976EB6 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		FA5B01AB2742D65900976EB6 /* Environments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environments.plist; sourceTree = "<group>"; };
@@ -183,6 +195,43 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA3CD3F4274F67FF007DB824 /* FranchiseDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA3CD3F9274F7415007DB824 /* TableViewCells */,
+				FA3CD3F5274F683F007DB824 /* PVFranchiseDetailVC.swift */,
+				FA3CD3F7274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift */,
+			);
+			path = FranchiseDetailVC;
+			sourceTree = "<group>";
+		};
+		FA3CD3F9274F7415007DB824 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA3CD3FF274F8655007DB824 /* PVFranchiseDetailTableViewCell */,
+				FA3CD3FA274F7A72007DB824 /* PVImageTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		FA3CD3FA274F7A72007DB824 /* PVImageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA3CD3FB274F7AB6007DB824 /* PVImageTableViewCell.swift */,
+				FA3CD3FC274F7AB6007DB824 /* PVImageTableViewCell.xib */,
+			);
+			path = PVImageTableViewCell;
+			sourceTree = "<group>";
+		};
+		FA3CD3FF274F8655007DB824 /* PVFranchiseDetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA3CD400274F8674007DB824 /* PVFranchiseDetailTableViewCell.swift */,
+				FA3CD401274F8674007DB824 /* PVFranchiseDetailTableViewCell.xib */,
+			);
+			path = PVFranchiseDetailTableViewCell;
+			sourceTree = "<group>";
+		};
 		FA474C8627234993008601A9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +262,7 @@
 		FA474C8927234A83008601A9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA3CD3F4274F67FF007DB824 /* FranchiseDetailVC */,
 				5273B2B92747722600E4D60E /* InputLocationVC */,
 				FAF4B6302746DA3E00B9503F /* HomeVC */,
 				FA81A8BF27276EF600D6759A /* PhoneVerifyVC */,
@@ -502,11 +552,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3CD403274F8674007DB824 /* PVFranchiseDetailTableViewCell.xib in Resources */,
 				FA5B01AD2742D65900976EB6 /* Environments.plist in Resources */,
 				FA93344B271A107A0002DBED /* LaunchScreen.storyboard in Resources */,
 				FAC8A1562748196000EFC95B /* PVHomeTableViewCell.xib in Resources */,
 				FA933448271A107A0002DBED /* Assets.xcassets in Resources */,
 				FA933446271A10780002DBED /* Main.storyboard in Resources */,
+				FA3CD3FE274F7AB6007DB824 /* PVImageTableViewCell.xib in Resources */,
 				FAEAC3DE27470D16005F0A4F /* PVTextFieldView.xib in Resources */,
 				FAC8A159274836D700EFC95B /* GoogleService-Info.plist in Resources */,
 			);
@@ -590,6 +642,7 @@
 				FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */,
 				FAF4B6402746E1C400B9503F /* NSMutableURLRequest+Additions.swift in Sources */,
 				FA70059627479944006DAB61 /* KeychainItem.swift in Sources */,
+				FA3CD402274F8674007DB824 /* PVFranchiseDetailTableViewCell.swift in Sources */,
 				FAF4B6522746EDBF00B9503F /* AppInfo.swift in Sources */,
 				FAB45CF227462D8B009F1D5D /* UIScrollView+Additions.swift in Sources */,
 				FAF4B64F2746ECB300B9503F /* Address.swift in Sources */,
@@ -597,6 +650,7 @@
 				FAB45CDE27462C15009F1D5D /* PVTextField.swift in Sources */,
 				FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */,
 				FAF4B64D2746EBA500B9503F /* Helper.swift in Sources */,
+				FA3CD3F8274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift in Sources */,
 				FAB45CEC27462D8B009F1D5D /* UINavigationController+Additions.swift in Sources */,
 				FAF4B6372746DE8400B9503F /* User.swift in Sources */,
 				FAF4B6532746EDBF00B9503F /* DeviceInfo.swift in Sources */,
@@ -613,11 +667,13 @@
 				FAF4B62D2746D86400B9503F /* PVUserManager.swift in Sources */,
 				FAB45CFC27463AD5009F1D5D /* PVTableView.swift in Sources */,
 				FAF4B6602746F59900B9503F /* Dictionary+Request.swift in Sources */,
+				FA3CD3FD274F7AB6007DB824 /* PVImageTableViewCell.swift in Sources */,
 				FAEAC3D527470150005F0A4F /* SceneDelegate.swift in Sources */,
 				FA474C8827234A25008601A9 /* PVButton.swift in Sources */,
 				FAC8A1552748196000EFC95B /* PVHomeTableViewCell.swift in Sources */,
 				FAB45CFE27463BE4009F1D5D /* Country.swift in Sources */,
 				FAF4B64A2746EAEC00B9503F /* Date+Additions.swift in Sources */,
+				FA3CD3F6274F683F007DB824 /* PVFranchiseDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

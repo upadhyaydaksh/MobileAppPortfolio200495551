@@ -10,10 +10,11 @@ import UIKit
 
 class PVHomeVC: PVBaseVC {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.registerTableViewCell()
     }
     
     class func identifier() -> String {
@@ -22,5 +23,9 @@ class PVHomeVC: PVBaseVC {
     
     class func instantiate() -> PVHomeVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVHomeVC.identifier()) as! PVHomeVC
+    }
+    
+    func registerTableViewCell() {
+        tableView.register(UINib(nibName: "PVHomeTableViewCell", bundle: nil), forCellReuseIdentifier: PVHomeTableViewCell.reuseIdentifier())
     }
 }

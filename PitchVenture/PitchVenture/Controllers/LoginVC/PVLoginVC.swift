@@ -68,7 +68,13 @@ class PVLoginVC: PVBaseVC {
           guard error == nil else { return }
 
             PVMessage.showSuccessWithMessage(message: "Login successfull")
-          // If sign in succeeded, display the app's main content View.
+          // If sign in succeeded, GO TO PHONE VERIFY VC
+            
+            let user: User? = User(id: "01", fullName: "Anonymus", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
+            
+            PVUserManager.sharedManager().activeUser = user
+            let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
+            self.push(vc: objPVPhoneVerifyVC)
         }
     }
     

@@ -1,15 +1,17 @@
 //
-//  PVHomeTableViewCell.swift
+//  PVImageTableViewCell.swift
 //  PitchVenture
 //
-//  Created by Harshit on 19/11/21.
+//  Created by Harshit on 25/11/21.
 //  Copyright © 2021 PitchVenture. All rights reserved.
 //
 
 import UIKit
 
-class PVHomeTableViewCell: UITableViewCell {
+class PVImageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

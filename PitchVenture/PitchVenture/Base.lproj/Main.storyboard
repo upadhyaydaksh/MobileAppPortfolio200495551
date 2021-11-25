@@ -376,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4og-hI-yUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2790" y="97.183098591549296"/>
+            <point key="canvasLocation" x="2837" y="96"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="EUM-Kg-qFC">
@@ -404,10 +404,64 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Fq-si-egT"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Gc5-P5-gYs" id="9wu-nh-s9Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="034-Fw-emN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3579.375" y="98.239436619718305"/>
+            <point key="canvasLocation" x="323" y="939"/>
+        </scene>
+        <!--Franchise DetailVC-->
+        <scene sceneID="l66-hD-0wo">
+            <objects>
+                <viewController storyboardIdentifier="PVFranchiseDetailVC" id="NnC-Kw-ilC" customClass="PVFranchiseDetailVC" customModule="PitchVenture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tNe-lV-VMR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NIz-ya-b2c">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="472"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NnC-Kw-ilC" id="74t-ki-B7X"/>
+                                    <outlet property="delegate" destination="NnC-Kw-ilC" id="Vxg-cI-P9c"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRq-mk-Bkv" customClass="PVButton" customModule="PitchVenture" customModuleProvider="target">
+                                <rect key="frame" x="32" y="492" width="256" height="56"/>
+                                <color key="backgroundColor" red="0.99354535340000005" green="0.84124034640000001" blue="0.27692013980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="LwX-qw-W6a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Apply">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circularUsingHeight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2PD-9E-3V7" firstAttribute="trailing" secondItem="LRq-mk-Bkv" secondAttribute="trailing" constant="32" id="0EX-Td-4mh"/>
+                            <constraint firstItem="NIz-ya-b2c" firstAttribute="trailing" secondItem="2PD-9E-3V7" secondAttribute="trailing" id="TN1-5t-K8S"/>
+                            <constraint firstItem="LRq-mk-Bkv" firstAttribute="top" secondItem="NIz-ya-b2c" secondAttribute="bottom" constant="20" id="ift-bz-owj"/>
+                            <constraint firstItem="LRq-mk-Bkv" firstAttribute="leading" secondItem="2PD-9E-3V7" secondAttribute="leading" constant="32" id="lKk-F9-Wlv"/>
+                            <constraint firstItem="NIz-ya-b2c" firstAttribute="top" secondItem="2PD-9E-3V7" secondAttribute="top" id="nXX-AJ-88o"/>
+                            <constraint firstItem="NIz-ya-b2c" firstAttribute="leading" secondItem="2PD-9E-3V7" secondAttribute="leading" id="qIM-2i-OpR"/>
+                            <constraint firstItem="2PD-9E-3V7" firstAttribute="bottom" secondItem="LRq-mk-Bkv" secondAttribute="bottom" constant="20" id="r10-iz-yVL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2PD-9E-3V7"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="NIz-ya-b2c" id="CSY-Kp-vFV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NjT-3M-V66" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.25" y="938.02816901408448"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KRF-0g-xtw">
@@ -424,7 +478,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSj-3j-X4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.75" y="100.35211267605634"/>
+            <point key="canvasLocation" x="323" y="97"/>
         </scene>
     </scenes>
     <resources>

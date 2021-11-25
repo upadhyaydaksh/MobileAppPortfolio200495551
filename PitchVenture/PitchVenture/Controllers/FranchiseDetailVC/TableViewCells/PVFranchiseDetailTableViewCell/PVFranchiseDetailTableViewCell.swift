@@ -1,14 +1,14 @@
 //
-//  PVHomeTableViewCell.swift
+//  PVFranchiseDetailTableViewCell.swift
 //  PitchVenture
 //
-//  Created by Harshit on 19/11/21.
+//  Created by Harshit on 25/11/21.
 //  Copyright © 2021 PitchVenture. All rights reserved.
 //
 
 import UIKit
 
-class PVHomeTableViewCell: UITableViewCell {
+class PVFranchiseDetailTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

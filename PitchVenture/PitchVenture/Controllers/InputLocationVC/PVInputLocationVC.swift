@@ -73,7 +73,9 @@ class PVInputLocationVC: PVBaseVC {
     
     
     @IBAction func btnSubmitAction(_ sender: Any) {
-        appDel.setHomeVC()
+        //appDel.setHomeVC()
+        let objPVInputLocationVC = PVHomeVC.instantiate()
+        self.push(vc: objPVInputLocationVC)
     }
     
 }
