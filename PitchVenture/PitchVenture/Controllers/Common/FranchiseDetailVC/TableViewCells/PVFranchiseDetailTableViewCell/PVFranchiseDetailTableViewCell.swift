@@ -10,6 +10,14 @@ import UIKit
 
 class PVFranchiseDetailTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblFranchiseCategory: UILabel!
+    
+    @IBOutlet weak var lblFranchiseName: UILabel!
+    
+    @IBOutlet weak var lblFranchiseDescription: UILabel!
+    
+    @IBOutlet weak var lblFranchiseDeposit: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

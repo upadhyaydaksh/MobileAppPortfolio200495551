@@ -10,8 +10,10 @@ import UIKit
 
 class PVHomeVC: PVBaseVC {
 
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - Class Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerTableViewCell()
