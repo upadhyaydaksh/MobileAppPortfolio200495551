@@ -1,5 +1,5 @@
 //
-//  PVHomeVC.swift
+//  PVStoreOwnerHomeVC.swift
 //  PitchVenture
 //
 //  Created by Harshit on 18/11/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PVHomeVC: PVBaseVC {
+class PVStoreOwnerHomeVC: PVBaseVC {
 
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -19,12 +19,8 @@ class PVHomeVC: PVBaseVC {
         self.registerTableViewCell()
     }
     
-    class func identifier() -> String {
-        return String(describing: self)
-    }
-    
-    class func instantiate() -> PVHomeVC {
-        return UIStoryboard.main().instantiateViewController(withIdentifier: PVHomeVC.identifier()) as! PVHomeVC
+    class func instantiate() -> PVStoreOwnerHomeVC {
+        return UIStoryboard.main().instantiateViewController(withIdentifier: PVStoreOwnerHomeVC.identifier()) as! PVStoreOwnerHomeVC
     }
     
     func registerTableViewCell() {

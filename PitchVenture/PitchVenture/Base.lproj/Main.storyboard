@@ -378,10 +378,10 @@
             </objects>
             <point key="canvasLocation" x="2837" y="96"/>
         </scene>
-        <!--HomeVC-->
+        <!--Store Owner HomeVC-->
         <scene sceneID="EUM-Kg-qFC">
             <objects>
-                <viewController storyboardIdentifier="PVHomeVC" id="gGM-fg-5C8" customClass="PVHomeVC" customModule="PitchVenture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PVStoreOwnerHomeVC" id="gGM-fg-5C8" customClass="PVStoreOwnerHomeVC" customModule="PitchVenture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="94G-ai-yP8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -526,7 +526,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" catalog="system" width="64" height="48"/>
+        <image name="camera" catalog="system" width="32" height="32"/>
         <image name="ic_logo" width="1024" height="1024"/>
     </resources>
 </document>

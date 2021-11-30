@@ -1,5 +1,5 @@
 //
-//  PVHomeVC+TableView.swift
+//  PVStoreOwnerHomeVC+TableView.swift
 //  PitchVenture
 //
 //  Created by Harshit on 19/11/21.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension PVHomeVC: UITableViewDataSource, UITableViewDelegate {
+extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
