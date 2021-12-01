@@ -21,10 +21,6 @@ class PVStoreOwnerProfileVC: UIViewController {
     
     // MARK: - Class Methods
     
-    class func identifier() -> String {
-        return String(describing: self)
-    }
-    
     class func instantiate() -> PVInputLocationVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVInputLocationVC.identifier()) as! PVInputLocationVC
     }

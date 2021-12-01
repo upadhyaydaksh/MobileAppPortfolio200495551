@@ -21,11 +21,6 @@ class PVFranchiseDetailVC: UIViewController {
         self.registerTableViewCell()
     }
     
-    
-    class func identifier() -> String {
-        return String(describing: self)
-    }
-    
     class func instantiate() -> PVFranchiseDetailVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVFranchiseDetailVC.identifier()) as! PVFranchiseDetailVC
     }

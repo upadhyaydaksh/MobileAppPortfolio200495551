@@ -14,7 +14,7 @@ extension AppDelegate {
     
     func setHomeVC() {
         let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
-        let obj = PVHomeVC.instantiate()
+        let obj = PVStoreOwnerHomeVC.instantiate()
         nav.setViewControllers([obj], animated: false)
         nav.isNavigationBarHidden = false
         self.window?.rootViewController = nav

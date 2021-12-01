@@ -22,10 +22,6 @@ class PVPhoneVerifyVC: PVBaseVC {
     
     // MARK: - Class Methods
     
-    class func identifier() -> String {
-        return String(describing: self)
-    }
-    
     class func instantiate() -> PVPhoneVerifyVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVPhoneVerifyVC.identifier()) as! PVPhoneVerifyVC
     }

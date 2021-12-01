@@ -34,10 +34,6 @@ class PVInputLocationVC: PVBaseVC {
     
     // MARK: - Class Methods
     
-    class func identifier() -> String {
-        return String(describing: self)
-    }
-    
     class func instantiate() -> PVInputLocationVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVInputLocationVC.identifier()) as! PVInputLocationVC
     }
@@ -74,7 +70,7 @@ class PVInputLocationVC: PVBaseVC {
     
     @IBAction func btnSubmitAction(_ sender: Any) {
         //appDel.setHomeVC()
-        let objPVInputLocationVC = PVHomeVC.instantiate()
+        let objPVInputLocationVC = PVStoreOwnerHomeVC.instantiate()
         self.push(vc: objPVInputLocationVC)
     }
     
