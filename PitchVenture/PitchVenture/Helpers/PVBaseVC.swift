@@ -225,6 +225,10 @@ extension UIViewController {
 
         return presentingIsModal || presentingIsNavigation || presentingIsTabBar
     }
+    
+    class func identifier() -> String {
+        return String(describing: self)
+    }
 }
 
 extension UIDevice {

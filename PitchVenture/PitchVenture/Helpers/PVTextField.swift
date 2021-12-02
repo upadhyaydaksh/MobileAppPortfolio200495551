@@ -56,11 +56,12 @@ class PVTextField: UITextField, UITextFieldDelegate {
                 self.leftView = nil
                 padding = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 18)
             } else {
-                let view = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: self.frame.size.height))
+                let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 32))
                 let imageView = UIImageView(image: leftViewImage)
-                imageView.contentMode = .center
+                imageView.contentMode = .scaleAspectFit
                 view.addSubview(imageView)
                 imageView.frame = view.bounds
+                imageView.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
                 view.backgroundColor = UIColor.clear
                 self.leftView = view
                 self.leftViewMode = .always

@@ -8,19 +8,18 @@
 
 import UIKit
 import AuthenticationServices
+import GoogleSignIn
 
 class PVLoginVC: PVBaseVC {
 
+    let signInConfig = GIDConfiguration.init(clientID: Constants.googleClientId)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
     // MARK: - Class Methods
-    
-    class func identifier() -> String {
-        return String(describing: self)
-    }
     
     class func instantiate() -> PVLoginVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVLoginVC.identifier()) as! PVLoginVC
@@ -54,11 +53,25 @@ class PVLoginVC: PVBaseVC {
     @IBAction func btnAppleLoginAction(_ sender: Any) {
         let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
         self.push(vc: objPVPhoneVerifyVC)
+//        self.handleAuthorizationAppleIDButtonPress()
     }
     
     @IBAction func btnGoogleLoginAction(_ sender: Any) {
-        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
-        self.push(vc: objPVPhoneVerifyVC)
+//        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
+//        self.push(vc: objPVPhoneVerifyVC)
+        
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
+          guard error == nil else { return }
+
+            PVMessage.showSuccessWithMessage(message: "Login successfull")
+          // If sign in succeeded, GO TO PHONE VERIFY VC
+            
+            let user: User? = User(id: "01", fullName: "Anonymus", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
+            
+            PVUserManager.sharedManager().activeUser = user
+            let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
+            self.push(vc: objPVPhoneVerifyVC)
+        }
     }
     
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>879116334242-42airoht40a0lv2cpl26sfiqmds0hv08.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.879116334242-42airoht40a0lv2cpl26sfiqmds0hv08</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCdikgVr9-8XCMEll3nTfQLUtoK8mdxmVw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>879116334242</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gc.pitchventure</string>
+	<key>PROJECT_ID</key>
+	<string>pitchventure-6cbb6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pitchventure-6cbb6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:879116334242:ios:97a77030b56799daf213fb</string>
+</dict>
+</plist>

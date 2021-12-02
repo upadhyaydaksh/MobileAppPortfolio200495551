@@ -42,10 +42,8 @@ class User: NSObject, Mappable, NSCopying, NSCoding {
     var dob: String?
     var accessToken: String?
     var pushToken: String?
-    var qbuserId: NSNumber?
-    var qbFullName : String?
     
-    init(id: String?, fullName: String?, phoneNumber: PhoneNumber?, deviceInfo: DeviceInfo?, appInfo: AppInfo?, profilePicture: String?, gender: Gender?, address: Address?, dob: String?, accessToken: String?, pushToken: String?, qbuserId: NSNumber?, qbFullName: String? ) {
+    init(id: String?, fullName: String?, phoneNumber: PhoneNumber?, deviceInfo: DeviceInfo?, appInfo: AppInfo?, profilePicture: String?, gender: Gender?, address: Address?, dob: String?, accessToken: String?, pushToken: String?) {
         self.id = id
         self.fullName = fullName
         self.phoneNumber = phoneNumber
@@ -57,12 +55,10 @@ class User: NSObject, Mappable, NSCopying, NSCoding {
         self.address = address
         self.dob = dob
         self.accessToken = accessToken
-        self.qbuserId = qbuserId
-        self.qbFullName = qbFullName
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return User(id: id, fullName: fullName, phoneNumber: phoneNumber, deviceInfo: deviceInfo, appInfo: appInfo, profilePicture: profilePicture, gender: gender, address: address, dob: dob, accessToken: accessToken, pushToken: pushToken, qbuserId : qbuserId, qbFullName: qbFullName)
+        return User(id: id, fullName: fullName, phoneNumber: phoneNumber, deviceInfo: deviceInfo, appInfo: appInfo, profilePicture: profilePicture, gender: gender, address: address, dob: dob, accessToken: accessToken, pushToken: pushToken)
     }
     
     override init() {
@@ -77,8 +73,6 @@ class User: NSObject, Mappable, NSCopying, NSCoding {
         self.address = nil
         self.dob = nil
         self.accessToken = nil
-        self.qbuserId = nil
-        self.qbFullName = nil
     }
     
     // MARK: ObjectMapper Initalizers
@@ -110,8 +104,6 @@ class User: NSObject, Mappable, NSCopying, NSCoding {
         address <- map["fullAddress"]
         dob <- map["dob"]
         pushToken <- map["pushToken"]
-        qbuserId <- map["qbuserId"]
-        qbFullName <- map["qbFullName"]
     }
     
     // MARK: NSCoding Protocol
@@ -132,8 +124,6 @@ class User: NSObject, Mappable, NSCopying, NSCoding {
         self.address = aDecoder.decodeObject(forKey: "fullAddress") as? Address
         self.dob = aDecoder.decodeObject(forKey: "dob") as? String
         self.pushToken = aDecoder.decodeObject(forKey: "pushToken") as? String
-        self.qbuserId = aDecoder.decodeObject(forKey: "qbuserId") as? NSNumber
-        self.qbFullName = aDecoder.decodeObject(forKey: "qbFullName") as? String
     }
 
     public func encode(with aCoder: NSCoder) {
@@ -148,8 +138,6 @@ class User: NSObject, Mappable, NSCopying, NSCoding {
         aCoder.encode(address, forKey: "fullAddress")
         aCoder.encode(dob, forKey: "dob")
         aCoder.encode(pushToken, forKey: "pushToken")
-        aCoder.encode(qbuserId, forKey: "qbuserId")
-        aCoder.encode(qbFullName, forKey: "qbFullName")
     }
 }
 

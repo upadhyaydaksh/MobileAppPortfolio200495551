@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import MobileCoreServices
 
-class PVInputLocationVC: UIViewController {
+class PVInputLocationVC: PVBaseVC {
 
     //MARK: - Outlets
     @IBOutlet weak var btnImagePicker: UIButton!
@@ -33,10 +33,6 @@ class PVInputLocationVC: UIViewController {
     }
     
     // MARK: - Class Methods
-    
-    class func identifier() -> String {
-        return String(describing: self)
-    }
     
     class func instantiate() -> PVInputLocationVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVInputLocationVC.identifier()) as! PVInputLocationVC
@@ -73,6 +69,9 @@ class PVInputLocationVC: UIViewController {
     
     
     @IBAction func btnSubmitAction(_ sender: Any) {
+        //appDel.setHomeVC()
+        let objPVInputLocationVC = PVStoreOwnerHomeVC.instantiate()
+        self.push(vc: objPVInputLocationVC)
     }
     
 }

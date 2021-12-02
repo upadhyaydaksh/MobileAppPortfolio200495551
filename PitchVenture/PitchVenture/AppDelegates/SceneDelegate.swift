@@ -14,10 +14,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        if let windowScene = scene as? UIWindowScene {
+            
+            if PVUserManager.sharedManager().isProfileComplete() {
+                // Move to HomeVC
+                let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
+                let obj = PVStoreOwnerHomeVC.instantiate()
+                nav.setViewControllers([obj], animated: false)
+                nav.isNavigationBarHidden = false
+                self.window?.rootViewController = nav
+                self.window?.makeKeyAndVisible()
+            } else {
+                
+                let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
+                let obj = PVLoginVC.instantiate()
+                nav.setViewControllers([obj], animated: false)
+                nav.isNavigationBarHidden = true
+                self.window?.rootViewController = nav
+                self.window?.makeKeyAndVisible()
+                
+            }
+            
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
