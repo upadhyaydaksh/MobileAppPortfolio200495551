@@ -271,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				FA521C24275024DE0099D8C0 /* Common */,
-				FA521C23275024C60099D8C0 /* Franchisors */,
 				FA521C22275024B70099D8C0 /* StoreOwners */,
 				5273B2B92747722600E4D60E /* InputLocationVC */,
 			);
@@ -285,13 +284,6 @@
 				FA521C252750430D0099D8C0 /* StoreOwnerProfileVC */,
 			);
 			path = StoreOwners;
-			sourceTree = "<group>";
-		};
-		FA521C23275024C60099D8C0 /* Franchisors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Franchisors;
 			sourceTree = "<group>";
 		};
 		FA521C24275024DE0099D8C0 /* Common */ = {

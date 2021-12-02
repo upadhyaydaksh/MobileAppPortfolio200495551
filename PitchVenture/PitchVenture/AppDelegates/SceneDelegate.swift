@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             
-            if PVUserManager.sharedManager().isProfileComplete() {
+            if !PVUserManager.sharedManager().isProfileComplete() {
                 // Move to HomeVC
                 let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
                 let obj = PVStoreOwnerHomeVC.instantiate()
