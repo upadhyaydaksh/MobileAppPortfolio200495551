@@ -18,7 +18,7 @@ extension PVFranchiseDetailVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
-            let cell: PVHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVHomeTableViewCell.reuseIdentifier()) as! PVHomeTableViewCell
+            let cell: PVImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVImageTableViewCell.reuseIdentifier()) as! PVImageTableViewCell
             
             return cell
         } else {
