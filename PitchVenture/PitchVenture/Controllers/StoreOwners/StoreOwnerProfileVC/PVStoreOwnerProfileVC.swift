@@ -23,6 +23,7 @@ class PVStoreOwnerProfileVC: PVBaseVC {
         super.viewWillAppear(animated)
         self.setLeftBarButton()
         self.setNavigationTitle("Store Owner Profile")
+        self.setLogoutNavBarButton()
     }
     // MARK: - Class Methods
     

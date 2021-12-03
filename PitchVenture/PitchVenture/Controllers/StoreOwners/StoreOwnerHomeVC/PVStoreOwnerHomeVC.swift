@@ -21,6 +21,7 @@ class PVStoreOwnerHomeVC: PVBaseVC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
         self.setNavigationTitle("Home")
         self.setProfileNavBarButton()
     }

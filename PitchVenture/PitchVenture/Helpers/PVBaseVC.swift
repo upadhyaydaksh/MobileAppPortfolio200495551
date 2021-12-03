@@ -231,6 +231,31 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         self.push(vc: obj)
     }
 
+    func setLogoutNavBarButton() {
+        let profileButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_logout"), style: .plain, target: self, action: #selector(logoutUser))
+        profileButton.tintColor = Constants.color.kAPP_COLOR
+        
+        self.navigationItem.setRightBarButton(profileButton, animated: true)
+    }
+    
+    func showLogoutConfirmation() {
+        
+        let alert = UIAlertController(title: "Logout", message: kAreYouSureToLogout, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Logout", style: .default, handler: { (_) in
+            PVUserManager.sharedManager().logout()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func logoutUser() {
+        self.showLogoutConfirmation()
+    }
 }
 
 extension UIViewController {

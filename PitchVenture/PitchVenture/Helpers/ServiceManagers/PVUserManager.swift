@@ -124,7 +124,8 @@ class PVUserManager: NSObject {
     func setSplashAsRoot() {
         SVProgressHUD.dismiss()
         self.deleteActiveUser()
-        appDel.setRootViewController()
+        let sceneD = SceneDelegate()
+        sceneD.setRootController()
     }
     
 }
