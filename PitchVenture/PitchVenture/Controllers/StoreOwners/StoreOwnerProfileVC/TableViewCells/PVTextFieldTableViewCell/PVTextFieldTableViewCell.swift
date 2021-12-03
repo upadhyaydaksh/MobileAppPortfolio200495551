@@ -35,12 +35,15 @@ class PVTextFieldTableViewCell: UITableViewCell {
         if index == 0 {
             // FULL NAME
             self.txtValue.leftViewImage = UIImage(named: "ic_user")
+            self.txtValue.placeholder = "Full Name"
         } else if index == 1 {
             // EMAIL
-            self.txtValue.leftViewImage = UIImage(named: "ic_email")
+            self.txtValue.leftViewImage = UIImage(named: "ic_mail")
+            self.txtValue.placeholder = "Email"
         } else {
             // PHONE NUMBER
             self.txtValue.leftViewImage = UIImage(named: "ic_phone")
+            self.txtValue.placeholder = "Phone Number"
         }
     }
 }

@@ -22,7 +22,7 @@ class PVStoreOwnerProfileVC: PVBaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setLeftBarButton()
-        self.setNavigationTitle("Profile")
+        self.setNavigationTitle("Store Owner Profile")
     }
     // MARK: - Class Methods
     
