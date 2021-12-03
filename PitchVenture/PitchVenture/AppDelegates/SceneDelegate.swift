@@ -16,28 +16,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             
-            if PVUserManager.sharedManager().isProfileComplete() {
-                // Move to HomeVC
-                let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
-                let obj = PVStoreOwnerHomeVC.instantiate()
-                nav.setViewControllers([obj], animated: false)
-                nav.isNavigationBarHidden = false
-                self.window?.rootViewController = nav
-                self.window?.makeKeyAndVisible()
-            } else {
-                
-                let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
-                let obj = PVLoginVC.instantiate()
-                nav.setViewControllers([obj], animated: false)
-                nav.isNavigationBarHidden = true
-                self.window?.rootViewController = nav
-                self.window?.makeKeyAndVisible()
-                
-            }
+            self.setRootController()
             
         }
     }
 
+    func setRootController() {
+        if PVUserManager.sharedManager().isUserLoggedIn() {
+            // Move to HomeVC
+            let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
+            let obj = PVStoreOwnerHomeVC.instantiate()
+            nav.setViewControllers([obj], animated: false)
+            nav.isNavigationBarHidden = false
+            self.window?.rootViewController = nav
+            self.window?.makeKeyAndVisible()
+        } else {
+            
+            let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
+            let obj = PVLoginVC.instantiate()
+            nav.setViewControllers([obj], animated: false)
+            nav.isNavigationBarHidden = true
+            self.window?.rootViewController = nav
+            self.window?.makeKeyAndVisible()
+            
+        }
+    }
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

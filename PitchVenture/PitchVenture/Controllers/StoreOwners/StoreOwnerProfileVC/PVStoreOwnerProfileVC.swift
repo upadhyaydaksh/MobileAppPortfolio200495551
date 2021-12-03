@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PVStoreOwnerProfileVC: UIViewController {
+class PVStoreOwnerProfileVC: PVBaseVC {
 
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -19,10 +19,16 @@ class PVStoreOwnerProfileVC: UIViewController {
         self.registerTableViewCell()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setLeftBarButton()
+        self.setNavigationTitle("Store Owner Profile")
+        self.setLogoutNavBarButton()
+    }
     // MARK: - Class Methods
     
-    class func instantiate() -> PVInputLocationVC {
-        return UIStoryboard.main().instantiateViewController(withIdentifier: PVInputLocationVC.identifier()) as! PVInputLocationVC
+    class func instantiate() -> PVStoreOwnerProfileVC {
+        return UIStoryboard.main().instantiateViewController(withIdentifier: PVStoreOwnerProfileVC.identifier()) as! PVStoreOwnerProfileVC
     }
     
     func registerTableViewCell() {

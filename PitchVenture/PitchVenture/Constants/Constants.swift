@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 let appDel = UIApplication.shared.delegate as! AppDelegate
+//let sceneDel = UIApplication.shared.delegate as! SceneDelegate
 
 enum DeviceType: String {
     case iOS = "iPhone"

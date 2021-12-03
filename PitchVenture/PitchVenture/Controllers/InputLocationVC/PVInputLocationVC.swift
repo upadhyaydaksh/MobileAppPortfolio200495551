@@ -69,7 +69,13 @@ class PVInputLocationVC: PVBaseVC {
     
     
     @IBAction func btnSubmitAction(_ sender: Any) {
-        //appDel.setHomeVC()
+//        let user = User(id: nil, fullName: "Demo user", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
+//        PVUserManager.sharedManager().activeUser = user
+//        let sceneD = SceneDelegate()
+//        sceneD.setRootController()
+//
+//        appDel.setRootViewController()
+        
         let objPVInputLocationVC = PVStoreOwnerHomeVC.instantiate()
         self.push(vc: objPVInputLocationVC)
     }

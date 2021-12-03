@@ -25,6 +25,7 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavBar()
+        navigationController?.navigationBar.barStyle = .black
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -85,7 +86,7 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
             let visibleViewController = self.navigationController?.viewControllers.last
             
             if self.navigationController!.viewControllers.count > 1 {
-                setLeftBarButtonWithImageName(imageName: "back_white.png")
+                setLeftBarButtonWithImageName(imageName: "ic_back_white.png")
             } else {
                 removeLeftBarButton()
             }
@@ -135,8 +136,12 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
     // MARK: - Navigation Title
     
     func setNavigationTitle(_ title: String) {
-        
         self.navigationItem.title = title
+    }
+    
+    func setLeftBarButton() {
+        let logoutButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named:"ic_back-white.png"), style: .plain, target: self, action: #selector(PVBaseVC.actionBackTapped))
+        self.navigationItem.setLeftBarButtonItems([logoutButton], animated: true)
     }
     
     func setNavigationImage(imageName: String) {
@@ -214,6 +219,43 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         views.layer.add(transition!, forKey: nil)
     }
     
+    func setProfileNavBarButton() {
+        let profileButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_user"), style: .plain, target: self, action: #selector(goToStoreOwnerProfileVC))
+        profileButton.tintColor = Constants.color.kAPP_COLOR
+        
+        self.navigationItem.setRightBarButton(profileButton, animated: true)
+    }
+    
+    @objc func goToStoreOwnerProfileVC() {
+        let obj = PVStoreOwnerProfileVC.instantiate()
+        self.push(vc: obj)
+    }
+
+    func setLogoutNavBarButton() {
+        let profileButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_logout"), style: .plain, target: self, action: #selector(logoutUser))
+        profileButton.tintColor = Constants.color.kAPP_COLOR
+        
+        self.navigationItem.setRightBarButton(profileButton, animated: true)
+    }
+    
+    func showLogoutConfirmation() {
+        
+        let alert = UIAlertController(title: "Logout", message: kAreYouSureToLogout, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Logout", style: .default, handler: { (_) in
+            PVUserManager.sharedManager().logout()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func logoutUser() {
+        self.showLogoutConfirmation()
+    }
 }
 
 extension UIViewController {
@@ -242,3 +284,4 @@ extension UIDevice {
         
     }
 }
+

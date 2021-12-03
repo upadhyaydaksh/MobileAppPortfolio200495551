@@ -19,6 +19,9 @@ class PVLoginVC: PVBaseVC {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
     // MARK: - Class Methods
     
     class func instantiate() -> PVLoginVC {
@@ -69,8 +72,8 @@ class PVLoginVC: PVBaseVC {
             let user: User? = User(id: "01", fullName: "Anonymus", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
             
             PVUserManager.sharedManager().activeUser = user
-            let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
-            self.push(vc: objPVPhoneVerifyVC)
+            let sceneD = SceneDelegate()
+            sceneD.setRootController()
         }
     }
     

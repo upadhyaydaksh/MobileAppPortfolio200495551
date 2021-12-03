@@ -22,19 +22,19 @@ extension AppDelegate {
     }
     
     func setRootViewController() {
-        if PVUserManager.sharedManager().isProfileComplete() {
+        if PVUserManager.sharedManager().isUserLoggedIn() {
             // Move to HomeVC
             self.setHomeVC()
         } else {
             
-            self.setHomeVC()
-//            PVUserManager.sharedManager().deleteActiveUser()
-//            //Set login page as root
-//            let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
-//            let obj = PVLoginVC.instantiate()
-//            nav.setViewControllers([obj], animated: false)
-//            nav.isNavigationBarHidden = true
-//            self.window?.rootViewController = nav
+//            self.setHomeVC()
+            PVUserManager.sharedManager().deleteActiveUser()
+            //Set login page as root
+            let nav: PVNavigationController = UIStoryboard.main().instantiateViewController(withIdentifier: "PVNavigationController") as! PVNavigationController
+            let obj = PVLoginVC.instantiate()
+            nav.setViewControllers([obj], animated: false)
+            nav.isNavigationBarHidden = true
+            self.window?.rootViewController = nav
         }
     }
     

@@ -12,8 +12,6 @@ import UIKit
 class PVNavigationController: UINavigationController, UINavigationControllerDelegate {
     
     var titleLabel: UILabel?
-    
-    //var btnJustGive: FRAnimatedButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()

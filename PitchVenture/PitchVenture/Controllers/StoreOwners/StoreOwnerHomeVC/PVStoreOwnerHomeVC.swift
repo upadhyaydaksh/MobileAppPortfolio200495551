@@ -19,6 +19,12 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         self.registerTableViewCell()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+        self.setNavigationTitle("Home")
+        self.setProfileNavBarButton()
+    }
     class func instantiate() -> PVStoreOwnerHomeVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVStoreOwnerHomeVC.identifier()) as! PVStoreOwnerHomeVC
     }
@@ -26,4 +32,5 @@ class PVStoreOwnerHomeVC: PVBaseVC {
     func registerTableViewCell() {
         tableView.register(UINib(nibName: "PVHomeTableViewCell", bundle: nil), forCellReuseIdentifier: PVHomeTableViewCell.reuseIdentifier())
     }
+    
 }

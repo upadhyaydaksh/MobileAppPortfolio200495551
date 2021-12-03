@@ -10,6 +10,7 @@
 		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
 		5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */; };
 		FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D162B2742CCB300CF4413 /* FontManager.swift */; };
+		FA2AE7272759A44300EA6F56 /* PVImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2AE7262759A44300EA6F56 /* PVImageView.swift */; };
 		FA3CD3F6274F683F007DB824 /* PVFranchiseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD3F5274F683F007DB824 /* PVFranchiseDetailVC.swift */; };
 		FA3CD3F8274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD3F7274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift */; };
 		FA3CD3FD274F7AB6007DB824 /* PVImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD3FB274F7AB6007DB824 /* PVImageTableViewCell.swift */; };
@@ -90,6 +91,7 @@
 		99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.release.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.release.xcconfig"; sourceTree = "<group>"; };
 		EBD47B50966951F0CEB0EE3B /* Pods-PitchVenture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.debug.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0D162B2742CCB300CF4413 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		FA2AE7262759A44300EA6F56 /* PVImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVImageView.swift; sourceTree = "<group>"; };
 		FA3CD3F5274F683F007DB824 /* PVFranchiseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVFranchiseDetailVC.swift; sourceTree = "<group>"; };
 		FA3CD3F7274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVFranchiseDetailVC+TableView.swift"; sourceTree = "<group>"; };
 		FA3CD3FB274F7AB6007DB824 /* PVImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				FAB45CDD27462C15009F1D5D /* PVTextField.swift */,
 				FAEAC3E127470F47005F0A4F /* PVMessage.swift */,
 				FAB45CFB27463AD5009F1D5D /* PVTableView.swift */,
+				FA2AE7262759A44300EA6F56 /* PVImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -271,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				FA521C24275024DE0099D8C0 /* Common */,
-				FA521C23275024C60099D8C0 /* Franchisors */,
 				FA521C22275024B70099D8C0 /* StoreOwners */,
 				5273B2B92747722600E4D60E /* InputLocationVC */,
 			);
@@ -285,13 +287,6 @@
 				FA521C252750430D0099D8C0 /* StoreOwnerProfileVC */,
 			);
 			path = StoreOwners;
-			sourceTree = "<group>";
-		};
-		FA521C23275024C60099D8C0 /* Franchisors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Franchisors;
 			sourceTree = "<group>";
 		};
 		FA521C24275024DE0099D8C0 /* Common */ = {
@@ -693,6 +688,7 @@
 				FAF4B6362746DE8400B9503F /* PhoneNumber.swift in Sources */,
 				FAB45CEE27462D8B009F1D5D /* UITextViewPlaceholder.swift in Sources */,
 				FAC8A152274818E200EFC95B /* PVStoreOwnerHomeVC+TableView.swift in Sources */,
+				FA2AE7272759A44300EA6F56 /* PVImageView.swift in Sources */,
 				FAB45CF327462D8B009F1D5D /* UITableView+Additions.swift in Sources */,
 				FAF4B6462746E9CD00B9503F /* LogManager.swift in Sources */,
 				FAF4B6572746EE4C00B9503F /* NSUserDefaults+Additions.swift in Sources */,

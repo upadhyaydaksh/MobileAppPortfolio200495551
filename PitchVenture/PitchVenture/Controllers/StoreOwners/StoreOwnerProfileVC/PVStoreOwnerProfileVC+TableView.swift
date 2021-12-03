@@ -30,7 +30,7 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else {
             let cell: PVTextFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVTextFieldTableViewCell.reuseIdentifier()) as! PVTextFieldTableViewCell
-            
+            cell.configureCell(index: indexPath.row)
             return cell
         }
     }

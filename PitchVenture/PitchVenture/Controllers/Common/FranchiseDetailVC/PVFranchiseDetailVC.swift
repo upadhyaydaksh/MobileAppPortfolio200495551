@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PVFranchiseDetailVC: UIViewController {
+class PVFranchiseDetailVC: PVBaseVC {
 
     //MARK:- VARIABLES
     
@@ -19,6 +19,12 @@ class PVFranchiseDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerTableViewCell()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNavigationTitle("Franchise detail")
+        setLeftBarButton()
     }
     
     class func instantiate() -> PVFranchiseDetailVC {
