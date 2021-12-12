@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="PVHeaderFooterView" customModule="PitchVenture" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="69"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-Ju-kYQ">
+                    <rect key="frame" x="0.0" y="0.0" width="415" height="69"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMq-Y7-QEl">
+                            <rect key="frame" x="12" y="12" width="391" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="rMq-Y7-QEl" firstAttribute="leading" secondItem="hS2-Ju-kYQ" secondAttribute="leading" constant="12" id="OIz-aM-xD0"/>
+                        <constraint firstItem="rMq-Y7-QEl" firstAttribute="top" secondItem="hS2-Ju-kYQ" secondAttribute="top" constant="12" id="XUu-9b-lDW"/>
+                        <constraint firstAttribute="bottom" secondItem="rMq-Y7-QEl" secondAttribute="bottom" constant="12" id="oNo-rh-lWy"/>
+                        <constraint firstAttribute="trailing" secondItem="rMq-Y7-QEl" secondAttribute="trailing" constant="12" id="pzf-H4-nLV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="hS2-Ju-kYQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0LL-vL-3TX"/>
+                <constraint firstAttribute="bottom" secondItem="hS2-Ju-kYQ" secondAttribute="bottom" id="cU0-bV-gty"/>
+                <constraint firstItem="hS2-Ju-kYQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l95-JG-SgB"/>
+                <constraint firstAttribute="trailing" secondItem="hS2-Ju-kYQ" secondAttribute="trailing" id="wTF-1E-7eH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblTitle" destination="rMq-Y7-QEl" id="ln3-zY-qdI"/>
+            </connections>
+            <point key="canvasLocation" x="203.62318840579712" y="550.78125"/>
+        </view>
+    </objects>
+</document>

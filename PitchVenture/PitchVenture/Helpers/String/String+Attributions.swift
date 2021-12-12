@@ -2,8 +2,8 @@
 //  String+Attributions.swift
 //  Zirco
 //
-//  Created by Hemant Sharma on 14/02/18.
-//  Copyright © 2019 PHYX. All rights reserved.
+//  Created by Harshit on 17/11/21.
+//  Copyright © 2021 PitchVenture. All rights reserved.
 //
 
 import UIKit

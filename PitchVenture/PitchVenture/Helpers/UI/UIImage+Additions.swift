@@ -2,8 +2,8 @@
 //  UIImage+Additions.swift
 //  BodyFixers
 //
-//  Created by Hemant Sharma on 06/11/17.
-//  Copyright © 2019 PHYX. All rights reserved.
+//  Created by Harshit on 17/11/21.
+//  Copyright © 2021 PitchVenture. All rights reserved.
 //
 
 import UIKit

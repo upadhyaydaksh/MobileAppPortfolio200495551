@@ -1,8 +1,8 @@
 //
 //  Helper.swift
 //
-//  Created by Sourabh Bhardwaj on 15/04/16.
-//  Copyright © 2019 PHYX. All rights reserved.
+//  Created by Harshit on 17/11/21.
+//  Copyright © 2021 PitchVenture. All rights reserved.
 //
 
 import Foundation

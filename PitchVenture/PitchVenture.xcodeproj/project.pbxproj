@@ -24,6 +24,16 @@
 		FA521C2F27506D050099D8C0 /* PVTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA521C2D27506D050099D8C0 /* PVTextFieldTableViewCell.xib */; };
 		FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B01AA2742D65900976EB6 /* ConfigurationManager.swift */; };
 		FA5B01AD2742D65900976EB6 /* Environments.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA5B01AB2742D65900976EB6 /* Environments.plist */; };
+		FA5E0ABF2765301100BD8393 /* PVNotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E0ABE2765301100BD8393 /* PVNotificationsVC.swift */; };
+		FA5E0AC92765310500BD8393 /* PVNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E0AC72765310500BD8393 /* PVNotificationTableViewCell.swift */; };
+		FA5E0ACA2765310500BD8393 /* PVNotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5E0AC82765310500BD8393 /* PVNotificationTableViewCell.xib */; };
+		FA5E0ACC276536C800BD8393 /* PVHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E0ACB276536C800BD8393 /* PVHeaderFooterView.swift */; };
+		FA5E0ACE276537CF00BD8393 /* PVHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5E0ACD276537CF00BD8393 /* PVHeaderFooterView.xib */; };
+		FA5E0AD027654EF900BD8393 /* PVNotificaationsVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E0ACF27654EF900BD8393 /* PVNotificaationsVC+TableView.swift */; };
+		FA5E0AD3276552CA00BD8393 /* PVRequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E0AD2276552CA00BD8393 /* PVRequestsVC.swift */; };
+		FA5E0AD72765566C00BD8393 /* PVRequestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E0AD52765566C00BD8393 /* PVRequestsTableViewCell.swift */; };
+		FA5E0AD82765566C00BD8393 /* PVRequestsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5E0AD62765566C00BD8393 /* PVRequestsTableViewCell.xib */; };
+		FA5E0ADA276556E400BD8393 /* PVRequestsVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E0AD9276556E400BD8393 /* PVRequestsVC+TableView.swift */; };
 		FA70059627479944006DAB61 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70059527479944006DAB61 /* KeychainItem.swift */; };
 		FA81A8B62727688D00D6759A /* PVLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8B52727688D00D6759A /* PVLabel.swift */; };
 		FA81A8B9272769F100D6759A /* PVLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA81A8B8272769F100D6759A /* PVLoginVC.swift */; };
@@ -105,6 +115,16 @@
 		FA521C2D27506D050099D8C0 /* PVTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		FA5B01AA2742D65900976EB6 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		FA5B01AB2742D65900976EB6 /* Environments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environments.plist; sourceTree = "<group>"; };
+		FA5E0ABE2765301100BD8393 /* PVNotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVNotificationsVC.swift; sourceTree = "<group>"; };
+		FA5E0AC72765310500BD8393 /* PVNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVNotificationTableViewCell.swift; sourceTree = "<group>"; };
+		FA5E0AC82765310500BD8393 /* PVNotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVNotificationTableViewCell.xib; sourceTree = "<group>"; };
+		FA5E0ACB276536C800BD8393 /* PVHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVHeaderFooterView.swift; sourceTree = "<group>"; };
+		FA5E0ACD276537CF00BD8393 /* PVHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVHeaderFooterView.xib; sourceTree = "<group>"; };
+		FA5E0ACF27654EF900BD8393 /* PVNotificaationsVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVNotificaationsVC+TableView.swift"; sourceTree = "<group>"; };
+		FA5E0AD2276552CA00BD8393 /* PVRequestsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRequestsVC.swift; sourceTree = "<group>"; };
+		FA5E0AD52765566C00BD8393 /* PVRequestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVRequestsTableViewCell.swift; sourceTree = "<group>"; };
+		FA5E0AD62765566C00BD8393 /* PVRequestsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVRequestsTableViewCell.xib; sourceTree = "<group>"; };
+		FA5E0AD9276556E400BD8393 /* PVRequestsVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVRequestsVC+TableView.swift"; sourceTree = "<group>"; };
 		FA70059527479944006DAB61 /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 		FA81A8B52727688D00D6759A /* PVLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVLabel.swift; sourceTree = "<group>"; };
 		FA81A8B8272769F100D6759A /* PVLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVLoginVC.swift; sourceTree = "<group>"; };
@@ -292,6 +312,8 @@
 		FA521C24275024DE0099D8C0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FA5E0AD1276552A700BD8393 /* RequestsVC */,
+				FA5E0ABD27652FE800BD8393 /* NotificationsVC */,
 				FA3CD3F4274F67FF007DB824 /* FranchiseDetailVC */,
 				FA81A8BF27276EF600D6759A /* PhoneVerifyVC */,
 				FA81A8B72727696E00D6759A /* LoginVC */,
@@ -333,6 +355,62 @@
 				FA5B01AB2742D65900976EB6 /* Environments.plist */,
 			);
 			path = "Configuration Manager";
+			sourceTree = "<group>";
+		};
+		FA5E0ABD27652FE800BD8393 /* NotificationsVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E0AC02765308400BD8393 /* TableViewCells */,
+				FA5E0ABE2765301100BD8393 /* PVNotificationsVC.swift */,
+				FA5E0ACF27654EF900BD8393 /* PVNotificaationsVC+TableView.swift */,
+			);
+			path = NotificationsVC;
+			sourceTree = "<group>";
+		};
+		FA5E0AC02765308400BD8393 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E0AC6276530E800BD8393 /* NotificationCell */,
+				FA5E0AC12765309100BD8393 /* HeaderCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		FA5E0AC12765309100BD8393 /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E0ACB276536C800BD8393 /* PVHeaderFooterView.swift */,
+				FA5E0ACD276537CF00BD8393 /* PVHeaderFooterView.xib */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		FA5E0AC6276530E800BD8393 /* NotificationCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E0AC72765310500BD8393 /* PVNotificationTableViewCell.swift */,
+				FA5E0AC82765310500BD8393 /* PVNotificationTableViewCell.xib */,
+			);
+			path = NotificationCell;
+			sourceTree = "<group>";
+		};
+		FA5E0AD1276552A700BD8393 /* RequestsVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E0AD42765562200BD8393 /* TableViewCells */,
+				FA5E0AD2276552CA00BD8393 /* PVRequestsVC.swift */,
+				FA5E0AD9276556E400BD8393 /* PVRequestsVC+TableView.swift */,
+			);
+			path = RequestsVC;
+			sourceTree = "<group>";
+		};
+		FA5E0AD42765562200BD8393 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E0AD52765566C00BD8393 /* PVRequestsTableViewCell.swift */,
+				FA5E0AD62765566C00BD8393 /* PVRequestsTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		FA81A8B72727696E00D6759A /* LoginVC */ = {
@@ -615,6 +693,9 @@
 				FA933448271A107A0002DBED /* Assets.xcassets in Resources */,
 				FA933446271A10780002DBED /* Main.storyboard in Resources */,
 				FA3CD3FE274F7AB6007DB824 /* PVImageTableViewCell.xib in Resources */,
+				FA5E0ACE276537CF00BD8393 /* PVHeaderFooterView.xib in Resources */,
+				FA5E0ACA2765310500BD8393 /* PVNotificationTableViewCell.xib in Resources */,
+				FA5E0AD82765566C00BD8393 /* PVRequestsTableViewCell.xib in Resources */,
 				FAEAC3DE27470D16005F0A4F /* PVTextFieldView.xib in Resources */,
 				FAC8A159274836D700EFC95B /* GoogleService-Info.plist in Resources */,
 			);
@@ -687,6 +768,7 @@
 				FAF4B64B2746EAEC00B9503F /* NSDate+Formatters.swift in Sources */,
 				FAF4B6362746DE8400B9503F /* PhoneNumber.swift in Sources */,
 				FAB45CEE27462D8B009F1D5D /* UITextViewPlaceholder.swift in Sources */,
+				FA5E0AD3276552CA00BD8393 /* PVRequestsVC.swift in Sources */,
 				FAC8A152274818E200EFC95B /* PVStoreOwnerHomeVC+TableView.swift in Sources */,
 				FA2AE7272759A44300EA6F56 /* PVImageView.swift in Sources */,
 				FAB45CF327462D8B009F1D5D /* UITableView+Additions.swift in Sources */,
@@ -697,6 +779,7 @@
 				FAB45CFA27463889009F1D5D /* String+Additions.swift in Sources */,
 				FA81A8C62727705B00D6759A /* Constants.swift in Sources */,
 				FAF4B6322746DA5A00B9503F /* PVStoreOwnerHomeVC.swift in Sources */,
+				FA5E0ACC276536C800BD8393 /* PVHeaderFooterView.swift in Sources */,
 				FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */,
 				FAF4B6402746E1C400B9503F /* NSMutableURLRequest+Additions.swift in Sources */,
 				FA70059627479944006DAB61 /* KeychainItem.swift in Sources */,
@@ -704,6 +787,7 @@
 				FAF4B6522746EDBF00B9503F /* AppInfo.swift in Sources */,
 				FAB45CF227462D8B009F1D5D /* UIScrollView+Additions.swift in Sources */,
 				FAF4B64F2746ECB300B9503F /* Address.swift in Sources */,
+				FA5E0AD72765566C00BD8393 /* PVRequestsTableViewCell.swift in Sources */,
 				FAF4B63D2746E1C400B9503F /* StatusCode.swift in Sources */,
 				FAB45CDE27462C15009F1D5D /* PVTextField.swift in Sources */,
 				FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */,
@@ -716,17 +800,21 @@
 				FA521C2E27506D050099D8C0 /* PVTextFieldTableViewCell.swift in Sources */,
 				FA81A8C127276F7100D6759A /* PVPhoneVerifyVC.swift in Sources */,
 				FAF4B6642746F71500B9503F /* Reachability.swift in Sources */,
+				FA5E0AC92765310500BD8393 /* PVNotificationTableViewCell.swift in Sources */,
 				5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */,
 				FAF4B65C2746F23D00B9503F /* Messages.swift in Sources */,
 				FA521C27275043400099D8C0 /* PVStoreOwnerProfileVC.swift in Sources */,
+				FA5E0AD027654EF900BD8393 /* PVNotificaationsVC+TableView.swift in Sources */,
 				FAF4B6612746F59900B9503F /* Dictionary+Additions.swift in Sources */,
 				FAF4B65A2746F15B00B9503F /* Media.swift in Sources */,
 				FAB45CEB27462D8B009F1D5D /* UIImage+Additions.swift in Sources */,
 				FAF4B6582746EE4C00B9503F /* Userdefaults+Savings.swift in Sources */,
 				FAB45CF127462D8B009F1D5D /* UITapGestureRecognizer+Additions.swift in Sources */,
+				FA5E0ABF2765301100BD8393 /* PVNotificationsVC.swift in Sources */,
 				FAF4B62D2746D86400B9503F /* PVUserManager.swift in Sources */,
 				FAB45CFC27463AD5009F1D5D /* PVTableView.swift in Sources */,
 				FAF4B6602746F59900B9503F /* Dictionary+Request.swift in Sources */,
+				FA5E0ADA276556E400BD8393 /* PVRequestsVC+TableView.swift in Sources */,
 				FA3CD3FD274F7AB6007DB824 /* PVImageTableViewCell.swift in Sources */,
 				FAEAC3D527470150005F0A4F /* SceneDelegate.swift in Sources */,
 				FA474C8827234A25008601A9 /* PVButton.swift in Sources */,
