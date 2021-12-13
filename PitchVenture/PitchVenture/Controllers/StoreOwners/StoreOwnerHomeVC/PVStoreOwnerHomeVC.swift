@@ -23,7 +23,7 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
         self.setNavigationTitle("Home")
-        self.setProfileNavBarButton()
+        self.setProfileAndNotificationNavBarButton()
     }
     class func instantiate() -> PVStoreOwnerHomeVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVStoreOwnerHomeVC.identifier()) as! PVStoreOwnerHomeVC

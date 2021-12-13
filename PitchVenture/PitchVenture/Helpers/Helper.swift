@@ -540,16 +540,6 @@ func combineDateWithTime(date: Date, time: Date) -> Date? {
     return calendar.date(from: mergedComponments)
 }
 
-func showAlert(title: String?, message: String?) {
-    let actionSheet = UIAlertController(title: "\(title ?? "Sample Response")", message: message ?? "Message not available.", preferredStyle: .alert)
-    
-    actionSheet.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { (_) in
-        
-    }))
-    
-    appDel.window?.rootViewController?.present(actionSheet, animated: true, completion: nil)
-}
-
 func randomAlphaNumericString(length: Int) -> String {
   let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
   return String((0..<length).map{ _ in letters.randomElement()! })

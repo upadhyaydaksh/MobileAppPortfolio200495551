@@ -15,6 +15,8 @@ class PVFranchiseDetailVC: PVBaseVC {
     //MARK:- OUTLETS
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var btnApply: PVButton!
+    
     //MARK:- CLASS METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,4 +38,10 @@ class PVFranchiseDetailVC: PVBaseVC {
         
         tableView.register(UINib(nibName: "PVFranchiseDetailTableViewCell", bundle: nil), forCellReuseIdentifier: PVFranchiseDetailTableViewCell.reuseIdentifier())
     }
+    
+    @IBAction func btnApplyAction(_ sender: Any) {
+        let obj = PVRequestsVC.instantiate()
+        self.push(vc: obj)
+    }
+    
 }

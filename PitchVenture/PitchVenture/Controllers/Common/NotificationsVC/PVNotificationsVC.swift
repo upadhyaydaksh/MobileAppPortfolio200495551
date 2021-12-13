@@ -10,6 +10,7 @@ import UIKit
 
 class PVNotificationsVC: PVBaseVC {
 
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

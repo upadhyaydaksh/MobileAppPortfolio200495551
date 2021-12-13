@@ -28,9 +28,11 @@ extension PVRequestsVC : UITableViewDataSource, UITableViewDelegate {
     
     @objc func btnAcceptAction(_ sender: UIButton!) {
         print(sender.tag)
+        self.showAlertWithTitleAndMessage(title: "Success", msg: "Request accepted successfullty.")
     }
     
     @objc func btnRejectAction(_ sender: UIButton!) {
         print(sender.tag)
+        self.showAlertWithTitleAndMessage(title: "Success", msg: "Request rejected successfullty.")
     }
 }

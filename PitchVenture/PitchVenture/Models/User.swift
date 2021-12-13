@@ -9,11 +9,9 @@
 import UIKit
 import ObjectMapper
 
-enum UserAccountStatus: Int {
-    case PendingForApproval = 0
-    case Approved = 1
-    case Declined = 2
-    case Inactive = 3
+enum UserLoginType: Int {
+    case StoreOwner = 1
+    case Franchisor = 2
 }
 
 enum AcceptDecline : String {

@@ -45,13 +45,6 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         return .lightContent
     }
     
-    
-    // MARK: - UIGestureRecognizerDelegate
-    
-//    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-//        return true
-//    }
-    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         // Don't handle button taps
         return !(touch.view is UIButton)
@@ -226,8 +219,23 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         self.navigationItem.setRightBarButton(profileButton, animated: true)
     }
     
+    func setProfileAndNotificationNavBarButton() {
+        let profileButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_user"), style: .plain, target: self, action: #selector(goToStoreOwnerProfileVC))
+        profileButton.tintColor = Constants.color.kAPP_COLOR
+        
+        let notificationButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notification"), style: .plain, target: self, action: #selector(goToNotificationVC))
+        profileButton.tintColor = Constants.color.kAPP_COLOR
+        
+    self.navigationItem.setRightBarButtonItems([profileButton,notificationButton], animated: true)
+    }
+    
     @objc func goToStoreOwnerProfileVC() {
         let obj = PVStoreOwnerProfileVC.instantiate()
+        self.push(vc: obj)
+    }
+    
+    @objc func goToNotificationVC() {
+        let obj = PVNotificationsVC.instantiate()
         self.push(vc: obj)
     }
 
@@ -255,6 +263,16 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
     
     @objc func logoutUser() {
         self.showLogoutConfirmation()
+    }
+    
+    func showAlertWithTitleAndMessage(title: String, msg: String) {
+        // Open option of add business / add fundraiser
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
