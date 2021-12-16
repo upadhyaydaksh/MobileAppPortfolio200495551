@@ -108,7 +108,8 @@ class PVTextFieldView: UIView {
         textFieldPhonePicker.tintColor = textFieldPhonePicker.textColor!
         textFieldPhonePicker.attributedPlaceholder = NSAttributedString(string: textFieldPhonePicker.placeholder ?? "", attributes:[NSAttributedString.Key.foregroundColor: Constants.color.kTEXTFIELD_PLACEHOLDER_COLOR])
         textFieldPhonePicker.font = FontManager.montserratFont(fontName: .semiBold, size: 16)
-        
+        textField.inputType = .PhoneNumber
+        textField.maxLength = 10
         updateTextFieldVisibility()
     }
     
@@ -152,6 +153,8 @@ class PVTextFieldView: UIView {
         if viewMode == .phoneNumber {
             textField.isHidden = true
             textFieldPhonePicker.isHidden = false
+            textField.inputType = .PhoneNumber
+            textField.maxLength = 10
         } else {
             textField.isHidden = false
             textFieldPhonePicker.isHidden = true

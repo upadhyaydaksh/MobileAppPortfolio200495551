@@ -26,7 +26,7 @@ struct Constants {
         static let PriceAfterDecimalLength = 2
         static let RulesShort = 100
         static let PasswordMaxLength = 30
-        static let PhoneNumberMaxLength = 15
+        static let PhoneNumberMaxLength = 10
         static let NoLimit = Int(INT_MAX)
         static let ShortDescriptionTextLength = 200
         static let ZipCodeMaxLength = 10

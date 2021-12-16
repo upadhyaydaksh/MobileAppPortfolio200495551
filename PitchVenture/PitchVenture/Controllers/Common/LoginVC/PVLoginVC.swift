@@ -56,12 +56,9 @@ class PVLoginVC: PVBaseVC {
     @IBAction func btnAppleLoginAction(_ sender: Any) {
         let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
         self.push(vc: objPVPhoneVerifyVC)
-//        self.handleAuthorizationAppleIDButtonPress()
     }
     
     @IBAction func btnGoogleLoginAction(_ sender: Any) {
-//        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
-//        self.push(vc: objPVPhoneVerifyVC)
         
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
           guard error == nil else { return }
@@ -72,8 +69,12 @@ class PVLoginVC: PVBaseVC {
             let user: User? = User(id: "01", fullName: "Anonymus", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
             
             PVUserManager.sharedManager().activeUser = user
-            let sceneD = SceneDelegate()
-            sceneD.setRootController()
+//            let sceneD = SceneDelegate()
+//            sceneD.setRootController()
+            
+            //GO TO PHONE VERIFY VC
+            let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
+            self.push(vc: objPVPhoneVerifyVC)
         }
     }
     
