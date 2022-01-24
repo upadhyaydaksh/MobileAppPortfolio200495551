@@ -15,7 +15,7 @@ let kResponseMessage = "message"
 let kResponse = "response"
 
 /// ApiResponseInfo used to store URL response.
-class Response: NSObject {
+class Responses: NSObject {
 
     // The data received during the request.
     var responseData: Data?

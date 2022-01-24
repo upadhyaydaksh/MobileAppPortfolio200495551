@@ -81,7 +81,7 @@ func addAdditionalParameters(_ params: [String: AnyObject]) -> [String: AnyObjec
  - parameter response:   api response
  - parameter completion: completion handler
  */
-func handleApiResponse(_ response: Response, completion: (_ success: Bool, _ error: Error?) -> (Void)) {
+func handleApiResponse(_ response: Responses, completion: (_ success: Bool, _ error: Error?) -> (Void)) {
     LogManager.logDebug("response = \(response)")
     
     if response.success {

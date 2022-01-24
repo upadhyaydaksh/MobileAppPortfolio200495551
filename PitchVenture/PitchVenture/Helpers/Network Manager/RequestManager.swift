@@ -86,13 +86,13 @@ class RequestManager: NSObject {
      - parameter userInfo:          userinfo
      - parameter completionHandler: handler
      */
-    func performRequest(_ request: URLRequest, userInfo: NSDictionary? = nil, completionHandler: @escaping (_ response: Response) -> Void) -> () {
+    func performRequest(_ request: URLRequest, userInfo: NSDictionary? = nil, completionHandler: @escaping (_ response: Responses) -> Void) -> () {
         
         debugPrint("URL: \(String(describing: request.url))")
         
         guard isNetworkReachable() else {
             let resError: NSError = errorForNoNetwork()
-            let res = Response(error: resError)
+            let res = Responses(error: resError)
             completionHandler(res)
             return // do not proceed if user is not connected to internet
         }
@@ -120,10 +120,10 @@ class RequestManager: NSObject {
      - parameter userInfo:          userinfo
      - parameter completionHandler: handler
      */
-    fileprivate func performDownloadRequest(_ request: URLRequest, userInfo: NSDictionary? = nil, completionHandler: @escaping (_ response: Response) -> Void) -> () {
+    fileprivate func performDownloadRequest(_ request: URLRequest, userInfo: NSDictionary? = nil, completionHandler: @escaping (_ response: Responses) -> Void) -> () {
         guard isNetworkReachable() else {
             let resError: NSError = errorForNoNetwork()
-            let res = Response(error: resError)
+            let res = Responses(error: resError)
             completionHandler(res)
             return // do not proceed if user is not connected to internet
         }
@@ -154,9 +154,9 @@ class RequestManager: NSObject {
                     responseError = self.errorForStatus(httpResponse.statusCode)
                 }
             }
-            var apiResponse: Response?
+            var apiResponse: Responses?
             if let _ = responseError {
-                apiResponse = Response(data: data)
+                apiResponse = Responses(data: data)
                 if let _ = apiResponse?.resultDictionary {
                     self.logResponse(data!, responseDictnionary: apiResponse!.resultDictionary!, forRequest: mutableRequest)
                 }
@@ -167,7 +167,7 @@ class RequestManager: NSObject {
                 }
                 
             } else {
-                apiResponse = Response()
+                apiResponse = Responses()
                 apiResponse?.responseData = data
                 apiResponse?.resultDictionary = ["status": 1, "message": "Downloaded successfully"]
                 debugPrint("URL: \(String(describing: request.url?.absoluteString))")
@@ -183,7 +183,7 @@ class RequestManager: NSObject {
                     } else if httpResponse.statusCode == 405 {
                         // User is using an old version of the app. Please show alert of app update.
                         PVUserManager.sharedManager().setSplashAsRoot()
-                        let response = Response(data: data)
+                        let response = Responses(data: data)
                         if let result = response.resultDictionary {
                             if let info = result.value(forKey: "data") as? [String : Any] {
                                 if let platform = info["platform"] as? String {
@@ -206,7 +206,7 @@ class RequestManager: NSObject {
      - parameter userInfo:          user information
      - parameter completionHandler: completion handler
      */
-    fileprivate func performSessionDataTaskWithRequest(_ request: URLRequest, userInfo: NSDictionary? = nil, completionHandler: @escaping (_ response: Response) -> Void) -> () {
+    fileprivate func performSessionDataTaskWithRequest(_ request: URLRequest, userInfo: NSDictionary? = nil, completionHandler: @escaping (_ response: Responses) -> Void) -> () {
         
         RequestManager.beginNetworkActivity()
         self.addRequestedURL(request.url!)
@@ -227,9 +227,9 @@ class RequestManager: NSObject {
                     responseError = self.errorForStatus(httpResponse.statusCode)
                 }
             }
-            var apiResponse: Response?
+            var apiResponse: Responses?
             if let _ = responseError {
-                apiResponse = Response(data: data)
+                apiResponse = Responses(data: data)
                 if let _ = apiResponse?.resultDictionary {
                     self.logResponse(data!, responseDictnionary: apiResponse!.resultDictionary!, forRequest: request)
                 }
@@ -240,7 +240,7 @@ class RequestManager: NSObject {
                 }
                 
             } else {
-                apiResponse = Response(data: data)
+                apiResponse = Responses(data: data)
                 if let _ = apiResponse?.resultDictionary {
                     self.logResponse(data!, responseDictnionary: apiResponse!.resultDictionary!, forRequest: request)
                 }
@@ -257,7 +257,7 @@ class RequestManager: NSObject {
                     } else if httpResponse.statusCode == 405 {
                         // User is using an old version of the app. Please show alert of app update.
                         PVUserManager.sharedManager().setSplashAsRoot()
-                        let response = Response(data: data)
+                        let response = Responses(data: data)
                         if let result = response.resultDictionary {
                             if let info = result.value(forKey: "data") as? [String : Any] {
                                 print(data)
@@ -277,7 +277,7 @@ class RequestManager: NSObject {
      - parameter params:            parameters
      - parameter completionHandler: completion handler
      */
-    func performHTTPActionWithMethod(_ method: HTTPRequestMethod, urlString: String, params: [String: AnyObject]? = nil, completionHandler: @escaping (_ response: Response) -> Void) {
+    func performHTTPActionWithMethod(_ method: HTTPRequestMethod, urlString: String, params: [String: AnyObject]? = nil, completionHandler: @escaping (_ response: Responses) -> Void) {
         
         debugPrint("URL: \(urlString)")
         debugPrint("Params: \(String(describing: params))")
@@ -292,7 +292,7 @@ class RequestManager: NSObject {
                 self.performRequest(request, completionHandler: completionHandler)
             } else { // do not proceed if the url is nil
                 let resError: Error = errorForInvalidURL()
-                let res = Response(error: resError)
+                let res = Responses(error: resError)
                 completionHandler(res)
             }
         } else {
@@ -319,7 +319,7 @@ class RequestManager: NSObject {
      - parameter params:            parameters
      - parameter completionHandler: completion handler
      */
-    func performDownload(urlString: String, params: [String: AnyObject]? = nil, completionHandler: @escaping (_ response: Response) -> Void) {
+    func performDownload(urlString: String, params: [String: AnyObject]? = nil, completionHandler: @escaping (_ response: Responses) -> Void) {
         var components = URLComponents(string: urlString)
         components?.queryItems = params?.queryItems() as [URLQueryItem]?
         
@@ -329,7 +329,7 @@ class RequestManager: NSObject {
             self.performDownloadRequest(request, completionHandler: completionHandler)
         } else { // do not proceed if the url is nil
             let resError: Error = errorForInvalidURL()
-            let res = Response(error: resError)
+            let res = Responses(error: resError)
             completionHandler(res)
         }
     }

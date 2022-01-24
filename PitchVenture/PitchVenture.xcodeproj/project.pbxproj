@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
 		5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */; };
+		A0A2389B279D2D9000BE5156 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */; };
+		A0A2389C279D2D9000BE5156 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23895279D2D9000BE5156 /* ResponseModel.swift */; };
+		A0A2389D279D2D9000BE5156 /* ServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23896279D2D9000BE5156 /* ServerApi.swift */; };
+		A0A2389E279D2D9000BE5156 /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23898279D2D9000BE5156 /* LoginError.swift */; };
+		A0A2389F279D2D9000BE5156 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2389A279D2D9000BE5156 /* AccountService.swift */; };
+		A0A238A1279E6D1C00BE5156 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A238A0279E6D1C00BE5156 /* Account.swift */; };
 		FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D162B2742CCB300CF4413 /* FontManager.swift */; };
 		FA2AE7272759A44300EA6F56 /* PVImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2AE7262759A44300EA6F56 /* PVImageView.swift */; };
 		FA3CD3F6274F683F007DB824 /* PVFranchiseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD3F5274F683F007DB824 /* PVFranchiseDetailVC.swift */; };
@@ -77,7 +83,7 @@
 		FAF4B6372746DE8400B9503F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6352746DE8400B9503F /* User.swift */; };
 		FAF4B63D2746E1C400B9503F /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6392746E1C300B9503F /* StatusCode.swift */; };
 		FAF4B63E2746E1C400B9503F /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B63A2746E1C300B9503F /* RequestManager.swift */; };
-		FAF4B63F2746E1C400B9503F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B63B2746E1C300B9503F /* Response.swift */; };
+		FAF4B63F2746E1C400B9503F /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B63B2746E1C300B9503F /* Responses.swift */; };
 		FAF4B6402746E1C400B9503F /* NSMutableURLRequest+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B63C2746E1C300B9503F /* NSMutableURLRequest+Additions.swift */; };
 		FAF4B6462746E9CD00B9503F /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6452746E9CD00B9503F /* LogManager.swift */; };
 		FAF4B64A2746EAEC00B9503F /* Date+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6482746EAEC00B9503F /* Date+Additions.swift */; };
@@ -99,6 +105,12 @@
 		1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVInputLocationVC.swift; sourceTree = "<group>"; };
 		99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.release.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.release.xcconfig"; sourceTree = "<group>"; };
+		A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
+		A0A23895279D2D9000BE5156 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		A0A23896279D2D9000BE5156 /* ServerApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerApi.swift; sourceTree = "<group>"; };
+		A0A23898279D2D9000BE5156 /* LoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
+		A0A2389A279D2D9000BE5156 /* AccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		A0A238A0279E6D1C00BE5156 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		EBD47B50966951F0CEB0EE3B /* Pods-PitchVenture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.debug.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0D162B2742CCB300CF4413 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		FA2AE7262759A44300EA6F56 /* PVImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVImageView.swift; sourceTree = "<group>"; };
@@ -170,7 +182,7 @@
 		FAF4B6352746DE8400B9503F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FAF4B6392746E1C300B9503F /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		FAF4B63A2746E1C300B9503F /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
-		FAF4B63B2746E1C300B9503F /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		FAF4B63B2746E1C300B9503F /* Responses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
 		FAF4B63C2746E1C300B9503F /* NSMutableURLRequest+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableURLRequest+Additions.swift"; sourceTree = "<group>"; };
 		FAF4B6452746E9CD00B9503F /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 		FAF4B6482746EAEC00B9503F /* Date+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Additions.swift"; sourceTree = "<group>"; };
@@ -223,6 +235,43 @@
 				99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A0A23893279D2D9000BE5156 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A0A238A2279E6D2800BE5156 /* Models */,
+				A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */,
+				A0A23895279D2D9000BE5156 /* ResponseModel.swift */,
+				A0A23896279D2D9000BE5156 /* ServerApi.swift */,
+				A0A23897279D2D9000BE5156 /* Errors */,
+				A0A23899279D2D9000BE5156 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A0A23897279D2D9000BE5156 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A0A23898279D2D9000BE5156 /* LoginError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A0A23899279D2D9000BE5156 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A0A2389A279D2D9000BE5156 /* AccountService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A0A238A2279E6D2800BE5156 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0A238A0279E6D1C00BE5156 /* Account.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FA3CD3F4274F67FF007DB824 /* FranchiseDetailVC */ = {
@@ -471,6 +520,7 @@
 		FA93343D271A10780002DBED /* PitchVenture */ = {
 			isa = PBXGroup;
 			children = (
+				A0A23893279D2D9000BE5156 /* Networking */,
 				FA81A8C42727704100D6759A /* Constants */,
 				FA81A8BC27276C1A00D6759A /* AppDelegates */,
 				FA474C8927234A83008601A9 /* Controllers */,
@@ -575,7 +625,7 @@
 			children = (
 				FAF4B6392746E1C300B9503F /* StatusCode.swift */,
 				FAF4B63A2746E1C300B9503F /* RequestManager.swift */,
-				FAF4B63B2746E1C300B9503F /* Response.swift */,
+				FAF4B63B2746E1C300B9503F /* Responses.swift */,
 				FAF4B63C2746E1C300B9503F /* NSMutableURLRequest+Additions.swift */,
 			);
 			path = "Network Manager";
@@ -755,7 +805,7 @@
 				FA81A8B9272769F100D6759A /* PVLoginVC.swift in Sources */,
 				FA81A8BB27276AB300D6759A /* PVBaseVC.swift in Sources */,
 				FAB45CEF27462D8B009F1D5D /* UIButton+Additions.swift in Sources */,
-				FAF4B63F2746E1C400B9503F /* Response.swift in Sources */,
+				FAF4B63F2746E1C400B9503F /* Responses.swift in Sources */,
 				FA81A8B62727688D00D6759A /* PVLabel.swift in Sources */,
 				FAB45CF527462D8B009F1D5D /* UIBarButtonItem+Additions.swift in Sources */,
 				FAB45CF427462D8B009F1D5D /* UIStoryboard+Additions.swift in Sources */,
@@ -772,6 +822,7 @@
 				FAC8A152274818E200EFC95B /* PVStoreOwnerHomeVC+TableView.swift in Sources */,
 				FA2AE7272759A44300EA6F56 /* PVImageView.swift in Sources */,
 				FAB45CF327462D8B009F1D5D /* UITableView+Additions.swift in Sources */,
+				A0A2389B279D2D9000BE5156 /* NetworkAdapter.swift in Sources */,
 				FAF4B6462746E9CD00B9503F /* LogManager.swift in Sources */,
 				FAF4B6572746EE4C00B9503F /* NSUserDefaults+Additions.swift in Sources */,
 				FA93343F271A10780002DBED /* AppDelegate.swift in Sources */,
@@ -791,6 +842,8 @@
 				FAF4B63D2746E1C400B9503F /* StatusCode.swift in Sources */,
 				FAB45CDE27462C15009F1D5D /* PVTextField.swift in Sources */,
 				FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */,
+				A0A2389E279D2D9000BE5156 /* LoginError.swift in Sources */,
+				A0A2389C279D2D9000BE5156 /* ResponseModel.swift in Sources */,
 				FAF4B64D2746EBA500B9503F /* Helper.swift in Sources */,
 				FA3CD3F8274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift in Sources */,
 				FAB45CEC27462D8B009F1D5D /* UINavigationController+Additions.swift in Sources */,
@@ -800,11 +853,13 @@
 				FA521C2E27506D050099D8C0 /* PVTextFieldTableViewCell.swift in Sources */,
 				FA81A8C127276F7100D6759A /* PVPhoneVerifyVC.swift in Sources */,
 				FAF4B6642746F71500B9503F /* Reachability.swift in Sources */,
+				A0A238A1279E6D1C00BE5156 /* Account.swift in Sources */,
 				FA5E0AC92765310500BD8393 /* PVNotificationTableViewCell.swift in Sources */,
 				5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */,
 				FAF4B65C2746F23D00B9503F /* Messages.swift in Sources */,
 				FA521C27275043400099D8C0 /* PVStoreOwnerProfileVC.swift in Sources */,
 				FA5E0AD027654EF900BD8393 /* PVNotificaationsVC+TableView.swift in Sources */,
+				A0A2389D279D2D9000BE5156 /* ServerApi.swift in Sources */,
 				FAF4B6612746F59900B9503F /* Dictionary+Additions.swift in Sources */,
 				FAF4B65A2746F15B00B9503F /* Media.swift in Sources */,
 				FAB45CEB27462D8B009F1D5D /* UIImage+Additions.swift in Sources */,
@@ -820,6 +875,7 @@
 				FA474C8827234A25008601A9 /* PVButton.swift in Sources */,
 				FAC8A1552748196000EFC95B /* PVHomeTableViewCell.swift in Sources */,
 				FAB45CFE27463BE4009F1D5D /* Country.swift in Sources */,
+				A0A2389F279D2D9000BE5156 /* AccountService.swift in Sources */,
 				FAF4B64A2746EAEC00B9503F /* Date+Additions.swift in Sources */,
 				FA3CD3F6274F683F007DB824 /* PVFranchiseDetailVC.swift in Sources */,
 			);
