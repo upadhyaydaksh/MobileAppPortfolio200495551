@@ -31,4 +31,6 @@ target 'PitchVenture' do
   
   pod 'Moya'
 
+  #AD MOB
+  pod 'Google-Mobile-Ads-SDK'
 end

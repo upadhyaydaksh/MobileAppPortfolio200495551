@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
 		5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */; };
+		52B68B2727AF00A400921AC9 /* PVGoogleAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */; };
 		A0A2389B279D2D9000BE5156 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */; };
 		A0A2389C279D2D9000BE5156 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23895279D2D9000BE5156 /* ResponseModel.swift */; };
 		A0A2389D279D2D9000BE5156 /* ServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23896279D2D9000BE5156 /* ServerApi.swift */; };
@@ -104,6 +105,7 @@
 /* Begin PBXFileReference section */
 		1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVInputLocationVC.swift; sourceTree = "<group>"; };
+		52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVGoogleAdsViewController.swift; sourceTree = "<group>"; };
 		99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.release.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.release.xcconfig"; sourceTree = "<group>"; };
 		A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
 		A0A23895279D2D9000BE5156 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
@@ -226,6 +228,14 @@
 				5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */,
 			);
 			path = InputLocationVC;
+			sourceTree = "<group>";
+		};
+		52B68B2527AF008200921AC9 /* GoogleAds */ = {
+			isa = PBXGroup;
+			children = (
+				52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */,
+			);
+			path = GoogleAds;
 			sourceTree = "<group>";
 		};
 		7F2D321FC1A45AF67191A850 /* Pods */ = {
@@ -361,6 +371,7 @@
 		FA521C24275024DE0099D8C0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				52B68B2527AF008200921AC9 /* GoogleAds */,
 				FA5E0AD1276552A700BD8393 /* RequestsVC */,
 				FA5E0ABD27652FE800BD8393 /* NotificationsVC */,
 				FA3CD3F4274F67FF007DB824 /* FranchiseDetailVC */,
@@ -830,6 +841,7 @@
 				FAB45CFA27463889009F1D5D /* String+Additions.swift in Sources */,
 				FA81A8C62727705B00D6759A /* Constants.swift in Sources */,
 				FAF4B6322746DA5A00B9503F /* PVStoreOwnerHomeVC.swift in Sources */,
+				52B68B2727AF00A400921AC9 /* PVGoogleAdsViewController.swift in Sources */,
 				FA5E0ACC276536C800BD8393 /* PVHeaderFooterView.swift in Sources */,
 				FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */,
 				FAF4B6402746E1C400B9503F /* NSMutableURLRequest+Additions.swift in Sources */,
@@ -1031,7 +1043,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gc.project.pitchventure;
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgiancollege.pitchventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1053,7 +1065,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gc.project.pitchventure;
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgiancollege.pitchventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

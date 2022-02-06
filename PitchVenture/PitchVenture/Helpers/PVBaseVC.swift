@@ -300,4 +300,3 @@ extension UIDevice {
         
     }
 }
-
