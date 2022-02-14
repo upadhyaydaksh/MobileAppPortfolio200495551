@@ -26,9 +26,10 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         
         bannerView = GADBannerView(adSize: adSize)
         addBannerViewToView(bannerView)
-        
+        //TEST
         //bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.adUnitID = "ca-app-pub-8620133611536867~7249942660"
+        //LIVE
+        bannerView.adUnitID = "ca-app-pub-8620133611536867/7249942660"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         

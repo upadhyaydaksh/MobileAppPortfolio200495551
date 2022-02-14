@@ -14,6 +14,10 @@ enum MyServerAPI {
     case googleSignIn(data: [String: Any])
     
     case storeOwenerSignup(data: [String: Any])
+    
+    case getAllFranchises(data: [String: Any])
+    
+    case getAllStoreOwners(data: [String: Any])
 }
 
 // 2:
@@ -30,8 +34,15 @@ extension MyServerAPI: TargetType {
         switch self {
         case .googleSignIn:
             return "account/createAccount"
+            
         case .storeOwenerSignup:
             return "account/storeOwenerSignup"
+            
+        case .getAllFranchises:
+            return "account/getAllFranchises"
+            
+        case .getAllStoreOwners:
+            return "account/getAllStoreOwners"
         }
     }
   
@@ -65,8 +76,16 @@ extension MyServerAPI: TargetType {
         switch self {
         case .googleSignIn(data: let data):
             return .requestParameters(parameters: data, encoding: JSONEncoding.default)
+            
         case .storeOwenerSignup(data: let data):
             return .requestParameters(parameters: data, encoding: JSONEncoding.default)
+        
+        case .getAllFranchises(data: let data):
+            return .requestParameters(parameters: data, encoding: JSONEncoding.default)
+        
+        case .getAllStoreOwners(data: let data):
+            return .requestParameters(parameters: data, encoding: JSONEncoding.default)
+            
         default:
             return .requestPlain
         }

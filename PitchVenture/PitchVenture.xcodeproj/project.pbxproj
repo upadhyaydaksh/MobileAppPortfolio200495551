@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
+		5260AD2B27B40982001CD5B5 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260AD2A27B40982001CD5B5 /* Requests.swift */; };
+		5260AD2D27B40E06001CD5B5 /* Franchise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260AD2C27B40E06001CD5B5 /* Franchise.swift */; };
 		5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */; };
 		52B68B2727AF00A400921AC9 /* PVGoogleAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */; };
+		52C929FC27B3A5BA0021F7E8 /* StoreOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */; };
 		A0A2389B279D2D9000BE5156 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */; };
 		A0A2389C279D2D9000BE5156 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23895279D2D9000BE5156 /* ResponseModel.swift */; };
 		A0A2389D279D2D9000BE5156 /* ServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23896279D2D9000BE5156 /* ServerApi.swift */; };
@@ -104,8 +107,11 @@
 
 /* Begin PBXFileReference section */
 		1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5260AD2A27B40982001CD5B5 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		5260AD2C27B40E06001CD5B5 /* Franchise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Franchise.swift; sourceTree = "<group>"; };
 		5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVInputLocationVC.swift; sourceTree = "<group>"; };
 		52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVGoogleAdsViewController.swift; sourceTree = "<group>"; };
+		52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreOwner.swift; sourceTree = "<group>"; };
 		99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.release.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.release.xcconfig"; sourceTree = "<group>"; };
 		A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
 		A0A23895279D2D9000BE5156 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
@@ -280,6 +286,9 @@
 			isa = PBXGroup;
 			children = (
 				A0A238A0279E6D1C00BE5156 /* Account.swift */,
+				52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */,
+				5260AD2A27B40982001CD5B5 /* Requests.swift */,
+				5260AD2C27B40E06001CD5B5 /* Franchise.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -826,6 +835,7 @@
 				FAEAC3E227470F47005F0A4F /* PVMessage.swift in Sources */,
 				FAB45CDA27460FC4009F1D5D /* PVView.swift in Sources */,
 				FAB45CF927463889009F1D5D /* String+Attributions.swift in Sources */,
+				5260AD2D27B40E06001CD5B5 /* Franchise.swift in Sources */,
 				FAF4B64B2746EAEC00B9503F /* NSDate+Formatters.swift in Sources */,
 				FAF4B6362746DE8400B9503F /* PhoneNumber.swift in Sources */,
 				FAB45CEE27462D8B009F1D5D /* UITextViewPlaceholder.swift in Sources */,
@@ -850,6 +860,7 @@
 				FAF4B6522746EDBF00B9503F /* AppInfo.swift in Sources */,
 				FAB45CF227462D8B009F1D5D /* UIScrollView+Additions.swift in Sources */,
 				FAF4B64F2746ECB300B9503F /* Address.swift in Sources */,
+				5260AD2B27B40982001CD5B5 /* Requests.swift in Sources */,
 				FA5E0AD72765566C00BD8393 /* PVRequestsTableViewCell.swift in Sources */,
 				FAF4B63D2746E1C400B9503F /* StatusCode.swift in Sources */,
 				FAB45CDE27462C15009F1D5D /* PVTextField.swift in Sources */,
@@ -878,6 +889,7 @@
 				FAF4B6582746EE4C00B9503F /* Userdefaults+Savings.swift in Sources */,
 				FAB45CF127462D8B009F1D5D /* UITapGestureRecognizer+Additions.swift in Sources */,
 				FA5E0ABF2765301100BD8393 /* PVNotificationsVC.swift in Sources */,
+				52C929FC27B3A5BA0021F7E8 /* StoreOwner.swift in Sources */,
 				FAF4B62D2746D86400B9503F /* PVUserManager.swift in Sources */,
 				FAB45CFC27463AD5009F1D5D /* PVTableView.swift in Sources */,
 				FAF4B6602746F59900B9503F /* Dictionary+Request.swift in Sources */,
@@ -1036,7 +1048,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6L8PKQRJ67;
+				DEVELOPMENT_TEAM = 83DJL7X36B;
 				INFOPLIST_FILE = PitchVenture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1058,7 +1070,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6L8PKQRJ67;
+				DEVELOPMENT_TEAM = 83DJL7X36B;
 				INFOPLIST_FILE = PitchVenture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
