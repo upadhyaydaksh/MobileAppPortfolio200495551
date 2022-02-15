@@ -17,6 +17,7 @@
 		FA3CD3FE274F7AB6007DB824 /* PVImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3CD3FC274F7AB6007DB824 /* PVImageTableViewCell.xib */; };
 		FA3CD402274F8674007DB824 /* PVFranchiseDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD400274F8674007DB824 /* PVFranchiseDetailTableViewCell.swift */; };
 		FA3CD403274F8674007DB824 /* PVFranchiseDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3CD401274F8674007DB824 /* PVFranchiseDetailTableViewCell.xib */; };
+		FA3EC52F27BA2ADD00844D33 /* PVSponsoredVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EC52E27BA2ADD00844D33 /* PVSponsoredVC.swift */; };
 		FA474C8827234A25008601A9 /* PVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA474C8727234A25008601A9 /* PVButton.swift */; };
 		FA521C27275043400099D8C0 /* PVStoreOwnerProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA521C26275043400099D8C0 /* PVStoreOwnerProfileVC.swift */; };
 		FA521C29275049440099D8C0 /* PVStoreOwnerProfileVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA521C28275049440099D8C0 /* PVStoreOwnerProfileVC+TableView.swift */; };
@@ -108,6 +109,7 @@
 		FA3CD3FC274F7AB6007DB824 /* PVImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVImageTableViewCell.xib; sourceTree = "<group>"; };
 		FA3CD400274F8674007DB824 /* PVFranchiseDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVFranchiseDetailTableViewCell.swift; sourceTree = "<group>"; };
 		FA3CD401274F8674007DB824 /* PVFranchiseDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVFranchiseDetailTableViewCell.xib; sourceTree = "<group>"; };
+		FA3EC52E27BA2ADD00844D33 /* PVSponsoredVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSponsoredVC.swift; sourceTree = "<group>"; };
 		FA474C8727234A25008601A9 /* PVButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVButton.swift; sourceTree = "<group>"; };
 		FA521C26275043400099D8C0 /* PVStoreOwnerProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVStoreOwnerProfileVC.swift; sourceTree = "<group>"; };
 		FA521C28275049440099D8C0 /* PVStoreOwnerProfileVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVStoreOwnerProfileVC+TableView.swift"; sourceTree = "<group>"; };
@@ -262,6 +264,14 @@
 			path = PVFranchiseDetailTableViewCell;
 			sourceTree = "<group>";
 		};
+		FA3EC52D27BA2AB800844D33 /* SponsoredVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA3EC52E27BA2ADD00844D33 /* PVSponsoredVC.swift */,
+			);
+			path = SponsoredVC;
+			sourceTree = "<group>";
+		};
 		FA474C8627234993008601A9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +322,7 @@
 		FA521C24275024DE0099D8C0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FA3EC52D27BA2AB800844D33 /* SponsoredVC */,
 				FA5E0AD1276552A700BD8393 /* RequestsVC */,
 				FA5E0ABD27652FE800BD8393 /* NotificationsVC */,
 				FA3CD3F4274F67FF007DB824 /* FranchiseDetailVC */,
@@ -783,6 +794,7 @@
 				FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */,
 				FAF4B6402746E1C400B9503F /* NSMutableURLRequest+Additions.swift in Sources */,
 				FA70059627479944006DAB61 /* KeychainItem.swift in Sources */,
+				FA3EC52F27BA2ADD00844D33 /* PVSponsoredVC.swift in Sources */,
 				FA3CD402274F8674007DB824 /* PVFranchiseDetailTableViewCell.swift in Sources */,
 				FAF4B6522746EDBF00B9503F /* AppInfo.swift in Sources */,
 				FAB45CF227462D8B009F1D5D /* UIScrollView+Additions.swift in Sources */,
