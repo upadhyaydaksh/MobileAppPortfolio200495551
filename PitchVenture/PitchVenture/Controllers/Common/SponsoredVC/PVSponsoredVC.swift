@@ -25,11 +25,13 @@ class PVSponsoredVC: PVBaseVC {
         self.setLeftBarButton()
         self.setNavigationTitle("Upgrade Premium")
     }
+    
     class func instantiate() -> PVSponsoredVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVSponsoredVC.identifier()) as! PVSponsoredVC
     }
     
     @IBAction func btnUpgradeAction(_ sender: Any) {
+        //API TO UPGRADE
     }
     
     @IBAction func btnNotNowAction(_ sender: Any) {

@@ -250,11 +250,16 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         let profileButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_logout"), style: .plain, target: self, action: #selector(showLogoutConfirmation))
         profileButton.tintColor = Constants.color.kAPP_COLOR
         
-        let premiumButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_logout"), style: .plain, target: self, action: #selector(showLogoutConfirmation))
+        let premiumButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_sponsored"), style: .plain, target: self, action: #selector(openSponsoredVC))
         premiumButton.tintColor = Constants.color.kAPP_COLOR
         
-        self.navigationItem.setLeftBarButtonItems([profileButton, premiumButton], animated: true)
+        self.navigationItem.setRightBarButtonItems([profileButton, premiumButton], animated: true)
         //self.navigationItem.setRightBarButton(profileButton, animated: true)
+    }
+    
+    @objc func openSponsoredVC() {
+        let vc = PVSponsoredVC.instantiate()
+        self.push(vc: vc)
     }
     
     @objc func showLogoutConfirmation() {
