@@ -15,21 +15,26 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
     // MARK: Properties
     
     var id : String?
-    var apartmentNumber : String?
+    var franchiseName : String?
+    var minimumDeposit : Int?
+    var franchiseCategory : [String] = []
     
-    init(id: String?, apartmentNumber: String?) {
+    init(id: String?, franchiseName: String?, minimumDeposit: Int?, franchiseCategory: [String]) {
         self.id = id
-        self.apartmentNumber = apartmentNumber
-        
+        self.franchiseName = franchiseName
+        self.minimumDeposit = minimumDeposit
+        self.franchiseCategory = franchiseCategory
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Franchise(id : id, apartmentNumber : apartmentNumber)
+        return Franchise(id : id, franchiseName : franchiseName, minimumDeposit: minimumDeposit, franchiseCategory: franchiseCategory)
     }
     
     override init() {
         self.id = nil
-        self.apartmentNumber = nil
+        self.franchiseName = nil
+        self.minimumDeposit = nil
+        self.franchiseCategory = []
     }
     
     // MARK: ObjectMapper Initalizers
@@ -46,8 +51,10 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
      - parameter map: A mapping from ObjectMapper
      */
     public func mapping(map: Map) {
-        id <- map["id"]
-        apartmentNumber <- map["apartmentNumber"]
+        id <- map["_id"]
+        franchiseName <- map["franchiseName"]
+        minimumDeposit <- map["minimumDeposit"]
+        franchiseCategory <- map["franchiseCategory"]
     }
     
     // MARK: NSCoding Protocol
@@ -59,5 +66,18 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
 
     public func encode(with aCoder: NSCoder) {
         
+    }
+    
+    func convertIntToCurrencyAsString(intValue: Int) -> String {
+        var stringVersion: String
+        let cFormatter = NumberFormatter()
+        cFormatter.usesGroupingSeparator = true
+        cFormatter.numberStyle = .currency
+        if let currencyString = cFormatter.string(from: NSNumber(value: intValue)) {
+            stringVersion = currencyString
+        } else {
+            stringVersion = "Invalid Message"
+        }
+        return stringVersion
     }
 }

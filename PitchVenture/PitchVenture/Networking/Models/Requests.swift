@@ -17,7 +17,7 @@ class Requests: NSObject, Mappable, NSCopying, NSCoding {
     var id : String?
     var apartmentNumber : String?
     
-    init(id: String?, apartmentNumber: String?, addressLine1: String?, addressLine2: String?, city: String?, province : String?, postalCode: String?, sentRequests : [String: Any]?, acceptedRequests : [String: Any]?, pictures: [String]?, v: Int?) {
+    init(id: String?, apartmentNumber: String?) {
         self.id = id
         self.apartmentNumber = apartmentNumber
         

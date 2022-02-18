@@ -15,6 +15,8 @@ class PVStoreOwnerHomeVC: PVBaseVC {
     
     var bannerView: GADBannerView!
     
+    var arrFranchises : [Account] = []
+    
     @IBOutlet weak var tableView: UITableView!
     
     let adSize = GADAdSizeFromCGSize(CGSize(width: SCREEN_WIDTH - 20, height: 64))
@@ -42,8 +44,13 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         self.setNavigationTitle("Home")
         self.setProfileAndNotificationNavBarButton()
         
+//        if UserLoginType == UserLoginType.StoreOwner {
+//            self.getAllStoreOwners()
+//        } else {
+//            self.getAllFranchises()
+//        }
+        self.getAllStoreOwners()
         
-        MyServerAPI.getAllFranchises(data: nil)
     }
     
     class func instantiate() -> PVStoreOwnerHomeVC {
@@ -59,53 +66,53 @@ class PVStoreOwnerHomeVC: PVBaseVC {
 extension PVStoreOwnerHomeVC: GADBannerViewDelegate {
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
-      bannerView.translatesAutoresizingMaskIntoConstraints = false
-      view.addSubview(bannerView)
-      view.addConstraints(
-        [NSLayoutConstraint(item: bannerView,
-                            attribute: .bottom,
-                            relatedBy: .equal,
-                            toItem: bottomLayoutGuide,
-                            attribute: .top,
-                            multiplier: 1,
-                            constant: 0),
-         NSLayoutConstraint(item: bannerView,
-                            attribute: .centerX,
-                            relatedBy: .equal,
-                            toItem: view,
-                            attribute: .centerX,
-                            multiplier: 1,
-                            constant: 0)
-        ])
-     }
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+    }
     
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("bannerViewDidReceiveAd")
         self.addBannerViewToView(bannerView)
         
-//        bannerView.alpha = 0
-//          UIView.animate(withDuration: 1, animations: {
-//            bannerView.alpha = 1
-//          })
+        //        bannerView.alpha = 0
+        //          UIView.animate(withDuration: 1, animations: {
+        //            bannerView.alpha = 1
+        //          })
     }
-
+    
     func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-      print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+        print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
     }
-
+    
     func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
-      print("bannerViewDidRecordImpression")
+        print("bannerViewDidRecordImpression")
     }
-
+    
     func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
-      print("bannerViewWillPresentScreen")
+        print("bannerViewWillPresentScreen")
     }
-
+    
     func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
-      print("bannerViewWillDIsmissScreen")
+        print("bannerViewWillDIsmissScreen")
     }
-
+    
     func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
-      print("bannerViewDidDismissScreen")
+        print("bannerViewDidDismissScreen")
     }
 }

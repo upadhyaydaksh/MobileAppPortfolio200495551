@@ -25,7 +25,12 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavBar()
+        navigationController?.navigationBar.barTintColor = Constants.color.kApp_Blue_Color
         navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.black
+        ]
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -279,6 +284,16 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func showAlertWithMessage(msg: String) {
+        // Open option of add business / add fundraiser
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func showAlertWithTitleAndMessage(title: String, msg: String) {
         // Open option of add business / add fundraiser
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
@@ -287,6 +302,19 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         }))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func convertIntToCurrencyAsString(intValue: Int) -> String {
+        var stringVersion: String
+        let cFormatter = NumberFormatter()
+        cFormatter.usesGroupingSeparator = true
+        cFormatter.numberStyle = .currency
+        if let currencyString = cFormatter.string(from: NSNumber(value: intValue)) {
+            stringVersion = currencyString
+        } else {
+            stringVersion = "Invalid Message"
+        }
+        return stringVersion
     }
 }
 

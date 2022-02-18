@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,6 +62,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="circularUsingHeight" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0Ix-zx-A0E"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4Z-TD-BWw">
                                 <rect key="frame" x="60" y="58" width="228" height="14"/>
@@ -128,9 +132,25 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnFranchise" destination="QFj-si-kAS" id="4bA-g0-6op"/>
+                <outlet property="imgFranchise" destination="av7-J7-Oaf" id="VNZ-Ou-1Nx"/>
+                <outlet property="lblCategory" destination="V4Z-TD-BWw" id="FfI-I4-dFl"/>
+                <outlet property="lblDeposit" destination="or5-KV-Z0U" id="Yjf-bX-qCq"/>
+                <outlet property="lblMinimumDeposit" destination="fAQ-bF-wZx" id="o4F-G1-Pu7"/>
+                <outlet property="lblName" destination="asd-uV-LdJ" id="g59-2l-X2j"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="141.29464285714286"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="QFj-si-kAS">
+            <size key="intrinsicContentSize" width="54" height="34"/>
+        </designable>
+        <designable name="av7-J7-Oaf">
+            <size key="intrinsicContentSize" width="1024" height="1024"/>
+        </designable>
+    </designables>
     <resources>
         <image name="ic_logo" width="1024" height="1024"/>
     </resources>

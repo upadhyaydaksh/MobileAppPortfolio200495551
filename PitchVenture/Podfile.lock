@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.5.0)
+  - Alamofire (4.7.3)
   - AppAuth (1.4.0):
     - AppAuth/Core (= 1.4.0)
     - AppAuth/ExternalUserAgent (= 1.4.0)
@@ -62,10 +62,6 @@ PODS:
   - LGRefreshView (1.0.5):
     - DACircularProgress (~> 2.3.0)
   - Localize-Swift (2.0.0)
-  - Moya (15.0.0):
-    - Moya/Core (= 15.0.0)
-  - Moya/Core (15.0.0):
-    - Alamofire (~> 5.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -76,26 +72,31 @@ PODS:
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
   - ObjectMapper (3.5.3)
   - PromisesObjC (2.0.0)
+  - ReachabilitySwift (5.0.0)
   - SVProgressHUD (2.2.5)
   - SwiftMessages (5.0.1):
     - SwiftMessages/App (= 5.0.1)
   - SwiftMessages/App (5.0.1)
+  - SwiftyJSON (5.0.1)
   - XCGLogger (7.0.1):
     - XCGLogger/Core (= 7.0.1)
   - XCGLogger/Core (7.0.1):
     - ObjcExceptionBridging
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7.2)
   - FlagPhoneNumber (~> 0.8.0)
   - Google-Mobile-Ads-SDK
   - GoogleSignIn
   - IQKeyboardManagerSwift (= 6.5.9)
   - LGRefreshView
   - Localize-Swift (~> 2.0)
-  - Moya
   - ObjectMapper (~> 3.3)
+  - ReachabilitySwift
+  - SVProgressHUD
   - SVProgressHUD (= 2.2.5)
   - SwiftMessages (~> 5.0)
+  - SwiftyJSON
   - XCGLogger
 
 SPEC REPOS:
@@ -114,17 +115,18 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - LGRefreshView
     - Localize-Swift
-    - Moya
     - nanopb
     - ObjcExceptionBridging
     - ObjectMapper
     - PromisesObjC
+    - ReachabilitySwift
     - SVProgressHUD
     - SwiftMessages
+    - SwiftyJSON
     - XCGLogger
 
 SPEC CHECKSUMS:
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
@@ -138,15 +140,16 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   LGRefreshView: 34746afadbd23de8d1449cab15f3d89269645d43
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
-  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: c7bdac83854d685501cd4c6e35f1c2e31c3c669c
+PODFILE CHECKSUM: 89ba8b278d7e3710ddde31dd0bcab17d46a8ee6c
 
 COCOAPODS: 1.11.2

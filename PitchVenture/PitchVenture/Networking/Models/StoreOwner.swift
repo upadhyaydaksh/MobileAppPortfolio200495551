@@ -96,4 +96,10 @@ class StoreOwner: NSObject, Mappable, NSCopying, NSCoding {
     public func encode(with aCoder: NSCoder) {
 
     }
+    
+    func getCompleteAddress() -> String {
+        //let address = "\(self.addressLine1 ?? "") \(self.addressLine2 ?? "") \(self.city ?? ""), \(self.province ?? "")"
+        let address = "\(self.addressLine1 ?? "") \(self.addressLine2 ?? "") "
+        return address
+    }
 }

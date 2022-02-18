@@ -13,7 +13,6 @@ import GoogleSignIn
 class PVLoginVC: PVBaseVC {
 
     let signInConfig = GIDConfiguration.init(clientID: Constants.googleClientId)
-    let accountService = AccountService()
     
     override func viewDidLoad() {
         super.viewDidLoad()

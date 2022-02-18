@@ -10,6 +10,16 @@ import UIKit
 
 class PVHomeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgFranchise: PVImageView!
+    @IBOutlet weak var lblName: UILabel!
+    
+    @IBOutlet weak var lblCategory: UILabel!
+    
+    @IBOutlet weak var lblDeposit: UILabel!
+    
+    @IBOutlet weak var lblMinimumDeposit: UILabel!
+    
+    @IBOutlet weak var btnFranchise: PVButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,6 +34,21 @@ class PVHomeTableViewCell: UITableViewCell {
     
     class func reuseIdentifier() -> String {
         return String(describing: self)
+    }
+    
+    func configureFranchiseCell(franchise: Franchise?) {
+        self.lblName.text = franchise?.franchiseName
+        self.lblMinimumDeposit.text = franchise?.convertIntToCurrencyAsString(intValue: franchise?.minimumDeposit ?? 0)
+    }
+    
+    func configureStoreOwnerCell(account: Account?) {
+        self.lblName.text = account?.name
+        self.lblCategory.text = account?.storeOwner?.getCompleteAddress()
+        self.lblDeposit.text = "City"
+        self.lblMinimumDeposit.text = account?.storeOwner?.city
+    }
+    
+    @IBAction func btnAction(_ sender: Any) {
     }
     
 }

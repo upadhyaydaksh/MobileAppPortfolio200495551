@@ -29,7 +29,10 @@ target 'PitchVenture' do
 
   pod 'GoogleSignIn'
   
-  pod 'Moya'
+  pod 'SwiftyJSON'
+  pod 'ReachabilitySwift'
+  pod 'Alamofire', '~> 4.7.2'
+  pod 'SVProgressHUD'
 
   #AD MOB
   pod 'Google-Mobile-Ads-SDK'
