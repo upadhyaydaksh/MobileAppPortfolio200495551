@@ -41,6 +41,7 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         self.navigationController?.isNavigationBarHidden = false
         self.setNavigationTitle("Home")
         self.setProfileAndNotificationNavBarButton()
+        
     }
     
     class func instantiate() -> PVStoreOwnerHomeVC {

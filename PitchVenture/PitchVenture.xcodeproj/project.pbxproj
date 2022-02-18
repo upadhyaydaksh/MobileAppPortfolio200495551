@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
+		5256657127BF45F3005EB5E3 /* PVSponsoredVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */; };
 		5260AD2B27B40982001CD5B5 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260AD2A27B40982001CD5B5 /* Requests.swift */; };
 		5260AD2D27B40E06001CD5B5 /* Franchise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260AD2C27B40E06001CD5B5 /* Franchise.swift */; };
 		5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */; };
@@ -107,6 +108,7 @@
 
 /* Begin PBXFileReference section */
 		1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVSponsoredVC.swift; sourceTree = "<group>"; };
 		5260AD2A27B40982001CD5B5 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		5260AD2C27B40E06001CD5B5 /* Franchise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Franchise.swift; sourceTree = "<group>"; };
 		5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVInputLocationVC.swift; sourceTree = "<group>"; };
@@ -226,6 +228,14 @@
 				1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5256656F27BF45D4005EB5E3 /* SponsoredVC */ = {
+			isa = PBXGroup;
+			children = (
+				5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */,
+			);
+			path = SponsoredVC;
 			sourceTree = "<group>";
 		};
 		5273B2B92747722600E4D60E /* InputLocationVC */ = {
@@ -380,6 +390,7 @@
 		FA521C24275024DE0099D8C0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5256656F27BF45D4005EB5E3 /* SponsoredVC */,
 				52B68B2527AF008200921AC9 /* GoogleAds */,
 				FA5E0AD1276552A700BD8393 /* RequestsVC */,
 				FA5E0ABD27652FE800BD8393 /* NotificationsVC */,
@@ -822,6 +833,7 @@
 			files = (
 				FAB45CF027462D8B009F1D5D /* UITextField+Additions.swift in Sources */,
 				FAB45CED27462D8B009F1D5D /* UIView+Additions.swift in Sources */,
+				5256657127BF45F3005EB5E3 /* PVSponsoredVC.swift in Sources */,
 				FA81A8B9272769F100D6759A /* PVLoginVC.swift in Sources */,
 				FA81A8BB27276AB300D6759A /* PVBaseVC.swift in Sources */,
 				FAB45CEF27462D8B009F1D5D /* UIButton+Additions.swift in Sources */,
