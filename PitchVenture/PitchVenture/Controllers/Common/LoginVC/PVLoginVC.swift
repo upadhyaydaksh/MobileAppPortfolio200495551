@@ -13,6 +13,7 @@ import GoogleSignIn
 class PVLoginVC: PVBaseVC {
 
     let signInConfig = GIDConfiguration.init(clientID: Constants.googleClientId)
+    let accountService = AccountService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,9 +70,13 @@ class PVLoginVC: PVBaseVC {
             let user: User? = User(id: "01", fullName: "Anonymus", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
             
             PVUserManager.sharedManager().activeUser = user
-//            let sceneD = SceneDelegate()
-//            sceneD.setRootController()
-            
+
+            //CHECK IF USER IS ALREADY SIGNED UP OR NOT
+//            let dic = [
+//                "a": "b"
+//            ] as [String: Any]
+//            self.accountService.googleSignIn(data: <#T##[String : Any]#>, onSuccess: <#T##(ResponseModel<Account>?) -> Void#>, onError: <#T##(LoginError) -> Void#>)
+//
             //GO TO PHONE VERIFY VC
             let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
             self.push(vc: objPVPhoneVerifyVC)
@@ -116,7 +121,7 @@ extension PVLoginVC: ASAuthorizationControllerDelegate {
     
     private func saveUserInKeychain(_ userIdentifier: String) {
         do {
-            try KeychainItem(service: "com.gc.pitchventure", account: "userIdentifier").saveItem(userIdentifier)
+            try KeychainItem(service: "com.georgiancollege.pitchventure", account: "userIdentifier").saveItem(userIdentifier)
         } catch {
             print("Unable to save userIdentifier to keychain.")
         }

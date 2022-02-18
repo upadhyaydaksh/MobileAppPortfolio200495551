@@ -28,5 +28,9 @@ target 'PitchVenture' do
   pod 'SwiftMessages', '~> 5.0'
 
   pod 'GoogleSignIn'
+  
+  pod 'Moya'
 
+  #AD MOB
+  pod 'Google-Mobile-Ads-SDK'
 end

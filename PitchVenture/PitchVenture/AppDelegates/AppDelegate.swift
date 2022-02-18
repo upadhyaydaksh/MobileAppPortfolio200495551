@@ -9,6 +9,7 @@
 import UIKit
 import SVProgressHUD
 import GoogleSignIn
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Show the app's signed-in state.
           }
         }
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         return true
     }
