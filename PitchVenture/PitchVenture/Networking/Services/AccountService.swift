@@ -28,7 +28,7 @@ class AccountService {
         })
     }
     
-    func getAllFranchises(data: [String: Any], onSuccess: @escaping (ResponseModel<Account>?) -> Void, onError: @escaping (LoginError) -> Void) {
+    func getAllFranchises(data: [String: Any], onSuccess: @escaping (ResponseModel<Franchise>?) -> Void, onError: @escaping (LoginError) -> Void) {
 
         NetworkAdapter.request(target: .getAllFranchises(data: data), success: { (response) in
             do {
@@ -47,7 +47,7 @@ class AccountService {
         })
     }
 
-    func getAllStoreOwners(data: [String: Any], onSuccess: @escaping (ResponseModel<Account>?) -> Void, onError: @escaping (LoginError) -> Void) {
+    func getAllStoreOwners(data: [String: Any], onSuccess: @escaping (ResponseModel<StoreOwner>?) -> Void, onError: @escaping (LoginError) -> Void) {
 
         NetworkAdapter.request(target: .getAllStoreOwners(data: data), success: { (response) in
             do {

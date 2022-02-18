@@ -42,6 +42,8 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         self.setNavigationTitle("Home")
         self.setProfileAndNotificationNavBarButton()
         
+        
+        MyServerAPI.getAllFranchises(data: nil)
     }
     
     class func instantiate() -> PVStoreOwnerHomeVC {
