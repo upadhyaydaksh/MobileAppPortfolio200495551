@@ -42,6 +42,7 @@ extension PVLoginVC {
                             } else {
                                 //GO TO PHONE VERIFY VC FOR SIGNUP
                                 let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
+                                objPVPhoneVerifyVC.account = self.account
                                 self.push(vc: objPVPhoneVerifyVC)
                             }
                         }

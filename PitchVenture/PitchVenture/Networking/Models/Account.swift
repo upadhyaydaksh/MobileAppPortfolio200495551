@@ -24,8 +24,10 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
     var storeOwner: StoreOwner?
     var franchise: Franchise?
     var v: Int?
-
-    init(id: String?, name: String?, email: String?, picture: String?, isComplete: Bool?, isFranchise: Bool?, createdAt: String?, v: Int?, franchise: Franchise?, storeOwner: StoreOwner?) {
+    var countryCode: String?
+    var phoneNumber: String?
+    
+    init(id: String?, name: String?, email: String?, picture: String?, isComplete: Bool?, isFranchise: Bool?, createdAt: String?, v: Int?, franchise: Franchise?, storeOwner: StoreOwner?, countryCode: String?, phoneNumber: String?) {
             self.id = id
             self.name = name
             self.email = email
@@ -36,10 +38,12 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
             self.v = v
             self.franchise = franchise
             self.storeOwner = storeOwner
+            self.countryCode = countryCode
+            self.phoneNumber = phoneNumber
         }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Account(id : id, name : name, email : email, picture : picture, isComplete : isComplete, isFranchise : isFranchise, createdAt : createdAt, v : v,  franchise : franchise, storeOwner : storeOwner)
+        return Account(id : id, name : name, email : email, picture : picture, isComplete : isComplete, isFranchise : isFranchise, createdAt : createdAt, v : v,  franchise : franchise, storeOwner : storeOwner, countryCode: countryCode, phoneNumber: phoneNumber)
     }
     
     override init() {
@@ -53,6 +57,8 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
         self.v = nil
         self.franchise = nil
         self.storeOwner = nil
+        self.countryCode = nil
+        self.phoneNumber = nil
     }
     
     // MARK: ObjectMapper Initalizers
@@ -79,6 +85,8 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
         v <- map["v"]
         franchise <- map["franchise"]
         storeOwner <- map["storeOwner"]
+        countryCode <- map["countryCode"]
+        phoneNumber <- map["phoneNumber"]
     }
 
     // MARK: NSCoding Protocol

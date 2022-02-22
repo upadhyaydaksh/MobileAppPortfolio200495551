@@ -26,12 +26,17 @@ class PVInputLocationVC: PVBaseVC {
     
     var locationImage: UIImage?
     
+    var account : Account = Account()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setLeftBarButton()
+        self.setNavigationTitle("Add Store Details")
+    }
     // MARK: - Class Methods
     
     class func instantiate() -> PVInputLocationVC {
@@ -57,14 +62,14 @@ class PVInputLocationVC: PVBaseVC {
     }
     
     func selectImage(sourceType: UIImagePickerController.SourceType) {
-            imagePicker.modalPresentationStyle = .fullScreen
-            imagePicker.delegate = self
-            imagePicker.allowsEditing = false
-            imagePicker.sourceType = sourceType
-            imagePicker.mediaTypes = [kUTTypeImage as String]
-            imagePicker.modalPresentationStyle = .fullScreen
-            self.present(imagePicker, animated: true, completion: nil)
-        }
+        imagePicker.modalPresentationStyle = .fullScreen
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = sourceType
+        imagePicker.mediaTypes = [kUTTypeImage as String]
+        imagePicker.modalPresentationStyle = .fullScreen
+        self.present(imagePicker, animated: true, completion: nil)
+    }
     
     
     

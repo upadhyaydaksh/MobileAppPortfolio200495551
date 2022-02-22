@@ -15,9 +15,18 @@ class PVPhoneVerifyVC: PVBaseVC {
     @IBOutlet weak var txtPhoneNumber: PVTextFieldView!
     @IBOutlet weak var btnUserRoleSegmentControl: UISegmentedControl!
     
+    var account : Account = Account()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         txtPhoneNumber.viewMode = .phoneNumber
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+        self.setNavigationTitle("Verify Phone")
+        
     }
     
     // MARK: - Class Methods
@@ -36,18 +45,29 @@ class PVPhoneVerifyVC: PVBaseVC {
     }
     
     @IBAction func btnUserRoleSegmentControlAction(_ sender: Any) {
+        if self.btnUserRoleSegmentControl.selectedSegmentIndex == 0 {
+            //STORE OWNER
+            self.account.isFranchise = false
+        } else {
+            //FRANCHISOR
+            self.account.isFranchise = true
+        }
     }
+    
     
     @IBAction func btnSubmitAction(_ sender: Any) {
         // PHONE NUMBER VERIFY
-//        if isMobileNumberValid() {
-//            guard let countryCode = txtPhoneNumber.countryCode else { return }
-//            guard let phoneNumber = txtPhoneNumber.phone else { return }
-//            let param = ["countryCode": countryCode, "phone": phoneNumber]
-//            self.signIn(parameters: param as [String : AnyObject])
-//            print(param)
-//        }
-        let objPVInputLocationVC = PVInputLocationVC.instantiate()
-        self.push(vc: objPVInputLocationVC)
+        
+        if self.txtPhoneNumber.text?.count != 10 {
+            self.showAlertWithMessage(msg: "Please enter valid phone number")
+        } else {
+            //CREATE USER AND SELECT ROLE
+            self.account.phoneNumber = self.txtPhoneNumber.text
+            self.account.countryCode = self.txtPhoneNumber.countryCode
+            
+            let objPVInputLocationVC = PVInputLocationVC.instantiate()
+            objPVInputLocationVC.account = self.account
+            self.push(vc: objPVInputLocationVC)
+        }
     }
 }
