@@ -16,6 +16,8 @@
 		52C929FC27B3A5BA0021F7E8 /* StoreOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */; };
 		52D5E6F027C56DC8003E73CE /* PVRequestsVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5E6EF27C56DC8003E73CE /* PVRequestsVC+Services.swift */; };
 		52D5E6F227C57392003E73CE /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D5E6F127C57392003E73CE /* Pods_PitchVenture.framework */; };
+		52D5E6F627C57B6A003E73CE /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5E6F527C57B6A003E73CE /* AppData.swift */; };
+		52D5E6F827C57C36003E73CE /* PVPhoneVerifyVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5E6F727C57C36003E73CE /* PVPhoneVerifyVC+Services.swift */; };
 		A0A2389B279D2D9000BE5156 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */; };
 		A0A2389C279D2D9000BE5156 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23895279D2D9000BE5156 /* ResponseModel.swift */; };
 		A0A2389D279D2D9000BE5156 /* ServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23896279D2D9000BE5156 /* ServerApi.swift */; };
@@ -120,6 +122,8 @@
 		52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreOwner.swift; sourceTree = "<group>"; };
 		52D5E6EF27C56DC8003E73CE /* PVRequestsVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVRequestsVC+Services.swift"; sourceTree = "<group>"; };
 		52D5E6F127C57392003E73CE /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D5E6F527C57B6A003E73CE /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		52D5E6F727C57C36003E73CE /* PVPhoneVerifyVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVPhoneVerifyVC+Services.swift"; sourceTree = "<group>"; };
 		99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.release.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.release.xcconfig"; sourceTree = "<group>"; };
 		A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
 		A0A23895279D2D9000BE5156 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
@@ -312,6 +316,7 @@
 				52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */,
 				5260AD2A27B40982001CD5B5 /* Requests.swift */,
 				5260AD2C27B40E06001CD5B5 /* Franchise.swift */,
+				52D5E6F527C57B6A003E73CE /* AppData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				FA81A8C027276F7100D6759A /* PVPhoneVerifyVC.swift */,
+				52D5E6F727C57C36003E73CE /* PVPhoneVerifyVC+Services.swift */,
 			);
 			path = PhoneVerifyVC;
 			sourceTree = "<group>";
@@ -906,6 +912,7 @@
 				FAB45CEB27462D8B009F1D5D /* UIImage+Additions.swift in Sources */,
 				BA64E46327BF6F1D001145BE /* CommonMethods.swift in Sources */,
 				FAF4B6582746EE4C00B9503F /* Userdefaults+Savings.swift in Sources */,
+				52D5E6F827C57C36003E73CE /* PVPhoneVerifyVC+Services.swift in Sources */,
 				FAB45CF127462D8B009F1D5D /* UITapGestureRecognizer+Additions.swift in Sources */,
 				FA5E0ABF2765301100BD8393 /* PVNotificationsVC.swift in Sources */,
 				52C929FC27B3A5BA0021F7E8 /* StoreOwner.swift in Sources */,
@@ -919,6 +926,7 @@
 				FA474C8827234A25008601A9 /* PVButton.swift in Sources */,
 				FAC8A1552748196000EFC95B /* PVHomeTableViewCell.swift in Sources */,
 				FAB45CFE27463BE4009F1D5D /* Country.swift in Sources */,
+				52D5E6F627C57B6A003E73CE /* AppData.swift in Sources */,
 				A0A2389F279D2D9000BE5156 /* AccountService.swift in Sources */,
 				FAF4B64A2746EAEC00B9503F /* Date+Additions.swift in Sources */,
 				FA3CD3F6274F683F007DB824 /* PVFranchiseDetailVC.swift in Sources */,
