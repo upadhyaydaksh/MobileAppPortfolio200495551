@@ -67,13 +67,6 @@ class PVLoginVC: PVBaseVC {
 
             print(user?.authentication.idToken ?? "N.A.")
             
-            //PVMessage.showSuccessWithMessage(message: "Login successfull")
-          // If sign in succeeded, GO TO PHONE VERIFY VC
-            
-            //let user: User? = User(id: "01", fullName: "Anonymus", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
-            
-            //PVUserManager.sharedManager().activeUser = user
-
             //CHECK IF USER IS ALREADY SIGNED UP OR NOT
             self.callCreateUser(tokenID: user?.authentication.idToken)
         }

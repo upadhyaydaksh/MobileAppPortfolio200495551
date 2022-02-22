@@ -85,6 +85,29 @@ class PVInputLocationVC: PVBaseVC {
         self.push(vc: objPVInputLocationVC)
     }
     
+    
+    func isFormValid() -> Bool{
+        if let apartmentNo = self.txtApartmentNo.text, apartmentNo.trimmedString().isEmpty {
+            return false
+        }
+        if let addressLine1 = self.txtAddressLine1.text, addressLine1.trimmedString().isEmpty {
+            return false
+        }
+        if let addressLine1 = self.txtAddressLine1.text, addressLine1.trimmedString().isEmpty {
+            return false
+        }
+        if let addressLine1 = self.txtAddressLine1.text, addressLine1.trimmedString().isEmpty {
+            return false
+        }
+        if let addressLine1 = self.txtAddressLine1.text, addressLine1.trimmedString().isEmpty {
+            return false
+        }
+        
+            
+            return true
+            
+    }
+    
 }
 
 extension PVInputLocationVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
