@@ -28,7 +28,7 @@ let GET_ALL_PARTNERED_STORE_OWNERS = MAIN_URL_REQUEST + "getAllPartneredStoreOwn
 let GET_ALL_FRANCHISORS_REQUESTS   = MAIN_URL_REQUEST + "getAllFranchises"
 let GET_ALL_STORE_OWNERS_REQUESTS  = MAIN_URL_REQUEST + "getAllRequests"
 
-let SEND_REQUEST                   = MAIN_URL_REQUEST + "sendRequest/"
-let ACCEPT_REQUEST                 = MAIN_URL_REQUEST + "acceptRequest/"
-let REJECT_REQUEST                 = MAIN_URL_REQUEST + "rejectRequest/"
+let CALL_SEND_REQUEST                   = MAIN_URL_REQUEST + "sendRequest/"
+let CALL_ACCEPT_REQUEST                 = MAIN_URL_REQUEST + "acceptRequest/"
+let CALL_REJECT_REQUEST                 = MAIN_URL_REQUEST + "rejectRequest/"
 
