@@ -94,7 +94,6 @@ DEPENDENCIES:
   - ObjectMapper (~> 3.3)
   - ReachabilitySwift
   - SVProgressHUD
-  - SVProgressHUD (= 2.2.5)
   - SwiftMessages (~> 5.0)
   - SwiftyJSON
   - XCGLogger
@@ -150,6 +149,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: 89ba8b278d7e3710ddde31dd0bcab17d46a8ee6c
+PODFILE CHECKSUM: 33726428826c6a83de0d049f996306067cb24b80
 
 COCOAPODS: 1.11.2

@@ -14,6 +14,8 @@
 		5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */; };
 		52B68B2727AF00A400921AC9 /* PVGoogleAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */; };
 		52C929FC27B3A5BA0021F7E8 /* StoreOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */; };
+		52D5E6F027C56DC8003E73CE /* PVRequestsVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5E6EF27C56DC8003E73CE /* PVRequestsVC+Services.swift */; };
+		52D5E6F227C57392003E73CE /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D5E6F127C57392003E73CE /* Pods_PitchVenture.framework */; };
 		A0A2389B279D2D9000BE5156 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */; };
 		A0A2389C279D2D9000BE5156 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23895279D2D9000BE5156 /* ResponseModel.swift */; };
 		A0A2389D279D2D9000BE5156 /* ServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23896279D2D9000BE5156 /* ServerApi.swift */; };
@@ -116,6 +118,8 @@
 		5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVInputLocationVC.swift; sourceTree = "<group>"; };
 		52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVGoogleAdsViewController.swift; sourceTree = "<group>"; };
 		52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreOwner.swift; sourceTree = "<group>"; };
+		52D5E6EF27C56DC8003E73CE /* PVRequestsVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVRequestsVC+Services.swift"; sourceTree = "<group>"; };
+		52D5E6F127C57392003E73CE /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.release.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.release.xcconfig"; sourceTree = "<group>"; };
 		A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
 		A0A23895279D2D9000BE5156 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */,
+				52D5E6F227C57392003E73CE /* Pods_PitchVenture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +234,7 @@
 		1C29550ED8F555926ADDCC41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52D5E6F127C57392003E73CE /* Pods_PitchVenture.framework */,
 				1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */,
 			);
 			name = Frameworks;
@@ -487,6 +493,7 @@
 				FA5E0AD42765562200BD8393 /* TableViewCells */,
 				FA5E0AD2276552CA00BD8393 /* PVRequestsVC.swift */,
 				FA5E0AD9276556E400BD8393 /* PVRequestsVC+TableView.swift */,
+				52D5E6EF27C56DC8003E73CE /* PVRequestsVC+Services.swift */,
 			);
 			path = RequestsVC;
 			sourceTree = "<group>";
@@ -733,7 +740,7 @@
 			attributes = {
 				CLASSPREFIX = PV;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = PitchVenture;
 				TargetAttributes = {
 					FA93343A271A10780002DBED = {
@@ -877,6 +884,7 @@
 				A0A2389E279D2D9000BE5156 /* LoginError.swift in Sources */,
 				A0A2389C279D2D9000BE5156 /* ResponseModel.swift in Sources */,
 				BA56429227C4DC2B00D234B3 /* PVLoginVC+Services.swift in Sources */,
+				52D5E6F027C56DC8003E73CE /* PVRequestsVC+Services.swift in Sources */,
 				FAF4B64D2746EBA500B9503F /* Helper.swift in Sources */,
 				FA3CD3F8274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift in Sources */,
 				FAB45CEC27462D8B009F1D5D /* UINavigationController+Additions.swift in Sources */,
@@ -965,6 +973,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1025,6 +1034,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

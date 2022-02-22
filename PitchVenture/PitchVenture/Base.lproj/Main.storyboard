@@ -457,27 +457,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTf-JE-IH1" customClass="PVView" customModule="PitchVenture" customModuleProvider="target">
-                                <rect key="frame" x="40" y="130.5" width="240" height="307.5"/>
+                                <rect key="frame" x="40" y="74.5" width="240" height="419"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aM-v7-Oxb">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="81"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="96"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upgrade to PREMIUM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enB-gR-hvx">
-                                                <rect key="frame" x="4" y="4" width="232" height="20.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upgrade to PREMIUM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enB-gR-hvx">
+                                                <rect key="frame" x="4" y="8" width="232" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5h-ch-anS">
-                                                <rect key="frame" x="64" y="32.5" width="112" height="1"/>
+                                                <rect key="frame" x="64" y="40" width="112" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="nxy-Fk-unQ"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$99.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrd-ZZ-dIn">
-                                                <rect key="frame" x="4" y="41.5" width="232" height="35.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="30"/>
+                                                <rect key="frame" x="4" y="49" width="232" height="43"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="36"/>
                                                 <color key="textColor" red="0.1396433711" green="0.18898770209999999" blue="0.33196055889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -491,27 +491,27 @@
                                             <constraint firstItem="rrd-ZZ-dIn" firstAttribute="leading" secondItem="2aM-v7-Oxb" secondAttribute="leading" constant="4" id="NfG-AD-ztq"/>
                                             <constraint firstAttribute="bottom" secondItem="rrd-ZZ-dIn" secondAttribute="bottom" constant="4" id="V1e-ej-YGy"/>
                                             <constraint firstItem="enB-gR-hvx" firstAttribute="leading" secondItem="2aM-v7-Oxb" secondAttribute="leading" constant="4" id="iWq-Tj-jSz"/>
-                                            <constraint firstItem="enB-gR-hvx" firstAttribute="top" secondItem="2aM-v7-Oxb" secondAttribute="top" constant="4" id="qi6-UM-QuC"/>
+                                            <constraint firstItem="enB-gR-hvx" firstAttribute="top" secondItem="2aM-v7-Oxb" secondAttribute="top" constant="8" id="qi6-UM-QuC"/>
                                             <constraint firstItem="d5h-ch-anS" firstAttribute="centerX" secondItem="2aM-v7-Oxb" secondAttribute="centerX" id="ytY-LI-4oa"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-45-RgW">
-                                        <rect key="frame" x="12" y="93" width="216" height="118.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-45-RgW">
+                                        <rect key="frame" x="12" y="108" width="216" height="147"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Boost your business" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-CR-52d">
-                                                <rect key="frame" x="0.0" y="0.0" width="216" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="216" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Add your business to SPONSORED List" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO7-dF-0DD">
-                                                <rect key="frame" x="0.0" y="28.5" width="216" height="41"/>
+                                                <rect key="frame" x="0.0" y="53" width="216" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Get your business listed on top of list for 14 days" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJw-Ea-X3V">
-                                                <rect key="frame" x="0.0" y="77.5" width="216" height="41"/>
+                                                <rect key="frame" x="0.0" y="106" width="216" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -519,11 +519,14 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xbs-eL-2Cr">
-                                        <rect key="frame" x="32" y="223.5" width="176" height="72"/>
+                                        <rect key="frame" x="32" y="275" width="176" height="124"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODg-NQ-PDm" customClass="PVButton" customModule="PitchVenture" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="176" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="176" height="56"/>
                                                 <color key="backgroundColor" red="0.14117647058823529" green="0.18823529411764706" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="OIk-iA-M7y"/>
+                                                </constraints>
                                                 <state key="normal" title="Upgrade">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -535,7 +538,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi0-45-8o2" customClass="PVButton" customModule="PitchVenture" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="42" width="176" height="30"/>
+                                                <rect key="frame" x="0.0" y="68" width="176" height="56"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Not Now">
                                                     <color key="titleColor" red="0.1396433711" green="0.18898770209999999" blue="0.33196055889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -563,11 +566,11 @@
                                     <constraint firstItem="yfb-45-RgW" firstAttribute="leading" secondItem="BTf-JE-IH1" secondAttribute="leading" constant="12" id="I8U-lu-Xkk"/>
                                     <constraint firstItem="yfb-45-RgW" firstAttribute="top" secondItem="2aM-v7-Oxb" secondAttribute="bottom" constant="12" id="J5I-Kp-agd"/>
                                     <constraint firstAttribute="trailing" secondItem="yfb-45-RgW" secondAttribute="trailing" constant="12" id="Xky-lX-kCg"/>
-                                    <constraint firstItem="xbs-eL-2Cr" firstAttribute="top" secondItem="yfb-45-RgW" secondAttribute="bottom" constant="12" id="g9f-lO-fPg"/>
+                                    <constraint firstItem="xbs-eL-2Cr" firstAttribute="top" secondItem="yfb-45-RgW" secondAttribute="bottom" constant="20" id="g9f-lO-fPg"/>
                                     <constraint firstAttribute="trailing" secondItem="xbs-eL-2Cr" secondAttribute="trailing" constant="32" id="gji-cU-FC5"/>
                                     <constraint firstItem="2aM-v7-Oxb" firstAttribute="leading" secondItem="BTf-JE-IH1" secondAttribute="leading" id="gsC-IL-6Hg"/>
                                     <constraint firstItem="2aM-v7-Oxb" firstAttribute="top" secondItem="BTf-JE-IH1" secondAttribute="top" id="pqE-rF-ByS"/>
-                                    <constraint firstAttribute="bottom" secondItem="xbs-eL-2Cr" secondAttribute="bottom" constant="12" id="xab-mN-PVq"/>
+                                    <constraint firstAttribute="bottom" secondItem="xbs-eL-2Cr" secondAttribute="bottom" constant="20" id="xab-mN-PVq"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

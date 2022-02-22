@@ -65,7 +65,7 @@ class PVLoginVC: PVBaseVC {
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
           guard error == nil else { return }
 
-            let tokenId = user?.authentication.accessToken
+            print(user?.authentication.idToken ?? "N.A.")
             
             //PVMessage.showSuccessWithMessage(message: "Login successfull")
           // If sign in succeeded, GO TO PHONE VERIFY VC
@@ -75,11 +75,7 @@ class PVLoginVC: PVBaseVC {
             //PVUserManager.sharedManager().activeUser = user
 
             //CHECK IF USER IS ALREADY SIGNED UP OR NOT
-            //self.callCreateUser(tokenID: user?.authentication.idToken)
-            
-            //GO TO PHONE VERIFY VC FOR SIGNUP
-            let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
-            self.push(vc: objPVPhoneVerifyVC)
+            self.callCreateUser(tokenID: user?.authentication.idToken)
         }
     }
 }

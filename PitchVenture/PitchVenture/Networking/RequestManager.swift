@@ -2,7 +2,7 @@
 //  RequestManager.swift
 //  PitchVenture
 //
-//  Created by Akshay on 2022-02-18.
+//  Created by Harshit on 2022-02-18.
 //  Copyright © 2022 PitchVenture. All rights reserved.
 //
 
@@ -61,9 +61,6 @@ class RequestManager: Alamofire.SessionManager {
         
         var authHeader:HTTPHeaders = [:]
         let urlString = url as? String
-        
-        //Check network connectivity
-        guard CommonMethods.sharedInstance.isConnected else { return nil }
         
         let jsonString = JSONStringify(value: params as AnyObject, prettyPrinted: true)
         print("Parameters :- \(jsonString)")
