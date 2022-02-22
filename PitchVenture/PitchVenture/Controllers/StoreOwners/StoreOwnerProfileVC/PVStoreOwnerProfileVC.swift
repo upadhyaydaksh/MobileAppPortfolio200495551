@@ -13,6 +13,8 @@ class PVStoreOwnerProfileVC: PVBaseVC {
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    var account : Account = Account()
+    
     //MARK: - Class Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class PVStoreOwnerProfileVC: PVBaseVC {
         self.setLeftBarButton()
         self.setNavigationTitle("Store Owner Profile")
         self.setLogoutAndPremiumNavBarButton()
+        self.getProfile()
     }
     // MARK: - Class Methods
     

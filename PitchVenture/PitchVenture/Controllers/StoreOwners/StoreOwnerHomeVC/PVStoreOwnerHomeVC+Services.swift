@@ -74,7 +74,7 @@ extension PVStoreOwnerHomeVC {
                 if let value = response.result.value {
                     let json = JSON(value)
                     print("JSON: \(json)")
-                    if (json["statusCode"].numberValue == 2000) {
+                    if (json["\(STATUS_CODE)"].numberValue == 2000) {
                         if let resultArray = json["data"].array {
                             for i in 0 ..< resultArray.count {
                                 

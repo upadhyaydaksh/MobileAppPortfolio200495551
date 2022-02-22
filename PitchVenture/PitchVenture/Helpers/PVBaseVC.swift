@@ -25,8 +25,8 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavBar()
-        navigationController?.navigationBar.barTintColor = Constants.color.kApp_Blue_Color
-        navigationController?.navigationBar.barStyle = .black
+        //navigationController?.navigationBar.barTintColor = Constants.color.kApp_Blue_Color
+        navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor : UIColor.black

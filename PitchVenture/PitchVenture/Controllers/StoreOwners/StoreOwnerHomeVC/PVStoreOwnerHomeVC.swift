@@ -17,6 +17,8 @@ class PVStoreOwnerHomeVC: PVBaseVC {
     
     var arrFranchises : [Account] = []
     
+    var userLoginType : UserLoginType = .Franchisor
+    
     @IBOutlet weak var tableView: UITableView!
     
     let adSize = GADAdSizeFromCGSize(CGSize(width: SCREEN_WIDTH - 20, height: 64))
@@ -89,11 +91,6 @@ extension PVStoreOwnerHomeVC: GADBannerViewDelegate {
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("bannerViewDidReceiveAd")
         self.addBannerViewToView(bannerView)
-        
-        //        bannerView.alpha = 0
-        //          UIView.animate(withDuration: 1, animations: {
-        //            bannerView.alpha = 1
-        //          })
     }
     
     func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {

@@ -154,3 +154,6 @@ public class CommonMethods: NSObject {
 let STR_LOADING                     = "Loading..."
 let INVALID_RESPONSE                = "Invalid response from server."
 let APP_NAME                        = "PitchVenture"
+let SUCCESS                         = "success"
+let STATUS_CODE                     = "statusCode"
+let MESSAGE                         = "message"

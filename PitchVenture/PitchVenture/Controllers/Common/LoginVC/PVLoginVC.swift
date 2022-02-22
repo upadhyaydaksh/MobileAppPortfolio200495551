@@ -14,6 +14,8 @@ class PVLoginVC: PVBaseVC {
 
     let signInConfig = GIDConfiguration.init(clientID: Constants.googleClientId)
     
+    var account : Account = Account()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -63,25 +65,23 @@ class PVLoginVC: PVBaseVC {
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
           guard error == nil else { return }
 
-            PVMessage.showSuccessWithMessage(message: "Login successfull")
+            let tokenId = user?.authentication.accessToken
+            
+            //PVMessage.showSuccessWithMessage(message: "Login successfull")
           // If sign in succeeded, GO TO PHONE VERIFY VC
             
-            let user: User? = User(id: "01", fullName: "Anonymus", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
+            //let user: User? = User(id: "01", fullName: "Anonymus", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
             
-            PVUserManager.sharedManager().activeUser = user
+            //PVUserManager.sharedManager().activeUser = user
 
             //CHECK IF USER IS ALREADY SIGNED UP OR NOT
-//            let dic = [
-//                "a": "b"
-//            ] as [String: Any]
-//            self.accountService.googleSignIn(data: <#T##[String : Any]#>, onSuccess: <#T##(ResponseModel<Account>?) -> Void#>, onError: <#T##(LoginError) -> Void#>)
-//
-            //GO TO PHONE VERIFY VC
+            //self.callCreateUser(tokenID: user?.authentication.idToken)
+            
+            //GO TO PHONE VERIFY VC FOR SIGNUP
             let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
             self.push(vc: objPVPhoneVerifyVC)
         }
     }
-    
 }
 
 extension PVLoginVC: ASAuthorizationControllerDelegate {

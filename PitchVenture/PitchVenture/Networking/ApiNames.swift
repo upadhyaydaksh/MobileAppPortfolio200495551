@@ -16,3 +16,5 @@ let CREATE_ACCOUNT          = MAIN_URL + "account/createAccount"
 let STORE_OWNER_SIGNUP      = MAIN_URL + "account/storeOwenerSignup"
 let GET_ALL_FRANCHISES      = MAIN_URL + "account/getAllFranchises"
 let GET_ALL_STORE_OWNERS    = MAIN_URL + "account/getAllStoreOwners"
+let GET_PROFILE             = MAIN_URL + "account/getProfile/"
+
