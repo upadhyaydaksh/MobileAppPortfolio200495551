@@ -13,6 +13,8 @@
 		5260AD2D27B40E06001CD5B5 /* Franchise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260AD2C27B40E06001CD5B5 /* Franchise.swift */; };
 		5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */; };
 		52A0522827C5A9D100D606E4 /* PVInputLocationVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0522727C5A9D100D606E4 /* PVInputLocationVC+Services.swift */; };
+		52A0522C27C5B5FC00D606E4 /* PVFranchisorsSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0522B27C5B5FC00D606E4 /* PVFranchisorsSignupVC.swift */; };
+		52A0522E27C5B61800D606E4 /* PVFranchisorsSignupVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0522D27C5B61800D606E4 /* PVFranchisorsSignupVC+Services.swift */; };
 		52B68B2727AF00A400921AC9 /* PVGoogleAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */; };
 		52C929FC27B3A5BA0021F7E8 /* StoreOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */; };
 		52D5E6F027C56DC8003E73CE /* PVRequestsVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5E6EF27C56DC8003E73CE /* PVRequestsVC+Services.swift */; };
@@ -119,6 +121,8 @@
 		5260AD2C27B40E06001CD5B5 /* Franchise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Franchise.swift; sourceTree = "<group>"; };
 		5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVInputLocationVC.swift; sourceTree = "<group>"; };
 		52A0522727C5A9D100D606E4 /* PVInputLocationVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVInputLocationVC+Services.swift"; sourceTree = "<group>"; };
+		52A0522B27C5B5FC00D606E4 /* PVFranchisorsSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVFranchisorsSignupVC.swift; sourceTree = "<group>"; };
+		52A0522D27C5B61800D606E4 /* PVFranchisorsSignupVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVFranchisorsSignupVC+Services.swift"; sourceTree = "<group>"; };
 		52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVGoogleAdsViewController.swift; sourceTree = "<group>"; };
 		52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreOwner.swift; sourceTree = "<group>"; };
 		52D5E6EF27C56DC8003E73CE /* PVRequestsVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVRequestsVC+Services.swift"; sourceTree = "<group>"; };
@@ -261,6 +265,23 @@
 			path = InputLocationVC;
 			sourceTree = "<group>";
 		};
+		52A0522927C5B59D00D606E4 /* Franchisors */ = {
+			isa = PBXGroup;
+			children = (
+				52A0522A27C5B5A900D606E4 /* FranchisorsSignup */,
+			);
+			path = Franchisors;
+			sourceTree = "<group>";
+		};
+		52A0522A27C5B5A900D606E4 /* FranchisorsSignup */ = {
+			isa = PBXGroup;
+			children = (
+				52A0522B27C5B5FC00D606E4 /* PVFranchisorsSignupVC.swift */,
+				52A0522D27C5B61800D606E4 /* PVFranchisorsSignupVC+Services.swift */,
+			);
+			path = FranchisorsSignup;
+			sourceTree = "<group>";
+		};
 		52B68B2527AF008200921AC9 /* GoogleAds */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +410,7 @@
 		FA474C8927234A83008601A9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52A0522927C5B59D00D606E4 /* Franchisors */,
 				FA521C24275024DE0099D8C0 /* Common */,
 				FA521C22275024B70099D8C0 /* StoreOwners */,
 				5273B2B92747722600E4D60E /* InputLocationVC */,
@@ -855,6 +877,7 @@
 				FA81A8BE27276C7900D6759A /* AppDelegate+Additions.swift in Sources */,
 				FAEAC3E027470DA1005F0A4F /* PVTextFieldView.swift in Sources */,
 				FAEAC3E227470F47005F0A4F /* PVMessage.swift in Sources */,
+				52A0522C27C5B5FC00D606E4 /* PVFranchisorsSignupVC.swift in Sources */,
 				FAB45CDA27460FC4009F1D5D /* PVView.swift in Sources */,
 				FAB45CF927463889009F1D5D /* String+Attributions.swift in Sources */,
 				52A0522827C5A9D100D606E4 /* PVInputLocationVC+Services.swift in Sources */,
@@ -874,6 +897,7 @@
 				FAB45CFA27463889009F1D5D /* String+Additions.swift in Sources */,
 				FA81A8C62727705B00D6759A /* Constants.swift in Sources */,
 				FAF4B6322746DA5A00B9503F /* PVStoreOwnerHomeVC.swift in Sources */,
+				52A0522E27C5B61800D606E4 /* PVFranchisorsSignupVC+Services.swift in Sources */,
 				52B68B2727AF00A400921AC9 /* PVGoogleAdsViewController.swift in Sources */,
 				FA5E0ACC276536C800BD8393 /* PVHeaderFooterView.swift in Sources */,
 				FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */,

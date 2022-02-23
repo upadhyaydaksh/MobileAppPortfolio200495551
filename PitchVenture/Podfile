@@ -35,4 +35,7 @@ target 'PitchVenture' do
 
   #AD MOB
   pod 'Google-Mobile-Ads-SDK'
+  
+  #DROP DOWN
+  pod 'IQDropDownTextField'
 end
