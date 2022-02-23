@@ -58,7 +58,7 @@ class PVPhoneVerifyVC: PVBaseVC {
     @IBAction func btnSubmitAction(_ sender: Any) {
         // PHONE NUMBER VERIFY
         
-        if self.txtPhoneNumber.text?.count != 10 {
+        if self.txtPhoneNumber.phone?.count != 10 {
             self.showAlertWithMessage(msg: "Please enter valid phone number")
         } else {
             //CREATE USER AND SELECT ROLE

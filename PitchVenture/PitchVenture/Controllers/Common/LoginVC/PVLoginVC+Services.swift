@@ -30,10 +30,11 @@ extension PVLoginVC {
                             self.account = account
                             PVUserManager.sharedManager().activeUser = account
                             
-                            if let acc = account.isComplete, acc {
+                            if let acc = account.isComplete, !acc {
                                 //GO TO HOMEVC
-                                let objPVStoreOwnerHomeVC = PVStoreOwnerHomeVC.instantiate()
                                 
+                                let objPVStoreOwnerHomeVC = PVStoreOwnerHomeVC.instantiate()
+
                                 if let isFranchise = account.isFranchise, isFranchise {
                                     objPVStoreOwnerHomeVC.userLoginType = .Franchisor
                                 } else {

@@ -74,40 +74,55 @@ class PVInputLocationVC: PVBaseVC {
     
     
     @IBAction func btnSubmitAction(_ sender: Any) {
-//        let user = User(id: nil, fullName: "Demo user", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
-//        PVUserManager.sharedManager().activeUser = user
-//        let sceneD = SceneDelegate()
-//        sceneD.setRootController()
-//
-//        appDel.setRootViewController()
         
-        let objPVInputLocationVC = PVStoreOwnerHomeVC.instantiate()
-        self.push(vc: objPVInputLocationVC)
+        var parameters = [String: Any]()
+        parameters = [
+            "accountId": self.account.id!,
+            "apartmentNumber": self.txtApartmentNo.text!,
+            "addressLine1": self.txtAddressLine1.text!,
+            "addressLine2": self.txtAddressLine2.text!,
+            "city": self.txtCity.text!,
+            "province": self.txtProvince.text!,
+            "postalCode": self.txtPostalCode.text!
+        ]
+        
+        if self.isFormValid() {
+            self.callStoreOwnerSignup(parameters: parameters)
+        } else {
+            self.showAlertWithMessage(msg: "Please enter all details.")
+        }
     }
     
     
     func isFormValid() -> Bool{
         if let apartmentNo = self.txtApartmentNo.text, apartmentNo.trimmedString().isEmpty {
+            self.showAlertWithMessage(msg: "Please Enter Apartment No")
             return false
         }
         if let addressLine1 = self.txtAddressLine1.text, addressLine1.trimmedString().isEmpty {
+            self.showAlertWithMessage(msg: "Please Enter Address Line 1")
             return false
         }
-        if let addressLine1 = self.txtAddressLine1.text, addressLine1.trimmedString().isEmpty {
+//        if let addressLine2 = self.txtAddressLine2.text, addressLine2.trimmedString().isEmpty {
+//            self.showAlertWithMessage(msg: "Please Enter Address Line 2")
+//            return false
+//        }
+        if let city = self.txtCity.text, city.trimmedString().isEmpty {
+            self.showAlertWithMessage(msg: "Please Enter City")
             return false
         }
-        if let addressLine1 = self.txtAddressLine1.text, addressLine1.trimmedString().isEmpty {
-            return false
-        }
-        if let addressLine1 = self.txtAddressLine1.text, addressLine1.trimmedString().isEmpty {
+        if let province = self.txtProvince.text, province.trimmedString().isEmpty {
+            self.showAlertWithMessage(msg: "Please Enter Province")
             return false
         }
         
-            
-            return true
-            
+        if let postalCode = self.txtPostalCode.text, postalCode.trimmedString().isEmpty {
+            self.showAlertWithMessage(msg: "Please Enter Postal Code")
+            return false
+        }
+        return true
     }
-    
+        
 }
 
 extension PVInputLocationVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {

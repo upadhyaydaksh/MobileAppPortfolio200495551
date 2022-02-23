@@ -75,7 +75,7 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
      - parameter map: A mapping from ObjectMapper
      */
     public func mapping(map: Map) {
-        id <- map["id"]
+        id <- map["_id"]
         name <- map["name"]
         email <- map["email"]
         picture <- map["picture"]
