@@ -21,7 +21,7 @@ let GET_ALL_FRANCHISES            = MAIN_URL_ACCOUNT + "getAllFranchises"
 let GET_ALL_STORE_OWNERS          = MAIN_URL_ACCOUNT + "getAllStoreOwners"
 let GET_PROFILE                   = MAIN_URL_ACCOUNT + "getProfile/"
 
-let GET_APP_DATA                  = MAIN_URL_ACCOUNT + "account/"
+let GET_APP_DATA                  = MAIN_URL_ACCOUNT + "appData"
 
 //REQUESTS
 let GET_ALL_PARTNERED_STORE_OWNERS = MAIN_URL_REQUEST + "getAllPartneredStoreOwners"

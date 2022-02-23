@@ -36,6 +36,7 @@ class PVInputLocationVC: PVBaseVC {
         super.viewWillAppear(animated)
         self.setLeftBarButton()
         self.setNavigationTitle("Add Store Details")
+        PVUserManager.sharedManager().loadActiveUser()
     }
     // MARK: - Class Methods
     

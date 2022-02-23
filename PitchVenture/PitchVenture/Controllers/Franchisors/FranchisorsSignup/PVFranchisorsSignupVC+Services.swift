@@ -7,6 +7,8 @@
 //
 
 import SwiftyJSON
+import Alamofire
+import SwiftyJSON
 import ObjectMapper
 
 extension PVFranchisorsSignupVC {
@@ -25,6 +27,7 @@ extension PVFranchisorsSignupVC {
                         if let account: Account = Mapper<Account>().map(JSON: result) {
                             self.account = account
                             PVUserManager.sharedManager().activeUser = account
+                            PVUserManager.sharedManager().saveActiveUser()
                             
                             if let acc = account.isComplete, acc {
                                 //GO TO HOMEVC
@@ -66,6 +69,51 @@ extension PVFranchisorsSignupVC {
     }
     
     func getAppData(){
-        
+        _ = Alamofire.request(GET_APP_DATA, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
+            print("--------- Request URL - %@", response.request?.url ?? "")
+            CommonMethods.sharedInstance.hideHud()
+
+            switch response.result {
+            case .success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    print("JSON: \(json)")
+                    if (json["statusCode"].numberValue == 2000) {
+                        if let dataDic = json["data"].dictionary {
+                            
+                            if let franchiseCategory = dataDic["franchiseCategories"]?.array {
+                                for i in 0 ..< franchiseCategory.count {
+
+                                    if let appData: AppData = Mapper<AppData>().map(JSON: franchiseCategory[i].rawValue as! [String : Any]) {
+                                        self.arrAppData.append(appData)
+                                    }
+                                }
+                                
+                                for i in 0 ..< self.arrAppData.count {
+                                    self.itemList.append(self.arrAppData[i].name ?? "")
+                                }
+                                
+                                self.txtFranchiseCategory.itemList = self.itemList
+                            }
+                        } else {
+                            self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
+                        }
+                    } else {
+                        if let message = json["message"].string {
+                            self.showAlertWithMessage(msg: message)
+                        } else {
+                            self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
+                        }
+                    }
+//                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error)
+                if let data = response.data {
+                    print("Response data: \(NSString(data: data, encoding: String.Encoding.utf8.rawValue)!)")
+                    //CommonMethods.sharedInstance.showAlertWithMessage(message: error.localizedDescription, withController: self)
+                }
+            }
+        }
     }
 }

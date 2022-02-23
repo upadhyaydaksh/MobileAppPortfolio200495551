@@ -90,13 +90,34 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
     }
 
     // MARK: NSCoding Protocol
-
+    
     required public init(coder aDecoder: NSCoder) {
-
-
+        self.id = aDecoder.decodeObject(forKey: "_id") as? String
+        self.name = aDecoder.decodeObject(forKey: "name") as? String
+        self.email = aDecoder.decodeObject(forKey: "email") as? String
+        self.picture = aDecoder.decodeObject(forKey: "picture") as? String
+        self.isComplete = aDecoder.decodeObject(forKey: "isComplete") as? Bool
+        self.isFranchise = aDecoder.decodeObject(forKey: "isFranchise") as? Bool
+        self.createdAt = aDecoder.decodeObject(forKey: "createdAt") as? String
+        self.v = aDecoder.decodeObject(forKey: "v") as? Int
+        self.franchise = aDecoder.decodeObject(forKey: "franchise") as? Franchise
+        self.storeOwner = aDecoder.decodeObject(forKey: "storeOwner") as? StoreOwner
+        self.countryCode = aDecoder.decodeObject(forKey: "countryCode") as? String
+        self.phoneNumber = aDecoder.decodeObject(forKey: "phoneNumber") as? String
     }
 
     public func encode(with aCoder: NSCoder) {
-
+        aCoder.encode(id, forKey: "_id")
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(email, forKey: "email")
+        aCoder.encode(picture, forKey: "picture")
+        aCoder.encode(isComplete, forKey: "isComplete")
+        aCoder.encode(isFranchise, forKey: "isFranchise")
+        aCoder.encode(createdAt, forKey: "createdAt")
+        aCoder.encode(v, forKey: "v")
+        aCoder.encode(franchise, forKey: "franchise")
+        aCoder.encode(storeOwner, forKey: "storeOwner")
+        aCoder.encode(countryCode, forKey: "countryCode")
+        aCoder.encode(phoneNumber, forKey: "phoneNumber")
     }
 }

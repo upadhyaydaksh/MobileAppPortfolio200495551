@@ -56,18 +56,48 @@ class PVPhoneVerifyVC: PVBaseVC {
     
     
     @IBAction func btnSubmitAction(_ sender: Any) {
-        // PHONE NUMBER VERIFY
         
-        if self.txtPhoneNumber.phone?.count != 10 {
-            self.showAlertWithMessage(msg: "Please enter valid phone number")
-        } else {
+//        if self.txtPhoneNumber.phone?.count != 10 {
+//            self.showAlertWithMessage(msg: "Please enter valid phone number")
+//        } else {
+//            if self.btnUserRoleSegmentControl.selectedSegmentIndex == 0 {
+//                // Store Owner
+//                //CREATE USER AND SELECT ROLE
+//                self.account.phoneNumber = self.txtPhoneNumber.text
+//                self.account.countryCode = self.txtPhoneNumber.countryCode
+//
+//                let obj = PVInputLocationVC.instantiate()
+//                obj.account = self.account
+//                self.push(vc: obj)
+//            }else{
+//                // Franchisor
+//                self.account.phoneNumber = self.txtPhoneNumber.text
+//                self.account.countryCode = self.txtPhoneNumber.countryCode
+//
+//                let obj = PVFranchisorsSignupVC.instantiate()
+//                obj.account = self.account
+//                self.push(vc: obj)
+//            }
+//        }
+        
+        if self.btnUserRoleSegmentControl.selectedSegmentIndex == 0 {
+            // Store Owner
             //CREATE USER AND SELECT ROLE
             self.account.phoneNumber = self.txtPhoneNumber.text
             self.account.countryCode = self.txtPhoneNumber.countryCode
             
-            let objPVInputLocationVC = PVInputLocationVC.instantiate()
-            objPVInputLocationVC.account = self.account
-            self.push(vc: objPVInputLocationVC)
+            let obj = PVInputLocationVC.instantiate()
+            obj.account = self.account
+            self.push(vc: obj)
+        } else {
+            // Franchisor
+            self.account.phoneNumber = self.txtPhoneNumber.text
+            self.account.countryCode = self.txtPhoneNumber.countryCode
+            
+            let obj = PVFranchisorsSignupVC.instantiate()
+            obj.account = self.account
+            self.push(vc: obj)
         }
+        
     }
 }

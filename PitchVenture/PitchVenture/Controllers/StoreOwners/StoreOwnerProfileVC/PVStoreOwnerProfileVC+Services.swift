@@ -14,7 +14,7 @@ import ObjectMapper
 extension PVStoreOwnerProfileVC{
     func getProfile() {
         
-        _ = Alamofire.request(GET_PROFILE+"6203439886e190ac401a76f1", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
+        _ = Alamofire.request(GET_PROFILE + "\(PVUserManager.sharedManager().activeUser?.id! ?? "")", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
             print("--------- Request URL - %@", response.request?.url ?? "")
             CommonMethods.sharedInstance.hideHud()
 

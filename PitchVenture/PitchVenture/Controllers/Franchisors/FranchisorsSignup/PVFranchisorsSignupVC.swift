@@ -29,8 +29,15 @@ class PVFranchisorsSignupVC: PVBaseVC {
     
     var account : Account = Account()
     
+    var arrAppData : [AppData] = []
+    
+    var arrSelectedCategory : [String] = []
+    
+    var itemList : [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.txtFranchiseCategory.isOptionalDropDown = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,8 +48,8 @@ class PVFranchisorsSignupVC: PVBaseVC {
     }
     // MARK: - Class Methods
     
-    class func instantiate() -> PVLoginVC {
-        return UIStoryboard.main().instantiateViewController(withIdentifier: PVLoginVC.identifier()) as! PVLoginVC
+    class func instantiate() -> PVFranchisorsSignupVC {
+        return UIStoryboard.main().instantiateViewController(withIdentifier: PVFranchisorsSignupVC.identifier()) as! PVFranchisorsSignupVC
     }
     
     //MARK: - Class Methods
@@ -75,29 +82,29 @@ class PVFranchisorsSignupVC: PVBaseVC {
     
     func isFormValid() -> Bool{
         if let franchiseName = self.txtFranchiseName.text, franchiseName.trimmedString().isEmpty {
-            self.showAlertWithMessage(msg: "Please Enter Apartment No")
+            self.showAlertWithMessage(msg: "Please Enter Franchise Name")
             return false
         }
         if let minimumDeposit = self.txtMinimumDeposit.text, minimumDeposit.trimmedString().isEmpty {
             self.showAlertWithMessage(msg: "Please Enter Minimum Deposit")
             return false
         }
-        if let franchiseCategory = self.txtFranchiseCategory.selectedItem?.trimmedString(), franchiseCategory.trimmedString().isEmpty {
-            self.showAlertWithMessage(msg: "Please Enter Franchise Category")
-            return false
-        }
         return true
     }
     
     @IBAction func btnSubmitAction(_ sender: Any) {
+        self.arrSelectedCategory.removeAll()
+        self.arrSelectedCategory.append(self.arrAppData[self.txtFranchiseCategory.selectedRow].id ?? "")
         
         var parameters = [String: Any]()
         parameters = [
             "accountId": self.account.id!,
+            "franchiseName": self.txtFranchiseName.text!,
             "minimumDeposit": self.txtMinimumDeposit.text!,
-            "franchiseCategories": self.txtFranchiseCategory.selectedItem?.trimmedString()
+            "franchiseCategories": self.arrSelectedCategory
         ]
         
+        print(parameters)
         if self.isFormValid() {
             self.callFranchiseSignup(parameters: parameters)
         } else {
