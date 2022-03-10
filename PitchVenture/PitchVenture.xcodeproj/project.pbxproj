@@ -129,6 +129,7 @@
 		52D5E6F127C57392003E73CE /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D5E6F527C57B6A003E73CE /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.release.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.release.xcconfig"; sourceTree = "<group>"; };
+		A070652B27D9640800EC0581 /* PitchVenture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PitchVenture.entitlements; sourceTree = "<group>"; };
 		A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
 		A0A23895279D2D9000BE5156 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		A0A23896279D2D9000BE5156 /* ServerApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerApi.swift; sourceTree = "<group>"; };
@@ -594,6 +595,7 @@
 		FA93343D271A10780002DBED /* PitchVenture */ = {
 			isa = PBXGroup;
 			children = (
+				A070652B27D9640800EC0581 /* PitchVenture.entitlements */,
 				A0A23893279D2D9000BE5156 /* Networking */,
 				FA81A8C42727704100D6759A /* Constants */,
 				FA81A8BC27276C1A00D6759A /* AppDelegates */,
@@ -1100,9 +1102,10 @@
 			baseConfigurationReference = EBD47B50966951F0CEB0EE3B /* Pods-PitchVenture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PitchVenture/PitchVenture.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 83DJL7X36B;
+				DEVELOPMENT_TEAM = EQV48EW98J;
 				INFOPLIST_FILE = PitchVenture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1122,9 +1125,10 @@
 			baseConfigurationReference = 99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PitchVenture/PitchVenture.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 83DJL7X36B;
+				DEVELOPMENT_TEAM = EQV48EW98J;
 				INFOPLIST_FILE = PitchVenture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

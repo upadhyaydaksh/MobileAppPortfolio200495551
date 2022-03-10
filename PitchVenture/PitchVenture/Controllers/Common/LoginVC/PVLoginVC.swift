@@ -18,7 +18,6 @@ class PVLoginVC: PVBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,18 +45,17 @@ class PVLoginVC: PVBaseVC {
     @objc
     func handleAuthorizationAppleIDButtonPress() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
-        let request = appleIDProvider.createRequest()
-        request.requestedScopes = [.fullName, .email]
-        
-        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-        authorizationController.delegate = self
-        authorizationController.presentationContextProvider = self
-        authorizationController.performRequests()
+            let request = appleIDProvider.createRequest()
+            request.requestedScopes = [.fullName, .email]
+            
+            let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+            authorizationController.delegate = self
+            authorizationController.presentationContextProvider = self
+            authorizationController.performRequests()
     }
     
     @IBAction func btnAppleLoginAction(_ sender: Any) {
-        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
-        self.push(vc: objPVPhoneVerifyVC)
+        handleAuthorizationAppleIDButtonPress()
     }
     
     @IBAction func btnGoogleLoginAction(_ sender: Any) {
@@ -81,14 +79,17 @@ extension PVLoginVC: ASAuthorizationControllerDelegate {
             
             // Create an account in your system.
             let userIdentifier = appleIDCredential.user
-            let fullName = appleIDCredential.fullName
+            let familyName = appleIDCredential.fullName?.familyName
+            let givenName = appleIDCredential.fullName?.givenName
             let email = appleIDCredential.email
-            
+            let token = appleIDCredential.identityToken
+            let tokenString = String(data: token!, encoding: .utf8)
+            self.callCreateUserWithAppleSignIn(token: tokenString, email: email, appleUserId: userIdentifier, givenName:givenName, familyName: familyName)
             // For the purpose of this demo app, store the `userIdentifier` in the keychain.
             self.saveUserInKeychain(userIdentifier)
             
             // For the purpose of this demo app, show the Apple ID credential information in the `ResultViewController`.
-            self.showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
+//            self.showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
         
         case let passwordCredential as ASPasswordCredential:
         
