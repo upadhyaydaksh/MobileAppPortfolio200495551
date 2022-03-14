@@ -3,32 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>879116334242-42airoht40a0lv2cpl26sfiqmds0hv08.apps.googleusercontent.com</string>
+	<string>1062304744018-6nv7hnqio29vokcv8s009regcqp82jva.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.879116334242-42airoht40a0lv2cpl26sfiqmds0hv08</string>
+	<string>com.googleusercontent.apps.1062304744018-6nv7hnqio29vokcv8s009regcqp82jva</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCdikgVr9-8XCMEll3nTfQLUtoK8mdxmVw</string>
+	<string>AIzaSyBK6fBt7iBfbo0RskRHiVkBeN35GvRCdSc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>879116334242</string>
+	<string>617807045117</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.gc.pitchventure</string>
+	<string>com.georgiancollege.pitchventure</string>
 	<key>PROJECT_ID</key>
-	<string>pitchventure-6cbb6</string>
+	<string>pitchventure-bc3a3</string>
 	<key>STORAGE_BUCKET</key>
-	<string>pitchventure-6cbb6.appspot.com</string>
+	<string>pitchventure-bc3a3.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:879116334242:ios:97a77030b56799daf213fb</string>
+	<string>1:617807045117:ios:27930915db752f460eb994</string>
 </dict>
 </plist>

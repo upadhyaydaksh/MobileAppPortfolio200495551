@@ -13,6 +13,8 @@ class PVStoreOwnerProfileVC: PVBaseVC {
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    var account : Account = Account()
+    
     //MARK: - Class Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,8 @@ class PVStoreOwnerProfileVC: PVBaseVC {
         super.viewWillAppear(animated)
         self.setLeftBarButton()
         self.setNavigationTitle("Store Owner Profile")
-        self.setLogoutNavBarButton()
+        self.setLogoutAndPremiumNavBarButton()
+        self.getProfile()
     }
     // MARK: - Class Methods
     
@@ -33,6 +36,8 @@ class PVStoreOwnerProfileVC: PVBaseVC {
     
     func registerTableViewCell() {
         tableView.register(UINib(nibName: "PVHomeTableViewCell", bundle: nil), forCellReuseIdentifier: PVHomeTableViewCell.reuseIdentifier())
+        
+        tableView.register(UINib(nibName: "PVButtonTableViewCell", bundle: nil), forCellReuseIdentifier: PVButtonTableViewCell.reuseIdentifier())
         
         tableView.register(UINib(nibName: "PVTextFieldTableViewCell", bundle: nil), forCellReuseIdentifier: PVTextFieldTableViewCell.reuseIdentifier())
     }

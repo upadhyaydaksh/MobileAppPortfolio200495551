@@ -24,6 +24,7 @@ extension AppDelegate {
     func setRootViewController() {
         if PVUserManager.sharedManager().isUserLoggedIn() {
             // Move to HomeVC
+            print(PVUserManager.sharedManager().loadActiveUser())
             self.setHomeVC()
         } else {
             

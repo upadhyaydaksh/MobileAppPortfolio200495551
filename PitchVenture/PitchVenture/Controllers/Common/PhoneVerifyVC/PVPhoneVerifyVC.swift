@@ -15,9 +15,18 @@ class PVPhoneVerifyVC: PVBaseVC {
     @IBOutlet weak var txtPhoneNumber: PVTextFieldView!
     @IBOutlet weak var btnUserRoleSegmentControl: UISegmentedControl!
     
+    var account : Account = Account()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         txtPhoneNumber.viewMode = .phoneNumber
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+        self.setNavigationTitle("Verify Phone")
+        
     }
     
     // MARK: - Class Methods
@@ -36,18 +45,59 @@ class PVPhoneVerifyVC: PVBaseVC {
     }
     
     @IBAction func btnUserRoleSegmentControlAction(_ sender: Any) {
+        if self.btnUserRoleSegmentControl.selectedSegmentIndex == 0 {
+            //STORE OWNER
+            self.account.isFranchise = false
+        } else {
+            //FRANCHISOR
+            self.account.isFranchise = true
+        }
     }
     
+    
     @IBAction func btnSubmitAction(_ sender: Any) {
-        // PHONE NUMBER VERIFY
-//        if isMobileNumberValid() {
-//            guard let countryCode = txtPhoneNumber.countryCode else { return }
-//            guard let phoneNumber = txtPhoneNumber.phone else { return }
-//            let param = ["countryCode": countryCode, "phone": phoneNumber]
-//            self.signIn(parameters: param as [String : AnyObject])
-//            print(param)
+        
+//        if self.txtPhoneNumber.phone?.count != 10 {
+//            self.showAlertWithMessage(msg: "Please enter valid phone number")
+//        } else {
+//            if self.btnUserRoleSegmentControl.selectedSegmentIndex == 0 {
+//                // Store Owner
+//                //CREATE USER AND SELECT ROLE
+//                self.account.phoneNumber = self.txtPhoneNumber.text
+//                self.account.countryCode = self.txtPhoneNumber.countryCode
+//
+//                let obj = PVInputLocationVC.instantiate()
+//                obj.account = self.account
+//                self.push(vc: obj)
+//            }else{
+//                // Franchisor
+//                self.account.phoneNumber = self.txtPhoneNumber.text
+//                self.account.countryCode = self.txtPhoneNumber.countryCode
+//
+//                let obj = PVFranchisorsSignupVC.instantiate()
+//                obj.account = self.account
+//                self.push(vc: obj)
+//            }
 //        }
-        let objPVInputLocationVC = PVInputLocationVC.instantiate()
-        self.push(vc: objPVInputLocationVC)
+        
+        if self.btnUserRoleSegmentControl.selectedSegmentIndex == 0 {
+            // Store Owner
+            //CREATE USER AND SELECT ROLE
+            self.account.phoneNumber = self.txtPhoneNumber.text
+            self.account.countryCode = self.txtPhoneNumber.countryCode
+            
+            let obj = PVInputLocationVC.instantiate()
+            obj.account = self.account
+            self.push(vc: obj)
+        } else {
+            // Franchisor
+            self.account.phoneNumber = self.txtPhoneNumber.text
+            self.account.countryCode = self.txtPhoneNumber.countryCode
+            
+            let obj = PVFranchisorsSignupVC.instantiate()
+            obj.account = self.account
+            self.push(vc: obj)
+        }
+        
     }
 }

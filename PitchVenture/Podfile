@@ -7,7 +7,6 @@ target 'PitchVenture' do
 
   # Pods for PitchVenture
   pod 'IQKeyboardManagerSwift', '6.5.9'
-  pod 'SVProgressHUD', '2.2.5'
 
   # Country Code Selection
   pod 'FlagPhoneNumber', '~> 0.8.0'
@@ -28,5 +27,22 @@ target 'PitchVenture' do
   pod 'SwiftMessages', '~> 5.0'
 
   pod 'GoogleSignIn'
+  
+  pod 'SwiftyJSON'
+  pod 'ReachabilitySwift'
+  pod 'Alamofire', '~> 4.7.2'
+  pod 'SVProgressHUD'
 
+  #AD MOB
+  pod 'Google-Mobile-Ads-SDK'
+  
+  #DROP DOWN
+  pod 'IQDropDownTextField'
+  
+  #FIREBASE
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  
+  # Image download async
+  pod 'SDWebImage'
 end
