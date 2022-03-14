@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18B84DB727DF9C4D00E0718B /* Pods-PitchVenture.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EBD47B50966951F0CEB0EE3B /* Pods-PitchVenture.debug.xcconfig */; };
 		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
 		522F0CAE27DEF28C00479167 /* PVButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F0CAC27DEF28C00479167 /* PVButtonTableViewCell.swift */; };
 		522F0CAF27DEF28C00479167 /* PVButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F0CAD27DEF28C00479167 /* PVButtonTableViewCell.xib */; };
@@ -765,7 +766,6 @@
 				FA933437271A10780002DBED /* Sources */,
 				FA933438271A10780002DBED /* Frameworks */,
 				FA933439271A10780002DBED /* Resources */,
-				08EBE890B319DB65DA6BBBEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -819,6 +819,7 @@
 				FA521C2F27506D050099D8C0 /* PVTextFieldTableViewCell.xib in Resources */,
 				FA5B01AD2742D65900976EB6 /* Environments.plist in Resources */,
 				FA93344B271A107A0002DBED /* LaunchScreen.storyboard in Resources */,
+				18B84DB727DF9C4D00E0718B /* Pods-PitchVenture.debug.xcconfig in Resources */,
 				FAC8A1562748196000EFC95B /* PVHomeTableViewCell.xib in Resources */,
 				FA933448271A107A0002DBED /* Assets.xcassets in Resources */,
 				FA933446271A10780002DBED /* Main.storyboard in Resources */,
@@ -835,23 +836,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08EBE890B319DB65DA6BBBEB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PitchVenture/Pods-PitchVenture-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PitchVenture/Pods-PitchVenture-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PitchVenture/Pods-PitchVenture-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1FD12A26A7C605F1B2151C2E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1121,7 +1105,7 @@
 				CODE_SIGN_ENTITLEMENTS = PitchVenture/PitchVenture.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EQV48EW98J;
+				DEVELOPMENT_TEAM = NZXQ4998XD;
 				INFOPLIST_FILE = PitchVenture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1144,7 +1128,7 @@
 				CODE_SIGN_ENTITLEMENTS = PitchVenture/PitchVenture.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EQV48EW98J;
+				DEVELOPMENT_TEAM = NZXQ4998XD;
 				INFOPLIST_FILE = PitchVenture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
