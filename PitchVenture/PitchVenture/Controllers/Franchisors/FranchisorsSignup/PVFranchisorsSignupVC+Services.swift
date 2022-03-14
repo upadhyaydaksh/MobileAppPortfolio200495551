@@ -26,12 +26,12 @@ extension PVFranchisorsSignupVC {
                     if let result = json["data"].dictionaryObject {
                         if let account: Account = Mapper<Account>().map(JSON: result) {
                             self.account = account
-                            PVUserManager.sharedManager().activeUser = account
-                            PVUserManager.sharedManager().saveActiveUser()
                             
                             if let acc = account.isComplete, acc {
                                 //GO TO HOMEVC
-                                self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Signup Successfull")
+                                
+                                PVUserManager.sharedManager().activeUser = account
+                                PVUserManager.sharedManager().saveActiveUser()
                                 
                                 let objPVStoreOwnerHomeVC = PVStoreOwnerHomeVC.instantiate()
 
@@ -42,6 +42,8 @@ extension PVFranchisorsSignupVC {
                                 }
 
                                 self.push(vc: objPVStoreOwnerHomeVC)
+                                
+                                self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Signup Successfull")
                             } else {
                                 //GO TO PHONE VERIFY VC FOR SIGNUP
                                 let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()

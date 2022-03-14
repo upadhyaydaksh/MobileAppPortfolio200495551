@@ -47,7 +47,7 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         self.setNavigationTitle("Home")
         self.setProfileAndNotificationNavBarButton()
         
-//        if UserLoginType == UserLoginType.StoreOwner {
+//        if userLoginType == UserLoginType.StoreOwner {
 //            self.getAllStoreOwners()
 //        } else {
 //            self.getAllFranchises()

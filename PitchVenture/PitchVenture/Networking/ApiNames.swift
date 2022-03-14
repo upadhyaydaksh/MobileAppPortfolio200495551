@@ -16,8 +16,13 @@ let MAIN_URL_REQUEST = "http://ec2-13-59-174-252.us-east-2.compute.amazonaws.com
 //ACCOUNT
 let CREATE_ACCOUNT                = MAIN_URL_ACCOUNT + "createAccount"
 let CREATE_ACCOUNT_APPLE          = MAIN_URL_ACCOUNT + "appleSignIn"
+
 let STORE_OWNER_SIGNUP            = MAIN_URL_ACCOUNT + "storeOwenerSignup"
+let STORE_OWNER_UPDATE            = MAIN_URL_ACCOUNT + "storeOwenerUpdate"
+
 let FRANCHISE_SIGNUP              = MAIN_URL_ACCOUNT + "franchiseSignup"
+let FRANCHISE_UPDATE              = MAIN_URL_ACCOUNT + "franchiseUpdate"
+
 let GET_ALL_FRANCHISES            = MAIN_URL_ACCOUNT + "getAllFranchises"
 let GET_ALL_STORE_OWNERS          = MAIN_URL_ACCOUNT + "getAllStoreOwners"
 let GET_PROFILE                   = MAIN_URL_ACCOUNT + "getProfile/"

@@ -37,6 +37,8 @@ class PVStoreOwnerProfileVC: PVBaseVC {
     func registerTableViewCell() {
         tableView.register(UINib(nibName: "PVHomeTableViewCell", bundle: nil), forCellReuseIdentifier: PVHomeTableViewCell.reuseIdentifier())
         
+        tableView.register(UINib(nibName: "PVButtonTableViewCell", bundle: nil), forCellReuseIdentifier: PVButtonTableViewCell.reuseIdentifier())
+        
         tableView.register(UINib(nibName: "PVTextFieldTableViewCell", bundle: nil), forCellReuseIdentifier: PVTextFieldTableViewCell.reuseIdentifier())
     }
 }

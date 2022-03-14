@@ -106,6 +106,22 @@ class RequestManager: Alamofire.SessionManager {
         }
     }
     
+    func callRespectivePutWebservices(isSucces:@escaping (_ response :DataResponse<Any>) -> (),
+                       isFailure:@escaping (_ isCancelled :Bool?,_ error:NSError?)->(), params: [String: Any], urlApi: String) {
+        _ = self.startRequest(url: urlApi, method: .put, params: params, encoding: JSONEncoding.default, headers: nil, success: { (response) in
+            CommonMethods.sharedInstance.hideHud()
+            return isSucces(response)
+        }) { (response, error) in
+            CommonMethods.sharedInstance.hideHud()
+            if error._code != NSURLErrorCancelled {
+                return isFailure(false,error as NSError)
+            }
+            else{
+                return isFailure(true,error as NSError)
+            }
+        }
+    }
+    
     override init(configuration: URLSessionConfiguration, delegate: SessionDelegate, serverTrustPolicyManager: ServerTrustPolicyManager? = nil) {
         super.init(configuration: configuration, delegate: delegate, serverTrustPolicyManager: serverTrustPolicyManager)
     }

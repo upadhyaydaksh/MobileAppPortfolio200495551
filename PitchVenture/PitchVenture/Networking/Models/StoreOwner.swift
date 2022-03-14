@@ -17,16 +17,18 @@ class StoreOwner: NSObject, Mappable, NSCopying, NSCoding {
     var id : String?
     var apartmentNumber : String?
     var addressLine1 : String?
-    var addressLine2: String?
+    var addressLine2 : String?
     var city : String?
     var province : String?
     var postalCode: String?
     var sentRequests : [Requests]?
     var acceptedRequests : [Requests]?
-    var pictures: [String]?
-    var v: Int?
-
-    init(id: String?, apartmentNumber: String?, addressLine1: String?, addressLine2: String?, city: String?, province : String?, postalCode: String?, sentRequests : [Requests]?, acceptedRequests : [Requests]?, pictures: [String]?, v: Int?) {
+    var pictures : [String]?
+    var v : Int?
+    var countryCode: String?
+    var phoneNumber: String?
+    
+    init(id: String?, apartmentNumber: String?, addressLine1: String?, addressLine2: String?, city: String?, province : String?, postalCode: String?, sentRequests : [Requests]?, acceptedRequests : [Requests]?, pictures: [String]?, v: Int?, countryCode: String?, phoneNumber: String?) {
         self.id = id
         self.apartmentNumber = apartmentNumber
         self.addressLine1 = addressLine1
@@ -38,11 +40,13 @@ class StoreOwner: NSObject, Mappable, NSCopying, NSCoding {
         self.acceptedRequests = acceptedRequests
         self.pictures = pictures
         self.v = v
+        self.countryCode = countryCode
+        self.phoneNumber = phoneNumber
 
     }
 
     func copy(with zone: NSZone? = nil) -> Any {
-        return StoreOwner(id : id, apartmentNumber : apartmentNumber, addressLine1 : addressLine1, addressLine2 : addressLine2, city : city, province : province, postalCode : postalCode, sentRequests : sentRequests, acceptedRequests : acceptedRequests, pictures : pictures, v : v)
+        return StoreOwner(id : id, apartmentNumber : apartmentNumber, addressLine1 : addressLine1, addressLine2 : addressLine2, city : city, province : province, postalCode : postalCode, sentRequests : sentRequests, acceptedRequests : acceptedRequests, pictures : pictures, v : v, countryCode: countryCode, phoneNumber: phoneNumber)
     }
 
     override init() {
@@ -57,6 +61,8 @@ class StoreOwner: NSObject, Mappable, NSCopying, NSCoding {
         self.acceptedRequests = []
         self.pictures = []
         self.v = nil
+        self.countryCode = nil
+        self.phoneNumber = nil
     }
 
     // MARK: ObjectMapper Initalizers
@@ -84,6 +90,8 @@ class StoreOwner: NSObject, Mappable, NSCopying, NSCoding {
         acceptedRequests <- map["acceptedRequests"]
         pictures <- map["pictures"]
         v <- map["v"]
+        countryCode <- map["countryCode"]
+        phoneNumber <- map["phoneNumber"]
     }
 
     // MARK: NSCoding Protocol

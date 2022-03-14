@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
+		522F0CAE27DEF28C00479167 /* PVButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F0CAC27DEF28C00479167 /* PVButtonTableViewCell.swift */; };
+		522F0CAF27DEF28C00479167 /* PVButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F0CAD27DEF28C00479167 /* PVButtonTableViewCell.xib */; };
 		5256657127BF45F3005EB5E3 /* PVSponsoredVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */; };
 		5260AD2B27B40982001CD5B5 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260AD2A27B40982001CD5B5 /* Requests.swift */; };
 		5260AD2D27B40E06001CD5B5 /* Franchise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260AD2C27B40E06001CD5B5 /* Franchise.swift */; };
@@ -116,6 +118,8 @@
 
 /* Begin PBXFileReference section */
 		1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		522F0CAC27DEF28C00479167 /* PVButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVButtonTableViewCell.swift; sourceTree = "<group>"; };
+		522F0CAD27DEF28C00479167 /* PVButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVButtonTableViewCell.xib; sourceTree = "<group>"; };
 		5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVSponsoredVC.swift; sourceTree = "<group>"; };
 		5260AD2A27B40982001CD5B5 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		5260AD2C27B40E06001CD5B5 /* Franchise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Franchise.swift; sourceTree = "<group>"; };
@@ -247,6 +251,15 @@
 				1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		522F0CAB27DEF25800479167 /* PVButtonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				522F0CAC27DEF28C00479167 /* PVButtonTableViewCell.swift */,
+				522F0CAD27DEF28C00479167 /* PVButtonTableViewCell.xib */,
+			);
+			path = PVButtonTableViewCell;
 			sourceTree = "<group>";
 		};
 		5256656F27BF45D4005EB5E3 /* SponsoredVC */ = {
@@ -456,6 +469,7 @@
 		FA521C2A27506C950099D8C0 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				522F0CAB27DEF25800479167 /* PVButtonTableViewCell */,
 				FA521C2B27506CB90099D8C0 /* PVTextFieldTableViewCell */,
 			);
 			path = TableViewCells;
@@ -808,6 +822,7 @@
 				FAC8A1562748196000EFC95B /* PVHomeTableViewCell.xib in Resources */,
 				FA933448271A107A0002DBED /* Assets.xcassets in Resources */,
 				FA933446271A10780002DBED /* Main.storyboard in Resources */,
+				522F0CAF27DEF28C00479167 /* PVButtonTableViewCell.xib in Resources */,
 				FA3CD3FE274F7AB6007DB824 /* PVImageTableViewCell.xib in Resources */,
 				FA5E0ACE276537CF00BD8393 /* PVHeaderFooterView.xib in Resources */,
 				FA5E0ACA2765310500BD8393 /* PVNotificationTableViewCell.xib in Resources */,
@@ -956,6 +971,7 @@
 				A0A2389F279D2D9000BE5156 /* AccountService.swift in Sources */,
 				FAF4B64A2746EAEC00B9503F /* Date+Additions.swift in Sources */,
 				FA3CD3F6274F683F007DB824 /* PVFranchiseDetailVC.swift in Sources */,
+				522F0CAE27DEF28C00479167 /* PVButtonTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

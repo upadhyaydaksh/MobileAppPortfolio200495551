@@ -102,7 +102,9 @@ class PVInputLocationVC: PVBaseVC {
             "addressLine2": self.txtAddressLine2.text!,
             "city": self.txtCity.text!,
             "province": self.txtProvince.text!,
-            "postalCode": self.txtPostalCode.text!
+            "postalCode": self.txtPostalCode.text!,
+            "countryCode": self.account.countryCode!,
+            "phoneNumber": self.account.phoneNumber!
         ]
         
         if self.isFormValid() {

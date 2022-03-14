@@ -231,7 +231,10 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         let notificationButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notification"), style: .plain, target: self, action: #selector(goToNotificationVC))
         notificationButton.tintColor = Constants.color.kAPP_COLOR
         
-    self.navigationItem.setRightBarButtonItems([profileButton,notificationButton], animated: true)
+        let premiumButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_sponsored"), style: .plain, target: self, action: #selector(openSponsoredVC))
+        premiumButton.tintColor = Constants.color.kAPP_COLOR
+        
+    self.navigationItem.setRightBarButtonItems([profileButton,notificationButton, premiumButton], animated: true)
     }
     
     @objc func goToStoreOwnerProfileVC() {
@@ -259,7 +262,6 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         premiumButton.tintColor = Constants.color.kAPP_COLOR
         
         self.navigationItem.setRightBarButtonItems([profileButton, premiumButton], animated: true)
-        //self.navigationItem.setRightBarButton(profileButton, animated: true)
     }
     
     @objc func openSponsoredVC() {

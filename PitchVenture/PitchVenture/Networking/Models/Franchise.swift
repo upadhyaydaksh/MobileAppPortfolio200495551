@@ -16,25 +16,34 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
     
     var id : String?
     var franchiseName : String?
+    var franchiseDescription : String?
     var minimumDeposit : Int?
     var franchiseCategory : [String] = []
+    var countryCode: String?
+    var phoneNumber: String?
     
-    init(id: String?, franchiseName: String?, minimumDeposit: Int?, franchiseCategory: [String]) {
+    init(id: String?, franchiseName: String?,franchiseDescription: String?, minimumDeposit: Int?, franchiseCategory: [String], countryCode: String?, phoneNumber: String?) {
         self.id = id
         self.franchiseName = franchiseName
+        self.franchiseDescription = franchiseDescription
         self.minimumDeposit = minimumDeposit
         self.franchiseCategory = franchiseCategory
+        self.countryCode = countryCode
+        self.phoneNumber = phoneNumber
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Franchise(id : id, franchiseName : franchiseName, minimumDeposit: minimumDeposit, franchiseCategory: franchiseCategory)
+        return Franchise(id : id, franchiseName : franchiseName, franchiseDescription: franchiseDescription, minimumDeposit: minimumDeposit, franchiseCategory: franchiseCategory, countryCode: countryCode, phoneNumber: phoneNumber)
     }
     
     override init() {
         self.id = nil
         self.franchiseName = nil
+        self.franchiseDescription = nil
         self.minimumDeposit = nil
         self.franchiseCategory = []
+        self.countryCode = nil
+        self.phoneNumber = nil
     }
     
     // MARK: ObjectMapper Initalizers
@@ -53,8 +62,11 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
     public func mapping(map: Map) {
         id <- map["_id"]
         franchiseName <- map["franchiseName"]
+        franchiseDescription <- map["franchiseDescription"]
         minimumDeposit <- map["minimumDeposit"]
         franchiseCategory <- map["franchiseCategory"]
+        countryCode <- map["countryCode"]
+        phoneNumber <- map["phoneNumber"]
     }
     
     // MARK: NSCoding Protocol

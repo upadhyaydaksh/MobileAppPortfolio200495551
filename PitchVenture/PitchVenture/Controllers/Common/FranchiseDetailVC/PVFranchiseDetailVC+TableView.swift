@@ -23,7 +23,7 @@ extension PVFranchiseDetailVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else {
             let cell: PVFranchiseDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVFranchiseDetailTableViewCell.reuseIdentifier()) as! PVFranchiseDetailTableViewCell
-            
+            cell.configureCell(franchise: self.account.franchise)
             return cell
         }
     }
