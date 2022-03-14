@@ -17,6 +17,8 @@ class PVFranchiseDetailVC: PVBaseVC {
     
     @IBOutlet weak var btnApply: PVButton!
     
+    var account : Account = Account()
+    
     //MARK:- CLASS METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,7 @@ class PVFranchiseDetailVC: PVBaseVC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationTitle("Franchise detail")
+        self.setNavigationTitle("Franchise details")
         setLeftBarButton()
     }
     
@@ -43,5 +45,4 @@ class PVFranchiseDetailVC: PVBaseVC {
         let obj = PVRequestsVC.instantiate()
         self.push(vc: obj)
     }
-    
 }
