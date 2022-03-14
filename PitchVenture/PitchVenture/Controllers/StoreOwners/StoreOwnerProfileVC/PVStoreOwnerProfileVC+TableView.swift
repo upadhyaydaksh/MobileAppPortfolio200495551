@@ -31,7 +31,17 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
         } else {
             let cell: PVHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVHomeTableViewCell.reuseIdentifier()) as! PVHomeTableViewCell
             cell.configureStoreOwnerCell(account: self.account)
+            cell.btnFranchise.setTitle("Edit", for: .normal)
+            cell.btnFranchise.addTarget(self, action: #selector(btnEditProfileAction(sender:)), for: .touchUpInside)
+
             return cell
         }
+    }
+    
+    @objc func btnEditProfileAction(sender: UIButton){
+        let obj = PVInputLocationVC.instantiate()
+        obj.account = self.account
+        obj.isFromEditProfile = true
+        self.push(vc: obj)
     }
 }

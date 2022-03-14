@@ -229,7 +229,7 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         profileButton.tintColor = Constants.color.kAPP_COLOR
         
         let notificationButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notification"), style: .plain, target: self, action: #selector(goToNotificationVC))
-        profileButton.tintColor = Constants.color.kAPP_COLOR
+        notificationButton.tintColor = Constants.color.kAPP_COLOR
         
     self.navigationItem.setRightBarButtonItems([profileButton,notificationButton], animated: true)
     }

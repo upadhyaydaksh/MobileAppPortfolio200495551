@@ -28,6 +28,8 @@ class PVInputLocationVC: PVBaseVC {
     
     var account : Account = Account()
     
+    var isFromEditProfile: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -35,7 +37,14 @@ class PVInputLocationVC: PVBaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setLeftBarButton()
-        self.setNavigationTitle("Add Store Details")
+        
+        if self.isFromEditProfile {
+            self.setNavigationTitle("Edit Store")
+            self.autoFillData()
+        } else {
+            self.setNavigationTitle("Add Store Details")
+        }
+        
         PVUserManager.sharedManager().loadActiveUser()
     }
     // MARK: - Class Methods
@@ -44,6 +53,15 @@ class PVInputLocationVC: PVBaseVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: PVInputLocationVC.identifier()) as! PVInputLocationVC
     }
     
+    func autoFillData() {
+        
+        self.txtApartmentNo.text = self.account.storeOwner?.apartmentNumber
+        self.txtAddressLine1.text = self.account.storeOwner?.addressLine1
+        self.txtAddressLine2.text = self.account.storeOwner?.addressLine2
+        self.txtCity.text = self.account.storeOwner?.city
+        self.txtProvince.text = self.account.storeOwner?.province
+        self.txtPostalCode.text = self.account.storeOwner?.postalCode
+    }
     //MARK: - Class Methods
     @IBAction func btnImagePickerAction(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Upload Photo", message: "Select an option", preferredStyle: .actionSheet)

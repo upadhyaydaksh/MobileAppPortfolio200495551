@@ -30,7 +30,6 @@ extension PVInputLocationVC {
                             
                             if let acc = account.isComplete, acc {
                                 //GO TO HOMEVC
-                                self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Signup Successfull")
                                 
                                 let objPVStoreOwnerHomeVC = PVStoreOwnerHomeVC.instantiate()
 
@@ -41,6 +40,9 @@ extension PVInputLocationVC {
                                 }
 
                                 self.push(vc: objPVStoreOwnerHomeVC)
+                                
+                                self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Signup Successfull")
+                                
                             } else {
                                 //GO TO PHONE VERIFY VC FOR SIGNUP
                                 let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()

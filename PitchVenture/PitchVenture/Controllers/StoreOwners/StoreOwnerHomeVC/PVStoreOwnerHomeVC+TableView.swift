@@ -19,6 +19,7 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
         let cell: PVHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVHomeTableViewCell.reuseIdentifier()) as! PVHomeTableViewCell
         //cell.configureFranchiseCell(franchise: self.arrFranchises[indexPath.row].franchise)
         cell.configureStoreOwnerCell(account: self.arrFranchises[indexPath.row])
+        cell.btnFranchise.setTitle("Apply", for: .normal)
         return cell
     }
     
