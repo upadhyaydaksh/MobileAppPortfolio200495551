@@ -14,8 +14,8 @@
             filePath = "PitchVenture/Controllers/InputLocationVC/PVInputLocationVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "btnImagePickerAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,57 +30,9 @@
             filePath = "PitchVenture/Controllers/Franchisors/FranchisorsSignup/PVFranchisorsSignupVC+Services.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "getAppData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F83BA44E-5C6F-4D6F-AAF5-2B0E7B0103B5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PitchVenture/Controllers/Franchisors/FranchisorsSignup/PVFranchisorsSignupVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "btnSubmitAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C8EE5CB6-162A-4D34-8A0E-A00E7D9D242C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PitchVenture/Controllers/InputLocationVC/PVInputLocationVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "btnSubmitAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BF61842A-86E3-40F0-90B8-953E98DF4580"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PitchVenture/Controllers/InputLocationVC/PVInputLocationVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "btnSubmitAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -103,32 +55,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0B8DD805-9C55-4E72-92B3-A12C50DF6D0A"
+            uuid = "DB92453D-8A1B-48D6-B11B-ADCE6923AC49"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PitchVenture/Controllers/StoreOwners/StoreOwnerProfileVC/PVStoreOwnerProfileVC+TableView.swift"
+            filePath = "PitchVenture/Controllers/InputLocationVC/PVInputLocationVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "btnUpdateAction(sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "28A88969-1FCD-4735-81B3-AC2DD971ACFD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PitchVenture/Controllers/StoreOwners/StoreOwnerProfileVC/PVStoreOwnerProfileVC+TableView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "btnUpdateAction(sender:)"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "uploadImageToFirebase()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

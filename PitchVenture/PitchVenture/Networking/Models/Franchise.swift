@@ -21,8 +21,9 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
     var franchiseCategory : [String] = []
     var countryCode: String?
     var phoneNumber: String?
+    var pictures : [String]?
     
-    init(id: String?, franchiseName: String?,franchiseDescription: String?, minimumDeposit: Int?, franchiseCategory: [String], countryCode: String?, phoneNumber: String?) {
+    init(id: String?, franchiseName: String?,franchiseDescription: String?, minimumDeposit: Int?, franchiseCategory: [String], countryCode: String?, phoneNumber: String?, pictures: [String]?) {
         self.id = id
         self.franchiseName = franchiseName
         self.franchiseDescription = franchiseDescription
@@ -30,10 +31,11 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
         self.franchiseCategory = franchiseCategory
         self.countryCode = countryCode
         self.phoneNumber = phoneNumber
+        self.pictures = pictures
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Franchise(id : id, franchiseName : franchiseName, franchiseDescription: franchiseDescription, minimumDeposit: minimumDeposit, franchiseCategory: franchiseCategory, countryCode: countryCode, phoneNumber: phoneNumber)
+        return Franchise(id : id, franchiseName : franchiseName, franchiseDescription: franchiseDescription, minimumDeposit: minimumDeposit, franchiseCategory: franchiseCategory, countryCode: countryCode, phoneNumber: phoneNumber, pictures : pictures)
     }
     
     override init() {
@@ -44,6 +46,7 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
         self.franchiseCategory = []
         self.countryCode = nil
         self.phoneNumber = nil
+        self.pictures = []
     }
     
     // MARK: ObjectMapper Initalizers
@@ -67,6 +70,7 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
         franchiseCategory <- map["franchiseCategory"]
         countryCode <- map["countryCode"]
         phoneNumber <- map["phoneNumber"]
+        pictures <- map["pictures"]
     }
     
     // MARK: NSCoding Protocol

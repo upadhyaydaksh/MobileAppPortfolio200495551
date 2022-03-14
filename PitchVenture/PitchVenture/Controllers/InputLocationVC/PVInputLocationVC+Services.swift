@@ -32,13 +32,6 @@ extension PVInputLocationVC {
                                 PVUserManager.sharedManager().saveActiveUser()
                                 
                                 let objPVStoreOwnerHomeVC = PVStoreOwnerHomeVC.instantiate()
-
-                                if let isFranchise = account.isFranchise, isFranchise {
-                                    objPVStoreOwnerHomeVC.userLoginType = .Franchisor
-                                } else {
-                                    objPVStoreOwnerHomeVC.userLoginType = .StoreOwner
-                                }
-
                                 self.push(vc: objPVStoreOwnerHomeVC)
                                 
                                 self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Signup Successfull")
@@ -67,5 +60,41 @@ extension PVInputLocationVC {
                 }
             }
         }, params: parameters, urlApi: STORE_OWNER_SIGNUP)
+    }
+    
+    func storeOwenerUpdate(parameters: [String : Any]) {
+        CommonMethods.sharedInstance.showHud()
+        
+        RequestManager.sharedInstance.callRespectivePutWebservices(isSucces: { (response) in
+            if let value = response.result.value {
+                let json = JSON(value)
+                if (json[STATUS_CODE].intValue == 2000) {
+                    
+                    //SIGNUP SUCCESSFULL
+                    if let result = json["data"].dictionaryObject {
+                        if let account: Account = Mapper<Account>().map(JSON: result) {
+                            self.account = account
+                            PVUserManager.sharedManager().activeUser = account
+                            PVUserManager.sharedManager().saveActiveUser()
+                            
+                            self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Profile updated successfully.")
+                        }
+                    } else {
+                        self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
+                    }
+                } else {
+                    let message = json[MESSAGE].stringValue
+                    self.showAlertWithMessage(msg: message)
+                }
+            }
+        }, isFailure: { (isCancelled, error) in
+            if error?._code != NSURLErrorCancelled {
+                if (error?._code == -1001 || error?._code == -1005) {
+                    
+                } else {
+                    self.showAlertWithMessage(msg: (error?.localizedDescription)!)
+                }
+            }
+        }, params: parameters, urlApi: STORE_OWNER_UPDATE)
     }
 }

@@ -16,6 +16,8 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
 
     var arrayForHiddenNavBarControllers: [AnyClass] = []
     
+    let timeStamp = NSDate().timeIntervalSince1970
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -234,7 +236,9 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         let premiumButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_sponsored"), style: .plain, target: self, action: #selector(openSponsoredVC))
         premiumButton.tintColor = Constants.color.kAPP_COLOR
         
-    self.navigationItem.setRightBarButtonItems([profileButton,notificationButton, premiumButton], animated: true)
+        //self.navigationItem.setRightBarButtonItems([profileButton,notificationButton, premiumButton], animated: true)
+        
+        self.navigationItem.setRightBarButtonItems([profileButton, premiumButton], animated: true)
     }
     
     @objc func goToStoreOwnerProfileVC() {

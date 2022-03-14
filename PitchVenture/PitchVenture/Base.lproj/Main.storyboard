@@ -406,7 +406,6 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <connections>
                                                             <action selector="btnImagePickerAction:" destination="EFU-he-ped" eventType="touchUpInside" id="W6C-Ve-Fw4"/>
-                                                            <action selector="btnImagePickerAction:" destination="l4S-c7-dNC" eventType="touchUpInside" id="zvm-QH-Gww"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

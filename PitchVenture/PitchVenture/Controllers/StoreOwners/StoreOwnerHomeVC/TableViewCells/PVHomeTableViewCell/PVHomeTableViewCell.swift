@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PVHomeTableViewCell: UITableViewCell {
 
@@ -47,6 +48,10 @@ class PVHomeTableViewCell: UITableViewCell {
         self.lblCategory.text = account?.storeOwner?.getCompleteAddress()
         self.lblDeposit.text = "City"
         self.lblMinimumDeposit.text = account?.storeOwner?.city
+        if let pictures = account?.storeOwner?.pictures, pictures.count > 0 {
+            self.imgFranchise.sd_setImage(with: URL(string: account?.storeOwner?.pictures?[0] ?? ""), placeholderImage: UIImage(named: "ic_logo.png"))
+        }
+        
     }
     
     @IBAction func btnAction(_ sender: Any) {

@@ -62,10 +62,18 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func btnEditProfileAction(sender: UIButton){
-        let obj = PVInputLocationVC.instantiate()
-        obj.account = self.account
-        obj.isFromEditProfile = true
-        self.push(vc: obj)
+        
+        if self.account.isFranchise! {
+            let obj = PVFranchisorsSignupVC.instantiate()
+            obj.account = self.account
+            obj.isFromEditProfile = true
+            self.push(vc: obj)
+        } else {
+            let obj = PVInputLocationVC.instantiate()
+            obj.account = self.account
+            obj.isFromEditProfile = true
+            self.push(vc: obj)
+        }
     }
     
     func isFormValid() -> Bool{

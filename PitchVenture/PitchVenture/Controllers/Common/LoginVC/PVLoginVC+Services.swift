@@ -36,13 +36,6 @@ extension PVLoginVC {
                                 PVUserManager.sharedManager().saveActiveUser()
                                 
                                 let objPVStoreOwnerHomeVC = PVStoreOwnerHomeVC.instantiate()
-
-                                if let isFranchise = account.isFranchise, isFranchise {
-                                    objPVStoreOwnerHomeVC.userLoginType = .Franchisor
-                                } else {
-                                    objPVStoreOwnerHomeVC.userLoginType = .StoreOwner
-                                }
-
                                 self.push(vc: objPVStoreOwnerHomeVC)
                             } else {
                                 //GO TO PHONE VERIFY VC FOR SIGNUP
@@ -90,20 +83,13 @@ extension PVLoginVC {
                     if let result = json["data"].dictionaryObject {
                         if let account: Account = Mapper<Account>().map(JSON: result) {
                             self.account = account
-                            PVUserManager.sharedManager().activeUser = account
-                            PVUserManager.sharedManager().saveActiveUser()
-                            
+
                             if let acc = account.isComplete, acc {
                                 //GO TO HOMEVC
+                                PVUserManager.sharedManager().activeUser = account
+                                PVUserManager.sharedManager().saveActiveUser()
                                 
                                 let objPVStoreOwnerHomeVC = PVStoreOwnerHomeVC.instantiate()
-
-                                if let isFranchise = account.isFranchise, isFranchise {
-                                    objPVStoreOwnerHomeVC.userLoginType = .Franchisor
-                                } else {
-                                    objPVStoreOwnerHomeVC.userLoginType = .StoreOwner
-                                }
-
                                 self.push(vc: objPVStoreOwnerHomeVC)
                             } else {
                                 //GO TO PHONE VERIFY VC FOR SIGNUP

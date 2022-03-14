@@ -10,6 +10,9 @@ import UIKit
 import IQDropDownTextField
 import AVKit
 import MobileCoreServices
+import Firebase
+import FirebaseStorage
+import SDWebImage
 
 class PVFranchisorsSignupVC: PVBaseVC {
 
@@ -29,6 +32,8 @@ class PVFranchisorsSignupVC: PVBaseVC {
     
     var account : Account = Account()
     
+    var isFromEditProfile: Bool = false
+    
     var arrAppData : [AppData] = []
     
     var arrSelectedCategory : [String] = []
@@ -38,14 +43,30 @@ class PVFranchisorsSignupVC: PVBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.txtFranchiseCategory.isOptionalDropDown = false
+        self.getAppData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setLeftBarButton()
-        self.setNavigationTitle("Add Franchise Details")
-        self.getAppData()
+        
+        if self.isFromEditProfile {
+            self.setNavigationTitle("Edit Franchise Details")
+            self.autoFillData()
+        } else {
+            self.setNavigationTitle("Add Franchise Details")
+        }
     }
+    
+    func autoFillData() {
+        
+        self.txtFranchiseName.text = self.account.franchise?.franchiseName
+        self.txtFranchiseCategory.selectedItem = self.account.franchise?.franchiseCategory[0]
+        self.txtMinimumDeposit.text = "\(self.account.franchise?.minimumDeposit ?? 0)"
+        
+        self.imgLocation.sd_setImage(with: URL(string: self.account.storeOwner?.pictures?[0] ?? ""), placeholderImage: UIImage(named: "ic_logo.png"))
+    }
+    
     // MARK: - Class Methods
     
     class func instantiate() -> PVFranchisorsSignupVC {
@@ -93,22 +114,57 @@ class PVFranchisorsSignupVC: PVBaseVC {
     }
     
     @IBAction func btnSubmitAction(_ sender: Any) {
-        self.arrSelectedCategory.removeAll()
-        self.arrSelectedCategory.append(self.arrAppData[self.txtFranchiseCategory.selectedRow].id ?? "")
         
-        var parameters = [String: Any]()
-        parameters = [
-            "accountId": self.account.id!,
-            "franchiseName": self.txtFranchiseName.text!,
-            "minimumDeposit": self.txtMinimumDeposit.text!,
-            "franchiseCategories": self.arrSelectedCategory
-        ]
-        
-        print(parameters)
         if self.isFormValid() {
-            self.callFranchiseSignup(parameters: parameters)
+            if self.locationImage == nil {
+                var parameters = [String: Any]()
+                parameters = [
+                    "accountId": self.account.id!,
+                    "franchiseName": self.txtFranchiseName.text!,
+                    "minimumDeposit": self.txtMinimumDeposit.text!,
+                    "franchiseCategories": self.arrSelectedCategory
+                ]
+                self.callFranchiseSignup(parameters: parameters)
+            } else {
+                self.uploadImageToFirebase()
+            }
+            
         } else {
             self.showAlertWithMessage(msg: "Please enter all details.")
+        }
+    }
+    
+    func uploadImageToFirebase() {
+        let storageRef = Storage.storage().reference().child("USER_\(self.account.id ?? "").png")
+        if let uploadData = self.imgLocation.image?.pngData(){
+            storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                if error != nil {
+                    print("error")
+                } else {
+                    storageRef.downloadURL(completion: { (url, error) in
+                        print("Image URL: \((url?.absoluteString)!)")
+                        self.account.franchise?.pictures?.removeAll()
+                        self.account.franchise?.pictures?.append(url!.absoluteString)
+                        
+                        self.arrSelectedCategory.removeAll()
+                        self.arrSelectedCategory.append(self.arrAppData[self.txtFranchiseCategory.selectedRow].id ?? "")
+                        
+                        var parameters = [String: Any]()
+                        parameters = [
+                            "accountId": self.account.id!,
+                            "franchiseName": self.txtFranchiseName.text!,
+                            "minimumDeposit": self.txtMinimumDeposit.text!,
+                            "franchiseCategories": self.arrSelectedCategory,
+                            "pictures": self.account.franchise?.pictures! as Any
+                            
+                        ]
+                        
+                        print(parameters)
+                        
+                        self.franchisorUpdate(parameters: parameters)
+                    })
+                }
+            })
         }
     }
 }

@@ -9,6 +9,9 @@
 import UIKit
 import AVKit
 import MobileCoreServices
+import Firebase
+import FirebaseStorage
+import SDWebImage
 
 class PVInputLocationVC: PVBaseVC {
 
@@ -61,6 +64,8 @@ class PVInputLocationVC: PVBaseVC {
         self.txtCity.text = self.account.storeOwner?.city
         self.txtProvince.text = self.account.storeOwner?.province
         self.txtPostalCode.text = self.account.storeOwner?.postalCode
+        
+        self.imgLocation.sd_setImage(with: URL(string: self.account.storeOwner?.pictures?[0] ?? ""), placeholderImage: UIImage(named: "ic_logo.png"))
     }
     //MARK: - Class Methods
     @IBAction func btnImagePickerAction(_ sender: Any) {
@@ -90,25 +95,11 @@ class PVInputLocationVC: PVBaseVC {
         self.present(imagePicker, animated: true, completion: nil)
     }
     
-    
-    
     @IBAction func btnSubmitAction(_ sender: Any) {
         
-        var parameters = [String: Any]()
-        parameters = [
-            "accountId": self.account.id!,
-            "apartmentNumber": self.txtApartmentNo.text!,
-            "addressLine1": self.txtAddressLine1.text!,
-            "addressLine2": self.txtAddressLine2.text!,
-            "city": self.txtCity.text!,
-            "province": self.txtProvince.text!,
-            "postalCode": self.txtPostalCode.text!,
-            "countryCode": self.account.countryCode!,
-            "phoneNumber": self.account.phoneNumber!
-        ]
-        
         if self.isFormValid() {
-            self.callStoreOwnerSignup(parameters: parameters)
+            //UPLOAD IMAGE TO FIREBASE AND GET IMAGE URL
+            self.uploadImageToFirebase()
         } else {
             self.showAlertWithMessage(msg: "Please enter all details.")
         }
@@ -124,10 +115,6 @@ class PVInputLocationVC: PVBaseVC {
             self.showAlertWithMessage(msg: "Please Enter Address Line 1")
             return false
         }
-//        if let addressLine2 = self.txtAddressLine2.text, addressLine2.trimmedString().isEmpty {
-//            self.showAlertWithMessage(msg: "Please Enter Address Line 2")
-//            return false
-//        }
         if let city = self.txtCity.text, city.trimmedString().isEmpty {
             self.showAlertWithMessage(msg: "Please Enter City")
             return false
@@ -153,5 +140,38 @@ extension PVInputLocationVC : UIImagePickerControllerDelegate, UINavigationContr
         self.locationImage = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage)!
         self.imgLocation.image = locationImage
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func uploadImageToFirebase() {
+        let storageRef = Storage.storage().reference().child("USER_\(self.account.id ?? "").png")
+        if let uploadData = self.imgLocation.image?.pngData(){
+            storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                if error != nil {
+                    print("error")
+                } else {
+                    storageRef.downloadURL(completion: { (url, error) in
+                        print("Image URL: \((url?.absoluteString)!)")
+                        self.account.storeOwner?.pictures?.removeAll()
+                        self.account.storeOwner?.pictures?.append(url!.absoluteString)
+                        
+                        var parameters = [String: Any]()
+                        parameters = [
+                            "accountId": self.account.id!,
+                            "apartmentNumber": self.txtApartmentNo.text!,
+                            "addressLine1": self.txtAddressLine1.text!,
+                            "addressLine2": self.txtAddressLine2.text!,
+                            "city": self.txtCity.text!,
+                            "province": self.txtProvince.text!,
+                            "postalCode": self.txtPostalCode.text!,
+                            "pictures": self.account.storeOwner?.pictures! as Any
+                        ]
+                        
+                        print(parameters)
+                        
+                        self.storeOwenerUpdate(parameters: parameters)
+                    })
+                }
+            })
+        }
     }
 }

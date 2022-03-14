@@ -17,7 +17,7 @@ class PVStoreOwnerHomeVC: PVBaseVC {
     
     var arrFranchises : [Account] = []
     
-    var userLoginType : UserLoginType = .Franchisor
+    var account : Account = Account()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -47,12 +47,13 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         self.setNavigationTitle("Home")
         self.setProfileAndNotificationNavBarButton()
         
-//        if userLoginType == UserLoginType.StoreOwner {
-//            self.getAllStoreOwners()
-//        } else {
-//            self.getAllFranchises()
-//        }
-        self.getAllStoreOwners()
+        self.account = PVUserManager.sharedManager().activeUser
+        
+        if self.account.isFranchise! {
+            self.getAllStoreOwners()
+        } else {
+            self.getAllFranchises()
+        }
         
     }
     

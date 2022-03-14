@@ -38,4 +38,11 @@ target 'PitchVenture' do
   
   #DROP DOWN
   pod 'IQDropDownTextField'
+  
+  #FIREBASE
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  
+  # Image download async
+  pod 'SDWebImage'
 end
