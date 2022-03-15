@@ -98,6 +98,22 @@ class RequestManager: Alamofire.SessionManager {
         return req
     }
     
+    func callRespectiveGetWebservices(isSucces:@escaping (_ response :DataResponse<Any>) -> (),
+                       isFailure:@escaping (_ isCancelled :Bool?,_ error:NSError?)->(), params: [String: Any], urlApi: String) {
+        _ = self.startRequest(url: urlApi, method: .get, params: params, encoding: JSONEncoding.default, headers: nil, success: { (response) in
+            CommonMethods.sharedInstance.hideHud()
+            return isSucces(response)
+        }) { (response, error) in
+            CommonMethods.sharedInstance.hideHud()
+            if error._code != NSURLErrorCancelled {
+                return isFailure(false,error as NSError)
+            }
+            else{
+                return isFailure(true,error as NSError)
+            }
+        }
+    }
+    
     func callRespectiveWebservices(isSucces:@escaping (_ response :DataResponse<Any>) -> (),
                        isFailure:@escaping (_ isCancelled :Bool?,_ error:NSError?)->(), params: [String: Any], urlApi: String) {
         _ = self.startRequest(url: urlApi, method: .post, params: params, encoding: JSONEncoding.default, headers: nil, success: { (response) in

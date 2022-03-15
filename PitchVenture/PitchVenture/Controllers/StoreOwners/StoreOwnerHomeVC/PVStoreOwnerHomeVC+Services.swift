@@ -117,8 +117,8 @@ extension PVStoreOwnerHomeVC {
                 if let value = response.result.value {
                     let json = JSON(value)
                     if (json[STATUS_CODE].intValue == 2000) {
-                        let message = json[MESSAGE].stringValue
-                        self.showAlertWithMessage(msg: message)
+                        
+                        self.showAlertWithMessage(msg: "Request sent successfully.")
                     } else {
                         let message = json[MESSAGE].stringValue
                         self.showAlertWithMessage(msg: message)

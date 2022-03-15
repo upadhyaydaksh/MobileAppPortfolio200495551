@@ -17,11 +17,11 @@ extension PVRequestsVC : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : PVRequestsTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVRequestsTableViewCell.reuseIdentifier()) as! PVRequestsTableViewCell
         
-        cell.btnAccept.tag = indexPath.row
-        cell.btnAccept.addTarget(self, action: #selector(self.btnAcceptAction), for: .touchUpInside)
-        
-        cell.btnReject.tag = indexPath.row
-        cell.btnReject.addTarget(self, action: #selector(self.btnRejectAction), for: .touchUpInside)
+//        cell.btnAccept.tag = indexPath.row
+//        cell.btnAccept.addTarget(self, action: #selector(self.btnAcceptAction), for: .touchUpInside)
+//        
+//        cell.btnReject.tag = indexPath.row
+//        cell.btnReject.addTarget(self, action: #selector(self.btnRejectAction), for: .touchUpInside)
         
         return cell
     }

@@ -39,19 +39,19 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
         } else if indexPath.section == 1 {
             let cell: PVButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVButtonTableViewCell.reuseIdentifier()) as! PVButtonTableViewCell
             cell.btnSubmit.setTitle("Update", for: .normal)
-            cell.btnSubmit.addTarget(self, action: #selector(self.btnUpdateAction), for: .touchUpInside)
+            //cell.btnSubmit.addTarget(self, action: #selector(self.btnUpdateAction), for: .touchUpInside)
             return cell
         } else if indexPath.section == 2 {
             let cell: PVHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVHomeTableViewCell.reuseIdentifier()) as! PVHomeTableViewCell
             cell.configureStoreOwnerCell(account: self.account)
             cell.btnFranchise.setTitle("Edit", for: .normal)
-            cell.btnFranchise.addTarget(self, action: #selector(btnEditProfileAction(sender:)), for: .touchUpInside)
+            cell.btnFranchise.addTarget(self, action: #selector(btnEditProfileAction), for: .touchUpInside)
 
             return cell
         } else {
             let cell: PVButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVButtonTableViewCell.reuseIdentifier()) as! PVButtonTableViewCell
             cell.btnSubmit.setTitle("  Manage Your Requests  ", for: .normal)
-            cell.btnSubmit.addTarget(self, action: #selector(self.btnRequestsAction), for: .touchUpInside)
+            cell.btnSubmit.addTarget(self, action: #selector(self.btnRequestsAction(sender:)), for: .touchUpInside)
             return cell
         }
     }
