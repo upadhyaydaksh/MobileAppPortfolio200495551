@@ -655,12 +655,13 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODg-NQ-PDm" customClass="PVButton" customModule="PitchVenture" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="176" height="56"/>
-                                                <color key="backgroundColor" red="0.14117647058823529" green="0.18823529411764706" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.88708509099999999" blue="0.18018780270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="OIk-iA-M7y"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <state key="normal" title="Upgrade">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="circularUsingHeight" value="YES"/>
@@ -888,7 +889,7 @@
             <size key="intrinsicContentSize" width="54" height="36"/>
         </designable>
         <designable name="ODg-NQ-PDm">
-            <size key="intrinsicContentSize" width="60" height="30"/>
+            <size key="intrinsicContentSize" width="83" height="36"/>
         </designable>
         <designable name="Sbu-YX-eiL">
             <size key="intrinsicContentSize" width="58" height="33"/>

@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue-Bold.ttf">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,14 +26,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3u-M0-x9a" customClass="PVButton" customModule="PitchVenture" customModuleProvider="target">
-                                <rect key="frame" x="104" y="12" width="112" height="44"/>
-                                <color key="backgroundColor" red="0.015686275440000001" green="0.074509806930000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="100" y="12" width="120" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.88708509099999999" blue="0.18018780270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="BBg-wd-pm0"/>
-                                    <constraint firstAttribute="width" constant="112" id="wCQ-Hz-GmM"/>
+                                    <constraint firstAttribute="width" constant="120" id="wCQ-Hz-GmM"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Update"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="circularUsingHeight" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -57,7 +65,7 @@
     </objects>
     <designables>
         <designable name="O3u-M0-x9a">
-            <size key="intrinsicContentSize" width="60" height="34"/>
+            <size key="intrinsicContentSize" width="70" height="36"/>
         </designable>
     </designables>
     <resources>

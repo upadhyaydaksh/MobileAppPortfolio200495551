@@ -28,6 +28,10 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell: PVTextFieldTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVTextFieldTableViewCell.reuseIdentifier()) as! PVTextFieldTableViewCell
+            
+            cell.txtValue.tag = indexPath.row
+            cell.txtValue.delegate = self
+            
             cell.configureCell(index: indexPath.row, account: self.account)
             return cell
         } else if indexPath.section == 1 {
@@ -45,17 +49,26 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func btnUpdateAction(sender: UIButton){
+        
+        self.view.endEditing(true)
         var parameters = [String: Any]()
         parameters = [
             "accountId": self.account.id!,
             "name": self.account.name?.trimmedString() ?? "",
             "email": self.account.email?.trimmedString() ?? "",
             "countryCode": "+1",
-            "phoneNumber": "2493597231"
+            "phoneNumber": self.account.phoneNumber?.trimmedString() ?? ""
         ]
         
+        print(parameters)
         if self.isFormValid() {
-            self.storeOwenerUpdate(parameters: parameters)
+            if let isFranchise = self.account.isFranchise, isFranchise {
+                //UPDATE PROFILE OF FRANCHISOR
+                self.franchisorUpdate(parameters: parameters)
+            } else {
+                //UPDATE PROFILE OF STORE OWNER
+                self.storeOwenerUpdate(parameters: parameters)
+            }
         } else {
             self.showAlertWithMessage(msg: "Please enter all details.")
         }
@@ -77,15 +90,39 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func isFormValid() -> Bool{
+        
         if let name = self.account.name, name.trimmedString().isEmpty {
             self.showAlertWithMessage(msg: "Please enter your full name")
             return false
         }
+        
         if let email = self.account.email, email.trimmedString().isEmpty {
             self.showAlertWithMessage(msg: "Please enter your email address")
             return false
         }
         
+        if let phone = self.account.phoneNumber, phone.isEmpty || phone.length() < 10  {
+            self.showAlertWithMessage(msg: "Please enter your phone number")
+            return false
+        }
+        
+        return true
+    }
+}
+
+extension PVStoreOwnerProfileVC: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.tag == 0 {
+            //NAME
+            self.account.name = textField.text
+        } else if textField.tag == 1 {
+            //EMAIL
+            self.account.email = textField.text
+        } else {
+            //PHONE
+            self.account.phoneNumber = textField.text
+        }
         return true
     }
 }
