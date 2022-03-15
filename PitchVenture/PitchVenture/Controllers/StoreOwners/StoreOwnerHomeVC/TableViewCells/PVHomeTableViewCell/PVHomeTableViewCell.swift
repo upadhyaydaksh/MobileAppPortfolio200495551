@@ -54,7 +54,4 @@ class PVHomeTableViewCell: UITableViewCell {
         
     }
     
-    @IBAction func btnAction(_ sender: Any) {
-    }
-    
 }

@@ -142,11 +142,7 @@ extension PVRequestsVC {
         }
     }
     
-    func sendRequest(){        
-    }
-    
     func acceptRequest(){
-        
     }
     
     func rejectRequest(){

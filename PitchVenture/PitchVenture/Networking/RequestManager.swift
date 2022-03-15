@@ -62,6 +62,14 @@ class RequestManager: Alamofire.SessionManager {
         var authHeader:HTTPHeaders = [:]
         let urlString = url as? String
         
+        let account = PVUserManager.sharedManager().activeUser
+        if let accountToken = account?.token {
+            authHeader = ["Authorization": "Bearer " + accountToken.trimmedString(),
+                          "Content-Type" : "application/json"]
+        }
+        
+        print("authHeader +++++++++++ \(authHeader)")
+        
         let jsonString = JSONStringify(value: params as AnyObject, prettyPrinted: true)
         print("Parameters :- \(jsonString)")
         

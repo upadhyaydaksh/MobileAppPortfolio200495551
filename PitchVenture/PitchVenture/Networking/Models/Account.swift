@@ -27,7 +27,7 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
     var countryCode: String?
     var phoneNumber: String?
     
-    init(id: String?, name: String?, email: String?, picture: String?, isComplete: Bool?, isFranchise: Bool?, createdAt: String?, v: Int?, franchise: Franchise?, storeOwner: StoreOwner?, countryCode: String?, phoneNumber: String?) {
+    init(id: String?, name: String?, email: String?, picture: String?, isComplete: Bool?, isFranchise: Bool?, createdAt: String?, v: Int?, franchise: Franchise?, storeOwner: StoreOwner?, countryCode: String?, phoneNumber: String?, token: String?) {
             self.id = id
             self.name = name
             self.email = email
@@ -40,10 +40,11 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
             self.storeOwner = storeOwner
             self.countryCode = countryCode
             self.phoneNumber = phoneNumber
+            self.token = token
         }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Account(id : id, name : name, email : email, picture : picture, isComplete : isComplete, isFranchise : isFranchise, createdAt : createdAt, v : v,  franchise : franchise, storeOwner : storeOwner, countryCode: countryCode, phoneNumber: phoneNumber)
+        return Account(id : id, name : name, email : email, picture : picture, isComplete : isComplete, isFranchise : isFranchise, createdAt : createdAt, v : v,  franchise : franchise, storeOwner : storeOwner, countryCode: countryCode, phoneNumber: phoneNumber, token: token)
     }
     
     override init() {
@@ -59,6 +60,7 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
         self.storeOwner = nil
         self.countryCode = nil
         self.phoneNumber = nil
+        self.token = nil
     }
     
     // MARK: ObjectMapper Initalizers
@@ -87,6 +89,7 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
         storeOwner <- map["storeOwner"]
         countryCode <- map["countryCode"]
         phoneNumber <- map["phoneNumber"]
+        token <- map["token"]
     }
 
     // MARK: NSCoding Protocol
@@ -104,6 +107,8 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
         self.storeOwner = aDecoder.decodeObject(forKey: "storeOwner") as? StoreOwner
         self.countryCode = aDecoder.decodeObject(forKey: "countryCode") as? String
         self.phoneNumber = aDecoder.decodeObject(forKey: "phoneNumber") as? String
+        self.token = aDecoder.decodeObject(forKey: "token") as? String
+        
     }
 
     public func encode(with aCoder: NSCoder) {
@@ -119,5 +124,6 @@ class Account: NSObject, Mappable, NSCopying, NSCoding {
         aCoder.encode(storeOwner, forKey: "storeOwner")
         aCoder.encode(countryCode, forKey: "countryCode")
         aCoder.encode(phoneNumber, forKey: "phoneNumber")
+        aCoder.encode(token, forKey: "token")
     }
 }

@@ -100,10 +100,40 @@ extension PVStoreOwnerHomeVC {
                 print(error)
                 if let data = response.data {
                     print("Response data: \(NSString(data: data, encoding: String.Encoding.utf8.rawValue)!)")
-                    //CommonMethods.sharedInstance.showAlertWithMessage(message: error.localizedDescription, withController: self)
                 }
             }
         }
 
     }
+    
+    func callSendRequest(user: Account?) {
+        CommonMethods.sharedInstance.showHud()
+        
+        if let userID = user?.id, userID != nil {
+            let urlName = "\(CALL_SEND_REQUEST)\(userID)"
+            print(urlName)
+            
+            RequestManager.sharedInstance.callRespectiveWebservices(isSucces: { (response) in
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    if (json[STATUS_CODE].intValue == 2000) {
+                        let message = json[MESSAGE].stringValue
+                        self.showAlertWithMessage(msg: message)
+                    } else {
+                        let message = json[MESSAGE].stringValue
+                        self.showAlertWithMessage(msg: message)
+                    }
+                }
+            }, isFailure: { (isCancelled, error) in
+                if error?._code != NSURLErrorCancelled {
+                    if (error?._code == -1001 || error?._code == -1005) {
+                        
+                    } else {
+                        self.showAlertWithMessage(msg: (error?.localizedDescription)!)
+                    }
+                }
+            }, params: [:], urlApi: urlName)
+        }
+    }
+    
 }

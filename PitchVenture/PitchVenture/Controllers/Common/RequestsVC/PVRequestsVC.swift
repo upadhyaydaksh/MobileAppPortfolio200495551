@@ -12,6 +12,8 @@ class PVRequestsVC: PVBaseVC {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var account : Account = Account()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerTableViewCells()
@@ -21,6 +23,11 @@ class PVRequestsVC: PVBaseVC {
         super.viewWillAppear(animated)
         self.setNavigationTitle("Requests")
         self.setLeftBarButton()
+        if let isFranchise = self.account.isFranchise, isFranchise {
+            self.getAllFranchisorsRequests()
+        } else {
+            self.getAllStoreOwnersRequests()
+        }
     }
     
     class func instantiate() -> PVRequestsVC {

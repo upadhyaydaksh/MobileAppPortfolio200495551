@@ -20,6 +20,8 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
         //cell.configureFranchiseCell(franchise: self.arrFranchises[indexPath.row].franchise)
         cell.configureStoreOwnerCell(account: self.arrFranchises[indexPath.row])
         cell.btnFranchise.setTitle("Apply", for: .normal)
+        cell.btnFranchise.tag = indexPath.row
+        cell.btnFranchise.addTarget(self, action: #selector(btnApplyAction), for: .touchUpInside)
         return cell
     }
     
@@ -28,4 +30,20 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
 //        obj.account = self.arrFranchises[indexPath.row]
 //        self.push(vc: obj)
     }
+    
+    @objc func btnApplyAction(sender: UIButton) {
+
+        let alert = UIAlertController(title: "Send Request", message: "Are you sure you want to send request for connect?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Send", style: .default, handler: { (_) in
+            //SEND REQUEST
+            self.callSendRequest(user: self.arrFranchises[sender.tag])
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
