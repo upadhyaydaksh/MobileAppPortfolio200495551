@@ -128,7 +128,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "117"
             endingLineNumber = "117"
-            landmarkName = "getAllStoreOwnersRequests()"
+            landmarkName = "acceptRequest(account:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -144,7 +144,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
             endingLineNumber = "118"
-            landmarkName = "getAllStoreOwnersRequests()"
+            landmarkName = "acceptRequest(account:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -160,7 +160,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
-            landmarkName = "getAllFranchisorsRequests()"
+            landmarkName = "getAllStoreOwnersRequests()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

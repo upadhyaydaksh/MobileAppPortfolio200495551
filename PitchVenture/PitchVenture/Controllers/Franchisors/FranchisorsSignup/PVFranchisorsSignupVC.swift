@@ -61,7 +61,11 @@ class PVFranchisorsSignupVC: PVBaseVC {
     func autoFillData() {
         
         self.txtFranchiseName.text = self.account.franchise?.franchiseName
-        self.txtFranchiseCategory.selectedItem = self.account.franchise?.franchiseCategory[0]
+        
+        if let franchiseCategory = self.account.franchise?.franchiseCategory, franchiseCategory.count > 0 {
+            self.txtFranchiseCategory.selectedItem = self.account.franchise?.franchiseCategory[0]
+        }
+        
         self.txtMinimumDeposit.text = "\(self.account.franchise?.minimumDeposit ?? 0)"
         
         self.imgLocation.sd_setImage(with: URL(string: self.account.storeOwner?.pictures?[0] ?? ""), placeholderImage: UIImage(named: "ic_logo.png"))
