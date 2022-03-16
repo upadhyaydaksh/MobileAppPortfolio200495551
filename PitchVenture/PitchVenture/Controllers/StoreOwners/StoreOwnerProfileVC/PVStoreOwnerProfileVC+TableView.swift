@@ -52,7 +52,7 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
             let cell: PVHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVHomeTableViewCell.reuseIdentifier()) as! PVHomeTableViewCell
             if let isFranchise = self.account.isFranchise, isFranchise {
                 //FRANCHISE
-                cell.configureFranchiseCell(account: self.account, isEditHidden: true)
+                cell.configureFranchiseCell(account: self.account, isEditHidden: false)
                 for i in 0 ..< self.arrAppData.count {
                     if self.arrAppData[i].id == self.account.franchise?.franchiseCategory.first {
                         cell.lblCategory.text = self.arrAppData[i].name
@@ -60,7 +60,7 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
                     }
                 }
             } else {
-                cell.configureStoreOwnerCell(account: self.account, isEditHidden: true)
+                cell.configureStoreOwnerCell(account: self.account, isEditHidden: false)
             }
             
             cell.btnFranchise.setTitle("Edit", for: .normal)
