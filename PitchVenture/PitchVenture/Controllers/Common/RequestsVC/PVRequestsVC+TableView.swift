@@ -33,7 +33,7 @@ extension PVRequestsVC : UITableViewDataSource, UITableViewDelegate {
         
         alert.addAction(UIAlertAction(title: "Accept", style: .default, handler: { (_) in
             //ACCEPT REQUEST
-            
+            self.acceptRequest(account: self.arrFranchises[sender.tag])
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
@@ -47,8 +47,8 @@ extension PVRequestsVC : UITableViewDataSource, UITableViewDelegate {
         let alert = UIAlertController(title: "Reject Request", message: "Are you sure you want to Reject request?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Reject", style: .default, handler: { (_) in
-            //ACCEPT REQUEST
-            
+            //Reject REQUEST
+            self.rejectRequest(account: self.arrFranchises[sender.tag])
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
