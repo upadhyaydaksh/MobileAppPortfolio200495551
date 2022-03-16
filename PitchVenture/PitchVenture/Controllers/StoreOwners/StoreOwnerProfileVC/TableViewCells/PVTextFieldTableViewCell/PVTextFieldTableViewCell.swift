@@ -46,7 +46,7 @@ class PVTextFieldTableViewCell: UITableViewCell {
             // PHONE NUMBER
             self.txtValue.leftViewImage = UIImage(named: "ic_phone")
             //"\(account?.storeOwner?.countryCode ?? "+1")" +
-            if let isFranchise = account?.isFranchise {
+            if let isFranchise = account?.isFranchise, isFranchise {
                 self.txtValue.text = "\(account?.franchise?.phoneNumber ?? "")"
             } else {
                 self.txtValue.text = "\(account?.storeOwner?.phoneNumber ?? "")"

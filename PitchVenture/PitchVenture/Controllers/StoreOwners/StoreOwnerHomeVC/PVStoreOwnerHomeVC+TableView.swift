@@ -25,8 +25,20 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
         cell.btnFranchise.setTitle("Apply", for: .normal)
         cell.btnFranchise.tag = indexPath.row
         cell.btnFranchise.addTarget(self, action: #selector(btnApplyAction), for: .touchUpInside)
+    
         
-        cell.configureStoreOwnerCell(account: self.arrFranchises[indexPath.row])
+        if let isFranchise = self.account.isFranchise, isFranchise {
+            //FRANCHISE
+            cell.configureStoreOwnerCell(account: self.arrFranchises[indexPath.row], isEditHidden: false)
+        } else {
+            cell.configureFranchiseCell(account: self.arrFranchises[indexPath.row], isEditHidden: false)
+            for i in 0 ..< self.arrAppData.count {
+                if self.arrAppData[i].id == self.arrFranchises[indexPath.row].franchise?.franchiseCategory.first {
+                    cell.lblCategory.text = self.arrAppData[i].name
+                    break
+                }
+            }
+        }
         
         return cell
     }

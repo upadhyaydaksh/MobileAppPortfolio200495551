@@ -136,4 +136,52 @@ extension PVStoreOwnerHomeVC {
         }
     }
     
+    func getAppData(){
+        _ = Alamofire.request(GET_APP_DATA, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
+            print("--------- Request URL - %@", response.request?.url ?? "")
+            CommonMethods.sharedInstance.hideHud()
+
+            switch response.result {
+            case .success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    print("JSON: \(json)")
+                    if (json["statusCode"].numberValue == 2000) {
+                        if let dataDic = json["data"].dictionary {
+                            
+                            if let franchiseCategory = dataDic["franchiseCategories"]?.array {
+                                for i in 0 ..< franchiseCategory.count {
+
+                                    if let appData: AppData = Mapper<AppData>().map(JSON: franchiseCategory[i].rawValue as! [String : Any]) {
+                                        self.arrAppData.append(appData)
+                                    }
+                                }
+                            }
+                            
+                            self.account = PVUserManager.sharedManager().activeUser
+                            
+                            if self.account.isFranchise! {
+                                self.getAllStoreOwners()
+                            } else {
+                                self.getAllFranchises()
+                            }
+                        } else {
+                            self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
+                        }
+                    } else {
+                        if let message = json["message"].string {
+                            self.showAlertWithMessage(msg: message)
+                        } else {
+                            self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
+                        }
+                    }
+                }
+            case .failure(let error):
+                print(error)
+                if let data = response.data {
+                    print("Response data: \(NSString(data: data, encoding: String.Encoding.utf8.rawValue)!)")
+                }
+            }
+        }
+    }
 }

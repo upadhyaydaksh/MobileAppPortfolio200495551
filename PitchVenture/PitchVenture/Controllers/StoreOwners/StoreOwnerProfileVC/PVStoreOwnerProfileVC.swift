@@ -15,10 +15,13 @@ class PVStoreOwnerProfileVC: PVBaseVC {
     
     var account : Account = Account()
     
+    var arrAppData : [AppData] = []
+    
     //MARK: - Class Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerTableViewCell()
+        self.getAppData()
     }
     
     override func viewWillAppear(_ animated: Bool) {

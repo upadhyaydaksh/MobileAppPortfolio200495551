@@ -16,6 +16,7 @@ class PVStoreOwnerHomeVC: PVBaseVC {
     var bannerView: GADBannerView!
     
     var arrFranchises : [Account] = []
+    var arrAppData : [AppData] = []
     
     var account : Account = Account()
     
@@ -27,6 +28,8 @@ class PVStoreOwnerHomeVC: PVBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerTableViewCell()
+        
+        self.getAppData()
         
         bannerView = GADBannerView(adSize: adSize)
         addBannerViewToView(bannerView)
@@ -46,15 +49,6 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         self.removeLeftBarButton()
         self.setNavigationTitle("Home")
         self.setProfileAndNotificationNavBarButton()
-        
-        self.account = PVUserManager.sharedManager().activeUser
-        
-        if self.account.isFranchise! {
-            self.getAllStoreOwners()
-        } else {
-            self.getAllFranchises()
-        }
-        
     }
     
     class func instantiate() -> PVStoreOwnerHomeVC {

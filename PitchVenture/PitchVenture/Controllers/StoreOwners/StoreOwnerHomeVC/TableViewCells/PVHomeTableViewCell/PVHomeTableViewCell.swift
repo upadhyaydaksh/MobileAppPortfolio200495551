@@ -37,15 +37,15 @@ class PVHomeTableViewCell: UITableViewCell {
         return String(describing: self)
     }
     
-    func configureFranchiseCell(franchise: Franchise?) {
-        self.lblName.text = franchise?.franchiseName
+    func configureFranchiseCell(account: Account?, isEditHidden: Bool) {
+        self.lblName.text = account?.franchise?.franchiseName
         self.lblDeposit.text = "Minimum deposit:"
-        self.lblMinimumDeposit.text = franchise?.convertIntToCurrencyAsString(intValue: franchise?.minimumDeposit ?? 0)
+        self.lblMinimumDeposit.text = account?.franchise?.convertIntToCurrencyAsString(intValue: account?.franchise?.minimumDeposit ?? 0)
+        self.btnFranchise.isHidden = isEditHidden
         self.btnFranchise.setTitle("Edit", for: .normal)
-        
     }
     
-    func configureStoreOwnerCell(account: Account?) {
+    func configureStoreOwnerCell(account: Account?, isEditHidden: Bool) {
         self.lblName.text = account?.name
         self.lblCategory.text = account?.storeOwner?.getCompleteAddress()
         self.lblDeposit.text = "City"
