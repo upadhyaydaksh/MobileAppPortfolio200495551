@@ -44,7 +44,7 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else if indexPath.section == 1 {
             let cell: PVButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVButtonTableViewCell.reuseIdentifier()) as! PVButtonTableViewCell
-            cell.btnSubmit.tag = indexPath.row
+            cell.btnSubmit.tag = 1
             cell.btnSubmit.setTitle("Update", for: .normal)
             cell.btnSubmit.addTarget(self, action: #selector(self.btnUpdateAction), for: .touchUpInside)
             return cell
@@ -57,7 +57,7 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else {
             let cell: PVButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVButtonTableViewCell.reuseIdentifier()) as! PVButtonTableViewCell
-            cell.btnSubmit.tag = indexPath.row
+            cell.btnSubmit.tag = 3
             cell.btnSubmit.setTitle("  Manage Your Requests  ", for: .normal)
             cell.btnSubmit.addTarget(self, action: #selector(self.btnRequestsAction(sender:)), for: .touchUpInside)
             return cell
