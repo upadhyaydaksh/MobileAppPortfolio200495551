@@ -81,7 +81,6 @@ extension PVRequestsVC {
                                 if let franchise: Account = Mapper<Account>().map(JSON: resultArray[i].rawValue as! [String : Any]) {
                                     self.arrFranchises.append(franchise)
                                 }
-
                             }
                             self.tableView.reloadData()
                         } else {

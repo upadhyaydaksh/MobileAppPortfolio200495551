@@ -23,6 +23,7 @@ extension PVRequestsVC : UITableViewDataSource, UITableViewDelegate {
         cell.btnReject.tag = indexPath.row
         cell.btnReject.addTarget(self, action: #selector(self.btnRejectAction), for: .touchUpInside)
         
+        cell.configureCell(account: self.arrFranchises[indexPath.row])
         return cell
     }
     

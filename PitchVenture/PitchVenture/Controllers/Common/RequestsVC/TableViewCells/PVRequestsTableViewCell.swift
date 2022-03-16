@@ -34,8 +34,10 @@ class PVRequestsTableViewCell: UITableViewCell {
         return String(describing: self)
     }
     
-    func configureCell(url: String) {
-        lblName.text = url
+    func configureCell(account: Account?) {
+        self.lblName.text = account?.name
+        self.lblCompanyName.text = account?.storeOwner?.getCompleteAddress()
+        self.imgvLogo.sd_setImage(with: URL(string: account?.storeOwner?.pictures?[0] ?? ""), placeholderImage: UIImage(named: "ic_logo.png"))
     }
     
 }

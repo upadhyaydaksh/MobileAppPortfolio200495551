@@ -39,8 +39,10 @@ class PVHomeTableViewCell: UITableViewCell {
     
     func configureFranchiseCell(franchise: Franchise?) {
         self.lblName.text = franchise?.franchiseName
-        self.lblMinimumDeposit.text = "Minimum deposit: \(franchise?.convertIntToCurrencyAsString(intValue: franchise?.minimumDeposit ?? 0) ?? "")"
+        self.lblDeposit.text = "Minimum deposit:"
+        self.lblMinimumDeposit.text = franchise?.convertIntToCurrencyAsString(intValue: franchise?.minimumDeposit ?? 0)
         self.btnFranchise.setTitle("Edit", for: .normal)
+        
     }
     
     func configureStoreOwnerCell(account: Account?) {
