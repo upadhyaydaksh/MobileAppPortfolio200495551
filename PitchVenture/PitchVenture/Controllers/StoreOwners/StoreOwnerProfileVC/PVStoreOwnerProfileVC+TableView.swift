@@ -50,7 +50,13 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else if indexPath.section == 2 {
             let cell: PVHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVHomeTableViewCell.reuseIdentifier()) as! PVHomeTableViewCell
-            cell.configureStoreOwnerCell(account: self.account)
+            if let isFranchise = self.account.isFranchise, isFranchise {
+                //FRANCHISE
+                cell.configureFranchiseCell(franchise: self.account.franchise)
+            } else {
+                cell.configureStoreOwnerCell(account: self.account)
+            }
+            
             cell.btnFranchise.setTitle("Edit", for: .normal)
             cell.btnFranchise.addTarget(self, action: #selector(btnEditProfileAction), for: .touchUpInside)
 

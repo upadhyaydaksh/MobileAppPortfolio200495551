@@ -18,14 +18,14 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
         
         let cell: PVHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVHomeTableViewCell.reuseIdentifier()) as! PVHomeTableViewCell
         
-        if let isFranchise = self.arrFranchises[indexPath.row].isFranchise, isFranchise {
-            cell.btnFranchise.isHidden = true
-        } else {
-            cell.btnFranchise.isHidden = false
-            cell.btnFranchise.setTitle("Apply", for: .normal)
-            cell.btnFranchise.tag = indexPath.row
-            cell.btnFranchise.addTarget(self, action: #selector(btnApplyAction), for: .touchUpInside)
+        if let isFranchise = self.account.isFranchise {
+            cell.btnFranchise.isHidden = isFranchise
         }
+        
+        cell.btnFranchise.setTitle("Apply", for: .normal)
+        cell.btnFranchise.tag = indexPath.row
+        cell.btnFranchise.addTarget(self, action: #selector(btnApplyAction), for: .touchUpInside)
+        
         cell.configureStoreOwnerCell(account: self.arrFranchises[indexPath.row])
         
         return cell

@@ -168,7 +168,8 @@ extension PVInputLocationVC : UIImagePickerControllerDelegate, UINavigationContr
                         
                         print(parameters)
                         
-                        self.storeOwenerUpdate(parameters: parameters)
+                        self.callStoreOwnerSignup(parameters: parameters)
+                        //self.storeOwenerUpdate(parameters: parameters)
                     })
                 }
             })
