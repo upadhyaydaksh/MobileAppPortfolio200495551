@@ -131,6 +131,7 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
         if self.account.isFranchise! {
             let obj = PVFranchisorsSignupVC.instantiate()
             obj.account = self.account
+            obj.arrAppData = self.arrAppData
             obj.isFromEditProfile = true
             self.push(vc: obj)
         } else {

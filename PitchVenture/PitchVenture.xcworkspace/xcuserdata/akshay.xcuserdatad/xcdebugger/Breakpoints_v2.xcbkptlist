@@ -119,38 +119,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0953EA3C-4AEA-42BE-A826-C9CDC820D30C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PitchVenture/Controllers/Common/RequestsVC/PVRequestsVC+Services.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "acceptRequest(account:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "57F79ABC-9083-40D9-9546-9B1489B85352"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PitchVenture/Controllers/Common/RequestsVC/PVRequestsVC+Services.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "acceptRequest(account:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C83ADDF3-8093-4850-9A53-1CBC75E759E4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -158,10 +126,42 @@
             filePath = "PitchVenture/Controllers/Common/RequestsVC/PVRequestsVC+Services.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "getAllStoreOwnersRequests()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C83ADDF3-8093-4850-9A53-1CBC75E759E4 - 33d7110e020e4250"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in PitchVenture.PVRequestsVC.getAllStoreOwnersRequests() -&gt; ()"
+                  moduleName = "PitchVenture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akshay/Documents/HarshitModi/MobileAppPortfolio200495551/PitchVenture/PitchVenture/Controllers/Common/RequestsVC/PVRequestsVC+Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "2588">
+               </Location>
+               <Location
+                  uuid = "C83ADDF3-8093-4850-9A53-1CBC75E759E4 - 33d7110e020e4250"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in PitchVenture.PVRequestsVC.getAllStoreOwnersRequests() -&gt; ()"
+                  moduleName = "PitchVenture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/akshay/Documents/HarshitModi/MobileAppPortfolio200495551/PitchVenture/PitchVenture/Controllers/Common/RequestsVC/PVRequestsVC+Services.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "2656">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -208,6 +208,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
             endingLineNumber = "76"
+            landmarkName = "autoFillData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8F82EAF-CA0D-4AFB-9D5C-BF999D8FF4C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PitchVenture/Controllers/Franchisors/FranchisorsSignup/PVFranchisorsSignupVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "autoFillData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0635B663-3EE8-4672-B589-EB94D4A3333F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PitchVenture/Controllers/Franchisors/FranchisorsSignup/PVFranchisorsSignupVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "autoFillData()"
             landmarkType = "7">
          </BreakpointContent>

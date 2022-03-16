@@ -14,7 +14,7 @@ import ObjectMapper
 extension PVRequestsVC {
     
     func getAllFranchisorsRequests(){
-        
+        self.arrFranchises.removeAll()
         var authHeader:HTTPHeaders = [:]
          
         let account = PVUserManager.sharedManager().activeUser
@@ -63,6 +63,7 @@ extension PVRequestsVC {
     }
     
     func getAllStoreOwnersRequests() {
+        self.arrFranchises.removeAll()
         var authHeader:HTTPHeaders = [:]
          
         let account = PVUserManager.sharedManager().activeUser
@@ -70,6 +71,7 @@ extension PVRequestsVC {
             authHeader = ["Authorization": "Bearer " + accountToken.trimmedString(),
                           "Content-Type" : "application/json"]
         }
+        
         _ = Alamofire.request(GET_ALL_STORE_OWNERS_REQUESTS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: authHeader).validate().responseJSON { (response) in
             print("--------- Request URL - %@", response.request?.url ?? "")
             CommonMethods.sharedInstance.hideHud()
@@ -112,7 +114,11 @@ extension PVRequestsVC {
                 if let value = response.result.value {
                     let json = JSON(value)
                     if (json[STATUS_CODE].intValue == 2000) {
-                        
+                        if let isFranchise = self.account.isFranchise, isFranchise {
+                            self.getAllFranchisorsRequests()
+                        } else {
+                            self.getAllStoreOwnersRequests()
+                        }
                         self.showAlertWithMessage(msg: "Request Accepted successfully.")
                     } else {
                         let message = json[MESSAGE].stringValue
@@ -143,7 +149,11 @@ extension PVRequestsVC {
                 if let value = response.result.value {
                     let json = JSON(value)
                     if (json[STATUS_CODE].intValue == 2000) {
-                        
+                        if let isFranchise = self.account.isFranchise, isFranchise {
+                            self.getAllFranchisorsRequests()
+                        } else {
+                            self.getAllStoreOwnersRequests()
+                        }
                         self.showAlertWithMessage(msg: "Request Rejected successfully.")
                     } else {
                         let message = json[MESSAGE].stringValue

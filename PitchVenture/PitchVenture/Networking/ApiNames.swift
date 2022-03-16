@@ -37,4 +37,3 @@ let GET_ALL_STORE_OWNERS_REQUESTS  = MAIN_URL_REQUEST + "getAllRequests"
 let CALL_SEND_REQUEST                   = MAIN_URL_REQUEST + "sendRequest/"
 let CALL_ACCEPT_REQUEST                 = MAIN_URL_REQUEST + "acceptRequest/"
 let CALL_REJECT_REQUEST                 = MAIN_URL_REQUEST + "rejectRequest/"
-
