@@ -13,6 +13,7 @@ import MobileCoreServices
 import Firebase
 import FirebaseStorage
 import SDWebImage
+import Alamofire
 
 class PVFranchisorsSignupVC: PVBaseVC {
 
@@ -63,7 +64,16 @@ class PVFranchisorsSignupVC: PVBaseVC {
         self.txtFranchiseName.text = self.account.franchise?.franchiseName
         
         if let franchiseCategory = self.account.franchise?.franchiseCategory, franchiseCategory.count > 0 {
-            self.txtFranchiseCategory.selectedItem = self.account.franchise?.franchiseCategory[0]
+            
+            for i in 0 ..< self.arrAppData.count {
+                if self.arrAppData[i].id == self.account.franchise?.franchiseCategory.first {
+                    self.txtFranchiseCategory.selectedItem = self.arrAppData[i].name
+                    break
+                }
+            }
+            
+        } else {
+            self.txtFranchiseCategory.selectedItem = self.arrAppData.first?.name
         }
         
         self.txtMinimumDeposit.text = "\(self.account.franchise?.minimumDeposit ?? 0)"
@@ -128,7 +138,12 @@ class PVFranchisorsSignupVC: PVBaseVC {
                     "minimumDeposit": self.txtMinimumDeposit.text!,
                     "franchiseCategories": self.arrSelectedCategory
                 ]
-                self.callFranchiseSignup(parameters: parameters)
+                if isFromEditProfile {
+                    self.franchisorUpdate(parameters: parameters)
+                } else {
+                    self.callFranchiseSignup(parameters: parameters)
+                }
+                
             } else {
                 self.uploadImageToFirebase()
             }
@@ -165,7 +180,11 @@ class PVFranchisorsSignupVC: PVBaseVC {
                         
                         print(parameters)
                         
-                        self.franchisorUpdate(parameters: parameters)
+                        if self.isFromEditProfile {
+                            self.franchisorUpdate(parameters: parameters)
+                        } else {
+                            self.callFranchiseSignup(parameters: parameters)
+                        }
                     })
                 }
             })
