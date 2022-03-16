@@ -22,13 +22,11 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
             cell.btnFranchise.isHidden = isFranchise
         }
         
-        cell.btnFranchise.setTitle("Apply", for: .normal)
-        cell.btnFranchise.tag = indexPath.row
-        cell.btnFranchise.addTarget(self, action: #selector(btnApplyAction), for: .touchUpInside)
+        
     
         
         if let isFranchise = self.account.isFranchise, isFranchise {
-            //FRANCHISE
+            //LOGIN User is FRANCHISE so he will see Store owner cell
             cell.configureStoreOwnerCell(account: self.arrFranchises[indexPath.row], isEditHidden: false)
         } else {
             cell.configureFranchiseCell(account: self.arrFranchises[indexPath.row], isEditHidden: false)
@@ -40,6 +38,9 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
             }
         }
         
+        cell.btnFranchise.setTitle("Apply", for: .normal)
+        cell.btnFranchise.tag = indexPath.row
+        cell.btnFranchise.addTarget(self, action: #selector(btnApplyAction), for: .touchUpInside)
         return cell
     }
     
