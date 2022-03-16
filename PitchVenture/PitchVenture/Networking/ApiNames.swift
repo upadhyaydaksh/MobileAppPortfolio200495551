@@ -31,7 +31,7 @@ let GET_APP_DATA                  = MAIN_URL_ACCOUNT + "appData"
 
 //REQUESTS
 let GET_ALL_PARTNERED_STORE_OWNERS = MAIN_URL_REQUEST + "getAllPartneredStoreOwners"
-let GET_ALL_FRANCHISORS_REQUESTS   = MAIN_URL_REQUEST + "getAllFranchises"
+let GET_ALL_FRANCHISORS_REQUESTS   = MAIN_URL_REQUEST + "getAllRequests"
 let GET_ALL_STORE_OWNERS_REQUESTS  = MAIN_URL_REQUEST + "getAllRequests"
 
 let CALL_SEND_REQUEST                   = MAIN_URL_REQUEST + "sendRequest/"

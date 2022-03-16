@@ -14,6 +14,8 @@ class PVRequestsVC: PVBaseVC {
     
     var account : Account = Account()
     
+    var arrFranchises : [Account] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerTableViewCells()

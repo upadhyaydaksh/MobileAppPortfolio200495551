@@ -11,28 +11,48 @@ import UIKit
 extension PVRequestsVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.arrFranchises.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : PVRequestsTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVRequestsTableViewCell.reuseIdentifier()) as! PVRequestsTableViewCell
         
-//        cell.btnAccept.tag = indexPath.row
-//        cell.btnAccept.addTarget(self, action: #selector(self.btnAcceptAction), for: .touchUpInside)
-//        
-//        cell.btnReject.tag = indexPath.row
-//        cell.btnReject.addTarget(self, action: #selector(self.btnRejectAction), for: .touchUpInside)
+        cell.btnAccept.tag = indexPath.row
+        cell.btnAccept.addTarget(self, action: #selector(self.btnAcceptAction), for: .touchUpInside)
+        
+        cell.btnReject.tag = indexPath.row
+        cell.btnReject.addTarget(self, action: #selector(self.btnRejectAction), for: .touchUpInside)
         
         return cell
     }
     
     @objc func btnAcceptAction(_ sender: UIButton!) {
         print(sender.tag)
-        self.showAlertWithTitleAndMessage(title: "Success", msg: "Request accepted successfullty.")
+        let alert = UIAlertController(title: "Accept Request", message: "Are you sure you want to Accept request?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Accept", style: .default, handler: { (_) in
+            //ACCEPT REQUEST
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc func btnRejectAction(_ sender: UIButton!) {
         print(sender.tag)
-        self.showAlertWithTitleAndMessage(title: "Success", msg: "Request rejected successfullty.")
+        let alert = UIAlertController(title: "Reject Request", message: "Are you sure you want to Reject request?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Reject", style: .default, handler: { (_) in
+            //ACCEPT REQUEST
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }

@@ -23,7 +23,13 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
         } else if section == 2 {
             return 1
         } else {
-            return 1
+            
+            //HIDE REQUEST BUTTON FOR STORE OWNERS
+            if let isFranchise = self.account.isFranchise, isFranchise {
+                return 1
+            } else {
+                return 0
+            }
         }
     }
     
@@ -38,8 +44,9 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else if indexPath.section == 1 {
             let cell: PVButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVButtonTableViewCell.reuseIdentifier()) as! PVButtonTableViewCell
+            cell.btnSubmit.tag = indexPath.row
             cell.btnSubmit.setTitle("Update", for: .normal)
-            //cell.btnSubmit.addTarget(self, action: #selector(self.btnUpdateAction), for: .touchUpInside)
+            cell.btnSubmit.addTarget(self, action: #selector(self.btnUpdateAction), for: .touchUpInside)
             return cell
         } else if indexPath.section == 2 {
             let cell: PVHomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVHomeTableViewCell.reuseIdentifier()) as! PVHomeTableViewCell
@@ -50,6 +57,7 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else {
             let cell: PVButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVButtonTableViewCell.reuseIdentifier()) as! PVButtonTableViewCell
+            cell.btnSubmit.tag = indexPath.row
             cell.btnSubmit.setTitle("  Manage Your Requests  ", for: .normal)
             cell.btnSubmit.addTarget(self, action: #selector(self.btnRequestsAction(sender:)), for: .touchUpInside)
             return cell
@@ -57,47 +65,52 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func btnRequestsAction(sender: UIButton) {
-        let obj = PVRequestsVC.instantiate()
-        obj.account = self.account
-        self.push(vc: obj)
+        
+        if sender.tag == 3 {
+            let obj = PVRequestsVC.instantiate()
+            obj.account = self.account
+            self.push(vc: obj)
+        }
     }
     
     @objc func btnUpdateAction(sender: UIButton){
         
-        self.view.endEditing(true)
-        
-        if self.isFormValid() {
-            if let isFranchise = self.account.isFranchise, isFranchise {
-                //UPDATE PROFILE OF FRANCHISOR
-                
-                var parameters = [String: Any]()
-                parameters = [
-                    "accountId": self.account.id!,
-                    "name": self.account.name?.trimmedString() ?? "",
-                    "email": self.account.email?.trimmedString() ?? "",
-                    "countryCode": "+1",
-                    "phoneNumber": self.account.franchise?.phoneNumber?.trimmedString() ?? ""
-                ]
-                
-                print(parameters)
-                
-                self.franchisorUpdate(parameters: parameters)
+        if sender.tag == 1 && sender.currentTitle == "Update"{
+            self.view.endEditing(true)
+            
+            if self.isFormValid() {
+                if let isFranchise = self.account.isFranchise, isFranchise {
+                    //UPDATE PROFILE OF FRANCHISOR
+                    
+                    var parameters = [String: Any]()
+                    parameters = [
+                        "accountId": self.account.id!,
+                        "name": self.account.name?.trimmedString() ?? "",
+                        "email": self.account.email?.trimmedString() ?? "",
+                        "countryCode": "+1",
+                        "phoneNumber": self.account.franchise?.phoneNumber?.trimmedString() ?? ""
+                    ]
+                    
+                    print(parameters)
+                    
+                    self.franchisorUpdate(parameters: parameters)
+                } else {
+                    //UPDATE PROFILE OF STORE OWNER
+                    var parameters = [String: Any]()
+                    parameters = [
+                        "accountId": self.account.id!,
+                        "name": self.account.name?.trimmedString() ?? "",
+                        "email": self.account.email?.trimmedString() ?? "",
+                        "countryCode": "+1",
+                        "phoneNumber": self.account.storeOwner?.phoneNumber?.trimmedString() ?? ""
+                    ]
+                    
+                    print(parameters)
+                    self.storeOwenerUpdate(parameters: parameters)
+                }
             } else {
-                //UPDATE PROFILE OF STORE OWNER
-                var parameters = [String: Any]()
-                parameters = [
-                    "accountId": self.account.id!,
-                    "name": self.account.name?.trimmedString() ?? "",
-                    "email": self.account.email?.trimmedString() ?? "",
-                    "countryCode": "+1",
-                    "phoneNumber": self.account.storeOwner?.phoneNumber?.trimmedString() ?? ""
-                ]
-                
-                print(parameters)
-                self.storeOwenerUpdate(parameters: parameters)
+                self.showAlertWithMessage(msg: "Please enter all details.")
             }
-        } else {
-            self.showAlertWithMessage(msg: "Please enter all details.")
         }
     }
     

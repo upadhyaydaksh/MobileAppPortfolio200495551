@@ -75,18 +75,18 @@ extension PVRequestsVC {
                     let json = JSON(value)
                     print("JSON: \(json)")
                     if (json["statusCode"].numberValue == 2000) {
-//                        if let resultArray = json["data"].array {
-//                            for i in 0 ..< resultArray.count {
-//
-//                                if let franchise: Account = Mapper<Account>().map(JSON: resultArray[i].rawValue as! [String : Any]) {
-//                                    self.arrFranchises.append(franchise)
-//                                }
-//
-//                            }
-//                            self.tableView.reloadData()
-//                        } else {
-//                            self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
-//                        }
+                        if let resultArray = json["data"].array {
+                            for i in 0 ..< resultArray.count {
+
+                                if let franchise: Account = Mapper<Account>().map(JSON: resultArray[i].rawValue as! [String : Any]) {
+                                    self.arrFranchises.append(franchise)
+                                }
+
+                            }
+                            self.tableView.reloadData()
+                        } else {
+                            self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
+                        }
                     } else {
                         if let message = json["message"].string {
                             self.showAlertWithMessage(msg: message)
