@@ -17,11 +17,19 @@ extension PVRequestsVC : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : PVRequestsTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVRequestsTableViewCell.reuseIdentifier()) as! PVRequestsTableViewCell
         
-        cell.btnAccept.tag = indexPath.row
-        cell.btnAccept.addTarget(self, action: #selector(self.btnAcceptAction), for: .touchUpInside)
-        
-        cell.btnReject.tag = indexPath.row
-        cell.btnReject.addTarget(self, action: #selector(self.btnRejectAction), for: .touchUpInside)
+        if self.btnSegmentedControl.selectedSegmentIndex == 0 {
+            cell.btnAccept.isHidden = false
+            cell.btnAccept.tag = indexPath.row
+            cell.btnAccept.addTarget(self, action: #selector(self.btnAcceptAction), for: .touchUpInside)
+            
+            cell.btnReject.isHidden = false
+            cell.btnReject.tag = indexPath.row
+            cell.btnReject.addTarget(self, action: #selector(self.btnRejectAction), for: .touchUpInside)
+            
+        } else {
+            cell.btnAccept.isHidden = true
+            cell.btnReject.isHidden = true
+        }
         
         cell.configureCell(account: self.arrFranchises[indexPath.row])
         return cell

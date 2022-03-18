@@ -10,6 +10,8 @@ import UIKit
 
 class PVRequestsVC: PVBaseVC {
 
+    @IBOutlet weak var btnSegmentedControl: UISegmentedControl!
+    
     @IBOutlet weak var tableView: UITableView!
     
     var account : Account = Account()
@@ -40,4 +42,13 @@ class PVRequestsVC: PVBaseVC {
     //TABLEVIEW CELLS
         tableView.register(UINib(nibName: "PVRequestsTableViewCell", bundle: nil), forCellReuseIdentifier: PVRequestsTableViewCell.reuseIdentifier())
     }
+    
+    @IBAction func btnSegmentedControlAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            self.getAllFranchisorsRequests()
+        } else {
+            self.getAllPartneredStoreOwners()
+        }
+    }
+    
 }

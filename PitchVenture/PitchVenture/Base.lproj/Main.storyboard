@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ZW-KX-O8S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ZW-KX-O8S">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -838,24 +838,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dZj-j8-Uav">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="kgI-k8-fAB" id="4JN-Lg-Tcs"/>
                                     <outlet property="delegate" destination="kgI-k8-fAB" id="bVw-V5-g2i"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-Wn-QX5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="yGR-Zz-JTo"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="All Requests"/>
+                                    <segment title="Accepted Requests"/>
+                                </segments>
+                                <connections>
+                                    <action selector="btnSegmentedControlAction:" destination="kgI-k8-fAB" eventType="valueChanged" id="30j-Q6-VcF"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8xM-xV-q0N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Sdf-Wn-QX5" firstAttribute="leading" secondItem="8xM-xV-q0N" secondAttribute="leading" id="3cT-9u-Vyd"/>
+                            <constraint firstItem="8xM-xV-q0N" firstAttribute="trailing" secondItem="Sdf-Wn-QX5" secondAttribute="trailing" id="5dV-jm-9yL"/>
+                            <constraint firstItem="Sdf-Wn-QX5" firstAttribute="top" secondItem="wj6-40-cEG" secondAttribute="topMargin" id="6XS-jk-HqO"/>
                             <constraint firstItem="dZj-j8-Uav" firstAttribute="bottom" secondItem="8xM-xV-q0N" secondAttribute="bottom" id="Dr4-Us-UIj"/>
-                            <constraint firstItem="dZj-j8-Uav" firstAttribute="top" secondItem="8xM-xV-q0N" secondAttribute="top" id="Zg3-Rh-t1v"/>
+                            <constraint firstItem="dZj-j8-Uav" firstAttribute="top" secondItem="Sdf-Wn-QX5" secondAttribute="bottom" id="Jhf-mD-Wpc"/>
                             <constraint firstItem="dZj-j8-Uav" firstAttribute="trailing" secondItem="8xM-xV-q0N" secondAttribute="trailing" id="mFZ-ds-Y0Z"/>
                             <constraint firstItem="dZj-j8-Uav" firstAttribute="leading" secondItem="8xM-xV-q0N" secondAttribute="leading" id="u1F-P9-F03"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnSegmentedControl" destination="Sdf-Wn-QX5" id="UEe-gT-ifS"/>
                         <outlet property="tableView" destination="dZj-j8-Uav" id="WtL-gS-Udb"/>
                     </connections>
                 </viewController>

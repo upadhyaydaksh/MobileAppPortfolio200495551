@@ -43,7 +43,6 @@ class PVRequestsTableViewCell: UITableViewCell {
         } else {
             self.imgvLogo.image = UIImage(named: "ic_logo.png")
         }
-        
     }
     
 }
