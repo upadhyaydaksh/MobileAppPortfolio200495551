@@ -21,9 +21,9 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
     var franchiseCategory : [String] = []
     var countryCode: String?
     var phoneNumber: String?
-    var pictures : [String]?
+    var pictures : [String] = []
     
-    init(id: String?, franchiseName: String?,franchiseDescription: String?, minimumDeposit: Int?, franchiseCategory: [String], countryCode: String?, phoneNumber: String?, pictures: [String]?) {
+    init(id: String?, franchiseName: String?,franchiseDescription: String?, minimumDeposit: Int?, franchiseCategory: [String], countryCode: String?, phoneNumber: String?, pictures: [String]) {
         self.id = id
         self.franchiseName = franchiseName
         self.franchiseDescription = franchiseDescription
