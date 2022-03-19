@@ -151,64 +151,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7D89AFBA-3647-413F-9364-2D2486B92891"
+            uuid = "0C062D5C-314E-4FF8-8AB3-D83E5A715A39"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PitchVenture/Controllers/Franchisors/FranchisorsSignup/PVFranchisorsSignupVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "autoFillData()"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "selectImage(sourceType:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "24FCF42E-E392-495D-A4AD-C538429D3DDE"
+            uuid = "1A83F0E8-1D26-45D9-A76E-12B70772A81F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PitchVenture/Controllers/Franchisors/FranchisorsSignup/PVFranchisorsSignupVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "autoFillData()"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D8F82EAF-CA0D-4AFB-9D5C-BF999D8FF4C2"
+            uuid = "891B8A34-487D-4CA8-AEBE-349D225B818A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PitchVenture/Controllers/Franchisors/FranchisorsSignup/PVFranchisorsSignupVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "autoFillData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0635B663-3EE8-4672-B589-EB94D4A3333F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PitchVenture/Controllers/Franchisors/FranchisorsSignup/PVFranchisorsSignupVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "autoFillData()"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
