@@ -83,19 +83,21 @@ class PVPhoneVerifyVC: PVBaseVC {
         if self.btnUserRoleSegmentControl.selectedSegmentIndex == 0 {
             // Store Owner
             //CREATE USER AND SELECT ROLE
-            self.account.phoneNumber = self.txtPhoneNumber.text
-            self.account.countryCode = self.txtPhoneNumber.countryCode
             
             let obj = PVInputLocationVC.instantiate()
             obj.account = self.account
+            obj.phoneNumber = self.txtPhoneNumber.phone
+            obj.countryCode = self.txtPhoneNumber.countryCode
             self.push(vc: obj)
         } else {
             // Franchisor
-            self.account.phoneNumber = self.txtPhoneNumber.text
-            self.account.countryCode = self.txtPhoneNumber.countryCode
             
             let obj = PVFranchisorsSignupVC.instantiate()
             obj.account = self.account
+            obj.phoneNumber = self.txtPhoneNumber.phone
+            obj.countryCode = self.txtPhoneNumber.countryCode
+            
+            
             self.push(vc: obj)
         }
         

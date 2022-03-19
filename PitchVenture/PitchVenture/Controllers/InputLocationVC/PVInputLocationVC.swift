@@ -30,6 +30,8 @@ class PVInputLocationVC: PVBaseVC {
     var locationImage: UIImage?
     
     var account : Account = Account()
+    var phoneNumber: String?
+    var countryCode: String?
     
     var isFromEditProfile: Bool = false
     
@@ -164,7 +166,9 @@ extension PVInputLocationVC : UIImagePickerControllerDelegate, UINavigationContr
                             "city": self.txtCity.text!,
                             "province": self.txtProvince.text!,
                             "postalCode": self.txtPostalCode.text!,
-                            "pictures": self.account.storeOwner?.pictures! as Any
+                            "pictures": self.account.storeOwner?.pictures ?? url!.absoluteString,
+                            "countryCode": self.account.storeOwner?.countryCode ?? self.countryCode as Any,
+                            "phoneNumber": self.account.storeOwner?.phoneNumber ?? self.phoneNumber as Any
                         ]
                         
                         print(parameters)

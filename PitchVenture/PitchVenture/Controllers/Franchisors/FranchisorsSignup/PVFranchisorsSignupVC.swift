@@ -33,6 +33,9 @@ class PVFranchisorsSignupVC: PVBaseVC {
     
     var account : Account = Account()
     
+    var phoneNumber: String?
+    var countryCode: String?
+    
     var isFromEditProfile: Bool = false
     
     var arrAppData : [AppData] = []
@@ -174,7 +177,9 @@ class PVFranchisorsSignupVC: PVBaseVC {
                             "franchiseName": self.txtFranchiseName.text!,
                             "minimumDeposit": self.txtMinimumDeposit.text!,
                             "franchiseCategories": self.arrSelectedCategory,
-                            "picture": self.account.picture ?? ""
+                            "picture": self.account.picture ?? url!.absoluteString,
+                            "countryCode": self.account.franchise?.countryCode ?? self.countryCode as Any,
+                            "phoneNumber": self.account.franchise?.phoneNumber ?? self.phoneNumber as Any
                             
                         ]
                         
