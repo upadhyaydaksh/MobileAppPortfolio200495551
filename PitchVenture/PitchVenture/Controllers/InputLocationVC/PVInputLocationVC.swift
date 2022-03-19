@@ -35,18 +35,19 @@ class PVInputLocationVC: PVBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setLeftBarButton()
-        
         if self.isFromEditProfile {
             self.setNavigationTitle("Edit Store")
             self.autoFillData()
         } else {
             self.setNavigationTitle("Add Store Details")
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setLeftBarButton()
+        
+        
         
         PVUserManager.sharedManager().loadActiveUser()
     }
@@ -151,7 +152,7 @@ extension PVInputLocationVC : UIImagePickerControllerDelegate, UINavigationContr
                 } else {
                     storageRef.downloadURL(completion: { (url, error) in
                         print("Image URL: \((url?.absoluteString)!)")
-                        self.account.storeOwner?.pictures?.removeAll()
+                        self.account.storeOwner?.pictures = []
                         self.account.storeOwner?.pictures?.append(url!.absoluteString)
                         
                         var parameters = [String: Any]()
@@ -167,9 +168,13 @@ extension PVInputLocationVC : UIImagePickerControllerDelegate, UINavigationContr
                         ]
                         
                         print(parameters)
+                        if self.isFromEditProfile {
+                            self.storeOwenerUpdate(parameters: parameters)
+                        } else {
+                            self.callStoreOwnerSignup(parameters: parameters)
+                        }
                         
-                        self.callStoreOwnerSignup(parameters: parameters)
-                        //self.storeOwenerUpdate(parameters: parameters)
+                        
                     })
                 }
             })

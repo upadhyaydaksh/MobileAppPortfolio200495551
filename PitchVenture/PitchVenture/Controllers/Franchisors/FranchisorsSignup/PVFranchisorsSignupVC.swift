@@ -45,18 +45,19 @@ class PVFranchisorsSignupVC: PVBaseVC {
         super.viewDidLoad()
         self.txtFranchiseCategory.isOptionalDropDown = false
         self.getAppData()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setLeftBarButton()
-        
         if self.isFromEditProfile {
             self.setNavigationTitle("Edit Franchise Details")
             self.autoFillData()
         } else {
             self.setNavigationTitle("Add Franchise Details")
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setLeftBarButton()
+        
+        
     }
     
     func autoFillData() {
@@ -78,7 +79,7 @@ class PVFranchisorsSignupVC: PVBaseVC {
         
         self.txtMinimumDeposit.text = "\(self.account.franchise?.minimumDeposit ?? 0)"
         
-        self.imgLocation.sd_setImage(with: URL(string: (self.account.franchise?.pictures.count)! > 0 ? self.account.franchise?.pictures.first as! String :  "" ), placeholderImage: UIImage(named: "ic_logo.png"))
+        self.imgLocation.sd_setImage(with: URL(string: self.account.picture ?? "" ), placeholderImage: UIImage(named: "ic_logo.png"))
     }
     
     // MARK: - Class Methods
@@ -162,8 +163,7 @@ class PVFranchisorsSignupVC: PVBaseVC {
                 } else {
                     storageRef.downloadURL(completion: { (url, error) in
                         print("Image URL: \((url?.absoluteString)!)")
-                        self.account.franchise?.pictures.removeAll()
-                        self.account.franchise?.pictures.append(url!.absoluteString)
+                        self.account.picture = url?.absoluteString
                         
                         self.arrSelectedCategory.removeAll()
                         self.arrSelectedCategory.append(self.arrAppData[self.txtFranchiseCategory.selectedRow].id ?? "")
@@ -174,7 +174,7 @@ class PVFranchisorsSignupVC: PVBaseVC {
                             "franchiseName": self.txtFranchiseName.text!,
                             "minimumDeposit": self.txtMinimumDeposit.text!,
                             "franchiseCategories": self.arrSelectedCategory,
-                            "pictures": self.account.franchise?.pictures as Any
+                            "picture": self.account.picture ?? ""
                             
                         ]
                         
