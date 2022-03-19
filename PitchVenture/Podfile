@@ -42,6 +42,8 @@ target 'PitchVenture' do
   #FIREBASE
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
   
   # Image download async
   pod 'SDWebImage'

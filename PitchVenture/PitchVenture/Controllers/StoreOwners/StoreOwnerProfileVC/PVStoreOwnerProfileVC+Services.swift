@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import ObjectMapper
+import FirebaseAnalytics
 
 extension PVStoreOwnerProfileVC{
 
@@ -111,6 +112,10 @@ extension PVStoreOwnerProfileVC{
                             PVUserManager.sharedManager().activeUser = account
                             PVUserManager.sharedManager().saveActiveUser()
                             
+                            let param = [AnalyticsParameterScreenName: "store_owner_profile_vc", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")"]
+                            print("Analytics Param : \(param)")
+                            Analytics.logEvent("StoreOwnerProfileUpdate", parameters: param)
+                            
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Profile updated successfully.")
                         }
                     } else {
@@ -146,6 +151,10 @@ extension PVStoreOwnerProfileVC{
                             self.account = account
                             PVUserManager.sharedManager().activeUser = account
                             PVUserManager.sharedManager().saveActiveUser()
+                            
+                            let param = [AnalyticsParameterScreenName: "store_owner_profile_vc", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")"]
+                            print("Analytics Param : \(param)")
+                            Analytics.logEvent("FranchisorProfileUpdate", parameters: param)
                             
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Profile updated successfully.")
                         }

@@ -11,6 +11,7 @@ import SVProgressHUD
 import GoogleSignIn
 import Firebase
 import GoogleMobileAds
+import FirebaseAnalytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -34,6 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
+//        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+//          AnalyticsParameterItemID: "id-\(title!)",
+//          AnalyticsParameterItemName: title!,
+//          AnalyticsParameterContentType: "cont",
+//        ])
         return true
     }
 
@@ -64,6 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // If not handled by this app, return false.
       return false
     }
+    
 }
 
 

@@ -10,6 +10,7 @@ import SwiftyJSON
 import Alamofire
 import SwiftyJSON
 import ObjectMapper
+import FirebaseAnalytics
 
 extension PVFranchisorsSignupVC {
     
@@ -32,6 +33,10 @@ extension PVFranchisorsSignupVC {
                                 
                                 PVUserManager.sharedManager().activeUser = account
                                 PVUserManager.sharedManager().saveActiveUser()
+                                
+                                let param = [AnalyticsParameterScreenName: "franchisor_signup_vc", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")", "franchisor_signup": "true"]
+                                print("Analytics Login Param : \(param)")
+                                Analytics.logEvent(AnalyticsEventSignUp, parameters: param)
                                 
                                 let objPVStoreOwnerHomeVC = PVStoreOwnerHomeVC.instantiate()
                                 self.push(vc: objPVStoreOwnerHomeVC)
@@ -126,6 +131,11 @@ extension PVFranchisorsSignupVC {
                             self.account = account
                             PVUserManager.sharedManager().activeUser = account
                             PVUserManager.sharedManager().saveActiveUser()
+                            
+                            let param = [AnalyticsParameterScreenName: "franchisor_signup_vc", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")", "franchisor_profile_updated": "true"]
+                            print("Analytics Login Param : \(param)")
+                            Analytics.logEvent(AnalyticsParameterValue, parameters: param)
+                            
                             
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Profile updated successfully.")
                         }

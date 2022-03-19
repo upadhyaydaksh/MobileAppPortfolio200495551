@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import ObjectMapper
+import FirebaseAnalytics
 
 extension PVLoginVC {
     
@@ -24,6 +25,7 @@ extension PVLoginVC {
                 let json = JSON(value)
                 if (json[STATUS_CODE].intValue == 2000) {
                     
+                    
                     //IF REGISTRATION IS DONE
                     if let result = json["data"].dictionaryObject {
                         if let account: Account = Mapper<Account>().map(JSON: result) {
@@ -34,6 +36,10 @@ extension PVLoginVC {
                                 
                                 PVUserManager.sharedManager().activeUser = account
                                 PVUserManager.sharedManager().saveActiveUser()
+                                
+                                let param = [AnalyticsParameterScreenName: "login_vc", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")"]
+                                print("Analytics Login Param : \(param)")
+                                Analytics.logEvent(AnalyticsEventLogin, parameters: param)
                                 
                                 let objPVStoreOwnerHomeVC = PVStoreOwnerHomeVC.instantiate()
                                 self.push(vc: objPVStoreOwnerHomeVC)

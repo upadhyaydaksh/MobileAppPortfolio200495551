@@ -30,8 +30,6 @@ class PVInputLocationVC: PVBaseVC {
     var locationImage: UIImage?
     
     var account : Account = Account()
-    var phoneNumber: String?
-    var countryCode: String?
     
     var isFromEditProfile: Bool = false
     
@@ -48,9 +46,6 @@ class PVInputLocationVC: PVBaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.setLeftBarButton()
-        
-        
-        
         PVUserManager.sharedManager().loadActiveUser()
     }
     // MARK: - Class Methods
@@ -167,8 +162,8 @@ extension PVInputLocationVC : UIImagePickerControllerDelegate, UINavigationContr
                             "province": self.txtProvince.text!,
                             "postalCode": self.txtPostalCode.text!,
                             "pictures": self.account.storeOwner?.pictures ?? url!.absoluteString,
-                            "countryCode": self.account.storeOwner?.countryCode ?? self.countryCode as Any,
-                            "phoneNumber": self.account.storeOwner?.phoneNumber ?? self.phoneNumber as Any
+                            "countryCode": self.account.storeOwner?.countryCode! ?? "+1",
+                            "phoneNumber": self.account.storeOwner?.phoneNumber! ?? ""
                         ]
                         
                         print(parameters)

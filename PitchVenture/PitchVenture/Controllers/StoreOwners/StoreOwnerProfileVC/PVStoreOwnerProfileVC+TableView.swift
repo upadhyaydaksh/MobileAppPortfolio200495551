@@ -155,13 +155,13 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
         }
         
         if let isFranchise = self.account.isFranchise, isFranchise {
-            if let phone = self.account.franchise?.phoneNumber, phone.isEmpty || phone.length() < 10  {
-                self.showAlertWithMessage(msg: "Please enter your phone number")
+            if let phone = self.account.franchise?.phoneNumber, phone.isEmpty || phone.length() != 10 {
+                self.showAlertWithMessage(msg: "Please enter valid phone number. Phone number should be of 10 characters")
                 return false
             }
         } else {
-            if let phone = self.account.storeOwner?.phoneNumber, phone.isEmpty || phone.length() < 10  {
-                self.showAlertWithMessage(msg: "Please enter your phone number")
+            if let phone = self.account.storeOwner?.phoneNumber, phone.isEmpty || phone.length() != 10  {
+                self.showAlertWithMessage(msg: "Please enter valid phone number. Phone number should be of 10 characters")
                 return false
             }
         }

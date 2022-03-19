@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import ObjectMapper
+import FirebaseAnalytics
 
 extension PVInputLocationVC {
     
@@ -30,6 +31,10 @@ extension PVInputLocationVC {
                                 //GO TO HOMEVC
                                 PVUserManager.sharedManager().activeUser = account
                                 PVUserManager.sharedManager().saveActiveUser()
+                                
+                                let param = [AnalyticsParameterScreenName: "input_location_vc", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")", "store_owner_signup": "true"]
+                                print("Analytics Login Param : \(param)")
+                                Analytics.logEvent(AnalyticsEventSignUp, parameters: param)
                                 
                                 let objPVStoreOwnerHomeVC = PVStoreOwnerHomeVC.instantiate()
                                 self.push(vc: objPVStoreOwnerHomeVC)
@@ -76,6 +81,10 @@ extension PVInputLocationVC {
                             self.account = account
                             PVUserManager.sharedManager().activeUser = account
                             PVUserManager.sharedManager().saveActiveUser()
+                            
+                            let param = [AnalyticsParameterScreenName: "input_location_vc", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")", "store_owner_profile_update": "true"]
+                            print("Analytics Login Param : \(param)")
+                            Analytics.logEvent(AnalyticsParameterValue, parameters: param)
                             
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Profile updated successfully.")
                         }
