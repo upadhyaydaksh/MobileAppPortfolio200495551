@@ -43,6 +43,11 @@ class PVHomeTableViewCell: UITableViewCell {
         self.lblMinimumDeposit.text = account?.franchise?.convertIntToCurrencyAsString(intValue: account?.franchise?.minimumDeposit ?? 0)
         self.btnFranchise.isHidden = isEditHidden
         self.btnFranchise.setTitle("Edit", for: .normal)
+        if let account = account, account.isFranchise ?? false  {
+            if let picture = account.picture {
+                self.imgFranchise.sd_setImage(with: URL(string: picture), placeholderImage: UIImage(named: "ic_logo.png"))
+            }
+        } 
     }
     
     func configureStoreOwnerCell(account: Account?, isEditHidden: Bool) {

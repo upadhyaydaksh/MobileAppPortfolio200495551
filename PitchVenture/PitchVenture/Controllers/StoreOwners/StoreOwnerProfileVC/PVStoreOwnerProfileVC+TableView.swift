@@ -99,8 +99,8 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
                         "accountId": self.account.id!,
                         "name": self.account.name?.trimmedString() ?? "",
                         "email": self.account.email?.trimmedString() ?? "",
-                        "countryCode": "+1",
-                        "phoneNumber": self.account.franchise?.phoneNumber?.trimmedString() ?? ""
+                        "countryCode": self.account.franchise?.countryCode ?? "",
+                        "phoneNumber": self.account.franchise?.phoneNumber ?? ""
                     ]
                     
                     print(parameters)
@@ -113,8 +113,8 @@ extension PVStoreOwnerProfileVC: UITableViewDataSource, UITableViewDelegate {
                         "accountId": self.account.id!,
                         "name": self.account.name?.trimmedString() ?? "",
                         "email": self.account.email?.trimmedString() ?? "",
-                        "countryCode": "+1",
-                        "phoneNumber": self.account.storeOwner?.phoneNumber?.trimmedString() ?? ""
+                        "countryCode": self.account.storeOwner?.countryCode ?? "",
+                        "phoneNumber": self.account.storeOwner?.phoneNumber ?? ""
                     ]
                     
                     print(parameters)

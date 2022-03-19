@@ -30,23 +30,26 @@ class PVInputLocationVC: PVBaseVC {
     var locationImage: UIImage?
     
     var account : Account = Account()
+    var phoneNumber: String?
+    var countryCode: String?
     
     var isFromEditProfile: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setLeftBarButton()
-        
         if self.isFromEditProfile {
             self.setNavigationTitle("Edit Store")
             self.autoFillData()
         } else {
             self.setNavigationTitle("Add Store Details")
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setLeftBarButton()
+        
+        
         
         PVUserManager.sharedManager().loadActiveUser()
     }
@@ -151,7 +154,7 @@ extension PVInputLocationVC : UIImagePickerControllerDelegate, UINavigationContr
                 } else {
                     storageRef.downloadURL(completion: { (url, error) in
                         print("Image URL: \((url?.absoluteString)!)")
-                        self.account.storeOwner?.pictures?.removeAll()
+                        self.account.storeOwner?.pictures = []
                         self.account.storeOwner?.pictures?.append(url!.absoluteString)
                         
                         var parameters = [String: Any]()
@@ -163,13 +166,19 @@ extension PVInputLocationVC : UIImagePickerControllerDelegate, UINavigationContr
                             "city": self.txtCity.text!,
                             "province": self.txtProvince.text!,
                             "postalCode": self.txtPostalCode.text!,
-                            "pictures": self.account.storeOwner?.pictures! as Any
+                            "pictures": self.account.storeOwner?.pictures ?? url!.absoluteString,
+                            "countryCode": self.account.storeOwner?.countryCode ?? self.countryCode as Any,
+                            "phoneNumber": self.account.storeOwner?.phoneNumber ?? self.phoneNumber as Any
                         ]
                         
                         print(parameters)
+                        if self.isFromEditProfile {
+                            self.storeOwenerUpdate(parameters: parameters)
+                        } else {
+                            self.callStoreOwnerSignup(parameters: parameters)
+                        }
                         
-                        self.callStoreOwnerSignup(parameters: parameters)
-                        //self.storeOwenerUpdate(parameters: parameters)
+                        
                     })
                 }
             })
