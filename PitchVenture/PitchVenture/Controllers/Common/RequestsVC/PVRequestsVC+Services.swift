@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import ObjectMapper
+import FirebaseAnalytics
 
 extension PVRequestsVC {
     
@@ -163,6 +164,11 @@ extension PVRequestsVC {
                 if let value = response.result.value {
                     let json = JSON(value)
                     if (json[STATUS_CODE].intValue == 2000) {
+                        
+                        let param = [AnalyticsParameterScreenName: "franchisor_request_accepted", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")", "franchisor_profile_updated": "true"]
+                        print("Analytics Login Param : \(param)")
+                        Analytics.logEvent("FranchiseRequestAccepted", parameters: param)
+                        
                         if let isFranchise = self.account.isFranchise, isFranchise {
                             self.getAllFranchisorsRequests()
                         } else {
@@ -198,6 +204,11 @@ extension PVRequestsVC {
                 if let value = response.result.value {
                     let json = JSON(value)
                     if (json[STATUS_CODE].intValue == 2000) {
+                        
+                        let param = [AnalyticsParameterScreenName: "franchisor_request_rejected", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")", "franchisor_request_rejected": "true"]
+                        print("Analytics Login Param : \(param)")
+                        Analytics.logEvent("FranchiseRequestRejected", parameters: param)
+                        
                         if let isFranchise = self.account.isFranchise, isFranchise {
                             self.getAllFranchisorsRequests()
                         } else {

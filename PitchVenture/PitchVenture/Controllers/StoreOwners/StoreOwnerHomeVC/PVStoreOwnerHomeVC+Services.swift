@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import ObjectMapper
+import FirebaseAnalytics
 
 extension PVStoreOwnerHomeVC {
     
@@ -117,6 +118,10 @@ extension PVStoreOwnerHomeVC {
                 if let value = response.result.value {
                     let json = JSON(value)
                     if (json[STATUS_CODE].intValue == 2000) {
+                        
+                        let param = [AnalyticsParameterScreenName: "franchisor_request_sent", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")", "franchisor_request_sent": "true"]
+                        print("Analytics Login Param : \(param)")
+                        Analytics.logEvent("FranchiseRequestSent", parameters: param)
                         
                         self.showAlertWithMessage(msg: "Request sent successfully.")
                     } else {

@@ -48,9 +48,9 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Camera access</string>
+	<string>$(PRODUCT_NAME) uses camera to capture profile picture / location image / logo</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Media library</string>
+	<string>$(PRODUCT_NAME) uses photo from gallery to upload profile picture / location image / logo</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>

@@ -84,7 +84,7 @@ extension PVInputLocationVC {
                             
                             let param = [AnalyticsParameterScreenName: "input_location_vc", "user_name" : self.account.name!, "user_id" : "\(self.account.id ?? "")", "store_owner_profile_update": "true"]
                             print("Analytics Login Param : \(param)")
-                            Analytics.logEvent(AnalyticsParameterValue, parameters: param)
+                            Analytics.logEvent("StoreDetailsUpdated", parameters: param)
                             
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: "Profile updated successfully.")
                         }
