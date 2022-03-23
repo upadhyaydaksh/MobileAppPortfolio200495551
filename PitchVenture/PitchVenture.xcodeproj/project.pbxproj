@@ -1140,7 +1140,7 @@
 				CODE_SIGN_ENTITLEMENTS = PitchVenture/PitchVenture.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 83DJL7X36B;
+				DEVELOPMENT_TEAM = EQV48EW98J;
 				INFOPLIST_FILE = PitchVenture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1163,7 +1163,7 @@
 				CODE_SIGN_ENTITLEMENTS = PitchVenture/PitchVenture.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 83DJL7X36B;
+				DEVELOPMENT_TEAM = EQV48EW98J;
 				INFOPLIST_FILE = PitchVenture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
