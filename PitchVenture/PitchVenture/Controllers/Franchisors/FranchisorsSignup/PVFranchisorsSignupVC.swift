@@ -79,9 +79,10 @@ class PVFranchisorsSignupVC: PVBaseVC {
         
         self.txtMinimumDeposit.text = "\(self.account.franchise?.minimumDeposit ?? 0)"
         
-        self.imgLocation.sd_setImage(with: URL(string: (self.account.franchise?.pictures.count)! > 0 ? self.account.franchise?.pictures.first as! String :  "" ), placeholderImage: UIImage(named: "ic_logo.png"))
+        self.imgLocation.sd_setImage(with: URL(string: (self.account.picture ?? "")), placeholderImage: UIImage(named: "ic_logo.png"))
         
     }
+    
     
     // MARK: - Class Methods
     
