@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        FirebaseApp.configure()
+        
         //Push Notifications
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
@@ -43,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Messaging.messaging().delegate = self
         
-        FirebaseApp.configure()
         setRootViewController()
         setupKeyboardManager()
         
@@ -57,11 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
-//        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-//          AnalyticsParameterItemID: "id-\(title!)",
-//          AnalyticsParameterItemName: title!,
-//          AnalyticsParameterContentType: "cont",
-//        ])
         return true
     }
 

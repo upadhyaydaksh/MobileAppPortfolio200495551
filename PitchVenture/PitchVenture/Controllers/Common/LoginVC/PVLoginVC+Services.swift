@@ -16,10 +16,15 @@ extension PVLoginVC {
     //MARK: - API method call
     func callCreateUser(tokenID: String?) {
         CommonMethods.sharedInstance.showHud()
+        
+        let fcmToken = UserDefaults.standard.value(forKey: "fcmToken")
         var parameters = [String : Any]()
         parameters = [
-            "tokenId" : tokenID ?? ""
+            "tokenId" : tokenID ?? "",
+            "fcmToken" : fcmToken!
         ]
+        print("Login Parameters ------------------->")
+        print(parameters)
         RequestManager.sharedInstance.callRespectiveWebservices(isSucces: { (response) in
             if let value = response.result.value {
                 let json = JSON(value)
