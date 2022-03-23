@@ -57,9 +57,9 @@ class PVPhoneVerifyVC: PVBaseVC {
     
     @IBAction func btnSubmitAction(_ sender: Any) {
         
-//        if self.txtPhoneNumber.phone?.count != 10 {
-//            self.showAlertWithMessage(msg: "Please enter valid phone number")
-//        } else {
+        if self.txtPhoneNumber.phone?.count != 10 {
+            self.showAlertWithMessage(msg: "Please enter valid phone number")
+        } else {
 //            if self.btnUserRoleSegmentControl.selectedSegmentIndex == 0 {
 //                // Store Owner
 //                //CREATE USER AND SELECT ROLE
@@ -78,26 +78,25 @@ class PVPhoneVerifyVC: PVBaseVC {
 //                obj.account = self.account
 //                self.push(vc: obj)
 //            }
-//        }
-        
-        if self.btnUserRoleSegmentControl.selectedSegmentIndex == 0 {
-            // Store Owner
-            //CREATE USER AND SELECT ROLE
             
-            let obj = PVInputLocationVC.instantiate()
-            self.account.storeOwner?.phoneNumber = self.txtPhoneNumber.phone
-            self.account.storeOwner?.countryCode = self.txtPhoneNumber.countryCode
-            obj.account = self.account
-            self.push(vc: obj)
-        } else {
-            // Franchisor
-            
-            let obj = PVFranchisorsSignupVC.instantiate()
-            self.account.franchise?.phoneNumber = self.txtPhoneNumber.phone
-            self.account.franchise?.countryCode = self.txtPhoneNumber.countryCode
-            obj.account = self.account
-            self.push(vc: obj)
+            if self.btnUserRoleSegmentControl.selectedSegmentIndex == 0 {
+                // Store Owner
+                //CREATE USER AND SELECT ROLE
+                
+                let obj = PVInputLocationVC.instantiate()
+                self.account.storeOwner?.phoneNumber = self.txtPhoneNumber.phone
+                self.account.storeOwner?.countryCode = self.txtPhoneNumber.countryCode
+                obj.account = self.account
+                self.push(vc: obj)
+            } else {
+                // Franchisor
+                
+                let obj = PVFranchisorsSignupVC.instantiate()
+                self.account.franchise?.phoneNumber = self.txtPhoneNumber.phone
+                self.account.franchise?.countryCode = self.txtPhoneNumber.countryCode
+                obj.account = self.account
+                self.push(vc: obj)
+            }
         }
-        
     }
 }
