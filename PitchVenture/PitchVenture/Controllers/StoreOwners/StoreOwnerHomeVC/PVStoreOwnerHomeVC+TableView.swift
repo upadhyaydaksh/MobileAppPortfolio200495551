@@ -45,9 +45,9 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let obj = PVFranchiseDetailVC.instantiate()
-//        obj.account = self.arrFranchises[indexPath.row]
-//        self.push(vc: obj)
+        let obj = PVFranchiseDetailVC.instantiate()
+        obj.account = self.arrFranchises[indexPath.row]
+        self.push(vc: obj)
     }
     
     @objc func btnApplyAction(sender: UIButton) {

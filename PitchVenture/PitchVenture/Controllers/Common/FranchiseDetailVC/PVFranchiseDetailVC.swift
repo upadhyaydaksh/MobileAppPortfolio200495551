@@ -23,6 +23,15 @@ class PVFranchiseDetailVC: PVBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerTableViewCell()
+        
+        if let isFranchise = self.account.isFranchise, isFranchise {
+            self.btnApply.isHidden = false
+        } else {
+            //HIDE Apply button
+            self.btnApply.isHidden = true
+        }
+        
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
