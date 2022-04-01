@@ -40,7 +40,7 @@ extension PVRequestsVC {
                                     self.arrFranchises.append(franchise)
                                 }
                             }
-                            self.tableView.reloadData()
+                            self.tableView.reloadTableWithAnimation()
                         } else {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
                         }
@@ -51,7 +51,7 @@ extension PVRequestsVC {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
                         }
                     }
-//                    self.tableView.reloadData()
+//                    self.tableView.reloadTableWithAnimation()
                 }
             case .failure(let error):
                 print(error)
@@ -91,7 +91,7 @@ extension PVRequestsVC {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
                         }
                     }
-//                    self.tableView.reloadData()
+//                    self.tableView.reloadTableWithAnimation()
                 }
             case .failure(let error):
                 print(error)
@@ -129,7 +129,7 @@ extension PVRequestsVC {
                                     self.arrFranchises.append(franchise)
                                 }
                             }
-                            self.tableView.reloadData()
+                            self.tableView.reloadTableWithAnimation()
                         } else {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
                         }
@@ -140,7 +140,7 @@ extension PVRequestsVC {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
                         }
                     }
-//                    self.tableView.reloadData()
+//                    self.tableView.reloadTableWithAnimation()
                 }
             case .failure(let error):
                 print(error)

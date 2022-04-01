@@ -105,7 +105,7 @@ extension PVFranchisorsSignupVC {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
                         }
                     }
-//                    self.tableView.reloadData()
+//                    self.tableView.reloadTableWithAnimation()
                 }
             case .failure(let error):
                 print(error)

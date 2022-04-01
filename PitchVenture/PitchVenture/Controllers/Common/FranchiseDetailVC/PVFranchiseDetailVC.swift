@@ -31,7 +31,7 @@ class PVFranchiseDetailVC: PVBaseVC {
             self.btnApply.isHidden = true
         }
         
-        self.tableView.reloadData()
+        self.tableView.reloadTableWithAnimation()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -37,7 +37,7 @@ extension PVStoreOwnerHomeVC {
                                 }
                                 
                             }
-                            self.tableView.reloadData()
+                            self.tableView.reloadTableWithAnimation()
                         } else {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
                         }
@@ -48,7 +48,7 @@ extension PVStoreOwnerHomeVC {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
                         }
                     }
-                    self.tableView.reloadData()
+                    self.tableView.reloadTableWithAnimation()
                 }
             case .failure(let error):
                 print(error)
@@ -84,7 +84,7 @@ extension PVStoreOwnerHomeVC {
                                 }
                                 
                             }
-                            self.tableView.reloadData()
+                            self.tableView.reloadTableWithAnimation()
                         } else {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
                         }
@@ -95,7 +95,7 @@ extension PVStoreOwnerHomeVC {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
                         }
                     }
-                    self.tableView.reloadData()
+                    self.tableView.reloadTableWithAnimation()
                 }
             case .failure(let error):
                 print(error)
