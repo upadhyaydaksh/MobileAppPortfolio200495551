@@ -8,7 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
+		522F0CAE27DEF28C00479167 /* PVButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F0CAC27DEF28C00479167 /* PVButtonTableViewCell.swift */; };
+		522F0CAF27DEF28C00479167 /* PVButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F0CAD27DEF28C00479167 /* PVButtonTableViewCell.xib */; };
+		5256657127BF45F3005EB5E3 /* PVSponsoredVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */; };
+		5260AD2B27B40982001CD5B5 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260AD2A27B40982001CD5B5 /* Requests.swift */; };
+		5260AD2D27B40E06001CD5B5 /* Franchise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260AD2C27B40E06001CD5B5 /* Franchise.swift */; };
 		5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */; };
+		52A0522827C5A9D100D606E4 /* PVInputLocationVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0522727C5A9D100D606E4 /* PVInputLocationVC+Services.swift */; };
+		52A0522C27C5B5FC00D606E4 /* PVFranchisorsSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0522B27C5B5FC00D606E4 /* PVFranchisorsSignupVC.swift */; };
+		52A0522E27C5B61800D606E4 /* PVFranchisorsSignupVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0522D27C5B61800D606E4 /* PVFranchisorsSignupVC+Services.swift */; };
+		52B68B2727AF00A400921AC9 /* PVGoogleAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */; };
+		52C929FC27B3A5BA0021F7E8 /* StoreOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */; };
+		52D5E6F027C56DC8003E73CE /* PVRequestsVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5E6EF27C56DC8003E73CE /* PVRequestsVC+Services.swift */; };
+		52D5E6F227C57392003E73CE /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D5E6F127C57392003E73CE /* Pods_PitchVenture.framework */; };
+		52D5E6F627C57B6A003E73CE /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5E6F527C57B6A003E73CE /* AppData.swift */; };
+		A0A1E50527F4A5A60036137A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A1E50427F4A5A60036137A /* StoreKit.framework */; };
+		A0A2389B279D2D9000BE5156 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */; };
+		A0A2389C279D2D9000BE5156 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23895279D2D9000BE5156 /* ResponseModel.swift */; };
+		A0A2389D279D2D9000BE5156 /* ServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23896279D2D9000BE5156 /* ServerApi.swift */; };
+		A0A2389E279D2D9000BE5156 /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A23898279D2D9000BE5156 /* LoginError.swift */; };
+		A0A2389F279D2D9000BE5156 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2389A279D2D9000BE5156 /* AccountService.swift */; };
+		A0A238A1279E6D1C00BE5156 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A238A0279E6D1C00BE5156 /* Account.swift */; };
+		BA56429227C4DC2B00D234B3 /* PVLoginVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56429127C4DC2B00D234B3 /* PVLoginVC+Services.swift */; };
+		BA56429427C4E7F900D234B3 /* PVStoreOwnerProfileVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56429327C4E7F900D234B3 /* PVStoreOwnerProfileVC+Services.swift */; };
+		BA64E45D27BF69EF001145BE /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64E45C27BF69EF001145BE /* RequestManager.swift */; };
+		BA64E45F27BF6DBF001145BE /* ApiNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64E45E27BF6DBF001145BE /* ApiNames.swift */; };
+		BA64E46127BF6EB3001145BE /* PVStoreOwnerHomeVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64E46027BF6EB3001145BE /* PVStoreOwnerHomeVC+Services.swift */; };
+		BA64E46327BF6F1D001145BE /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64E46227BF6F1D001145BE /* CommonMethods.swift */; };
 		FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D162B2742CCB300CF4413 /* FontManager.swift */; };
 		FA2AE7272759A44300EA6F56 /* PVImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2AE7262759A44300EA6F56 /* PVImageView.swift */; };
 		FA3CD3F6274F683F007DB824 /* PVFranchiseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD3F5274F683F007DB824 /* PVFranchiseDetailVC.swift */; };
@@ -75,10 +101,6 @@
 		FAF4B6322746DA5A00B9503F /* PVStoreOwnerHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6312746DA5A00B9503F /* PVStoreOwnerHomeVC.swift */; };
 		FAF4B6362746DE8400B9503F /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6342746DE8400B9503F /* PhoneNumber.swift */; };
 		FAF4B6372746DE8400B9503F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6352746DE8400B9503F /* User.swift */; };
-		FAF4B63D2746E1C400B9503F /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6392746E1C300B9503F /* StatusCode.swift */; };
-		FAF4B63E2746E1C400B9503F /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B63A2746E1C300B9503F /* RequestManager.swift */; };
-		FAF4B63F2746E1C400B9503F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B63B2746E1C300B9503F /* Response.swift */; };
-		FAF4B6402746E1C400B9503F /* NSMutableURLRequest+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B63C2746E1C300B9503F /* NSMutableURLRequest+Additions.swift */; };
 		FAF4B6462746E9CD00B9503F /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6452746E9CD00B9503F /* LogManager.swift */; };
 		FAF4B64A2746EAEC00B9503F /* Date+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6482746EAEC00B9503F /* Date+Additions.swift */; };
 		FAF4B64B2746EAEC00B9503F /* NSDate+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4B6492746EAEC00B9503F /* NSDate+Formatters.swift */; };
@@ -97,8 +119,35 @@
 
 /* Begin PBXFileReference section */
 		1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		522F0CAC27DEF28C00479167 /* PVButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVButtonTableViewCell.swift; sourceTree = "<group>"; };
+		522F0CAD27DEF28C00479167 /* PVButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVButtonTableViewCell.xib; sourceTree = "<group>"; };
+		5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVSponsoredVC.swift; sourceTree = "<group>"; };
+		5260AD2A27B40982001CD5B5 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		5260AD2C27B40E06001CD5B5 /* Franchise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Franchise.swift; sourceTree = "<group>"; };
 		5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVInputLocationVC.swift; sourceTree = "<group>"; };
+		52A0522727C5A9D100D606E4 /* PVInputLocationVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVInputLocationVC+Services.swift"; sourceTree = "<group>"; };
+		52A0522B27C5B5FC00D606E4 /* PVFranchisorsSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVFranchisorsSignupVC.swift; sourceTree = "<group>"; };
+		52A0522D27C5B61800D606E4 /* PVFranchisorsSignupVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVFranchisorsSignupVC+Services.swift"; sourceTree = "<group>"; };
+		52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVGoogleAdsViewController.swift; sourceTree = "<group>"; };
+		52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreOwner.swift; sourceTree = "<group>"; };
+		52D5E6EF27C56DC8003E73CE /* PVRequestsVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVRequestsVC+Services.swift"; sourceTree = "<group>"; };
+		52D5E6F127C57392003E73CE /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D5E6F527C57B6A003E73CE /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.release.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.release.xcconfig"; sourceTree = "<group>"; };
+		A070652B27D9640800EC0581 /* PitchVenture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PitchVenture.entitlements; sourceTree = "<group>"; };
+		A0A1E50427F4A5A60036137A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
+		A0A23895279D2D9000BE5156 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		A0A23896279D2D9000BE5156 /* ServerApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerApi.swift; sourceTree = "<group>"; };
+		A0A23898279D2D9000BE5156 /* LoginError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
+		A0A2389A279D2D9000BE5156 /* AccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		A0A238A0279E6D1C00BE5156 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		BA56429127C4DC2B00D234B3 /* PVLoginVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVLoginVC+Services.swift"; sourceTree = "<group>"; };
+		BA56429327C4E7F900D234B3 /* PVStoreOwnerProfileVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVStoreOwnerProfileVC+Services.swift"; sourceTree = "<group>"; };
+		BA64E45C27BF69EF001145BE /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		BA64E45E27BF6DBF001145BE /* ApiNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiNames.swift; sourceTree = "<group>"; };
+		BA64E46027BF6EB3001145BE /* PVStoreOwnerHomeVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVStoreOwnerHomeVC+Services.swift"; sourceTree = "<group>"; };
+		BA64E46227BF6F1D001145BE /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
 		EBD47B50966951F0CEB0EE3B /* Pods-PitchVenture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PitchVenture.debug.xcconfig"; path = "Target Support Files/Pods-PitchVenture/Pods-PitchVenture.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0D162B2742CCB300CF4413 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		FA2AE7262759A44300EA6F56 /* PVImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVImageView.swift; sourceTree = "<group>"; };
@@ -168,10 +217,6 @@
 		FAF4B6312746DA5A00B9503F /* PVStoreOwnerHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVStoreOwnerHomeVC.swift; sourceTree = "<group>"; };
 		FAF4B6342746DE8400B9503F /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		FAF4B6352746DE8400B9503F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		FAF4B6392746E1C300B9503F /* StatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
-		FAF4B63A2746E1C300B9503F /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
-		FAF4B63B2746E1C300B9503F /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		FAF4B63C2746E1C300B9503F /* NSMutableURLRequest+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableURLRequest+Additions.swift"; sourceTree = "<group>"; };
 		FAF4B6452746E9CD00B9503F /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 		FAF4B6482746EAEC00B9503F /* Date+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Additions.swift"; sourceTree = "<group>"; };
 		FAF4B6492746EAEC00B9503F /* NSDate+Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Formatters.swift"; sourceTree = "<group>"; };
@@ -193,7 +238,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A1E50527F4A5A60036137A /* StoreKit.framework in Frameworks */,
 				392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */,
+				52D5E6F227C57392003E73CE /* Pods_PitchVenture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,17 +250,62 @@
 		1C29550ED8F555926ADDCC41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0A1E50427F4A5A60036137A /* StoreKit.framework */,
+				52D5E6F127C57392003E73CE /* Pods_PitchVenture.framework */,
 				1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		522F0CAB27DEF25800479167 /* PVButtonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				522F0CAC27DEF28C00479167 /* PVButtonTableViewCell.swift */,
+				522F0CAD27DEF28C00479167 /* PVButtonTableViewCell.xib */,
+			);
+			path = PVButtonTableViewCell;
+			sourceTree = "<group>";
+		};
+		5256656F27BF45D4005EB5E3 /* SponsoredVC */ = {
+			isa = PBXGroup;
+			children = (
+				5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */,
+			);
+			path = SponsoredVC;
 			sourceTree = "<group>";
 		};
 		5273B2B92747722600E4D60E /* InputLocationVC */ = {
 			isa = PBXGroup;
 			children = (
 				5273B2BA274776FC00E4D60E /* PVInputLocationVC.swift */,
+				52A0522727C5A9D100D606E4 /* PVInputLocationVC+Services.swift */,
 			);
 			path = InputLocationVC;
+			sourceTree = "<group>";
+		};
+		52A0522927C5B59D00D606E4 /* Franchisors */ = {
+			isa = PBXGroup;
+			children = (
+				52A0522A27C5B5A900D606E4 /* FranchisorsSignup */,
+			);
+			path = Franchisors;
+			sourceTree = "<group>";
+		};
+		52A0522A27C5B5A900D606E4 /* FranchisorsSignup */ = {
+			isa = PBXGroup;
+			children = (
+				52A0522B27C5B5FC00D606E4 /* PVFranchisorsSignupVC.swift */,
+				52A0522D27C5B61800D606E4 /* PVFranchisorsSignupVC+Services.swift */,
+			);
+			path = FranchisorsSignup;
+			sourceTree = "<group>";
+		};
+		52B68B2527AF008200921AC9 /* GoogleAds */ = {
+			isa = PBXGroup;
+			children = (
+				52B68B2627AF00A400921AC9 /* PVGoogleAdsViewController.swift */,
+			);
+			path = GoogleAds;
 			sourceTree = "<group>";
 		};
 		7F2D321FC1A45AF67191A850 /* Pods */ = {
@@ -223,6 +315,50 @@
 				99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A0A23893279D2D9000BE5156 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A0A238A2279E6D2800BE5156 /* Models */,
+				A0A23894279D2D9000BE5156 /* NetworkAdapter.swift */,
+				A0A23895279D2D9000BE5156 /* ResponseModel.swift */,
+				A0A23896279D2D9000BE5156 /* ServerApi.swift */,
+				A0A23897279D2D9000BE5156 /* Errors */,
+				A0A23899279D2D9000BE5156 /* Services */,
+				BA64E45C27BF69EF001145BE /* RequestManager.swift */,
+				BA64E45E27BF6DBF001145BE /* ApiNames.swift */,
+				BA64E46227BF6F1D001145BE /* CommonMethods.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A0A23897279D2D9000BE5156 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A0A23898279D2D9000BE5156 /* LoginError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A0A23899279D2D9000BE5156 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A0A2389A279D2D9000BE5156 /* AccountService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A0A238A2279E6D2800BE5156 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0A238A0279E6D1C00BE5156 /* Account.swift */,
+				52C929FB27B3A5BA0021F7E8 /* StoreOwner.swift */,
+				5260AD2A27B40982001CD5B5 /* Requests.swift */,
+				5260AD2C27B40E06001CD5B5 /* Franchise.swift */,
+				52D5E6F527C57B6A003E73CE /* AppData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FA3CD3F4274F67FF007DB824 /* FranchiseDetailVC */ = {
@@ -271,7 +407,6 @@
 				FAB45CDF27462D8B009F1D5D /* UI */,
 				FA5B01A92742D60300976EB6 /* Configuration Manager */,
 				FAF4B6442746E9CD00B9503F /* Log Manager */,
-				FAF4B6382746E1C300B9503F /* Network Manager */,
 				FAF4B6472746EAEC00B9503F /* NSDate */,
 				FAF4B65D2746F59900B9503F /* Dictionary */,
 				FAF4B6542746EE4C00B9503F /* NSUserDefaults */,
@@ -293,6 +428,7 @@
 		FA474C8927234A83008601A9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52A0522927C5B59D00D606E4 /* Franchisors */,
 				FA521C24275024DE0099D8C0 /* Common */,
 				FA521C22275024B70099D8C0 /* StoreOwners */,
 				5273B2B92747722600E4D60E /* InputLocationVC */,
@@ -312,6 +448,8 @@
 		FA521C24275024DE0099D8C0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5256656F27BF45D4005EB5E3 /* SponsoredVC */,
+				52B68B2527AF008200921AC9 /* GoogleAds */,
 				FA5E0AD1276552A700BD8393 /* RequestsVC */,
 				FA5E0ABD27652FE800BD8393 /* NotificationsVC */,
 				FA3CD3F4274F67FF007DB824 /* FranchiseDetailVC */,
@@ -326,6 +464,7 @@
 			children = (
 				FA521C2A27506C950099D8C0 /* TableViewCells */,
 				FA521C26275043400099D8C0 /* PVStoreOwnerProfileVC.swift */,
+				BA56429327C4E7F900D234B3 /* PVStoreOwnerProfileVC+Services.swift */,
 				FA521C28275049440099D8C0 /* PVStoreOwnerProfileVC+TableView.swift */,
 			);
 			path = StoreOwnerProfileVC;
@@ -334,6 +473,7 @@
 		FA521C2A27506C950099D8C0 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				522F0CAB27DEF25800479167 /* PVButtonTableViewCell */,
 				FA521C2B27506CB90099D8C0 /* PVTextFieldTableViewCell */,
 			);
 			path = TableViewCells;
@@ -400,6 +540,7 @@
 				FA5E0AD42765562200BD8393 /* TableViewCells */,
 				FA5E0AD2276552CA00BD8393 /* PVRequestsVC.swift */,
 				FA5E0AD9276556E400BD8393 /* PVRequestsVC+TableView.swift */,
+				52D5E6EF27C56DC8003E73CE /* PVRequestsVC+Services.swift */,
 			);
 			path = RequestsVC;
 			sourceTree = "<group>";
@@ -417,6 +558,7 @@
 			isa = PBXGroup;
 			children = (
 				FA81A8B8272769F100D6759A /* PVLoginVC.swift */,
+				BA56429127C4DC2B00D234B3 /* PVLoginVC+Services.swift */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -471,6 +613,8 @@
 		FA93343D271A10780002DBED /* PitchVenture */ = {
 			isa = PBXGroup;
 			children = (
+				A070652B27D9640800EC0581 /* PitchVenture.entitlements */,
+				A0A23893279D2D9000BE5156 /* Networking */,
 				FA81A8C42727704100D6759A /* Constants */,
 				FA81A8BC27276C1A00D6759A /* AppDelegates */,
 				FA474C8927234A83008601A9 /* Controllers */,
@@ -551,6 +695,7 @@
 			children = (
 				FAC8A150274811B400EFC95B /* TableViewCells */,
 				FAF4B6312746DA5A00B9503F /* PVStoreOwnerHomeVC.swift */,
+				BA64E46027BF6EB3001145BE /* PVStoreOwnerHomeVC+Services.swift */,
 				FAC8A151274818E200EFC95B /* PVStoreOwnerHomeVC+TableView.swift */,
 			);
 			path = StoreOwnerHomeVC;
@@ -568,17 +713,6 @@
 				FAF4B6352746DE8400B9503F /* User.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		FAF4B6382746E1C300B9503F /* Network Manager */ = {
-			isa = PBXGroup;
-			children = (
-				FAF4B6392746E1C300B9503F /* StatusCode.swift */,
-				FAF4B63A2746E1C300B9503F /* RequestManager.swift */,
-				FAF4B63B2746E1C300B9503F /* Response.swift */,
-				FAF4B63C2746E1C300B9503F /* NSMutableURLRequest+Additions.swift */,
-			);
-			path = "Network Manager";
 			sourceTree = "<group>";
 		};
 		FAF4B6442746E9CD00B9503F /* Log Manager */ = {
@@ -636,6 +770,7 @@
 				FA933438271A10780002DBED /* Frameworks */,
 				FA933439271A10780002DBED /* Resources */,
 				08EBE890B319DB65DA6BBBEB /* [CP] Embed Pods Frameworks */,
+				52D4E01427EA69A300639A19 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -654,7 +789,7 @@
 			attributes = {
 				CLASSPREFIX = PV;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = PitchVenture;
 				TargetAttributes = {
 					FA93343A271A10780002DBED = {
@@ -692,6 +827,7 @@
 				FAC8A1562748196000EFC95B /* PVHomeTableViewCell.xib in Resources */,
 				FA933448271A107A0002DBED /* Assets.xcassets in Resources */,
 				FA933446271A10780002DBED /* Main.storyboard in Resources */,
+				522F0CAF27DEF28C00479167 /* PVButtonTableViewCell.xib in Resources */,
 				FA3CD3FE274F7AB6007DB824 /* PVImageTableViewCell.xib in Resources */,
 				FA5E0ACE276537CF00BD8393 /* PVHeaderFooterView.xib in Resources */,
 				FA5E0ACA2765310500BD8393 /* PVNotificationTableViewCell.xib in Resources */,
@@ -743,6 +879,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		52D4E01427EA69A300639A19 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -752,10 +908,10 @@
 			files = (
 				FAB45CF027462D8B009F1D5D /* UITextField+Additions.swift in Sources */,
 				FAB45CED27462D8B009F1D5D /* UIView+Additions.swift in Sources */,
+				5256657127BF45F3005EB5E3 /* PVSponsoredVC.swift in Sources */,
 				FA81A8B9272769F100D6759A /* PVLoginVC.swift in Sources */,
 				FA81A8BB27276AB300D6759A /* PVBaseVC.swift in Sources */,
 				FAB45CEF27462D8B009F1D5D /* UIButton+Additions.swift in Sources */,
-				FAF4B63F2746E1C400B9503F /* Response.swift in Sources */,
 				FA81A8B62727688D00D6759A /* PVLabel.swift in Sources */,
 				FAB45CF527462D8B009F1D5D /* UIBarButtonItem+Additions.swift in Sources */,
 				FAB45CF427462D8B009F1D5D /* UIStoryboard+Additions.swift in Sources */,
@@ -763,34 +919,45 @@
 				FA81A8BE27276C7900D6759A /* AppDelegate+Additions.swift in Sources */,
 				FAEAC3E027470DA1005F0A4F /* PVTextFieldView.swift in Sources */,
 				FAEAC3E227470F47005F0A4F /* PVMessage.swift in Sources */,
+				52A0522C27C5B5FC00D606E4 /* PVFranchisorsSignupVC.swift in Sources */,
 				FAB45CDA27460FC4009F1D5D /* PVView.swift in Sources */,
 				FAB45CF927463889009F1D5D /* String+Attributions.swift in Sources */,
+				52A0522827C5A9D100D606E4 /* PVInputLocationVC+Services.swift in Sources */,
+				5260AD2D27B40E06001CD5B5 /* Franchise.swift in Sources */,
 				FAF4B64B2746EAEC00B9503F /* NSDate+Formatters.swift in Sources */,
 				FAF4B6362746DE8400B9503F /* PhoneNumber.swift in Sources */,
 				FAB45CEE27462D8B009F1D5D /* UITextViewPlaceholder.swift in Sources */,
 				FA5E0AD3276552CA00BD8393 /* PVRequestsVC.swift in Sources */,
+				BA56429427C4E7F900D234B3 /* PVStoreOwnerProfileVC+Services.swift in Sources */,
 				FAC8A152274818E200EFC95B /* PVStoreOwnerHomeVC+TableView.swift in Sources */,
 				FA2AE7272759A44300EA6F56 /* PVImageView.swift in Sources */,
 				FAB45CF327462D8B009F1D5D /* UITableView+Additions.swift in Sources */,
+				A0A2389B279D2D9000BE5156 /* NetworkAdapter.swift in Sources */,
 				FAF4B6462746E9CD00B9503F /* LogManager.swift in Sources */,
 				FAF4B6572746EE4C00B9503F /* NSUserDefaults+Additions.swift in Sources */,
 				FA93343F271A10780002DBED /* AppDelegate.swift in Sources */,
-				FAF4B63E2746E1C400B9503F /* RequestManager.swift in Sources */,
 				FAB45CFA27463889009F1D5D /* String+Additions.swift in Sources */,
 				FA81A8C62727705B00D6759A /* Constants.swift in Sources */,
 				FAF4B6322746DA5A00B9503F /* PVStoreOwnerHomeVC.swift in Sources */,
+				52A0522E27C5B61800D606E4 /* PVFranchisorsSignupVC+Services.swift in Sources */,
+				52B68B2727AF00A400921AC9 /* PVGoogleAdsViewController.swift in Sources */,
 				FA5E0ACC276536C800BD8393 /* PVHeaderFooterView.swift in Sources */,
 				FA0D162C2742CCB300CF4413 /* FontManager.swift in Sources */,
-				FAF4B6402746E1C400B9503F /* NSMutableURLRequest+Additions.swift in Sources */,
 				FA70059627479944006DAB61 /* KeychainItem.swift in Sources */,
 				FA3CD402274F8674007DB824 /* PVFranchiseDetailTableViewCell.swift in Sources */,
 				FAF4B6522746EDBF00B9503F /* AppInfo.swift in Sources */,
+				BA64E45D27BF69EF001145BE /* RequestManager.swift in Sources */,
 				FAB45CF227462D8B009F1D5D /* UIScrollView+Additions.swift in Sources */,
 				FAF4B64F2746ECB300B9503F /* Address.swift in Sources */,
+				5260AD2B27B40982001CD5B5 /* Requests.swift in Sources */,
 				FA5E0AD72765566C00BD8393 /* PVRequestsTableViewCell.swift in Sources */,
-				FAF4B63D2746E1C400B9503F /* StatusCode.swift in Sources */,
 				FAB45CDE27462C15009F1D5D /* PVTextField.swift in Sources */,
 				FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */,
+				BA64E46127BF6EB3001145BE /* PVStoreOwnerHomeVC+Services.swift in Sources */,
+				A0A2389E279D2D9000BE5156 /* LoginError.swift in Sources */,
+				A0A2389C279D2D9000BE5156 /* ResponseModel.swift in Sources */,
+				BA56429227C4DC2B00D234B3 /* PVLoginVC+Services.swift in Sources */,
+				52D5E6F027C56DC8003E73CE /* PVRequestsVC+Services.swift in Sources */,
 				FAF4B64D2746EBA500B9503F /* Helper.swift in Sources */,
 				FA3CD3F8274F73C1007DB824 /* PVFranchiseDetailVC+TableView.swift in Sources */,
 				FAB45CEC27462D8B009F1D5D /* UINavigationController+Additions.swift in Sources */,
@@ -800,28 +967,36 @@
 				FA521C2E27506D050099D8C0 /* PVTextFieldTableViewCell.swift in Sources */,
 				FA81A8C127276F7100D6759A /* PVPhoneVerifyVC.swift in Sources */,
 				FAF4B6642746F71500B9503F /* Reachability.swift in Sources */,
+				A0A238A1279E6D1C00BE5156 /* Account.swift in Sources */,
 				FA5E0AC92765310500BD8393 /* PVNotificationTableViewCell.swift in Sources */,
 				5273B2BB274776FC00E4D60E /* PVInputLocationVC.swift in Sources */,
 				FAF4B65C2746F23D00B9503F /* Messages.swift in Sources */,
 				FA521C27275043400099D8C0 /* PVStoreOwnerProfileVC.swift in Sources */,
 				FA5E0AD027654EF900BD8393 /* PVNotificaationsVC+TableView.swift in Sources */,
+				A0A2389D279D2D9000BE5156 /* ServerApi.swift in Sources */,
 				FAF4B6612746F59900B9503F /* Dictionary+Additions.swift in Sources */,
 				FAF4B65A2746F15B00B9503F /* Media.swift in Sources */,
 				FAB45CEB27462D8B009F1D5D /* UIImage+Additions.swift in Sources */,
+				BA64E46327BF6F1D001145BE /* CommonMethods.swift in Sources */,
 				FAF4B6582746EE4C00B9503F /* Userdefaults+Savings.swift in Sources */,
 				FAB45CF127462D8B009F1D5D /* UITapGestureRecognizer+Additions.swift in Sources */,
 				FA5E0ABF2765301100BD8393 /* PVNotificationsVC.swift in Sources */,
+				52C929FC27B3A5BA0021F7E8 /* StoreOwner.swift in Sources */,
 				FAF4B62D2746D86400B9503F /* PVUserManager.swift in Sources */,
 				FAB45CFC27463AD5009F1D5D /* PVTableView.swift in Sources */,
 				FAF4B6602746F59900B9503F /* Dictionary+Request.swift in Sources */,
 				FA5E0ADA276556E400BD8393 /* PVRequestsVC+TableView.swift in Sources */,
 				FA3CD3FD274F7AB6007DB824 /* PVImageTableViewCell.swift in Sources */,
+				BA64E45F27BF6DBF001145BE /* ApiNames.swift in Sources */,
 				FAEAC3D527470150005F0A4F /* SceneDelegate.swift in Sources */,
 				FA474C8827234A25008601A9 /* PVButton.swift in Sources */,
 				FAC8A1552748196000EFC95B /* PVHomeTableViewCell.swift in Sources */,
 				FAB45CFE27463BE4009F1D5D /* Country.swift in Sources */,
+				52D5E6F627C57B6A003E73CE /* AppData.swift in Sources */,
+				A0A2389F279D2D9000BE5156 /* AccountService.swift in Sources */,
 				FAF4B64A2746EAEC00B9503F /* Date+Additions.swift in Sources */,
 				FA3CD3F6274F683F007DB824 /* PVFranchiseDetailVC.swift in Sources */,
+				522F0CAE27DEF28C00479167 /* PVButtonTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,6 +1048,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -933,6 +1109,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -966,16 +1143,17 @@
 			baseConfigurationReference = EBD47B50966951F0CEB0EE3B /* Pods-PitchVenture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PitchVenture/PitchVenture.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6L8PKQRJ67;
+				DEVELOPMENT_TEAM = EQV48EW98J;
 				INFOPLIST_FILE = PitchVenture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gc.project.pitchventure;
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgiancollege.pitchventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -988,16 +1166,17 @@
 			baseConfigurationReference = 99BE6F91D71CF480D2A7040F /* Pods-PitchVenture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PitchVenture/PitchVenture.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6L8PKQRJ67;
+				DEVELOPMENT_TEAM = EQV48EW98J;
 				INFOPLIST_FILE = PitchVenture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gc.project.pitchventure;
+				PRODUCT_BUNDLE_IDENTIFIER = com.georgiancollege.pitchventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

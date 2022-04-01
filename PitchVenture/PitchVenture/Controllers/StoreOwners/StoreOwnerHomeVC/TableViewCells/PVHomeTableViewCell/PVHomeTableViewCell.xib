@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,48 +64,43 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4Z-TD-BWw">
-                                <rect key="frame" x="60" y="58" width="228" height="14"/>
+                                <rect key="frame" x="60" y="58" width="228" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="0.15691433816539999" green="0.15524023102254284" blue="0.15593113238308706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7QK-1t-G6F">
-                                <rect key="frame" x="60" y="80" width="228" height="24"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deposit :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="or5-KV-Z0U">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="uXE-uc-SV1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="fAQ-bF-wZx">
-                                        <rect key="frame" x="80" y="0.0" width="148" height="24"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="0.015686275440000001" green="0.074509806930000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Deposit :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="or5-KV-Z0U">
+                                <rect key="frame" x="60" y="84.5" width="72.5" height="21.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="XMw-zY-Rx6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="QOV-5R-1bU"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="fAQ-bF-wZx">
+                                <rect key="frame" x="138.5" y="84.5" width="151.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.015686275440000001" green="0.074509806930000005" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fAQ-bF-wZx" secondAttribute="bottom" constant="6" id="0og-aJ-60x"/>
                             <constraint firstItem="QFj-si-kAS" firstAttribute="leading" secondItem="asd-uV-LdJ" secondAttribute="trailing" constant="8" id="1TI-Sb-pMn"/>
-                            <constraint firstAttribute="trailing" secondItem="7QK-1t-G6F" secondAttribute="trailing" constant="8" id="2J3-lc-qYR"/>
-                            <constraint firstItem="7QK-1t-G6F" firstAttribute="top" secondItem="V4Z-TD-BWw" secondAttribute="bottom" constant="8" id="Eq1-51-ZLD"/>
+                            <constraint firstAttribute="trailing" secondItem="fAQ-bF-wZx" secondAttribute="trailing" constant="6" id="9Tb-hB-ps9"/>
                             <constraint firstItem="V4Z-TD-BWw" firstAttribute="top" secondItem="av7-J7-Oaf" secondAttribute="bottom" constant="6" id="FI2-WP-ikE"/>
+                            <constraint firstItem="fAQ-bF-wZx" firstAttribute="leading" secondItem="or5-KV-Z0U" secondAttribute="trailing" constant="6" id="FV4-SJ-CQQ"/>
                             <constraint firstAttribute="trailing" secondItem="V4Z-TD-BWw" secondAttribute="trailing" constant="8" id="Iei-Sl-Krh"/>
                             <constraint firstItem="av7-J7-Oaf" firstAttribute="top" secondItem="Pvr-UH-1GC" secondAttribute="top" constant="8" id="JK2-1C-bdc"/>
                             <constraint firstItem="QFj-si-kAS" firstAttribute="centerY" secondItem="av7-J7-Oaf" secondAttribute="centerY" id="MzG-at-KQm"/>
-                            <constraint firstItem="7QK-1t-G6F" firstAttribute="leading" secondItem="V4Z-TD-BWw" secondAttribute="leading" id="Uuq-H4-Gj2"/>
+                            <constraint firstItem="or5-KV-Z0U" firstAttribute="leading" secondItem="V4Z-TD-BWw" secondAttribute="leading" id="Odk-Ft-9qd"/>
+                            <constraint firstItem="fAQ-bF-wZx" firstAttribute="top" secondItem="V4Z-TD-BWw" secondAttribute="bottom" constant="6" id="OfO-mY-KlN"/>
+                            <constraint firstAttribute="bottom" secondItem="or5-KV-Z0U" secondAttribute="bottom" constant="6" id="S80-p4-yOZ"/>
                             <constraint firstItem="asd-uV-LdJ" firstAttribute="leading" secondItem="av7-J7-Oaf" secondAttribute="trailing" constant="8" id="WlN-5p-Nl0"/>
-                            <constraint firstAttribute="bottom" secondItem="7QK-1t-G6F" secondAttribute="bottom" constant="8" id="Z1X-kj-OQV"/>
                             <constraint firstAttribute="trailing" secondItem="QFj-si-kAS" secondAttribute="trailing" constant="8" id="hlj-4L-q2Q"/>
+                            <constraint firstItem="or5-KV-Z0U" firstAttribute="top" secondItem="V4Z-TD-BWw" secondAttribute="bottom" constant="6" id="qeV-eM-SEF"/>
                             <constraint firstItem="asd-uV-LdJ" firstAttribute="centerY" secondItem="av7-J7-Oaf" secondAttribute="centerY" id="wGn-f8-W0v"/>
                             <constraint firstItem="V4Z-TD-BWw" firstAttribute="leading" secondItem="asd-uV-LdJ" secondAttribute="leading" id="yHj-Cx-zZh"/>
                             <constraint firstItem="av7-J7-Oaf" firstAttribute="leading" secondItem="Pvr-UH-1GC" secondAttribute="leading" constant="8" id="zyj-g8-DGP"/>
@@ -128,9 +124,25 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnFranchise" destination="QFj-si-kAS" id="4bA-g0-6op"/>
+                <outlet property="imgFranchise" destination="av7-J7-Oaf" id="VNZ-Ou-1Nx"/>
+                <outlet property="lblCategory" destination="V4Z-TD-BWw" id="FfI-I4-dFl"/>
+                <outlet property="lblDeposit" destination="or5-KV-Z0U" id="Yjf-bX-qCq"/>
+                <outlet property="lblMinimumDeposit" destination="fAQ-bF-wZx" id="o4F-G1-Pu7"/>
+                <outlet property="lblName" destination="asd-uV-LdJ" id="g59-2l-X2j"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="141.29464285714286"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="QFj-si-kAS">
+            <size key="intrinsicContentSize" width="54" height="34"/>
+        </designable>
+        <designable name="av7-J7-Oaf">
+            <size key="intrinsicContentSize" width="1024" height="1024"/>
+        </designable>
+    </designables>
     <resources>
         <image name="ic_logo" width="1024" height="1024"/>
     </resources>

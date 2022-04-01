@@ -14,9 +14,10 @@ class PVLoginVC: PVBaseVC {
 
     let signInConfig = GIDConfiguration.init(clientID: Constants.googleClientId)
     
+    var account : Account = Account()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,18 +45,17 @@ class PVLoginVC: PVBaseVC {
     @objc
     func handleAuthorizationAppleIDButtonPress() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
-        let request = appleIDProvider.createRequest()
-        request.requestedScopes = [.fullName, .email]
-        
-        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-        authorizationController.delegate = self
-        authorizationController.presentationContextProvider = self
-        authorizationController.performRequests()
+            let request = appleIDProvider.createRequest()
+            request.requestedScopes = [.fullName, .email]
+            
+            let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+            authorizationController.delegate = self
+            authorizationController.presentationContextProvider = self
+            authorizationController.performRequests()
     }
     
     @IBAction func btnAppleLoginAction(_ sender: Any) {
-        let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
-        self.push(vc: objPVPhoneVerifyVC)
+        handleAuthorizationAppleIDButtonPress()
     }
     
     @IBAction func btnGoogleLoginAction(_ sender: Any) {
@@ -63,21 +63,12 @@ class PVLoginVC: PVBaseVC {
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
           guard error == nil else { return }
 
-            PVMessage.showSuccessWithMessage(message: "Login successfull")
-          // If sign in succeeded, GO TO PHONE VERIFY VC
+            print(user?.authentication.idToken ?? "N.A.")
             
-            let user: User? = User(id: "01", fullName: "Anonymus", phoneNumber: nil, deviceInfo: nil, appInfo: nil, profilePicture: nil, gender: nil, address: nil, dob: nil, accessToken: nil, pushToken: nil)
-            
-            PVUserManager.sharedManager().activeUser = user
-//            let sceneD = SceneDelegate()
-//            sceneD.setRootController()
-            
-            //GO TO PHONE VERIFY VC
-            let objPVPhoneVerifyVC = PVPhoneVerifyVC.instantiate()
-            self.push(vc: objPVPhoneVerifyVC)
+            //CHECK IF USER IS ALREADY SIGNED UP OR NOT
+            self.callCreateUser(tokenID: user?.authentication.idToken)
         }
     }
-    
 }
 
 extension PVLoginVC: ASAuthorizationControllerDelegate {
@@ -88,14 +79,17 @@ extension PVLoginVC: ASAuthorizationControllerDelegate {
             
             // Create an account in your system.
             let userIdentifier = appleIDCredential.user
-            let fullName = appleIDCredential.fullName
+            let familyName = appleIDCredential.fullName?.familyName
+            let givenName = appleIDCredential.fullName?.givenName
             let email = appleIDCredential.email
-            
+            let token = appleIDCredential.identityToken
+            let tokenString = String(data: token!, encoding: .utf8)
+            self.callCreateUserWithAppleSignIn(token: tokenString, email: email, appleUserId: userIdentifier, givenName:givenName, familyName: familyName)
             // For the purpose of this demo app, store the `userIdentifier` in the keychain.
             self.saveUserInKeychain(userIdentifier)
             
             // For the purpose of this demo app, show the Apple ID credential information in the `ResultViewController`.
-            self.showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
+//            self.showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
         
         case let passwordCredential as ASPasswordCredential:
         
@@ -116,7 +110,7 @@ extension PVLoginVC: ASAuthorizationControllerDelegate {
     
     private func saveUserInKeychain(_ userIdentifier: String) {
         do {
-            try KeychainItem(service: "com.gc.pitchventure", account: "userIdentifier").saveItem(userIdentifier)
+            try KeychainItem(service: "com.georgiancollege.pitchventure", account: "userIdentifier").saveItem(userIdentifier)
         } catch {
             print("Unable to save userIdentifier to keychain.")
         }

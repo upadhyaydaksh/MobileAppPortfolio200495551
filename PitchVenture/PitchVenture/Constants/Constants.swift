@@ -105,7 +105,8 @@ struct Constants {
     
     static let kKeyboardDistanceFromTextField: CGFloat = 20.0
  
-    static let googleClientId = "75832076040-3h9occi19llgbuu2air0iialqu50up44.apps.googleusercontent.com"
+    //static let googleClientId = "75832076040-3h9occi19llgbuu2air0iialqu50up44.apps.googleusercontent.com"
+    static let googleClientId = "1062304744018-6nv7hnqio29vokcv8s009regcqp82jva.apps.googleusercontent.com"
     
     static let reversedGoogleClientId = "75832076040-3h9occi19llgbuu2air0iialqu50up44.apps.googleusercontent.com"
 }

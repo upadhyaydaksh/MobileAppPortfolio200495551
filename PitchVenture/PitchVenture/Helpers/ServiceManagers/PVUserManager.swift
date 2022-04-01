@@ -20,9 +20,9 @@ enum RequestResponseStatusCode: Int {
 
 class PVUserManager: NSObject {
     
-    fileprivate var _activeUser: User?
+    fileprivate var _activeUser: Account?
     
-    var activeUser: User! {
+    var activeUser: Account! {
         get {
             return _activeUser
         }
@@ -43,7 +43,7 @@ class PVUserManager: NSObject {
     func loadActiveUser() {
         
         guard let decodedUser = UserDefaults.standard.object(forKey: Constants.UserDefaultKeys.ACTIVE_USER_KEY) as? Data,
-            let user = NSKeyedUnarchiver.unarchiveObject(with: decodedUser) as? User
+            let user = NSKeyedUnarchiver.unarchiveObject(with: decodedUser) as? Account
             else {
                 return
         }
@@ -92,7 +92,7 @@ class PVUserManager: NSObject {
     
     func printUserObject() {
         if self.activeUser != nil {
-            debugPrint("Access token: \(String(describing: self.activeUser.accessToken))")
+            debugPrint("Access token: \(String(describing: self.activeUser.id))")
             debugPrint("id: \(String(describing: self.activeUser.id))")
         }
     }
@@ -110,7 +110,7 @@ class PVUserManager: NSObject {
             else {
                 return false
         }
-        if self.activeUser.fullName.isNullOrEmpty() || self.activeUser.profilePicture == nil {
+        if self.activeUser.isComplete == false {
             return false
         }
         return true
@@ -125,6 +125,3 @@ class PVUserManager: NSObject {
     }
     
 }
-
-// MARK: - API Services
-

@@ -24,6 +24,13 @@ extension PVFranchiseDetailVC: UITableViewDataSource, UITableViewDelegate {
         } else {
             let cell: PVFranchiseDetailTableViewCell = tableView.dequeueReusableCell(withIdentifier: PVFranchiseDetailTableViewCell.reuseIdentifier()) as! PVFranchiseDetailTableViewCell
             
+            if let isFranchise = self.account.isFranchise, isFranchise {
+                //LOGIN User is FRANCHISE so he will see Store owner cell
+                cell.configureFranchiseCell(account: self.account)
+            } else {
+                cell.configureStoreOwnerCell(account: self.account)
+            }
+            
             return cell
         }
     }

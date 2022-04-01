@@ -33,4 +33,23 @@ class PVFranchiseDetailTableViewCell: UITableViewCell {
         return String(describing: self)
     }
     
+    func configureFranchiseCell(account: Account?) {
+        self.lblFranchiseName.text = account?.franchise?.franchiseName
+        self.lblFranchiseDescription.text = account?.franchise?.franchiseName
+        
+        if let category = account?.franchise?.franchiseCategory, category.count > 0 {
+            self.lblFranchiseCategory.text = account?.franchise?.franchiseCategory[0]
+        }
+        
+        self.lblFranchiseDeposit.text = account?.franchise?.convertIntToCurrencyAsString(intValue: account?.franchise?.minimumDeposit ?? 0)
+
+    }
+    
+    func configureStoreOwnerCell(account: Account?) {
+        self.lblFranchiseName.text = account?.name
+        self.lblFranchiseDescription.text = account?.storeOwner?.getCompleteAddress()
+        self.lblFranchiseCategory.text = "City"
+        self.lblFranchiseDeposit.text = account?.storeOwner?.city
+    }
+    
 }

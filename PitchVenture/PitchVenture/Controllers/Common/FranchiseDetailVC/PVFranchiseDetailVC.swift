@@ -17,15 +17,26 @@ class PVFranchiseDetailVC: PVBaseVC {
     
     @IBOutlet weak var btnApply: PVButton!
     
+    var account : Account = Account()
+    
     //MARK:- CLASS METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerTableViewCell()
+        
+        if let isFranchise = self.account.isFranchise, isFranchise {
+            self.btnApply.isHidden = false
+        } else {
+            //HIDE Apply button
+            self.btnApply.isHidden = true
+        }
+        
+        self.tableView.reloadTableWithAnimation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationTitle("Franchise detail")
+        self.setNavigationTitle("Franchise details")
         setLeftBarButton()
     }
     
@@ -43,5 +54,4 @@ class PVFranchiseDetailVC: PVBaseVC {
         let obj = PVRequestsVC.instantiate()
         self.push(vc: obj)
     }
-    
 }

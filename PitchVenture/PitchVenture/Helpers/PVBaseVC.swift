@@ -16,6 +16,8 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
 
     var arrayForHiddenNavBarControllers: [AnyClass] = []
     
+    let timeStamp = NSDate().timeIntervalSince1970
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,7 +27,12 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavBar()
-        navigationController?.navigationBar.barStyle = .black
+        //navigationController?.navigationBar.barTintColor = Constants.color.kApp_Blue_Color
+        navigationController?.navigationBar.barStyle = .default
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.black
+        ]
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -224,9 +231,15 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         profileButton.tintColor = Constants.color.kAPP_COLOR
         
         let notificationButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_notification"), style: .plain, target: self, action: #selector(goToNotificationVC))
-        profileButton.tintColor = Constants.color.kAPP_COLOR
+        notificationButton.tintColor = Constants.color.kAPP_COLOR
         
-    self.navigationItem.setRightBarButtonItems([profileButton,notificationButton], animated: true)
+        let premiumButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_sponsored"), style: .plain, target: self, action: #selector(openSponsoredVC))
+        premiumButton.tintColor = Constants.color.kAPP_COLOR
+        
+        //self.navigationItem.setRightBarButtonItems([profileButton,notificationButton, premiumButton], animated: true)
+        
+//        self.navigationItem.setRightBarButtonItems([profileButton, premiumButton], animated: true)
+        self.navigationItem.setRightBarButtonItems([profileButton], animated: true)
     }
     
     @objc func goToStoreOwnerProfileVC() {
@@ -246,6 +259,22 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         self.navigationItem.setRightBarButton(profileButton, animated: true)
     }
     
+    func setLogoutAndPremiumNavBarButton() {
+        let profileButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_logout"), style: .plain, target: self, action: #selector(showLogoutConfirmation))
+        profileButton.tintColor = Constants.color.kAPP_COLOR
+        
+        let premiumButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_sponsored"), style: .plain, target: self, action: #selector(openSponsoredVC))
+        premiumButton.tintColor = Constants.color.kAPP_COLOR
+        
+//        self.navigationItem.setRightBarButtonItems([profileButton, premiumButton], animated: true)
+        self.navigationItem.setRightBarButtonItems([profileButton], animated: true)
+    }
+    
+    @objc func openSponsoredVC() {
+        let vc = PVSponsoredVC.instantiate()
+        self.push(vc: vc)
+    }
+    
     @objc func showLogoutConfirmation() {
         
         let alert = UIAlertController(title: "Logout", message: kAreYouSureToLogout, preferredStyle: .alert)
@@ -263,6 +292,16 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func showAlertWithMessage(msg: String) {
+        // Open option of add business / add fundraiser
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func showAlertWithTitleAndMessage(title: String, msg: String) {
         // Open option of add business / add fundraiser
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
@@ -271,6 +310,19 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         }))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func convertIntToCurrencyAsString(intValue: Int) -> String {
+        var stringVersion: String
+        let cFormatter = NumberFormatter()
+        cFormatter.usesGroupingSeparator = true
+        cFormatter.numberStyle = .currency
+        if let currencyString = cFormatter.string(from: NSNumber(value: intValue)) {
+            stringVersion = currencyString
+        } else {
+            stringVersion = "Invalid Message"
+        }
+        return stringVersion
     }
 }
 
@@ -300,4 +352,3 @@ extension UIDevice {
         
     }
 }
-
