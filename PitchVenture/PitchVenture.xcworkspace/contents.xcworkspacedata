@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PitchVenture/Helpers/Configuration.storekit">
+   </FileRef>
+   <FileRef
       location = "group:PitchVenture.xcodeproj">
    </FileRef>
    <FileRef

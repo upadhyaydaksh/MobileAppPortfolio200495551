@@ -8,9 +8,17 @@
 
 import Foundation
 import UIKit
+import StoreKit
 
 let appDel = UIApplication.shared.delegate as! AppDelegate
 //let sceneDel = UIApplication.shared.delegate as! SceneDelegate
+
+enum IAPManagerError: Error {
+    case noProductIDsFound
+    case noProductsFound
+    case paymentWasCancelled
+    case productRequestFailed
+}
 
 enum DeviceType: String {
     case iOS = "iPhone"
