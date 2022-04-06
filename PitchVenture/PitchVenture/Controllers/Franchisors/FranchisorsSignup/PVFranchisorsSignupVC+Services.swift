@@ -69,6 +69,9 @@ extension PVFranchisorsSignupVC {
     }
     
     func getAppData(){
+        
+        self.itemList.removeAll()
+        
         _ = Alamofire.request(GET_APP_DATA, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
             print("--------- Request URL - %@", response.request?.url ?? "")
             CommonMethods.sharedInstance.hideHud()
@@ -90,9 +93,22 @@ extension PVFranchisorsSignupVC {
                                 }
                                 
                                 for i in 0 ..< self.arrAppData.count {
-                                    self.itemList.append(self.arrAppData[i].name ?? "")
+                                    
+                                    //GET THE SELECTED ITEM TO FIRST POSITION 
+                                    if let franchiseCategory = self.account.franchise?.franchiseCategory, franchiseCategory.count > 0 {
+                                        if self.arrAppData[i].id == self.account.franchise?.franchiseCategory.first {
+                                            self.itemList.insert(self.arrAppData[i].name ?? "", at: 0)
+                                            self.txtFranchiseCategory.selectedRow = 0
+                                            self.txtFranchiseCategory.selectedItem = self.arrAppData[i].name ?? ""
+                                            break
+                                        } else {
+                                            self.itemList.append(self.arrAppData[i].name ?? "")
+                                        }
+                                    } else {
+                                        self.itemList.append(self.arrAppData[i].name ?? "")
+                                    }
                                 }
-                                
+    
                                 self.txtFranchiseCategory.itemList = self.itemList
                             }
                         } else {

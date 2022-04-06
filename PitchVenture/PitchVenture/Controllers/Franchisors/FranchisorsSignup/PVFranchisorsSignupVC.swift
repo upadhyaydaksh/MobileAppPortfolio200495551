@@ -45,7 +45,7 @@ class PVFranchisorsSignupVC: PVBaseVC, IQDropDownTextFieldDelegate {
         super.viewDidLoad()
         self.txtFranchiseCategory.isOptionalDropDown = false
         
-//        self.getAppData()
+        self.getAppData()
         if self.isFromEditProfile {
             self.setNavigationTitle("Edit Franchise Details")
             self.autoFillData()
@@ -64,22 +64,6 @@ class PVFranchisorsSignupVC: PVBaseVC, IQDropDownTextFieldDelegate {
     func autoFillData() {
         
         self.txtFranchiseName.text = self.account.franchise?.franchiseName
-        
-        if let franchiseCategory = self.account.franchise?.franchiseCategory, franchiseCategory.count > 0 {
-            
-            for i in 0 ..< self.arrAppData.count {
-                if self.arrAppData[i].id == self.account.franchise?.franchiseCategory.first {
-                    print(self.arrAppData[i].name!)
-                    
-//                    self.txtFranchiseCategory.itemList = i
-//                    self.txtFranchiseCategory.selectedItem = self.arrAppData[i].name
-                    break
-                }
-            }
-            
-        } else {
-            self.txtFranchiseCategory.selectedItem = self.arrAppData.first?.name
-        }
         
         self.txtMinimumDeposit.text = "\(self.account.franchise?.minimumDeposit ?? 0)"
         
@@ -138,6 +122,16 @@ class PVFranchisorsSignupVC: PVBaseVC, IQDropDownTextFieldDelegate {
         
         if self.isFormValid() {
             if self.locationImage == nil {
+                
+                self.arrSelectedCategory.removeAll()
+                
+                for i in 0 ..< self.arrAppData.count {
+                    if self.arrAppData[i].name == self.txtFranchiseCategory.selectedItem {
+                        self.arrSelectedCategory.append(self.arrAppData[i].id ?? "")
+                        break
+                    }
+                }
+                
                 var parameters = [String: Any]()
                 parameters = [
                     "accountId": self.account.id!,
@@ -172,7 +166,13 @@ class PVFranchisorsSignupVC: PVBaseVC, IQDropDownTextFieldDelegate {
                         self.account.picture = url?.absoluteString
                         
                         self.arrSelectedCategory.removeAll()
-                        self.arrSelectedCategory.append(self.arrAppData[self.txtFranchiseCategory.selectedRow].id ?? "")
+                        
+                        for i in 0 ..< self.arrAppData.count {
+                            if self.arrAppData[i].name == self.txtFranchiseCategory.selectedItem {
+                                self.arrSelectedCategory.append(self.arrAppData[i].id ?? "")
+                            }
+                        }
+                        
                         
                         var parameters = [String: Any]()
                         parameters = [
