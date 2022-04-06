@@ -22,9 +22,6 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
             cell.btnFranchise.isHidden = isFranchise
         }
         
-        
-    
-        
         if let isFranchise = self.account.isFranchise, isFranchise {
             //LOGIN User is FRANCHISE so he will see Store owner cell
             cell.configureStoreOwnerCell(account: self.arrFranchises[indexPath.row], isEditHidden: false)
@@ -46,7 +43,23 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let obj = PVFranchiseDetailVC.instantiate()
-        obj.account = self.arrFranchises[indexPath.row]
+        
+        if self.arrAppData.count > 0 {
+            
+            for i in 0 ..< self.arrAppData.count {
+                if self.arrAppData[i].id == self.arrFranchises[indexPath.row].franchise?.franchiseCategory.first {
+                    
+                    obj.account = self.arrFranchises[indexPath.row]
+                    obj.account.franchise?.franchiseCategoryName = self.arrAppData[i].name
+                    break
+                }
+            }
+        } else {
+            obj.account = self.arrFranchises[indexPath.row]
+        }
+        
+        
+        
         self.push(vc: obj)
     }
     

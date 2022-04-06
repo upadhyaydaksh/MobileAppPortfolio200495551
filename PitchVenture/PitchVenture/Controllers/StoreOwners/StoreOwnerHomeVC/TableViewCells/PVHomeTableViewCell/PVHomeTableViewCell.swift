@@ -21,10 +21,14 @@ class PVHomeTableViewCell: UITableViewCell {
     @IBOutlet weak var lblMinimumDeposit: UILabel!
     
     @IBOutlet weak var btnFranchise: PVButton!
+    
+    @IBOutlet weak var imgSponsored: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
+        self.imgSponsored.tintColor = Constants.color.kAPP_COLOR
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -47,7 +51,11 @@ class PVHomeTableViewCell: UITableViewCell {
             if let picture = account.picture {
                 self.imgFranchise.sd_setImage(with: URL(string: picture), placeholderImage: UIImage(named: "ic_logo.png"))
             }
-        } 
+        }
+        
+        if let isSponsored = account?.franchise?.isProfileSponsored, isSponsored {
+            self.imgSponsored.isHidden = !isSponsored
+        }
     }
     
     func configureStoreOwnerCell(account: Account?, isEditHidden: Bool) {
@@ -57,6 +65,10 @@ class PVHomeTableViewCell: UITableViewCell {
         self.lblMinimumDeposit.text = account?.storeOwner?.city
         if let pictures = account?.storeOwner?.pictures, pictures.count > 0 {
             self.imgFranchise.sd_setImage(with: URL(string: account?.storeOwner?.pictures?[0] ?? ""), placeholderImage: UIImage(named: "ic_logo.png"))
+        }
+        
+        if let isSponsored = account?.storeOwner?.isProfileSponsored, isSponsored {
+            self.imgSponsored.isHidden = !isSponsored
         }
         
     }

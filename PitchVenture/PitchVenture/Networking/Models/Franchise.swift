@@ -17,36 +17,42 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
     var id : String?
     var franchiseName : String?
     var franchiseDescription : String?
+    var franchiseCategoryName : String?
     var minimumDeposit : Int?
     var franchiseCategory : [String] = []
     var countryCode: String?
     var phoneNumber: String?
     var pictures : [String] = []
+    var isProfileSponsored : Bool?
     
-    init(id: String?, franchiseName: String?,franchiseDescription: String?, minimumDeposit: Int?, franchiseCategory: [String], countryCode: String?, phoneNumber: String?, pictures: [String]) {
+    init(id: String?, franchiseName: String?,franchiseDescription: String?, franchiseCategoryName: String?, minimumDeposit: Int?, franchiseCategory: [String], countryCode: String?, phoneNumber: String?, pictures: [String], isProfileSponsored: Bool?) {
         self.id = id
         self.franchiseName = franchiseName
         self.franchiseDescription = franchiseDescription
+        self.franchiseCategoryName = franchiseCategoryName
         self.minimumDeposit = minimumDeposit
         self.franchiseCategory = franchiseCategory
         self.countryCode = countryCode
         self.phoneNumber = phoneNumber
         self.pictures = pictures
+        self.isProfileSponsored = isProfileSponsored
     }
     
     func copy(with zone: NSZone? = nil) -> Any {
-        return Franchise(id : id, franchiseName : franchiseName, franchiseDescription: franchiseDescription, minimumDeposit: minimumDeposit, franchiseCategory: franchiseCategory, countryCode: countryCode, phoneNumber: phoneNumber, pictures : pictures)
+        return Franchise(id : id, franchiseName : franchiseName, franchiseDescription: franchiseDescription, franchiseCategoryName: franchiseCategoryName, minimumDeposit: minimumDeposit, franchiseCategory: franchiseCategory, countryCode: countryCode, phoneNumber: phoneNumber, pictures : pictures, isProfileSponsored: isProfileSponsored)
     }
     
     override init() {
         self.id = nil
         self.franchiseName = nil
         self.franchiseDescription = nil
+        self.franchiseCategoryName = nil
         self.minimumDeposit = nil
         self.franchiseCategory = []
         self.countryCode = nil
         self.phoneNumber = nil
         self.pictures = []
+        self.isProfileSponsored = false
     }
     
     // MARK: ObjectMapper Initalizers
@@ -71,6 +77,7 @@ class Franchise: NSObject, Mappable, NSCopying, NSCoding {
         countryCode <- map["countryCode"]
         phoneNumber <- map["phoneNumber"]
         pictures <- map["pictures"]
+        isProfileSponsored <- map["isProfileSponsored"]
     }
     
     // MARK: NSCoding Protocol

@@ -27,8 +27,9 @@ class StoreOwner: NSObject, Mappable, NSCopying, NSCoding {
     var v : Int?
     var countryCode: String?
     var phoneNumber: String?
+    var isProfileSponsored : Bool?
     
-    init(id: String?, apartmentNumber: String?, addressLine1: String?, addressLine2: String?, city: String?, province : String?, postalCode: String?, sentRequests : [Requests]?, acceptedRequests : [Requests]?, pictures: [String]?, v: Int?, countryCode: String?, phoneNumber: String?) {
+    init(id: String?, apartmentNumber: String?, addressLine1: String?, addressLine2: String?, city: String?, province : String?, postalCode: String?, sentRequests : [Requests]?, acceptedRequests : [Requests]?, pictures: [String]?, v: Int?, countryCode: String?, phoneNumber: String?, isProfileSponsored: Bool?) {
         self.id = id
         self.apartmentNumber = apartmentNumber
         self.addressLine1 = addressLine1
@@ -42,11 +43,12 @@ class StoreOwner: NSObject, Mappable, NSCopying, NSCoding {
         self.v = v
         self.countryCode = countryCode
         self.phoneNumber = phoneNumber
+        self.isProfileSponsored = isProfileSponsored
 
     }
 
     func copy(with zone: NSZone? = nil) -> Any {
-        return StoreOwner(id : id, apartmentNumber : apartmentNumber, addressLine1 : addressLine1, addressLine2 : addressLine2, city : city, province : province, postalCode : postalCode, sentRequests : sentRequests, acceptedRequests : acceptedRequests, pictures : pictures, v : v, countryCode: countryCode, phoneNumber: phoneNumber)
+        return StoreOwner(id : id, apartmentNumber : apartmentNumber, addressLine1 : addressLine1, addressLine2 : addressLine2, city : city, province : province, postalCode : postalCode, sentRequests : sentRequests, acceptedRequests : acceptedRequests, pictures : pictures, v : v, countryCode: countryCode, phoneNumber: phoneNumber, isProfileSponsored: isProfileSponsored)
     }
 
     override init() {
@@ -63,6 +65,7 @@ class StoreOwner: NSObject, Mappable, NSCopying, NSCoding {
         self.v = nil
         self.countryCode = nil
         self.phoneNumber = nil
+        self.isProfileSponsored = false
     }
 
     // MARK: ObjectMapper Initalizers
@@ -92,6 +95,7 @@ class StoreOwner: NSObject, Mappable, NSCopying, NSCoding {
         v <- map["v"]
         countryCode <- map["countryCode"]
         phoneNumber <- map["phoneNumber"]
+        isProfileSponsored <- map["isProfileSponsored"]
     }
 
     // MARK: NSCoding Protocol

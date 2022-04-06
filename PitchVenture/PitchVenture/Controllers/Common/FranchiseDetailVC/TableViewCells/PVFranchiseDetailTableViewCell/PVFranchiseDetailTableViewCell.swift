@@ -38,7 +38,7 @@ class PVFranchiseDetailTableViewCell: UITableViewCell {
         self.lblFranchiseDescription.text = account?.franchise?.franchiseName
         
         if let category = account?.franchise?.franchiseCategory, category.count > 0 {
-            self.lblFranchiseCategory.text = account?.franchise?.franchiseCategory[0]
+            self.lblFranchiseCategory.text = account?.franchise?.franchiseCategoryName
         }
         
         self.lblFranchiseDeposit.text = account?.franchise?.convertIntToCurrencyAsString(intValue: account?.franchise?.minimumDeposit ?? 0)
