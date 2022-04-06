@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 import Reachability
-import SVProgressHUD
 import Alamofire
 import SwiftyJSON
+import MBProgressHUD
 
 public class CommonMethods: NSObject {
     
@@ -35,18 +35,13 @@ public class CommonMethods: NSObject {
     var usrState    :Int = 0
     var deviceToken : String = "0"
     
+    var progressHUD : MBProgressHUD = MBProgressHUD()
+    
     func initialize () {
-        setUpSVProgressHUD()
+        
     }
     
-    func setUpSVProgressHUD () {
-        //Progress hud settings
-        SVProgressHUD.setDefaultMaskType(.clear)
-        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.custom)
-        SVProgressHUD.setForegroundColor(UIColor.black)
-        SVProgressHUD.setBackgroundColor(UIColor.clear)
-        SVProgressHUD.setRingThickness(5.0)
-    }
+    
     
     // MARK: - Date Conversion functions
     
@@ -123,15 +118,11 @@ public class CommonMethods: NSObject {
     
     // MARK: - Progress HUD
     func showHud() {
-        SVProgressHUD.show()
-    }
-    
-    func showHudWithStatus(title:String) {
-        SVProgressHUD.show(withStatus: title)
+        progressHUD.show(animated: true)
     }
     
     func hideHud() {
-        SVProgressHUD.dismiss()
+        progressHUD.hide(animated: true)
     }
     
     func JSONStringify(value: AnyObject,prettyPrinted:Bool = false) -> String{

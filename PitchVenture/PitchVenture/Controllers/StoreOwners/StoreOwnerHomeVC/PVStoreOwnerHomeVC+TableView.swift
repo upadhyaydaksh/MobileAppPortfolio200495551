@@ -42,25 +42,26 @@ extension PVStoreOwnerHomeVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let obj = PVFranchiseDetailVC.instantiate()
         
-        if self.arrAppData.count > 0 {
+        if let isFranchise = self.account.isFranchise, !isFranchise {
+            let obj = PVFranchiseDetailVC.instantiate()
             
-            for i in 0 ..< self.arrAppData.count {
-                if self.arrAppData[i].id == self.arrFranchises[indexPath.row].franchise?.franchiseCategory.first {
-                    
-                    obj.account = self.arrFranchises[indexPath.row]
-                    obj.account.franchise?.franchiseCategoryName = self.arrAppData[i].name
-                    break
+            if self.arrAppData.count > 0 {
+                
+                for i in 0 ..< self.arrAppData.count {
+                    if self.arrAppData[i].id == self.arrFranchises[indexPath.row].franchise?.franchiseCategory.first {
+                        
+                        obj.account = self.arrFranchises[indexPath.row]
+                        obj.account.franchise?.franchiseCategoryName = self.arrAppData[i].name
+                        break
+                    }
                 }
+            } else {
+                obj.account = self.arrFranchises[indexPath.row]
             }
-        } else {
-            obj.account = self.arrFranchises[indexPath.row]
+            
+            self.push(vc: obj)
         }
-        
-        
-        
-        self.push(vc: obj)
     }
     
     @objc func btnApplyAction(sender: UIButton) {

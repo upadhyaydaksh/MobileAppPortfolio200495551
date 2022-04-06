@@ -9,7 +9,6 @@
 import UIKit
 import ObjectMapper
 import CoreLocation
-import SVProgressHUD
 
 enum RequestResponseStatusCode: Int {
     case error = 0

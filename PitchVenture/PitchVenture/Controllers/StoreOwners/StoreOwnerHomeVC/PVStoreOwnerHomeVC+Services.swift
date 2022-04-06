@@ -15,28 +15,40 @@ import FirebaseAnalytics
 extension PVStoreOwnerHomeVC {
     
     func getAllFranchises() {
-        CommonMethods.sharedInstance.showHudWithStatus(title: STR_LOADING)
+        self.showHud()
         
         self.arrFranchises.removeAll()
         
         _ = Alamofire.request(GET_ALL_FRANCHISES, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
             print("--------- Request URL - %@", response.request?.url ?? "")
-            CommonMethods.sharedInstance.hideHud()
+            self.hideHud()
 
             switch response.result {
             case .success:
                 if let value = response.result.value {
                     let json = JSON(value)
                     print("JSON: \(json)")
+                    
+                    var tempArr : [Account] = []
+                    
                     if (json["statusCode"].numberValue == 2000) {
                         if let resultArray = json["data"].array {
                             for i in 0 ..< resultArray.count {
                                 
                                 if let franchise: Account = Mapper<Account>().map(JSON: resultArray[i].rawValue as! [String : Any]) {
-                                    self.arrFranchises.append(franchise)
+                                    tempArr.append(franchise)
                                 }
                                 
                             }
+                            
+                            for i in 0 ..< tempArr.count {
+                                if tempArr[i].franchise?.isProfileSponsored == true {
+                                    self.arrFranchises.insert(tempArr[i], at: 0)
+                                } else {
+                                    self.arrFranchises.append(tempArr[i])
+                                }
+                            }
+                            
                             self.tableView.reloadTableWithAnimation()
                         } else {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
@@ -58,11 +70,11 @@ extension PVStoreOwnerHomeVC {
                 }
             }
         }
-
+        self.hideHud()
     }
     
     func getAllStoreOwners() {
-        CommonMethods.sharedInstance.showHudWithStatus(title: STR_LOADING)
+        self.showHud()
         
         self.arrFranchises.removeAll()
         
@@ -75,15 +87,26 @@ extension PVStoreOwnerHomeVC {
                 if let value = response.result.value {
                     let json = JSON(value)
                     print("JSON: \(json)")
+                    
+                    var tempArr : [Account] = []
                     if (json["\(STATUS_CODE)"].numberValue == 2000) {
                         if let resultArray = json["data"].array {
                             for i in 0 ..< resultArray.count {
                                 
                                 if let franchise: Account = Mapper<Account>().map(JSON: resultArray[i].rawValue as! [String : Any]) {
-                                    self.arrFranchises.append(franchise)
+                                    tempArr.append(franchise)
                                 }
                                 
                             }
+                            
+                            for i in 0 ..< tempArr.count {
+                                if tempArr[i].storeOwner?.isProfileSponsored == true {
+                                    self.arrFranchises.insert(tempArr[i], at: 0)
+                                } else {
+                                    self.arrFranchises.append(tempArr[i])
+                                }
+                            }
+
                             self.tableView.reloadTableWithAnimation()
                         } else {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)
@@ -104,11 +127,11 @@ extension PVStoreOwnerHomeVC {
                 }
             }
         }
-
+        self.hideHud()
     }
     
     func callSendRequest(user: Account?) {
-        CommonMethods.sharedInstance.showHud()
+        self.showHud()
         
         if let userID = user?.id, userID != nil {
             let urlName = "\(CALL_SEND_REQUEST)\(userID)"
@@ -139,9 +162,11 @@ extension PVStoreOwnerHomeVC {
                 }
             }, params: [:], urlApi: urlName)
         }
+        self.hideHud()
     }
     
     func getAppData(){
+        self.showHud()
         _ = Alamofire.request(GET_APP_DATA, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
             print("--------- Request URL - %@", response.request?.url ?? "")
             CommonMethods.sharedInstance.hideHud()
@@ -187,6 +212,7 @@ extension PVStoreOwnerHomeVC {
                     print("Response data: \(NSString(data: data, encoding: String.Encoding.utf8.rawValue)!)")
                 }
             }
+            self.hideHud()
         }
     }
 }

@@ -15,6 +15,7 @@ import FirebaseAnalytics
 extension PVRequestsVC {
     
     func getAllFranchisorsRequests(){
+        CommonMethods.sharedInstance.showHud()
         self.arrFranchises.removeAll()
         var authHeader:HTTPHeaders = [:]
          
@@ -64,6 +65,7 @@ extension PVRequestsVC {
     }
     
     func getAllStoreOwnersRequests() {
+        CommonMethods.sharedInstance.showHud()
         self.arrFranchises.removeAll()
         var authHeader:HTTPHeaders = [:]
          
@@ -104,6 +106,7 @@ extension PVRequestsVC {
     }
     
     func getAllPartneredStoreOwners() {
+        CommonMethods.sharedInstance.showHud()
         self.arrFranchises.removeAll()
         var authHeader:HTTPHeaders = [:]
          

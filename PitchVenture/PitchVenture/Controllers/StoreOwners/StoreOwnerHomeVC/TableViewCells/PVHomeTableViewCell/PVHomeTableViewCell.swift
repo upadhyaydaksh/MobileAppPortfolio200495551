@@ -54,7 +54,9 @@ class PVHomeTableViewCell: UITableViewCell {
         }
         
         if let isSponsored = account?.franchise?.isProfileSponsored, isSponsored {
-            self.imgSponsored.isHidden = !isSponsored
+            self.imgSponsored.isHidden = false
+        } else {
+            self.imgSponsored.isHidden = true
         }
     }
     
@@ -68,7 +70,9 @@ class PVHomeTableViewCell: UITableViewCell {
         }
         
         if let isSponsored = account?.storeOwner?.isProfileSponsored, isSponsored {
-            self.imgSponsored.isHidden = !isSponsored
+            self.imgSponsored.isHidden = false
+        } else {
+            self.imgSponsored.isHidden = true
         }
         
     }

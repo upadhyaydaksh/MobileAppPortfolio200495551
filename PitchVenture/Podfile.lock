@@ -143,6 +143,7 @@ PODS:
   - LGRefreshView (1.0.5):
     - DACircularProgress (~> 2.3.0)
   - Localize-Swift (2.0.0)
+  - MBProgressHUD (1.2.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -157,7 +158,6 @@ PODS:
   - SDWebImage (5.12.3):
     - SDWebImage/Core (= 5.12.3)
   - SDWebImage/Core (5.12.3)
-  - SVProgressHUD (2.2.5)
   - SwiftMessages (5.0.1):
     - SwiftMessages/App (= 5.0.1)
   - SwiftMessages/App (5.0.1)
@@ -181,10 +181,10 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (= 6.5.9)
   - LGRefreshView
   - Localize-Swift (~> 2.0)
+  - MBProgressHUD (~> 1.2.0)
   - ObjectMapper (~> 3.3)
   - ReachabilitySwift
   - SDWebImage
-  - SVProgressHUD
   - SwiftMessages (~> 5.0)
   - SwiftyJSON
   - XCGLogger
@@ -217,13 +217,13 @@ SPEC REPOS:
     - leveldb-library
     - LGRefreshView
     - Localize-Swift
+    - MBProgressHUD
     - nanopb
     - ObjcExceptionBridging
     - ObjectMapper
     - PromisesObjC
     - ReachabilitySwift
     - SDWebImage
-    - SVProgressHUD
     - SwiftMessages
     - SwiftyJSON
     - XCGLogger
@@ -255,17 +255,17 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   LGRefreshView: 34746afadbd23de8d1449cab15f3d89269645d43
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SDWebImage: 53179a2dba77246efa8a9b85f5c5b21f8f43e38f
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   XCGLogger: 1943831ef907df55108b0b18657953f868de973b
 
-PODFILE CHECKSUM: e91366c73593abbeb475e68853cc7cdfbea0dfb1
+PODFILE CHECKSUM: 20d40f278b1bed7551ee41c9f6b3c7e3f2eea713
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

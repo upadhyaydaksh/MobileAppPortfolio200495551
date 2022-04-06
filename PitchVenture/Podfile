@@ -31,7 +31,8 @@ target 'PitchVenture' do
   pod 'SwiftyJSON'
   pod 'ReachabilitySwift'
   pod 'Alamofire', '~> 4.7.2'
-  pod 'SVProgressHUD'
+  
+  pod 'MBProgressHUD', '~> 1.2.0'
 
   #AD MOB
   pod 'Google-Mobile-Ads-SDK'

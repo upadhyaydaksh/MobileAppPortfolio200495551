@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 import GoogleSignIn
 import Firebase
 import GoogleMobileAds

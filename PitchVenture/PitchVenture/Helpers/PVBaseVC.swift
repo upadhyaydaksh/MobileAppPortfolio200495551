@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import SVProgressHUD
+import MBProgressHUD
 
 class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
     
@@ -115,7 +115,7 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
     }
     
     @objc func actionBackTapped() {
-        SVProgressHUD.dismiss()
+        CommonMethods.sharedInstance.hideHud()
         self.navigationController?.popViewController(animated: true)
     }
 
@@ -323,6 +323,20 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
             stringVersion = "Invalid Message"
         }
         return stringVersion
+    }
+    
+    // MARK: - Progress HUD
+    func showHud() {
+        DispatchQueue.main.async{
+            let progressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
+            progressHUD.label.text = "Loading.."
+        }
+    }
+    
+    func hideHud() {
+        DispatchQueue.main.async{
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }
     }
 }
 
