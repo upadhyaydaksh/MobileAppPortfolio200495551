@@ -15,7 +15,7 @@ import FirebaseStorage
 import SDWebImage
 import Alamofire
 
-class PVFranchisorsSignupVC: PVBaseVC {
+class PVFranchisorsSignupVC: PVBaseVC, IQDropDownTextFieldDelegate {
 
     @IBOutlet weak var txtFranchiseName: UITextField!
     
@@ -44,7 +44,8 @@ class PVFranchisorsSignupVC: PVBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.txtFranchiseCategory.isOptionalDropDown = false
-        self.getAppData()
+        
+//        self.getAppData()
         if self.isFromEditProfile {
             self.setNavigationTitle("Edit Franchise Details")
             self.autoFillData()
@@ -68,7 +69,10 @@ class PVFranchisorsSignupVC: PVBaseVC {
             
             for i in 0 ..< self.arrAppData.count {
                 if self.arrAppData[i].id == self.account.franchise?.franchiseCategory.first {
-                    self.txtFranchiseCategory.selectedItem = self.arrAppData[i].name
+                    print(self.arrAppData[i].name!)
+                    
+//                    self.txtFranchiseCategory.itemList = i
+//                    self.txtFranchiseCategory.selectedItem = self.arrAppData[i].name
                     break
                 }
             }
@@ -205,4 +209,3 @@ extension PVFranchisorsSignupVC : UIImagePickerControllerDelegate, UINavigationC
         picker.dismiss(animated: true, completion: nil)
     }
 }
-
