@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		392DB1437134D34884837C20 /* Pods_PitchVenture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */; };
+		5219911827FD200E0067EC62 /* PVSponsoredVC+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219911727FD200E0067EC62 /* PVSponsoredVC+Services.swift */; };
 		522F0CAE27DEF28C00479167 /* PVButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F0CAC27DEF28C00479167 /* PVButtonTableViewCell.swift */; };
 		522F0CAF27DEF28C00479167 /* PVButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F0CAD27DEF28C00479167 /* PVButtonTableViewCell.xib */; };
 		5256657127BF45F3005EB5E3 /* PVSponsoredVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */; };
@@ -119,6 +120,7 @@
 
 /* Begin PBXFileReference section */
 		1651415D7639ADA89712EAF0 /* Pods_PitchVenture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PitchVenture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5219911727FD200E0067EC62 /* PVSponsoredVC+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PVSponsoredVC+Services.swift"; sourceTree = "<group>"; };
 		522F0CAC27DEF28C00479167 /* PVButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVButtonTableViewCell.swift; sourceTree = "<group>"; };
 		522F0CAD27DEF28C00479167 /* PVButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PVButtonTableViewCell.xib; sourceTree = "<group>"; };
 		5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PVSponsoredVC.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				5256657027BF45F3005EB5E3 /* PVSponsoredVC.swift */,
+				5219911727FD200E0067EC62 /* PVSponsoredVC+Services.swift */,
 			);
 			path = SponsoredVC;
 			sourceTree = "<group>";
@@ -952,6 +955,7 @@
 				5260AD2B27B40982001CD5B5 /* Requests.swift in Sources */,
 				FA5E0AD72765566C00BD8393 /* PVRequestsTableViewCell.swift in Sources */,
 				FAB45CDE27462C15009F1D5D /* PVTextField.swift in Sources */,
+				5219911827FD200E0067EC62 /* PVSponsoredVC+Services.swift in Sources */,
 				FA5B01AC2742D65900976EB6 /* ConfigurationManager.swift in Sources */,
 				BA64E46127BF6EB3001145BE /* PVStoreOwnerHomeVC+Services.swift in Sources */,
 				A0A2389E279D2D9000BE5156 /* LoginError.swift in Sources */,

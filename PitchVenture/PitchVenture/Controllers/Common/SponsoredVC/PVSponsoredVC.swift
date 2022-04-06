@@ -40,10 +40,11 @@ class PVSponsoredVC: PVBaseVC {
     fileprivate var productToPurchase: SKProduct?
     fileprivate var purchaseProductComplition: ((PVIAPHandlerAlertType, SKProduct?, SKPaymentTransaction?)->Void)?
     
+    var account : Account = Account()   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.account = PVUserManager.sharedManager().activeUser
 //        self.setProductIds(ids: self.productIds)
         
         self.fetchAvailableProducts { [weak self](products)   in
@@ -168,6 +169,17 @@ extension PVSponsoredVC : SKProductsRequestDelegate, SKPaymentTransactionObserve
                     SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
                     if let complition = self.purchaseProductComplition {
                         complition(PVIAPHandlerAlertType.purchased, self.productToPurchase, trans)
+                        var parameters = [String: Any]()
+                        parameters = [
+                            "accountId": self.account.id,
+                            "isProfileSponsored": true
+                        ]
+                        if let isFranchise = self.account.isFranchise, isFranchise {
+                            self.franchisorUpdate(parameters: parameters)
+                        }else{
+                            self.storeOwenerUpdate(parameters: parameters)
+                        }
+                            
                     }
                     break
                     
