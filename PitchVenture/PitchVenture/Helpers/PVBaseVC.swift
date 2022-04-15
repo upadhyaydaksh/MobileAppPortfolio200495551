@@ -237,9 +237,27 @@ class PVBaseVC: UIViewController, UIGestureRecognizerDelegate {
         premiumButton.tintColor = Constants.color.kAPP_COLOR
         
         //self.navigationItem.setRightBarButtonItems([profileButton,notificationButton, premiumButton], animated: true)
+        let account = PVUserManager.sharedManager().activeUser
         
-        self.navigationItem.setRightBarButtonItems([profileButton, premiumButton], animated: true)
-        //self.navigationItem.setRightBarButtonItems([profileButton], animated: true)
+        if let isFranchise = account?.isFranchise, isFranchise {
+            if let isProfileSponsored = account?.franchise?.isProfileSponsored, isProfileSponsored {
+                //USER IS ALREADY SPONSORED SO DONT SHOW HIM BUTTON IN NAVBAR
+                self.navigationItem.setRightBarButtonItems([profileButton], animated: true)
+            } else {
+                //USER IS NOT SPONSORED SO SHOW HIM BUTTON IN NAVBAR
+                self.navigationItem.setRightBarButtonItems([profileButton, premiumButton], animated: true)
+            }
+        } else {
+            if let isProfileSponsored = account?.storeOwner?.isProfileSponsored, isProfileSponsored {
+                //USER IS ALREADY SPONSORED SO DONT SHOW HIM BUTTON IN NAVBAR
+                self.navigationItem.setRightBarButtonItems([profileButton], animated: true)
+            } else {
+                //USER IS NOT SPONSORED SO SHOW HIM BUTTON IN NAVBAR
+                self.navigationItem.setRightBarButtonItems([profileButton, premiumButton], animated: true)
+            }
+        }
+        
+        
     }
     
     @objc func goToStoreOwnerProfileVC() {

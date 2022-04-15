@@ -11,6 +11,7 @@ import SDWebImage
 
 class PVHomeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var vwBG: PVView!
     @IBOutlet weak var imgFranchise: PVImageView!
     @IBOutlet weak var lblName: UILabel!
     
@@ -28,7 +29,7 @@ class PVHomeTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
-        self.imgSponsored.tintColor = Constants.color.kAPP_COLOR
+        self.imgSponsored.tintColor = UIColor.black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -55,8 +56,10 @@ class PVHomeTableViewCell: UITableViewCell {
         
         if let isSponsored = account?.franchise?.isProfileSponsored, isSponsored {
             self.imgSponsored.isHidden = false
+            self.configureViewAsSponsored()
         } else {
             self.imgSponsored.isHidden = true
+            self.configureViewAsNonSponsored()
         }
     }
     
@@ -71,10 +74,18 @@ class PVHomeTableViewCell: UITableViewCell {
         
         if let isSponsored = account?.storeOwner?.isProfileSponsored, isSponsored {
             self.imgSponsored.isHidden = false
+            self.configureViewAsSponsored()
         } else {
             self.imgSponsored.isHidden = true
+            self.configureViewAsNonSponsored()
         }
-        
     }
     
+    func configureViewAsSponsored() {
+        self.vwBG.backgroundColor = Constants.color.kApp_Blue_Color_Sponsored
+    }
+    
+    func configureViewAsNonSponsored() {
+        self.vwBG.backgroundColor = Constants.color.kApp_Grey_Color
+    }
 }

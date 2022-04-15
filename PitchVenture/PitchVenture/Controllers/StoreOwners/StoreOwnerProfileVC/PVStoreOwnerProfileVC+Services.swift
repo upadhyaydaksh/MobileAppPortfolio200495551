@@ -30,6 +30,7 @@ extension PVStoreOwnerProfileVC{
                             if let account: Account = Mapper<Account>().map(JSON: result) {
                                 self.account = account
                             }
+                            
                             self.tableView.reloadTableWithAnimation()
                         } else {
                             self.showAlertWithTitleAndMessage(title: APP_NAME, msg: INVALID_RESPONSE)

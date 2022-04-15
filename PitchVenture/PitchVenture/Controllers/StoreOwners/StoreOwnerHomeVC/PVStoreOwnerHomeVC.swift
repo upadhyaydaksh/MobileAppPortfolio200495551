@@ -48,7 +48,27 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         self.navigationController?.isNavigationBarHidden = false
         self.removeLeftBarButton()
         self.setNavigationTitle("Home")
-        self.setProfileAndNotificationNavBarButton()
+        self.account = PVUserManager.sharedManager().activeUser
+        
+        if let isFranchise = self.account.isFranchise, isFranchise {
+            if let isProfileSponsored = self.account.franchise?.isProfileSponsored, isProfileSponsored {
+                //USER IS ALREADY SPONSORED SO DONT SHOW HIM BUTTON IN NAVBAR
+                self.setProfileNavBarButton()
+            } else {
+                //USER IS NOT SPONSORED SO SHOW HIM BUTTON IN NAVBAR
+                self.setProfileAndNotificationNavBarButton()
+            }
+        } else {
+            if let isProfileSponsored = self.account.storeOwner?.isProfileSponsored, isProfileSponsored {
+                //USER IS ALREADY SPONSORED SO DONT SHOW HIM BUTTON IN NAVBAR
+                self.setProfileNavBarButton()
+            } else {
+                //USER IS NOT SPONSORED SO SHOW HIM BUTTON IN NAVBAR
+                self.setProfileAndNotificationNavBarButton()
+            }
+        }
+        
+        
     }
     
     class func instantiate() -> PVStoreOwnerHomeVC {

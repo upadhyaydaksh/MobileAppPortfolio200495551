@@ -277,6 +277,13 @@
 			path = SponsoredVC;
 			sourceTree = "<group>";
 		};
+		52737E6F280977280061A14C /* TableViewHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewHeaderCell;
+			sourceTree = "<group>";
+		};
 		5273B2B92747722600E4D60E /* InputLocationVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,6 +669,7 @@
 		FAC8A150274811B400EFC95B /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				52737E6F280977280061A14C /* TableViewHeaderCell */,
 				FAC8A1572748199300EFC95B /* PVHomeTableViewCell */,
 			);
 			path = TableViewCells;
