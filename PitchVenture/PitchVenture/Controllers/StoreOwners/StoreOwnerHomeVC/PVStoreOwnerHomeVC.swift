@@ -10,7 +10,7 @@ import GoogleMobileAds
 import UIKit
 
 class PVStoreOwnerHomeVC: PVBaseVC {
-
+    
     //MARK: - Outlets
     
     var bannerView: GADBannerView!
@@ -22,7 +22,7 @@ class PVStoreOwnerHomeVC: PVBaseVC {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let adSize = GADAdSizeFromCGSize(CGSize(width: SCREEN_WIDTH - 20, height: 64))
+    private var adInterstitial: GADInterstitialAd?
     
     //MARK: - Class Methods
     override func viewDidLoad() {
@@ -31,16 +31,6 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         
         self.getAppData()
         
-        bannerView = GADBannerView(adSize: adSize)
-        addBannerViewToView(bannerView)
-        //TEST
-        //bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        //LIVE
-        bannerView.adUnitID = "ca-app-pub-8620133611536867/7249942660"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
-        
-        bannerView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +58,15 @@ class PVStoreOwnerHomeVC: PVBaseVC {
             }
         }
         
+        self.showAdBanner()
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+            if self.adInterstitial != nil {
+                self.adInterstitial?.present(fromRootViewController: self)
+            } else {
+                print("Ad wasn't ready")
+            }
+        }
     }
     
     class func instantiate() -> PVStoreOwnerHomeVC {
@@ -79,53 +77,38 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         tableView.register(UINib(nibName: "PVHomeTableViewCell", bundle: nil), forCellReuseIdentifier: PVHomeTableViewCell.reuseIdentifier())
     }
     
+    func showAdBanner() {
+        
+        let request = GADRequest()
+        //TEST :- ca-app-pub-3940256099942544/4411468910
+        //LIVE :- ca-app-pub-8620133611536867/6791863776
+        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-8620133611536867/6791863776",
+                               request: request,
+                               completionHandler: { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            adInterstitial = ad
+            adInterstitial?.fullScreenContentDelegate = self
+        }
+        )
+    }
 }
 
-extension PVStoreOwnerHomeVC: GADBannerViewDelegate {
-    
-    func addBannerViewToView(_ bannerView: GADBannerView) {
-        bannerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bannerView)
-        view.addConstraints(
-            [NSLayoutConstraint(item: bannerView,
-                                attribute: .bottom,
-                                relatedBy: .equal,
-                                toItem: bottomLayoutGuide,
-                                attribute: .top,
-                                multiplier: 1,
-                                constant: 0),
-             NSLayoutConstraint(item: bannerView,
-                                attribute: .centerX,
-                                relatedBy: .equal,
-                                toItem: view,
-                                attribute: .centerX,
-                                multiplier: 1,
-                                constant: 0)
-            ])
-    }
-    
-    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("bannerViewDidReceiveAd")
-        self.addBannerViewToView(bannerView)
-    }
-    
-    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-        print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-    }
-    
-    func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
-        print("bannerViewDidRecordImpression")
-    }
-    
-    func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
-        print("bannerViewWillPresentScreen")
-    }
-    
-    func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
-        print("bannerViewWillDIsmissScreen")
-    }
-    
-    func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
-        print("bannerViewDidDismissScreen")
-    }
+extension PVStoreOwnerHomeVC: GADFullScreenContentDelegate {
+    /// Tells the delegate that the ad failed to present full screen content.
+      func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad did fail to present full screen content.")
+      }
+
+      /// Tells the delegate that the ad will present full screen content.
+      func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad will present full screen content.")
+      }
+
+      /// Tells the delegate that the ad dismissed full screen content.
+      func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content.")
+      }
 }
