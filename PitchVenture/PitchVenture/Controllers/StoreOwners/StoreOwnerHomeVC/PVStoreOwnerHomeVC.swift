@@ -30,6 +30,7 @@ class PVStoreOwnerHomeVC: PVBaseVC {
         self.registerTableViewCell()
         
         self.getAppData()
+        self.showAdBanner()
         
     }
     
@@ -58,7 +59,7 @@ class PVStoreOwnerHomeVC: PVBaseVC {
             }
         }
         
-        self.showAdBanner()
+        
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
             if self.adInterstitial != nil {
